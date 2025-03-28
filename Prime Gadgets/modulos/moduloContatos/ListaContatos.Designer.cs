@@ -1,6 +1,6 @@
 ﻿namespace Prime_Gadgets
 {
-    partial class Form1
+    partial class ListaContatos
     {
         /// <summary>
         ///  Required designer variable.
@@ -47,6 +47,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top;
             button1.Location = new Point(241, 78);
             button1.Name = "button1";
             button1.Size = new Size(191, 37);
@@ -56,6 +57,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button2.Location = new Point(456, 78);
             button2.Name = "button2";
             button2.Size = new Size(191, 37);
@@ -65,6 +67,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(23, 9);
             label1.Name = "label1";
@@ -78,15 +81,15 @@
             contatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             contatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             contatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            contatosTable.Location = new Point(23, 131);
+            contatosTable.Location = new Point(23, 140);
             contatosTable.MultiSelect = false;
             contatosTable.Name = "contatosTable";
             contatosTable.RowHeadersVisible = false;
             contatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            contatosTable.Size = new Size(624, 446);
+            contatosTable.Size = new Size(624, 432);
             contatosTable.TabIndex = 5;
             // 
-            // Form1
+            // ListaContatos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -96,8 +99,8 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(Create);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "ListaContatos";
+            Text = "Contatos";
             ((System.ComponentModel.ISupportInitialize)contatosTable).EndInit();
             ResumeLayout(false);
         }

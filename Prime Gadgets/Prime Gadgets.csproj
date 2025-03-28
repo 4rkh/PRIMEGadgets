@@ -4,13 +4,49 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>Prime_Gadgets</RootNamespace>
-    <Nullable>enable</Nullable>
+	<Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="modulos\moduloSenhas\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="modulos\moduloRotina\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="modulos\moduloToDoList\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="modulos\moduloFinanceiro\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="modulos\moduloCalculadora\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="modulos\moduloCalendario\Telas\CreateContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="modulos\moduloSenhas\Modelos\" />
+    <Folder Include="modulos\moduloSenhas\Repositorios\" />
+    <Folder Include="modulos\moduloRotina\Modelos\" />
+    <Folder Include="modulos\moduloRotina\Repositorios\" />
+    <Folder Include="modulos\moduloToDoList\Modelos\" />
+    <Folder Include="modulos\moduloToDoList\Repositorios\" />
+    <Folder Include="modulos\moduloFinanceiro\Modelos\" />
+    <Folder Include="modulos\moduloFinanceiro\Repositorios\" />
+    <Folder Include="modulos\moduloCalendario\Modelos\" />
+    <Folder Include="modulos\moduloCalendario\Repositorios\" />
+    <Folder Include="modulos\moduloCalculadora\Modelos\" />
+    <Folder Include="modulos\moduloCalculadora\Repositorios\" />
   </ItemGroup>
 
 </Project>

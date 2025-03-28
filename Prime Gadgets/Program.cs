@@ -12,7 +12,7 @@ namespace Prime_Gadgets
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new ListaContatos());
+            Application.Run(new MenuPrincipal());
 
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Prime_Gadgets
 {
-    partial class ListaContatos
+    partial class PrincipalContato
     {
         /// <summary>
         ///  Required designer variable.

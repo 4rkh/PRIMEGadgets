@@ -14,39 +14,40 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="modulos\moduloSenhas\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="modulos\moduloRotina\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="modulos\moduloToDoList\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="modulos\moduloFinanceiro\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="modulos\moduloCalculadora\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="modulos\moduloCalendario\Telas\CreateContato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="modulos\moduloCalculadora\Telas\" />
+    <Folder Include="modulos\moduloCalendario\Telas\" />
+    <Folder Include="modulos\moduloFinanceiro\Telas\" />
+    <Folder Include="modulos\moduloRotina\Telas\" />
     <Folder Include="modulos\moduloSenhas\Modelos\" />
     <Folder Include="modulos\moduloSenhas\Repositorios\" />
     <Folder Include="modulos\moduloRotina\Modelos\" />
     <Folder Include="modulos\moduloRotina\Repositorios\" />
-    <Folder Include="modulos\moduloToDoList\Modelos\" />
-    <Folder Include="modulos\moduloToDoList\Repositorios\" />
+    <Folder Include="modulos\moduloSenhas\Telas\" />
+    <Folder Include="modulos\moduloLembretes\Modelos\" />
+    <Folder Include="modulos\moduloLembretes\Repositorios\" />
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />
     <Folder Include="modulos\moduloFinanceiro\Repositorios\" />
     <Folder Include="modulos\moduloCalendario\Modelos\" />
     <Folder Include="modulos\moduloCalendario\Repositorios\" />
     <Folder Include="modulos\moduloCalculadora\Modelos\" />
     <Folder Include="modulos\moduloCalculadora\Repositorios\" />
+    <Folder Include="modulos\moduloLembretes\Telas\" />
+    <Folder Include="modulos\moduloLembretes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

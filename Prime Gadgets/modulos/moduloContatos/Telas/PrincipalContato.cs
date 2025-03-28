@@ -5,9 +5,9 @@ using System.Data;
 
 namespace Prime_Gadgets
 {
-    public partial class ListaContatos : Form
+    public partial class PrincipalContato : Form
     {
-        public ListaContatos()
+        public PrincipalContato()
         {
             try
             {

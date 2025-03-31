@@ -1,5 +1,6 @@
 #pragma warning disable
 #pragma warning disable CS0162
+using Prime_Gadgets.Models;
 using Prime_Gadgets.modulos.moduloContatos.Repositorios;
 using System.Data;
 
@@ -11,13 +12,14 @@ namespace Prime_Gadgets
         {
             try
             {
-                if (!File.Exists("modulos\\moduloContatos\\Repositorios\\Contatos.prime")) { 
+                if (!File.Exists("modulos\\moduloContatos\\Repositorios\\Contatos.prime"))
+                {
                     File.Create("modulos\\moduloContatos\\Repositorios\\Contatos.prime").Dispose();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Problema ao tentar ler o arquivo Contatos.prime"  +e.Message);
+                Console.WriteLine("Problema ao tentar ler o arquivo Contatos.prime" + e.Message);
 
             }
 
@@ -25,7 +27,7 @@ namespace Prime_Gadgets
             LerTabela();
         }
 
-        private void LerTabela()
+        public void LerTabela()
         {
             var contatoAccess = new ContatoAccess();
             var contatos = contatoAccess.exibirContatos();
@@ -52,6 +54,17 @@ namespace Prime_Gadgets
             this.contatosTable.DataSource = dataTable;
         }
 
+        private void Create_Click(object sender, EventArgs e)
+        {
+            CreateContato createContato = new CreateContato();
+            createContato.ShowDialog();
+            LerTabela();
+        }
+
+        private void contatosTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

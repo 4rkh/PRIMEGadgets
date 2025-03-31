@@ -34,10 +34,10 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
                 {
                     File.Create(caminho).Dispose();
                     conteudo = string.Empty;
-                    
+
                 }
                 conteudo = File.ReadAllText(caminho);
-                
+
             }
             catch (Exception e)
             {
@@ -84,6 +84,22 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
             }
 
             return contatos;
+        }
+
+        public void AdicionarContato(Contatos contato)
+        {
+            try
+            {
+                // Deixa os valores no padrão do arquivo
+                string linha = $"\n{contato.Id},{contato.Nome},{contato.Sobrenome},{contato.Telefone},{contato.Email}";
+
+                // Adiciona a linha ao arquivo
+                File.AppendAllText(caminho, linha + Environment.NewLine);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Problema ao tentar adicionar o contato: " + e.Message);
+            }
         }
     }
 }

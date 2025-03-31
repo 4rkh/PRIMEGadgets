@@ -31,11 +31,11 @@
             label1 = new Label();
             btContatoAddCriar = new Button();
             btContatoAddCancelar = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            campAddContatosId = new TextBox();
+            campAddContatosNome = new TextBox();
+            campAddContatosSobrenome = new TextBox();
+            campAddContatosTelefone = new TextBox();
+            campAddContatosEmail = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -62,6 +62,8 @@
             btContatoAddCriar.TabIndex = 1;
             btContatoAddCriar.Text = "Criar";
             btContatoAddCriar.UseVisualStyleBackColor = true;
+            btContatoAddCriar.Click += btContatoAddCriar_Click;
+            btContatoAddCriar.EnabledChanged += btContatoAddCriar_EnabledChanged;
             // 
             // btContatoAddCancelar
             // 
@@ -71,41 +73,50 @@
             btContatoAddCancelar.TabIndex = 2;
             btContatoAddCancelar.Text = "Cancelar";
             btContatoAddCancelar.UseVisualStyleBackColor = true;
+            btContatoAddCancelar.Click += btContatoAddCancelar_Click;
             // 
-            // textBox1
+            // campAddContatosId
             // 
-            textBox1.Location = new Point(131, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 23);
-            textBox1.TabIndex = 3;
+            campAddContatosId.Location = new Point(131, 128);
+            campAddContatosId.Name = "campAddContatosId";
+            campAddContatosId.Size = new Size(156, 23);
+            campAddContatosId.TabIndex = 3;
+            campAddContatosId.KeyPress += campAddContatosId_KeyPress;
+            campAddContatosId.TextChanged += Campos_TextChanged;
             // 
-            // textBox2
+            // campAddContatosNome
             // 
-            textBox2.Location = new Point(131, 157);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(156, 23);
-            textBox2.TabIndex = 4;
+            campAddContatosNome.Location = new Point(131, 157);
+            campAddContatosNome.Name = "campAddContatosNome";
+            campAddContatosNome.Size = new Size(156, 23);
+            campAddContatosNome.TabIndex = 4;
+            campAddContatosNome.TextChanged += Campos_TextChanged;
             // 
-            // textBox3
+            // campAddContatosSobrenome
             // 
-            textBox3.Location = new Point(131, 186);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(156, 23);
-            textBox3.TabIndex = 5;
+            campAddContatosSobrenome.Location = new Point(131, 186);
+            campAddContatosSobrenome.Name = "campAddContatosSobrenome";
+            campAddContatosSobrenome.Size = new Size(156, 23);
+            campAddContatosSobrenome.TabIndex = 5;
+            campAddContatosNome.TextChanged += Campos_TextChanged;
             // 
-            // textBox4
+            // campAddContatosTelefone
             // 
-            textBox4.Location = new Point(131, 215);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(156, 23);
-            textBox4.TabIndex = 6;
+            campAddContatosTelefone.Location = new Point(131, 215);
+            campAddContatosTelefone.Name = "campAddContatosTelefone";
+            campAddContatosTelefone.Size = new Size(156, 23);
+            campAddContatosTelefone.TabIndex = 6;
+            campAddContatosTelefone.KeyPress += campAddContatosTelefone_KeyPress;
+            campAddContatosTelefone.TextChanged += Campos_TextChanged;
             // 
-            // textBox5
+            // campAddContatosEmail
             // 
-            textBox5.Location = new Point(131, 244);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(156, 23);
-            textBox5.TabIndex = 7;
+            campAddContatosEmail.Location = new Point(131, 244);
+            campAddContatosEmail.Name = "campAddContatosEmail";
+            campAddContatosEmail.Size = new Size(156, 23);
+            campAddContatosEmail.TabIndex = 7;
+            campAddContatosEmail.Validating += campAddContatosEmail_Validating;
+            campAddContatosEmail.TextChanged += Campos_TextChanged;
             // 
             // label2
             // 
@@ -164,11 +175,11 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(campAddContatosEmail);
+            Controls.Add(campAddContatosTelefone);
+            Controls.Add(campAddContatosSobrenome);
+            Controls.Add(campAddContatosNome);
+            Controls.Add(campAddContatosId);
             Controls.Add(btContatoAddCancelar);
             Controls.Add(btContatoAddCriar);
             Controls.Add(label1);
@@ -176,7 +187,7 @@
             MaximizeBox = false;
             Name = "CreateContato";
             SizeGripStyle = SizeGripStyle.Hide;
-            Text = "Form1";
+            Text = "Adicionar Contato";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,11 +197,11 @@
         private Label label1;
         private Button btContatoAddCriar;
         private Button btContatoAddCancelar;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox campAddContatosId;
+        private TextBox campAddContatosNome;
+        private TextBox campAddContatosSobrenome;
+        private TextBox campAddContatosTelefone;
+        private TextBox campAddContatosEmail;
         private Label label2;
         private Label label3;
         private Label label4;

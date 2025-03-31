@@ -38,12 +38,14 @@
             // 
             // Create
             // 
+            Create.BackColor = Color.Lime;
             Create.Location = new Point(23, 78);
             Create.Name = "Create";
             Create.Size = new Size(191, 37);
             Create.TabIndex = 1;
             Create.Text = "Create";
-            Create.UseVisualStyleBackColor = true;
+            Create.UseVisualStyleBackColor = false;
+            Create.Click += Create_Click;
             // 
             // button1
             // 
@@ -88,8 +90,9 @@
             contatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             contatosTable.Size = new Size(624, 432);
             contatosTable.TabIndex = 5;
+            contatosTable.CellContentClick += contatosTable_CellContentClick;
             // 
-            // ListaContatos
+            // PrincipalContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -99,7 +102,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(Create);
-            Name = "ListaContatos";
+            Name = "PrincipalContato";
             Text = "Contatos";
             ((System.ComponentModel.ISupportInitialize)contatosTable).EndInit();
             ResumeLayout(false);

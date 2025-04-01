@@ -1,6 +1,5 @@
-#pragma warning disable
-#pragma warning disable CS0162
 using Prime_Gadgets.Models;
+using Prime_Gadgets.modulos.moduloContatos.Modelos;
 using Prime_Gadgets.modulos.moduloContatos.Repositorios;
 using System.Data;
 
@@ -12,14 +11,21 @@ namespace Prime_Gadgets
         {
             try
             {
-                if (!File.Exists("modulos\\moduloContatos\\Repositorios\\Contatos.prime"))
+                string diretorio = "modulos\\moduloContatos\\Repositorios";
+                if (!Directory.Exists(diretorio))
                 {
-                    File.Create("modulos\\moduloContatos\\Repositorios\\Contatos.prime").Dispose();
+                    Directory.CreateDirectory(diretorio);
+                }
+
+                string caminhoArquivo = Path.Combine(diretorio, "Contatos.prime");
+                if (!File.Exists(caminhoArquivo))
+                {
+                    using (File.Create(caminhoArquivo)) { }
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Problema ao tentar ler o arquivo Contatos.prime" + e.Message);
+                MessageBox.Show("PrincipalContato error. Problema ao tentar ler o arquivo Contatos.prime " + e.Message);
 
             }
 
@@ -34,7 +40,7 @@ namespace Prime_Gadgets
 
             DataTable dataTable = new DataTable();
 
-            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("ID", typeof(int));
             dataTable.Columns.Add("Nome");
             dataTable.Columns.Add("Sobrenome");
             dataTable.Columns.Add("Telefone");
@@ -53,7 +59,22 @@ namespace Prime_Gadgets
 
             this.contatosTable.DataSource = dataTable;
         }
-
+        public Contatos ContatoSelectId()
+        {
+            if (contatosTable.SelectedRows.Count > 0)
+            {
+                var selectedRow = contatosTable.SelectedRows[0];
+                return new Contatos
+                {
+                    Id = Convert.ToInt32(selectedRow.Cells["ID"].Value),
+                    Nome = selectedRow.Cells["Nome"].Value.ToString(),
+                    Sobrenome = selectedRow.Cells["Sobrenome"].Value.ToString(),
+                    Telefone = selectedRow.Cells["Telefone"].Value.ToString(),
+                    Email = selectedRow.Cells["Email"].Value.ToString()
+                };
+            }
+            return null;
+        }
         private void Create_Click(object sender, EventArgs e)
         {
             CreateContato createContato = new CreateContato();
@@ -65,8 +86,25 @@ namespace Prime_Gadgets
         {
 
         }
+
+        private void btPrincipalContatosDelete_Click(object sender, EventArgs e)
+        {
+            var contato = ContatoSelectId();
+            if (contato != null)
+            {
+                var result = MessageBox.Show($"Você deseja deletar o contato \"{contato.Nome}\"?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    ContatoAccess contatoAccess = new ContatoAccess();
+                    contatoAccess.DeleteContato(contato.Id);
+                    LerTabela();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum contato selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
-#pragma warning restore
-#pragma warning restore CS0162

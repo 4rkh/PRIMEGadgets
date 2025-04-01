@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Create = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            btPrincipalContatosCreate = new Button();
+            btPrincipalContatosUpdate = new Button();
+            btPrincipalContatosDelete = new Button();
             label1 = new Label();
             contatosTable = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)contatosTable).BeginInit();
             SuspendLayout();
             // 
-            // Create
+            // btPrincipalContatosCreate
             // 
-            Create.BackColor = Color.Lime;
-            Create.Location = new Point(23, 78);
-            Create.Name = "Create";
-            Create.Size = new Size(191, 37);
-            Create.TabIndex = 1;
-            Create.Text = "Create";
-            Create.UseVisualStyleBackColor = false;
-            Create.Click += Create_Click;
+            btPrincipalContatosCreate.BackColor = Color.Lime;
+            btPrincipalContatosCreate.Location = new Point(23, 78);
+            btPrincipalContatosCreate.Name = "btPrincipalContatosCreate";
+            btPrincipalContatosCreate.Size = new Size(191, 37);
+            btPrincipalContatosCreate.TabIndex = 1;
+            btPrincipalContatosCreate.Text = "Create";
+            btPrincipalContatosCreate.UseVisualStyleBackColor = false;
+            btPrincipalContatosCreate.Click += Create_Click;
             // 
-            // button1
+            // btPrincipalContatosUpdate
             // 
-            button1.Anchor = AnchorStyles.Top;
-            button1.Location = new Point(241, 78);
-            button1.Name = "button1";
-            button1.Size = new Size(191, 37);
-            button1.TabIndex = 2;
-            button1.Text = "Update";
-            button1.UseVisualStyleBackColor = true;
+            btPrincipalContatosUpdate.Anchor = AnchorStyles.Top;
+            btPrincipalContatosUpdate.Location = new Point(241, 78);
+            btPrincipalContatosUpdate.Name = "btPrincipalContatosUpdate";
+            btPrincipalContatosUpdate.Size = new Size(191, 37);
+            btPrincipalContatosUpdate.TabIndex = 2;
+            btPrincipalContatosUpdate.Text = "Update";
+            btPrincipalContatosUpdate.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btPrincipalContatosDelete
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Location = new Point(456, 78);
-            button2.Name = "button2";
-            button2.Size = new Size(191, 37);
-            button2.TabIndex = 3;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            btPrincipalContatosDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btPrincipalContatosDelete.Location = new Point(456, 78);
+            btPrincipalContatosDelete.Name = "btPrincipalContatosDelete";
+            btPrincipalContatosDelete.Size = new Size(191, 37);
+            btPrincipalContatosDelete.TabIndex = 3;
+            btPrincipalContatosDelete.Text = "Delete";
+            btPrincipalContatosDelete.UseVisualStyleBackColor = true;
+            btPrincipalContatosDelete.Click += btPrincipalContatosDelete_Click;
             // 
             // label1
             // 
@@ -80,6 +81,8 @@
             // 
             // contatosTable
             // 
+            contatosTable.AllowUserToAddRows = false;
+            contatosTable.AllowUserToDeleteRows = false;
             contatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             contatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             contatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -99,9 +102,9 @@
             ClientSize = new Size(673, 604);
             Controls.Add(contatosTable);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(Create);
+            Controls.Add(btPrincipalContatosDelete);
+            Controls.Add(btPrincipalContatosUpdate);
+            Controls.Add(btPrincipalContatosCreate);
             Name = "PrincipalContato";
             Text = "Contatos";
             ((System.ComponentModel.ISupportInitialize)contatosTable).EndInit();
@@ -110,9 +113,9 @@
 
         #endregion
 
-        private Button Create;
-        private Button button1;
-        private Button button2;
+        private Button btPrincipalContatosCreate;
+        private Button btPrincipalContatosUpdate;
+        private Button btPrincipalContatosDelete;
         private Label label1;
         private DataGridView contatosTable;
     }

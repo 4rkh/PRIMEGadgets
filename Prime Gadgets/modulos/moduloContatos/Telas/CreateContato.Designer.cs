@@ -31,12 +31,10 @@
             label1 = new Label();
             btContatoAddCriar = new Button();
             btContatoAddCancelar = new Button();
-            campAddContatosId = new TextBox();
             campAddContatosNome = new TextBox();
             campAddContatosSobrenome = new TextBox();
             campAddContatosTelefone = new TextBox();
             campAddContatosEmail = new TextBox();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -62,8 +60,8 @@
             btContatoAddCriar.TabIndex = 1;
             btContatoAddCriar.Text = "Criar";
             btContatoAddCriar.UseVisualStyleBackColor = true;
-            btContatoAddCriar.Click += btContatoAddCriar_Click;
             btContatoAddCriar.EnabledChanged += btContatoAddCriar_EnabledChanged;
+            btContatoAddCriar.Click += btContatoAddCriar_Click;
             // 
             // btContatoAddCancelar
             // 
@@ -74,15 +72,6 @@
             btContatoAddCancelar.Text = "Cancelar";
             btContatoAddCancelar.UseVisualStyleBackColor = true;
             btContatoAddCancelar.Click += btContatoAddCancelar_Click;
-            // 
-            // campAddContatosId
-            // 
-            campAddContatosId.Location = new Point(131, 128);
-            campAddContatosId.Name = "campAddContatosId";
-            campAddContatosId.Size = new Size(156, 23);
-            campAddContatosId.TabIndex = 3;
-            campAddContatosId.KeyPress += campAddContatosId_KeyPress;
-            campAddContatosId.TextChanged += Campos_TextChanged;
             // 
             // campAddContatosNome
             // 
@@ -98,7 +87,6 @@
             campAddContatosSobrenome.Name = "campAddContatosSobrenome";
             campAddContatosSobrenome.Size = new Size(156, 23);
             campAddContatosSobrenome.TabIndex = 5;
-            campAddContatosNome.TextChanged += Campos_TextChanged;
             // 
             // campAddContatosTelefone
             // 
@@ -106,8 +94,8 @@
             campAddContatosTelefone.Name = "campAddContatosTelefone";
             campAddContatosTelefone.Size = new Size(156, 23);
             campAddContatosTelefone.TabIndex = 6;
-            campAddContatosTelefone.KeyPress += campAddContatosTelefone_KeyPress;
             campAddContatosTelefone.TextChanged += Campos_TextChanged;
+            campAddContatosTelefone.KeyPress += campAddContatosTelefone_KeyPress;
             // 
             // campAddContatosEmail
             // 
@@ -115,17 +103,8 @@
             campAddContatosEmail.Name = "campAddContatosEmail";
             campAddContatosEmail.Size = new Size(156, 23);
             campAddContatosEmail.TabIndex = 7;
-            campAddContatosEmail.Validating += campAddContatosEmail_Validating;
             campAddContatosEmail.TextChanged += Campos_TextChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(56, 131);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 15);
-            label2.TabIndex = 8;
-            label2.Text = "ID";
+            campAddContatosEmail.Validating += campAddContatosEmail_Validating;
             // 
             // label3
             // 
@@ -174,12 +153,10 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(campAddContatosEmail);
             Controls.Add(campAddContatosTelefone);
             Controls.Add(campAddContatosSobrenome);
             Controls.Add(campAddContatosNome);
-            Controls.Add(campAddContatosId);
             Controls.Add(btContatoAddCancelar);
             Controls.Add(btContatoAddCriar);
             Controls.Add(label1);
@@ -197,12 +174,10 @@
         private Label label1;
         private Button btContatoAddCriar;
         private Button btContatoAddCancelar;
-        private TextBox campAddContatosId;
         private TextBox campAddContatosNome;
         private TextBox campAddContatosSobrenome;
         private TextBox campAddContatosTelefone;
         private TextBox campAddContatosEmail;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;

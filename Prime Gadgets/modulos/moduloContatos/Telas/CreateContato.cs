@@ -29,14 +29,15 @@ namespace Prime_Gadgets.Models
         private void btContatoAddCriar_Click(object sender, EventArgs e)
         {
             Contatos contato = new Contatos();
+            var contatoAccess = new ContatoAccess();
 
-            contato.Id = int.Parse(campAddContatosId.Text);
+            contato.Id = contatoAccess.LerUltimoId() + 1;
             contato.Nome = campAddContatosNome.Text;
             contato.Sobrenome = campAddContatosSobrenome.Text;
             contato.Telefone = campAddContatosTelefone.Text;
             contato.Email = campAddContatosEmail.Text;
 
-            var contatoAccess = new ContatoAccess();
+            
             contatoAccess.AdicionarContato(contato);
             this.Dispose();
         }
@@ -79,8 +80,7 @@ namespace Prime_Gadgets.Models
         private void VerificarCampos()
         {
             // Verifica se todos os campos estão preenchidos e se o e-mail é válido
-            bool camposPreenchidos = !string.IsNullOrWhiteSpace(campAddContatosId.Text) &&
-                                     !string.IsNullOrWhiteSpace(campAddContatosNome.Text) &&
+            bool camposPreenchidos = !string.IsNullOrWhiteSpace(campAddContatosNome.Text) &&
                                      !string.IsNullOrWhiteSpace(campAddContatosSobrenome.Text) &&
                                      !string.IsNullOrWhiteSpace(campAddContatosTelefone.Text) &&
                                      !string.IsNullOrWhiteSpace(campAddContatosEmail.Text) &&

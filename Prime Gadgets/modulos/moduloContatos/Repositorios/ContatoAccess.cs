@@ -47,7 +47,7 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
             }
         }
 
-        public List<Contatos> exibirContatos()
+        public List<Contatos> LerContatos()
         {
             var contatos = new List<Contatos>();
             try
@@ -134,7 +134,7 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
         {
             try
             {
-                List<Contatos> lista = exibirContatos();
+                List<Contatos> lista = LerContatos();
                 var contatoParaRemover = lista.Find(c => c.Id == id);
 
                 if (contatoParaRemover != null)
@@ -165,7 +165,50 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
                 MessageBox.Show("Problema ao tentar deletar o contato: " + e.Message);
             }
         }
+        public void UpdateContato(Contatos updatedContato,int oldId)
+        {
+            try
+            {
+                List<Contatos> lista = LerContatos();
+                var contatoParaAtualizar = lista.Find(c => c.Id == oldId);
 
+                if (contatoParaAtualizar != null)
+                {
+                    // Atualiza as propriedades do contato encontrado
+                    contatoParaAtualizar.Id = updatedContato.Id;
+                    contatoParaAtualizar.Nome = updatedContato.Nome;
+                    contatoParaAtualizar.Sobrenome = updatedContato.Sobrenome;
+                    contatoParaAtualizar.Telefone = updatedContato.Telefone;
+                    contatoParaAtualizar.Email = updatedContato.Email;
 
+                    lista = OrdenarContatosPorId(lista);
+
+                    // Deleta o arquivo existente
+                    File.Delete(caminho);
+
+                    // Cria novamente o arquivo e adiciona a nova lista de contatos
+                    using (StreamWriter sw = File.CreateText(caminho))
+                    {
+                        foreach (var contato in lista)
+                        {
+                            string linha = $"{contato.Id},{contato.Nome},{contato.Sobrenome},{contato.Telefone},{contato.Email}";
+                            sw.WriteLine(linha);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Contato não encontrado.");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Problema ao tentar atualizar o contato: " + e.Message);
+            }
+        }
+        public List<Contatos> OrdenarContatosPorId(List<Contatos> lista)
+        {
+            return lista.OrderBy(c => c.Id).ToList();
+        }
     }
 }

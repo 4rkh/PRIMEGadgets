@@ -17,7 +17,7 @@ namespace Prime_Gadgets.Models
         public CreateContato()
         {
             InitializeComponent();
-            btContatoAddCriar.Enabled = false; // Desabilita o botão "Criar" inicialmente
+            btAddContatosCriar.Enabled = false; // Desabilita o botão "Criar" inicialmente
             AtualizarCorBotao(); // Atualiza a cor do botão inicialmente
         }
 
@@ -86,19 +86,19 @@ namespace Prime_Gadgets.Models
                                      !string.IsNullOrWhiteSpace(campAddContatosEmail.Text) &&
                                      IsValidEmail(campAddContatosEmail.Text);
 
-            btContatoAddCriar.Enabled = camposPreenchidos;
+            btAddContatosCriar.Enabled = camposPreenchidos;
             AtualizarCorBotao();
         }
 
         private void AtualizarCorBotao()
         {
-            if (btContatoAddCriar.Enabled)
+            if (btAddContatosCriar.Enabled)
             {
-                btContatoAddCriar.BackColor = Color.Green; // Cor quando o botão está ativado
+                btAddContatosCriar.BackColor = Color.Green; // Cor quando o botão está ativado
             }
             else
             {
-                btContatoAddCriar.BackColor = Color.Red; // Cor quando o botão está desativado
+                btAddContatosCriar.BackColor = Color.Red; // Cor quando o botão está desativado
             }
         }
 

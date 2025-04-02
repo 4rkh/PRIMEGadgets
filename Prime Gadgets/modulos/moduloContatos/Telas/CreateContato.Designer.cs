@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            btContatoAddCriar = new Button();
-            btContatoAddCancelar = new Button();
+            lbAddContatosTitulo = new Label();
+            btAddContatosCriar = new Button();
+            btAddContatosCancelar = new Button();
             campAddContatosNome = new TextBox();
             campAddContatosSobrenome = new TextBox();
             campAddContatosTelefone = new TextBox();
             campAddContatosEmail = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            lbAddContatosNome = new Label();
+            lbAddContatosSobrenome = new Label();
+            lbAddContatosTelefone = new Label();
+            lbAddContatosEmail = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lbAddContatosTitulo
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Narrow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(68, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(229, 37);
-            label1.TabIndex = 0;
-            label1.Text = "Adicionar Contato";
+            lbAddContatosTitulo.AutoSize = true;
+            lbAddContatosTitulo.BackColor = Color.Transparent;
+            lbAddContatosTitulo.Font = new Font("Arial Narrow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbAddContatosTitulo.Location = new Point(68, 36);
+            lbAddContatosTitulo.Name = "lbAddContatosTitulo";
+            lbAddContatosTitulo.Size = new Size(229, 37);
+            lbAddContatosTitulo.TabIndex = 0;
+            lbAddContatosTitulo.Text = "Adicionar Contato";
             // 
-            // btContatoAddCriar
+            // btAddContatosCriar
             // 
-            btContatoAddCriar.Location = new Point(47, 382);
-            btContatoAddCriar.Name = "btContatoAddCriar";
-            btContatoAddCriar.Size = new Size(118, 37);
-            btContatoAddCriar.TabIndex = 1;
-            btContatoAddCriar.Text = "Criar";
-            btContatoAddCriar.UseVisualStyleBackColor = true;
-            btContatoAddCriar.EnabledChanged += btContatoAddCriar_EnabledChanged;
-            btContatoAddCriar.Click += btContatoAddCriar_Click;
+            btAddContatosCriar.Location = new Point(47, 382);
+            btAddContatosCriar.Name = "btAddContatosCriar";
+            btAddContatosCriar.Size = new Size(118, 37);
+            btAddContatosCriar.TabIndex = 1;
+            btAddContatosCriar.Text = "Criar";
+            btAddContatosCriar.UseVisualStyleBackColor = true;
+            btAddContatosCriar.EnabledChanged += btContatoAddCriar_EnabledChanged;
+            btAddContatosCriar.Click += btContatoAddCriar_Click;
             // 
-            // btContatoAddCancelar
+            // btAddContatosCancelar
             // 
-            btContatoAddCancelar.Location = new Point(199, 382);
-            btContatoAddCancelar.Name = "btContatoAddCancelar";
-            btContatoAddCancelar.Size = new Size(118, 37);
-            btContatoAddCancelar.TabIndex = 2;
-            btContatoAddCancelar.Text = "Cancelar";
-            btContatoAddCancelar.UseVisualStyleBackColor = true;
-            btContatoAddCancelar.Click += btContatoAddCancelar_Click;
+            btAddContatosCancelar.Location = new Point(199, 382);
+            btAddContatosCancelar.Name = "btAddContatosCancelar";
+            btAddContatosCancelar.Size = new Size(118, 37);
+            btAddContatosCancelar.TabIndex = 2;
+            btAddContatosCancelar.Text = "Cancelar";
+            btAddContatosCancelar.UseVisualStyleBackColor = true;
+            btAddContatosCancelar.Click += btContatoAddCancelar_Click;
             // 
             // campAddContatosNome
             // 
@@ -106,41 +106,41 @@
             campAddContatosEmail.TextChanged += Campos_TextChanged;
             campAddContatosEmail.Validating += campAddContatosEmail_Validating;
             // 
-            // label3
+            // lbAddContatosNome
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(56, 160);
-            label3.Name = "label3";
-            label3.Size = new Size(40, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Nome";
+            lbAddContatosNome.AutoSize = true;
+            lbAddContatosNome.Location = new Point(56, 160);
+            lbAddContatosNome.Name = "lbAddContatosNome";
+            lbAddContatosNome.Size = new Size(40, 15);
+            lbAddContatosNome.TabIndex = 9;
+            lbAddContatosNome.Text = "Nome";
             // 
-            // label4
+            // lbAddContatosSobrenome
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(40, 189);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Sobrenome";
+            lbAddContatosSobrenome.AutoSize = true;
+            lbAddContatosSobrenome.Location = new Point(40, 189);
+            lbAddContatosSobrenome.Name = "lbAddContatosSobrenome";
+            lbAddContatosSobrenome.Size = new Size(68, 15);
+            lbAddContatosSobrenome.TabIndex = 10;
+            lbAddContatosSobrenome.Text = "Sobrenome";
             // 
-            // label5
+            // lbAddContatosTelefone
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(47, 218);
-            label5.Name = "label5";
-            label5.Size = new Size(52, 15);
-            label5.TabIndex = 11;
-            label5.Text = "Telefone";
+            lbAddContatosTelefone.AutoSize = true;
+            lbAddContatosTelefone.Location = new Point(47, 218);
+            lbAddContatosTelefone.Name = "lbAddContatosTelefone";
+            lbAddContatosTelefone.Size = new Size(52, 15);
+            lbAddContatosTelefone.TabIndex = 11;
+            lbAddContatosTelefone.Text = "Telefone";
             // 
-            // label6
+            // lbAddContatosEmail
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(56, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(36, 15);
-            label6.TabIndex = 12;
-            label6.Text = "Email";
+            lbAddContatosEmail.AutoSize = true;
+            lbAddContatosEmail.Location = new Point(56, 247);
+            lbAddContatosEmail.Name = "lbAddContatosEmail";
+            lbAddContatosEmail.Size = new Size(36, 15);
+            lbAddContatosEmail.TabIndex = 12;
+            lbAddContatosEmail.Text = "Email";
             // 
             // CreateContato
             // 
@@ -149,17 +149,17 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(367, 450);
             ControlBox = false;
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(lbAddContatosEmail);
+            Controls.Add(lbAddContatosTelefone);
+            Controls.Add(lbAddContatosSobrenome);
+            Controls.Add(lbAddContatosNome);
             Controls.Add(campAddContatosEmail);
             Controls.Add(campAddContatosTelefone);
             Controls.Add(campAddContatosSobrenome);
             Controls.Add(campAddContatosNome);
-            Controls.Add(btContatoAddCancelar);
-            Controls.Add(btContatoAddCriar);
-            Controls.Add(label1);
+            Controls.Add(btAddContatosCancelar);
+            Controls.Add(btAddContatosCriar);
+            Controls.Add(lbAddContatosTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "CreateContato";
@@ -171,16 +171,16 @@
 
         #endregion
 
-        private Label label1;
-        private Button btContatoAddCriar;
-        private Button btContatoAddCancelar;
+        private Label lbAddContatosTitulo;
+        private Button btAddContatosCriar;
+        private Button btAddContatosCancelar;
         private TextBox campAddContatosNome;
         private TextBox campAddContatosSobrenome;
         private TextBox campAddContatosTelefone;
         private TextBox campAddContatosEmail;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        private Label lbAddContatosNome;
+        private Label lbAddContatosSobrenome;
+        private Label lbAddContatosTelefone;
+        private Label lbAddContatosEmail;
     }
 }

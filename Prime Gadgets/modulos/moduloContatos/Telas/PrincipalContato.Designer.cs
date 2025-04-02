@@ -32,8 +32,8 @@
             btPrincipalContatosUpdate = new Button();
             btPrincipalContatosDelete = new Button();
             label1 = new Label();
-            contatosTable = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)contatosTable).BeginInit();
+            ContatosTable = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)ContatosTable).BeginInit();
             SuspendLayout();
             // 
             // btPrincipalContatosCreate
@@ -56,6 +56,7 @@
             btPrincipalContatosUpdate.TabIndex = 2;
             btPrincipalContatosUpdate.Text = "Update";
             btPrincipalContatosUpdate.UseVisualStyleBackColor = true;
+            btPrincipalContatosUpdate.Click += btPrincipalContatosUpdate_Click;
             // 
             // btPrincipalContatosDelete
             // 
@@ -79,35 +80,35 @@
             label1.Text = "Lista de Contatos";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // contatosTable
+            // ContatosTable
             // 
-            contatosTable.AllowUserToAddRows = false;
-            contatosTable.AllowUserToDeleteRows = false;
-            contatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            contatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            contatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            contatosTable.Location = new Point(23, 140);
-            contatosTable.MultiSelect = false;
-            contatosTable.Name = "contatosTable";
-            contatosTable.RowHeadersVisible = false;
-            contatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            contatosTable.Size = new Size(624, 432);
-            contatosTable.TabIndex = 5;
-            contatosTable.CellContentClick += contatosTable_CellContentClick;
+            ContatosTable.AllowUserToAddRows = false;
+            ContatosTable.AllowUserToDeleteRows = false;
+            ContatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ContatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ContatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ContatosTable.Location = new Point(23, 140);
+            ContatosTable.MultiSelect = false;
+            ContatosTable.Name = "ContatosTable";
+            ContatosTable.RowHeadersVisible = false;
+            ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ContatosTable.Size = new Size(624, 432);
+            ContatosTable.TabIndex = 5;
+            ContatosTable.CellContentClick += contatosTable_CellContentClick;
             // 
             // PrincipalContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(673, 604);
-            Controls.Add(contatosTable);
+            Controls.Add(ContatosTable);
             Controls.Add(label1);
             Controls.Add(btPrincipalContatosDelete);
             Controls.Add(btPrincipalContatosUpdate);
             Controls.Add(btPrincipalContatosCreate);
             Name = "PrincipalContato";
             Text = "Contatos";
-            ((System.ComponentModel.ISupportInitialize)contatosTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ContatosTable).EndInit();
             ResumeLayout(false);
         }
 
@@ -117,6 +118,6 @@
         private Button btPrincipalContatosUpdate;
         private Button btPrincipalContatosDelete;
         private Label label1;
-        private DataGridView contatosTable;
+        private DataGridView ContatosTable;
     }
 }

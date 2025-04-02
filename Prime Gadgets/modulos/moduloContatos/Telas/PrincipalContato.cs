@@ -1,12 +1,15 @@
 using Prime_Gadgets.Models;
 using Prime_Gadgets.modulos.moduloContatos.Modelos;
 using Prime_Gadgets.modulos.moduloContatos.Repositorios;
+using Prime_Gadgets.modulos.moduloContatos.Telas;
 using System.Data;
 
 namespace Prime_Gadgets
 {
+
     public partial class PrincipalContato : Form
     {
+        
         public PrincipalContato()
         {
             try
@@ -36,7 +39,7 @@ namespace Prime_Gadgets
         public void LerTabela()
         {
             var contatoAccess = new ContatoAccess();
-            var contatos = contatoAccess.exibirContatos();
+            var contatos = contatoAccess.LerContatos();
 
             DataTable dataTable = new DataTable();
 
@@ -57,13 +60,13 @@ namespace Prime_Gadgets
                 dataTable.Rows.Add(row);
             }
 
-            this.contatosTable.DataSource = dataTable;
+            this.ContatosTable.DataSource = dataTable;
         }
-        public Contatos ContatoSelectId()
+        public Contatos ContatoSelect()
         {
-            if (contatosTable.SelectedRows.Count > 0)
+            if (ContatosTable.SelectedRows.Count > 0)
             {
-                var selectedRow = contatosTable.SelectedRows[0];
+                var selectedRow = ContatosTable.SelectedRows[0];
                 return new Contatos
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["ID"].Value),
@@ -81,15 +84,9 @@ namespace Prime_Gadgets
             createContato.ShowDialog();
             LerTabela();
         }
-
-        private void contatosTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btPrincipalContatosDelete_Click(object sender, EventArgs e)
         {
-            var contato = ContatoSelectId();
+            var contato = ContatoSelect();
             if (contato != null)
             {
                 var result = MessageBox.Show($"Você deseja deletar o contato \"{contato.Nome}\"?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -104,6 +101,22 @@ namespace Prime_Gadgets
             {
                 MessageBox.Show("Nenhum contato selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        
+
+        //clicar botao chama UpdateContato()
+        //inicializar uam list<contatos>
+        //update contato exibe a tela e os campo que sao capturados anteriormente na linha selecionada
+        //substituir os valore na list<contatos>
+        //fazer o sort na lista
+        //salvar a lista no arquivo
+
+        private void btPrincipalContatosUpdate_Click(object sender, EventArgs e)
+        {
+            var contato = ContatoSelect();
+            UpdateContato updateContato = new UpdateContato(contato);
+            updateContato.ShowDialog();
+            LerTabela();
         }
     }
 }

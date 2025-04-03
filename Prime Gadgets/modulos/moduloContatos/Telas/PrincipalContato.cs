@@ -39,7 +39,8 @@ namespace Prime_Gadgets
         public void LerTabela()
         {
             var contatoAccess = new ContatoAccess();
-            var contatos = contatoAccess.LerContatos();
+            List<Contatos> contatos = contatoAccess.LerContatos();
+            contatos = contatoAccess.OrdenarContatosPorId(contatos);
 
             DataTable dataTable = new DataTable();
 

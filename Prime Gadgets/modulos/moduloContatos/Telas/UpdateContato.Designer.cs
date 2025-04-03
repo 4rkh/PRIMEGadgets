@@ -41,6 +41,7 @@
             lbUpdateContatosEmail = new Label();
             lbUpdateContatosId = new Label();
             campUpdateContatosId = new TextBox();
+            lbUpdateContatosEmailInvalid = new Label();
             SuspendLayout();
             // 
             // lbUpdateContatosTitulo
@@ -80,8 +81,8 @@
             campUpdateContatosNome.Name = "campUpdateContatosNome";
             campUpdateContatosNome.Size = new Size(156, 23);
             campUpdateContatosNome.TabIndex = 4;
-            campUpdateContatosNome.KeyPress += campUpdateContatosNome_KeyPress;
             campUpdateContatosNome.TextChanged += Campos_TextChanged;
+            campUpdateContatosNome.KeyPress += campUpdateContatosNome_KeyPress;
             // 
             // campUpdateContatosSobrenome
             // 
@@ -89,8 +90,8 @@
             campUpdateContatosSobrenome.Name = "campUpdateContatosSobrenome";
             campUpdateContatosSobrenome.Size = new Size(156, 23);
             campUpdateContatosSobrenome.TabIndex = 5;
-            campUpdateContatosSobrenome.KeyPress += campUpdateContatosSobrenome_KeyPress;
             campUpdateContatosSobrenome.TextChanged += Campos_TextChanged;
+            campUpdateContatosSobrenome.KeyPress += campUpdateContatosSobrenome_KeyPress;
             // 
             // campUpdateContatosTelefone
             // 
@@ -98,8 +99,8 @@
             campUpdateContatosTelefone.Name = "campUpdateContatosTelefone";
             campUpdateContatosTelefone.Size = new Size(156, 23);
             campUpdateContatosTelefone.TabIndex = 6;
-            campUpdateContatosTelefone.KeyPress += campUpdateContatosTelefone_KeyPress;
             campUpdateContatosTelefone.TextChanged += Campos_TextChanged;
+            campUpdateContatosTelefone.KeyPress += campUpdateContatosTelefone_KeyPress;
             // 
             // campUpdateContatosEmail
             // 
@@ -107,8 +108,8 @@
             campUpdateContatosEmail.Name = "campUpdateContatosEmail";
             campUpdateContatosEmail.Size = new Size(156, 23);
             campUpdateContatosEmail.TabIndex = 7;
-            campUpdateContatosEmail.Validating += campUpdateContatosEmail_Validating;
             campUpdateContatosEmail.TextChanged += Campos_TextChanged;
+            campUpdateContatosEmail.Validating += campUpdateContatosEmail_Validating;
             // 
             // lbUpdateContatosNome
             // 
@@ -161,8 +162,18 @@
             campUpdateContatosId.Name = "campUpdateContatosId";
             campUpdateContatosId.Size = new Size(156, 23);
             campUpdateContatosId.TabIndex = 14;
-            campUpdateContatosId.KeyPress += campUpdateContatosId_KeyPress;
             campUpdateContatosId.TextChanged += Campos_TextChanged;
+            campUpdateContatosId.KeyPress += campUpdateContatosId_KeyPress;
+            // 
+            // lbUpdateContatosEmailInvalid
+            // 
+            lbUpdateContatosEmailInvalid.AutoSize = true;
+            lbUpdateContatosEmailInvalid.ForeColor = Color.Red;
+            lbUpdateContatosEmailInvalid.Location = new Point(168, 270);
+            lbUpdateContatosEmailInvalid.Name = "lbUpdateContatosEmailInvalid";
+            lbUpdateContatosEmailInvalid.Size = new Size(81, 15);
+            lbUpdateContatosEmailInvalid.TabIndex = 15;
+            lbUpdateContatosEmailInvalid.Text = "Email Inválido";
             // 
             // UpdateContato
             // 
@@ -171,6 +182,7 @@
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(367, 450);
             ControlBox = false;
+            Controls.Add(lbUpdateContatosEmailInvalid);
             Controls.Add(campUpdateContatosId);
             Controls.Add(lbUpdateContatosId);
             Controls.Add(lbUpdateContatosEmail);
@@ -208,5 +220,6 @@
         private Label lbUpdateContatosEmail;
         private Label lbUpdateContatosId;
         private TextBox campUpdateContatosId;
+        private Label lbUpdateContatosEmailInvalid;
     }
 }

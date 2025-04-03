@@ -6,11 +6,12 @@ namespace Prime_Gadgets.modulos.moduloContatos.Telas
 {
     public partial class UpdateContato : Form
     {
-        private bool cancelClicked = true; // Esta variavel serve para consertar um bug no bota cancelar
         public Contatos UpdatedContato { get; private set; }
         public UpdateContato(Contatos contato)
         {
             InitializeComponent();
+            btUpdateContatosCancelar.CausesValidation = false; // Desabilita a validação de campos para o botão "Cancelar"
+            lbUpdateContatosEmailInvalid.Hide();
             UpdatedContato = contato;
             PreencherCampos();
         }
@@ -61,20 +62,13 @@ namespace Prime_Gadgets.modulos.moduloContatos.Telas
             var email = campUpdateContatosEmail.Text;
 
             // Valida o formato do e-mail
-            if (cancelClicked)
+            if (!IsValidEmail(email))
             {
-                return;
 
+                e.Cancel = true;
             }
-            else
-            {
-                if (!IsValidEmail(email))
-                {
-                    e.Cancel = true;
-                    MessageBox.Show("Por favor, insira um endereço de e-mail válido.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                VerificarCampos();
-            }
+            VerificarCampos();
+
         }
 
         private bool IsValidEmail(string email)
@@ -82,10 +76,12 @@ namespace Prime_Gadgets.modulos.moduloContatos.Telas
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
+                lbUpdateContatosEmailInvalid.Hide();
                 return addr.Address == email;
             }
             catch
             {
+                lbUpdateContatosEmailInvalid.Show();
                 return false;
             }
         }
@@ -103,7 +99,6 @@ namespace Prime_Gadgets.modulos.moduloContatos.Telas
         {
             VerificarCampos();
         }
-
         private void VerificarCampos()
         {
             bool camposValidos = !string.IsNullOrWhiteSpace(campUpdateContatosNome.Text) &&

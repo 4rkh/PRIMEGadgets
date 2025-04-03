@@ -39,6 +39,7 @@
             lbAddContatosSobrenome = new Label();
             lbAddContatosTelefone = new Label();
             lbAddContatosEmail = new Label();
+            lbAddContatoEmailInvalid = new Label();
             SuspendLayout();
             // 
             // lbAddContatosTitulo
@@ -142,6 +143,16 @@
             lbAddContatosEmail.TabIndex = 12;
             lbAddContatosEmail.Text = "Email";
             // 
+            // lbAddContatoEmailInvalid
+            // 
+            lbAddContatoEmailInvalid.AutoSize = true;
+            lbAddContatoEmailInvalid.ForeColor = Color.Red;
+            lbAddContatoEmailInvalid.Location = new Point(164, 270);
+            lbAddContatoEmailInvalid.Name = "lbAddContatoEmailInvalid";
+            lbAddContatoEmailInvalid.Size = new Size(81, 15);
+            lbAddContatoEmailInvalid.TabIndex = 13;
+            lbAddContatoEmailInvalid.Text = "Email Inválido";
+            // 
             // CreateContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -149,6 +160,7 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(367, 450);
             ControlBox = false;
+            Controls.Add(lbAddContatoEmailInvalid);
             Controls.Add(lbAddContatosEmail);
             Controls.Add(lbAddContatosTelefone);
             Controls.Add(lbAddContatosSobrenome);
@@ -182,5 +194,6 @@
         private Label lbAddContatosSobrenome;
         private Label lbAddContatosTelefone;
         private Label lbAddContatosEmail;
+        private Label lbAddContatoEmailInvalid;
     }
 }

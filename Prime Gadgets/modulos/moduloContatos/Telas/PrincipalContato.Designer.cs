@@ -94,7 +94,6 @@
             ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ContatosTable.Size = new Size(624, 432);
             ContatosTable.TabIndex = 5;
-            ContatosTable.CellContentClick += contatosTable_CellContentClick;
             // 
             // PrincipalContato
             // 
@@ -106,6 +105,7 @@
             Controls.Add(btPrincipalContatosDelete);
             Controls.Add(btPrincipalContatosUpdate);
             Controls.Add(btPrincipalContatosCreate);
+            MinimumSize = new Size(689, 643);
             Name = "PrincipalContato";
             Text = "Contatos";
             ((System.ComponentModel.ISupportInitialize)ContatosTable).EndInit();

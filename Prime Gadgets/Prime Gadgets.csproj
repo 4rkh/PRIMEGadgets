@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="modulos\moduloCalculadora\Telas\" />
-    <Folder Include="modulos\moduloCalendario\Telas\" />
     <Folder Include="modulos\moduloFinanceiro\Telas\" />
     <Folder Include="modulos\moduloRotina\Telas\" />
     <Folder Include="modulos\moduloSenhas\Modelos\" />

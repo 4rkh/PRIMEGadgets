@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            btMenuPrincipalCalculadora = new Button();
+            btMenuPrincipalCalendario = new Button();
             btMenuPrincipalContatos = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            btMenuPrincipalFinanceiro = new Button();
+            btMenuPrincipalLembretes = new Button();
+            btMenuPrincipalRotina = new Button();
+            btMenuPrincipalSenhas = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btMenuPrincipalCalculadora
             // 
-            button1.BackColor = Color.DarkGray;
-            button1.Location = new Point(24, 37);
-            button1.Name = "button1";
-            button1.Size = new Size(95, 47);
-            button1.TabIndex = 0;
-            button1.Text = "Calculadora";
-            button1.UseVisualStyleBackColor = false;
+            btMenuPrincipalCalculadora.BackColor = Color.DarkGray;
+            btMenuPrincipalCalculadora.Location = new Point(24, 37);
+            btMenuPrincipalCalculadora.Name = "btMenuPrincipalCalculadora";
+            btMenuPrincipalCalculadora.Size = new Size(95, 47);
+            btMenuPrincipalCalculadora.TabIndex = 0;
+            btMenuPrincipalCalculadora.Text = "Calculadora";
+            btMenuPrincipalCalculadora.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btMenuPrincipalCalendario
             // 
-            button2.BackColor = Color.Gray;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 192);
-            button2.FlatAppearance.BorderSize = 100;
-            button2.FlatAppearance.MouseDownBackColor = Color.Blue;
-            button2.Location = new Point(141, 37);
-            button2.Name = "button2";
-            button2.Size = new Size(86, 47);
-            button2.TabIndex = 1;
-            button2.Text = "Calendário";
-            button2.UseVisualStyleBackColor = false;
+            btMenuPrincipalCalendario.BackColor = Color.LimeGreen;
+            btMenuPrincipalCalendario.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 192);
+            btMenuPrincipalCalendario.FlatAppearance.BorderSize = 100;
+            btMenuPrincipalCalendario.FlatAppearance.MouseDownBackColor = Color.Blue;
+            btMenuPrincipalCalendario.Location = new Point(141, 37);
+            btMenuPrincipalCalendario.Name = "btMenuPrincipalCalendario";
+            btMenuPrincipalCalendario.Size = new Size(86, 47);
+            btMenuPrincipalCalendario.TabIndex = 1;
+            btMenuPrincipalCalendario.Text = "Calendário";
+            btMenuPrincipalCalendario.UseVisualStyleBackColor = false;
+            btMenuPrincipalCalendario.Click += btMenuPrincipalCalendario_Click;
             // 
             // btMenuPrincipalContatos
             // 
@@ -71,46 +72,46 @@
             btMenuPrincipalContatos.UseVisualStyleBackColor = false;
             btMenuPrincipalContatos.Click += btMenuPrincipalContatos_Click;
             // 
-            // button4
+            // btMenuPrincipalFinanceiro
             // 
-            button4.BackColor = Color.Gray;
-            button4.Location = new Point(355, 37);
-            button4.Name = "button4";
-            button4.Size = new Size(82, 47);
-            button4.TabIndex = 3;
-            button4.Text = "Finaceiro";
-            button4.UseVisualStyleBackColor = false;
+            btMenuPrincipalFinanceiro.BackColor = Color.Gray;
+            btMenuPrincipalFinanceiro.Location = new Point(355, 37);
+            btMenuPrincipalFinanceiro.Name = "btMenuPrincipalFinanceiro";
+            btMenuPrincipalFinanceiro.Size = new Size(82, 47);
+            btMenuPrincipalFinanceiro.TabIndex = 3;
+            btMenuPrincipalFinanceiro.Text = "Finaceiro";
+            btMenuPrincipalFinanceiro.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btMenuPrincipalLembretes
             // 
-            button5.BackColor = Color.Gray;
-            button5.Location = new Point(455, 37);
-            button5.Name = "button5";
-            button5.Size = new Size(90, 47);
-            button5.TabIndex = 4;
-            button5.Text = "Lembretes";
-            button5.UseVisualStyleBackColor = false;
+            btMenuPrincipalLembretes.BackColor = Color.Gray;
+            btMenuPrincipalLembretes.Location = new Point(455, 37);
+            btMenuPrincipalLembretes.Name = "btMenuPrincipalLembretes";
+            btMenuPrincipalLembretes.Size = new Size(90, 47);
+            btMenuPrincipalLembretes.TabIndex = 4;
+            btMenuPrincipalLembretes.Text = "Lembretes";
+            btMenuPrincipalLembretes.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btMenuPrincipalRotina
             // 
-            button6.BackColor = Color.Gray;
-            button6.Location = new Point(568, 37);
-            button6.Name = "button6";
-            button6.Size = new Size(90, 47);
-            button6.TabIndex = 5;
-            button6.Text = "Rotina";
-            button6.UseVisualStyleBackColor = false;
+            btMenuPrincipalRotina.BackColor = Color.Gray;
+            btMenuPrincipalRotina.Location = new Point(568, 37);
+            btMenuPrincipalRotina.Name = "btMenuPrincipalRotina";
+            btMenuPrincipalRotina.Size = new Size(90, 47);
+            btMenuPrincipalRotina.TabIndex = 5;
+            btMenuPrincipalRotina.Text = "Rotina";
+            btMenuPrincipalRotina.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btMenuPrincipalSenhas
             // 
-            button7.BackColor = Color.Gray;
-            button7.FlatAppearance.BorderColor = Color.Blue;
-            button7.Location = new Point(678, 37);
-            button7.Name = "button7";
-            button7.Size = new Size(97, 47);
-            button7.TabIndex = 6;
-            button7.Text = "Senhas";
-            button7.UseVisualStyleBackColor = false;
+            btMenuPrincipalSenhas.BackColor = Color.Gray;
+            btMenuPrincipalSenhas.FlatAppearance.BorderColor = Color.Blue;
+            btMenuPrincipalSenhas.Location = new Point(678, 37);
+            btMenuPrincipalSenhas.Name = "btMenuPrincipalSenhas";
+            btMenuPrincipalSenhas.Size = new Size(97, 47);
+            btMenuPrincipalSenhas.TabIndex = 6;
+            btMenuPrincipalSenhas.Text = "Senhas";
+            btMenuPrincipalSenhas.UseVisualStyleBackColor = false;
             // 
             // MenuPrincipal
             // 
@@ -118,13 +119,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Firebrick;
             ClientSize = new Size(800, 116);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(btMenuPrincipalSenhas);
+            Controls.Add(btMenuPrincipalRotina);
+            Controls.Add(btMenuPrincipalLembretes);
+            Controls.Add(btMenuPrincipalFinanceiro);
             Controls.Add(btMenuPrincipalContatos);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btMenuPrincipalCalendario);
+            Controls.Add(btMenuPrincipalCalculadora);
             Name = "MenuPrincipal";
             Text = "MenuPrincipal";
             ResumeLayout(false);
@@ -132,12 +133,12 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button btMenuPrincipalCalculadora;
+        private Button btMenuPrincipalCalendario;
         private Button btMenuPrincipalContatos;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button btMenuPrincipalFinanceiro;
+        private Button btMenuPrincipalLembretes;
+        private Button btMenuPrincipalRotina;
+        private Button btMenuPrincipalSenhas;
     }
 }

@@ -1,5 +1,14 @@
-﻿namespace Prime_Gadgets.Models
+﻿namespace Prime_Gadgets.modulos.moduloContatos
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
     partial class CreateContato
     {
         /// <summary>

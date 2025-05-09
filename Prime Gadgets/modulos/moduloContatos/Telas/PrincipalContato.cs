@@ -1,10 +1,14 @@
-using Prime_Gadgets.Models;
-using Prime_Gadgets.modulos.moduloContatos.Modelos;
-using Prime_Gadgets.modulos.moduloContatos.Repositorios;
-using Prime_Gadgets.modulos.moduloContatos.Telas;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Prime_Gadgets
+namespace Prime_Gadgets.modulos.moduloContatos
 {
 
     public partial class PrincipalContato : Form

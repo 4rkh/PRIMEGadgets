@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
-using Prime_Gadgets.modulos.moduloContatos.Modelos;
+using Prime_Gadgets.modulos.moduloContatos;
 using System.Net.NetworkInformation;
 
-namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
+namespace Prime_Gadgets.modulos.moduloContatos
 {
     public class ContatoAccess
     {
@@ -54,7 +54,7 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
             {
                 //Divide o arquivo .prime em linhas
                 var linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-
+                contatos = OrdenarContatosPorId(contatos);
                 foreach (var linha in linhas)
                 {
                     if (!string.IsNullOrWhiteSpace(linha))
@@ -78,6 +78,8 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
                         }
                     }
                 }
+                // Ordena a lista de contatos por ID
+                
             }
             catch (Exception e)
             {
@@ -144,6 +146,7 @@ namespace Prime_Gadgets.modulos.moduloContatos.Repositorios
 
                     // Deleta o arquivo existente
                     File.Delete(caminho);
+                    lista = OrdenarContatosPorId(lista);
 
                     // Cria novamente o arquivo e adiciona a nova lista de contatos
                     using (StreamWriter sw = File.CreateText(caminho))

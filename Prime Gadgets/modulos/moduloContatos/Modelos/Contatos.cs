@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prime_Gadgets.modulos.moduloContatos.Modelos
+namespace Prime_Gadgets.modulos.moduloContatos
 {
     public class Contatos
     {

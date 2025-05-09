@@ -1,5 +1,4 @@
-﻿using Prime_Gadgets.modulos.moduloContatos.Modelos;
-using Prime_Gadgets.modulos.moduloContatos.Repositorios;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prime_Gadgets.Models
+namespace Prime_Gadgets.modulos.moduloContatos
 {
     public partial class CreateContato : Form
     {

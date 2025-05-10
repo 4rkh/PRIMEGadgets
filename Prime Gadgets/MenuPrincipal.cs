@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloCalendario;
-using Prime_Gadgets.modulos.moduloCalendario.Telas;
 
 namespace Prime_Gadgets
 {

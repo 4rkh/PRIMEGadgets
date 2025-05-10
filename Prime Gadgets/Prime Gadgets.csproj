@@ -17,11 +17,8 @@
     <Folder Include="modulos\moduloCalculadora\Telas\" />
     <Folder Include="modulos\moduloFinanceiro\Telas\" />
     <Folder Include="modulos\moduloRotina\Telas\" />
-    <Folder Include="modulos\moduloSenhas\Modelos\" />
-    <Folder Include="modulos\moduloSenhas\Repositorios\" />
     <Folder Include="modulos\moduloRotina\Modelos\" />
     <Folder Include="modulos\moduloRotina\Repositorios\" />
-    <Folder Include="modulos\moduloSenhas\Telas\" />
     <Folder Include="modulos\moduloLembretes\Modelos\" />
     <Folder Include="modulos\moduloLembretes\Repositorios\" />
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />

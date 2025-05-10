@@ -144,6 +144,7 @@
             btCreateSenhasCriar.TabIndex = 10;
             btCreateSenhasCriar.Text = "Criar";
             btCreateSenhasCriar.UseVisualStyleBackColor = true;
+            btCreateSenhasCriar.Click += btCreateSenhasCriar_Click;
             // 
             // btCreateSenhasCancelar
             // 
@@ -154,6 +155,7 @@
             btCreateSenhasCancelar.TabIndex = 11;
             btCreateSenhasCancelar.Text = "Cancelar";
             btCreateSenhasCancelar.UseVisualStyleBackColor = true;
+            btCreateSenhasCancelar.Click += btCreateSenhasCancelar_Click;
             // 
             // CreateSenhas
             // 

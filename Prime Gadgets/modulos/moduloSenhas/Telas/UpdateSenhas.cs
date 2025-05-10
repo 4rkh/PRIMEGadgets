@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Prime_Gadgets.modulos.moduloSenhas.Telas
 {
-    public partial class CreateSenhas : Form
+    public partial class UpdateSenhas : Form
     {
-        public CreateSenhas()
+        public UpdateSenhas()
         {
             InitializeComponent();
         }
 
-        private void btCreateSenhasCriar_Click(object sender, EventArgs e)
+        private void btUpdateSenhasAtualizar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btCreateSenhasCancelar_Click(object sender, EventArgs e)
+        private void btUpdateSenhasCancelar_Click(object sender, EventArgs e)
         {
 
         }

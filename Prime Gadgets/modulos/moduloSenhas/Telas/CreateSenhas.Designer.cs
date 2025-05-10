@@ -1,4 +1,4 @@
-﻿namespace Prime_Gadgets.modulos.moduloSenhas.Telas
+﻿namespace Prime_Gadgets.modulos.moduloSenhas
 {
     partial class CreateSenhas
     {

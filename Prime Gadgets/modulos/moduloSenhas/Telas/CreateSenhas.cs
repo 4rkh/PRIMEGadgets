@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prime_Gadgets.modulos.moduloSenhas.Telas
+namespace Prime_Gadgets.modulos.moduloSenhas
 {
     public partial class CreateSenhas : Form
     {

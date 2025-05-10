@@ -112,6 +112,7 @@
             btMenuPrincipalSenhas.TabIndex = 6;
             btMenuPrincipalSenhas.Text = "Senhas";
             btMenuPrincipalSenhas.UseVisualStyleBackColor = false;
+            btMenuPrincipalSenhas.Click += btMenuPrincipalSenhas_Click;
             // 
             // MenuPrincipal
             // 

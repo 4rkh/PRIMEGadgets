@@ -1,4 +1,4 @@
-﻿namespace Prime_Gadgets.modulos.moduloSenhas.Telas
+﻿namespace Prime_Gadgets.modulos.moduloSenhas
 {
     partial class MainSenhas
     {
@@ -38,7 +38,6 @@
             // 
             // btMainSenhasCreate
             // 
-            btMainSenhasCreate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btMainSenhasCreate.Location = new Point(12, 82);
             btMainSenhasCreate.Name = "btMainSenhasCreate";
             btMainSenhasCreate.Size = new Size(191, 37);
@@ -49,7 +48,7 @@
             // 
             // btMainSenhasUpdate
             // 
-            btMainSenhasUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btMainSenhasUpdate.Anchor = AnchorStyles.Top;
             btMainSenhasUpdate.Location = new Point(256, 82);
             btMainSenhasUpdate.Name = "btMainSenhasUpdate";
             btMainSenhasUpdate.Size = new Size(191, 37);
@@ -60,7 +59,7 @@
             // 
             // lbMainSenhasTitulo
             // 
-            lbMainSenhasTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbMainSenhasTitulo.Anchor = AnchorStyles.Top;
             lbMainSenhasTitulo.AutoSize = true;
             lbMainSenhasTitulo.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbMainSenhasTitulo.Location = new Point(269, 23);
@@ -71,7 +70,7 @@
             // 
             // btMainSenhasDelete
             // 
-            btMainSenhasDelete.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btMainSenhasDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btMainSenhasDelete.Location = new Point(470, 82);
             btMainSenhasDelete.Name = "btMainSenhasDelete";
             btMainSenhasDelete.Size = new Size(191, 37);

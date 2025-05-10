@@ -110,6 +110,7 @@
             campCreateSenhasNome.Name = "campCreateSenhasNome";
             campCreateSenhasNome.Size = new Size(100, 23);
             campCreateSenhasNome.TabIndex = 6;
+            campCreateSenhasNome.TextChanged += Campos_TextChanged;
             // 
             // campCreateSenhasEmail
             // 
@@ -118,6 +119,8 @@
             campCreateSenhasEmail.Name = "campCreateSenhasEmail";
             campCreateSenhasEmail.Size = new Size(100, 23);
             campCreateSenhasEmail.TabIndex = 7;
+            campCreateSenhasEmail.TextChanged += Campos_TextChanged;
+            campCreateSenhasEmail.Validating += campCreateSenhasEmail_Validating;
             // 
             // campCreateSenhasSenha
             // 
@@ -126,6 +129,7 @@
             campCreateSenhasSenha.Name = "campCreateSenhasSenha";
             campCreateSenhasSenha.Size = new Size(100, 23);
             campCreateSenhasSenha.TabIndex = 8;
+            campCreateSenhasSenha.TextChanged += Campos_TextChanged;
             // 
             // campCreateSenhasOrigem
             // 
@@ -134,6 +138,7 @@
             campCreateSenhasOrigem.Name = "campCreateSenhasOrigem";
             campCreateSenhasOrigem.Size = new Size(100, 23);
             campCreateSenhasOrigem.TabIndex = 9;
+            campCreateSenhasOrigem.TextChanged += Campos_TextChanged;
             // 
             // btCreateSenhasCriar
             // 
@@ -144,7 +149,10 @@
             btCreateSenhasCriar.TabIndex = 10;
             btCreateSenhasCriar.Text = "Criar";
             btCreateSenhasCriar.UseVisualStyleBackColor = true;
+            btCreateSenhasCriar.EnabledChanged += btCreateSenhasCriar_EnabledChanged;
             btCreateSenhasCriar.Click += btCreateSenhasCriar_Click;
+            
+
             // 
             // btCreateSenhasCancelar
             // 

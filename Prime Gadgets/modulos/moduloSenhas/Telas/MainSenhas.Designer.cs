@@ -81,11 +81,15 @@
             // 
             // tbMainSenhasDados
             // 
+            tbMainSenhasDados.AllowUserToAddRows = false;
+            tbMainSenhasDados.AllowUserToDeleteRows = false;
             tbMainSenhasDados.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbMainSenhasDados.BackgroundColor = SystemColors.ButtonFace;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbMainSenhasDados.Location = new Point(27, 144);
+            tbMainSenhasDados.RowHeadersVisible = false;
             tbMainSenhasDados.Name = "tbMainSenhasDados";
+            tbMainSenhasDados.MultiSelect = false;
             tbMainSenhasDados.Size = new Size(624, 432);
             tbMainSenhasDados.TabIndex = 4;
             // 

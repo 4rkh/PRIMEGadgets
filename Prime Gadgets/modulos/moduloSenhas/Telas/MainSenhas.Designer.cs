@@ -83,6 +83,7 @@
             // tbMainSenhasDados
             // 
             tbMainSenhasDados.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbMainSenhasDados.BackgroundColor = SystemColors.ButtonFace;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbMainSenhasDados.Location = new Point(27, 144);
             tbMainSenhasDados.Name = "tbMainSenhasDados";
@@ -93,6 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(673, 604);
             Controls.Add(tbMainSenhasDados);
             Controls.Add(btMainSenhasDelete);

@@ -42,7 +42,7 @@
             btPrincipalContatosDelete = new Button();
             label1 = new Label();
             ContatosTable = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)ContatosTable).BeginInit();
+            ((ISupportInitialize)ContatosTable).BeginInit();
             SuspendLayout();
             // 
             // btPrincipalContatosCreate
@@ -117,7 +117,8 @@
             MinimumSize = new Size(689, 643);
             Name = "PrincipalContato";
             Text = "Contatos";
-            ((System.ComponentModel.ISupportInitialize)ContatosTable).EndInit();
+            WindowState = FormWindowState.Maximized;
+            ((ISupportInitialize)ContatosTable).EndInit();
             ResumeLayout(false);
         }
 

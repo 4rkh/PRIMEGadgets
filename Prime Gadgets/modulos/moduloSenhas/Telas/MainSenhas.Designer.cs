@@ -87,9 +87,9 @@
             tbMainSenhasDados.BackgroundColor = SystemColors.ButtonFace;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbMainSenhasDados.Location = new Point(27, 144);
-            tbMainSenhasDados.RowHeadersVisible = false;
-            tbMainSenhasDados.Name = "tbMainSenhasDados";
             tbMainSenhasDados.MultiSelect = false;
+            tbMainSenhasDados.Name = "tbMainSenhasDados";
+            tbMainSenhasDados.RowHeadersVisible = false;
             tbMainSenhasDados.Size = new Size(624, 432);
             tbMainSenhasDados.TabIndex = 4;
             // 
@@ -106,6 +106,7 @@
             Controls.Add(btMainSenhasCreate);
             Name = "MainSenhas";
             Text = "MainSenhas";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)tbMainSenhasDados).EndInit();
             ResumeLayout(false);
             PerformLayout();

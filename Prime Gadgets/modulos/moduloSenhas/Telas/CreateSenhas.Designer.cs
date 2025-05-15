@@ -223,6 +223,10 @@
             Controls.Add(lbCreateSenhasTitulo);
             Name = "CreateSenhas";
             Text = "CreateSenhas";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            SizeGripStyle = SizeGripStyle.Hide;
+            ControlBox = false;
+            MaximizeBox = false;
             ResumeLayout(false);
             PerformLayout();
         }

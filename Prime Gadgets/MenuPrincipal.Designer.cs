@@ -127,6 +127,7 @@
             btMenuPrincipalCalculadora.TabIndex = 0;
             btMenuPrincipalCalculadora.Text = "Calculadora";
             btMenuPrincipalCalculadora.UseVisualStyleBackColor = false;
+            btMenuPrincipalCalculadora.Click += btMenuPrincipalCalculadora_Click;
             // 
             // btMenuPrincipalRotina
             // 

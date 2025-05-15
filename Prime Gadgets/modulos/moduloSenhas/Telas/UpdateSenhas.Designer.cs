@@ -243,6 +243,10 @@
             Controls.Add(lbUpdateSenhasTitulo);
             Name = "UpdateSenhas";
             Text = "UpdateSenhas";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            SizeGripStyle = SizeGripStyle.Hide;
+            ControlBox = false;
+            MaximizeBox = false;
             ResumeLayout(false);
             PerformLayout();
         }

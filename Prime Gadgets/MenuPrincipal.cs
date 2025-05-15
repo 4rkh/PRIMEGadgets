@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloSenhas;
+using Prime_Gadgets.modulos.moduloCalculadora.Telas;
 namespace Prime_Gadgets
 {
     public partial class MenuPrincipal : Form
@@ -44,6 +45,16 @@ namespace Prime_Gadgets
             MainSenhas mainSenhas = new MainSenhas();
             {
                 mainSenhas.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btMenuPrincipalCalculadora_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainCalculadora mainCalculadora = new MainCalculadora();
+            {
+                mainCalculadora.ShowDialog();
             }
             this.Show();
         }

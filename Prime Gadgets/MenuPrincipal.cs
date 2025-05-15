@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloSenhas;
-
 namespace Prime_Gadgets
 {
     public partial class MenuPrincipal : Form
@@ -39,7 +38,6 @@ namespace Prime_Gadgets
             }
             this.Show();
         }
-
         private void btMenuPrincipalSenhas_Click(object sender, EventArgs e)
         {
             this.Hide();

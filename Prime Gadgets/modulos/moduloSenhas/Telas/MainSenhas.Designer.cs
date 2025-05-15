@@ -83,15 +83,16 @@
             // 
             tbMainSenhasDados.AllowUserToAddRows = false;
             tbMainSenhasDados.AllowUserToDeleteRows = false;
-            tbMainSenhasDados.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbMainSenhasDados.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             tbMainSenhasDados.BackgroundColor = SystemColors.ButtonFace;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbMainSenhasDados.Location = new Point(27, 144);
             tbMainSenhasDados.MultiSelect = false;
             tbMainSenhasDados.Name = "tbMainSenhasDados";
             tbMainSenhasDados.RowHeadersVisible = false;
+            tbMainSenhasDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tbMainSenhasDados.Size = new Size(624, 432);
-            tbMainSenhasDados.TabIndex = 4;
+            tbMainSenhasDados.TabIndex = 5;
             // 
             // MainSenhas
             // 

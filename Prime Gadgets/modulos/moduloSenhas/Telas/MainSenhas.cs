@@ -57,13 +57,14 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 row["ID"] = senha.Id;
                 row["Nome de Usuário"] = senha.NomeDeUsuario;
                 row["Email"] = senha.Email;
-                row["Senha"] = senha.Senha;
+                row["Senha"] = new string('*', senha.Senha.Length);
                 row["Origem"] = senha.Origem;
                 dataTable.Rows.Add(row);
             }
 
             this.tbMainSenhasDados.DataSource = dataTable;
         }
+
 
         public Senhas SenhaSelect()
         {

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,9 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             InitializeComponent();
             btCreateSenhasCancelar.CausesValidation = false;
             lbCreateSenhasEmailInvalido.Hide();
+            btCreateSenhasMostrar.CausesValidation = false;
+            btCreateSenhasGerar.CausesValidation = false;
+            lbCreateSenhasSenhaInvalida.Hide();
             btCreateSenhasCriar.Enabled = false;
             AtualizarCorBotao();
         }
@@ -68,7 +72,44 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             btCreateSenhasCriar.Enabled = camposPreenchidos;
             AtualizarCorBotao();
         }
-
+        private void PasswordValidator(object sender, CancelEventArgs e)
+        {
+            var senha = campCreateSenhasSenha.Text;
+            string caracteresEspeciais = @"[!@#$%^&*(),.?""':;{}|<>]";
+            var erros = new System.Text.StringBuilder();
+            lbCreateSenhasSenhaInvalida.Text = string.Empty;
+            if (senha.Length < 8)
+            {
+                erros.AppendLine("*A senha deve ter pelo menos 8 caracteres.");
+            }
+            if (!Regex.IsMatch(senha, @"[A-Z]"))
+            {
+                erros.AppendLine("*A senha deve conter pelo menos uma letra maiúscula.");
+            }
+            if (!Regex.IsMatch(senha, @"[a-z]"))
+            {
+                erros.AppendLine("*A senha deve conter pelo menos uma letra minúscula.");
+            }
+            if (!Regex.IsMatch(senha, @"\d"))
+            {
+                erros.AppendLine("*A senha deve conter pelo menos um número.");
+            }
+            if (!Regex.IsMatch(senha, caracteresEspeciais))
+            {
+                erros.AppendLine("*A senha deve conter pelo menos um caractere especial.");
+            }
+            if (erros.Length > 0)
+            {
+                e.Cancel = true;
+                lbCreateSenhasSenhaInvalida.Text = "Senha inválida.\n" + erros.ToString();
+                lbCreateSenhasSenhaInvalida.Show();
+            }
+            else
+            {
+                lbCreateSenhasSenhaInvalida.Hide();
+            }
+            VerificarCampos();
+        }
         private void AtualizarCorBotao()
         {
             if (btCreateSenhasCriar.Enabled)
@@ -96,6 +137,47 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             {
                 lbCreateSenhasEmailInvalido.Show();
                 return false;
+            }
+        }
+        private string GerarSenha(int comprimento)
+        {
+            const string letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
+            const string numeros = "0123456789";
+            const string especiais = "'!@#$%^&*(),.?{}|<:;>";
+
+            string todosCaracteres = letrasMaiusculas + letrasMinusculas + numeros + especiais;
+            var random = new Random();
+            var senha = new StringBuilder();
+
+            senha.Append(letrasMaiusculas[random.Next(letrasMaiusculas.Length)]);
+            senha.Append(letrasMinusculas[random.Next(letrasMinusculas.Length)]);
+            senha.Append(numeros[random.Next(numeros.Length)]);
+            senha.Append(especiais[random.Next(especiais.Length)]);
+
+            for (int i = 4; i < comprimento; i++)
+            {
+                senha.Append(todosCaracteres[random.Next(todosCaracteres.Length)]);
+            }
+
+            return new string(senha.ToString().OrderBy(c => random.Next()).ToArray());
+        }
+        private void btCreateSenhasGerar_Click(object sender, EventArgs e)
+        {
+            campCreateSenhasSenha.Text = GerarSenha(15);
+        }
+
+        private void btCreateSenhasMostrar_Click(object sender, EventArgs e)
+        {
+            if (campCreateSenhasSenha.UseSystemPasswordChar)
+            {
+                campCreateSenhasSenha.UseSystemPasswordChar = false;
+                btCreateSenhasMostrar.Text = "Ocultar";
+            }
+            else
+            {
+                campCreateSenhasSenha.UseSystemPasswordChar = true;
+                btCreateSenhasMostrar.Text = "Mostrar";
             }
         }
     }

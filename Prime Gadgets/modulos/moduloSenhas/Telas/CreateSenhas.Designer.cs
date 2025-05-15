@@ -40,6 +40,9 @@
             campCreateSenhasOrigem = new TextBox();
             btCreateSenhasCriar = new Button();
             btCreateSenhasCancelar = new Button();
+            btCreateSenhasGerar = new Button();
+            btCreateSenhasMostrar = new Button();
+            lbCreateSenhasSenhaInvalida = new Label();
             SuspendLayout();
             // 
             // lbCreateSenhasTitulo
@@ -77,7 +80,7 @@
             // 
             lbCreateSenhasSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbCreateSenhasSenha.AutoSize = true;
-            lbCreateSenhasSenha.Location = new Point(12, 192);
+            lbCreateSenhasSenha.Location = new Point(12, 198);
             lbCreateSenhasSenha.Name = "lbCreateSenhasSenha";
             lbCreateSenhasSenha.Size = new Size(39, 15);
             lbCreateSenhasSenha.TabIndex = 3;
@@ -87,7 +90,7 @@
             // 
             lbCreateSenhasOrigem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbCreateSenhasOrigem.AutoSize = true;
-            lbCreateSenhasOrigem.Location = new Point(12, 230);
+            lbCreateSenhasOrigem.Location = new Point(12, 247);
             lbCreateSenhasOrigem.Name = "lbCreateSenhasOrigem";
             lbCreateSenhasOrigem.Size = new Size(47, 15);
             lbCreateSenhasOrigem.TabIndex = 4;
@@ -97,11 +100,21 @@
             // 
             lbCreateSenhasEmailInvalido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbCreateSenhasEmailInvalido.AutoSize = true;
-            lbCreateSenhasEmailInvalido.Location = new Point(136, 272);
+            lbCreateSenhasEmailInvalido.Location = new Point(136, 171);
             lbCreateSenhasEmailInvalido.Name = "lbCreateSenhasEmailInvalido";
             lbCreateSenhasEmailInvalido.Size = new Size(86, 15);
             lbCreateSenhasEmailInvalido.TabIndex = 5;
-            lbCreateSenhasEmailInvalido.Text = "E-mail inválido";
+            lbCreateSenhasEmailInvalido.Text = "E-mail inválido!";
+            // 
+            // lbCreateSenhasSenhaInvalida
+            // 
+            lbCreateSenhasSenhaInvalida.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbCreateSenhasSenhaInvalida.AutoSize = true;
+            lbCreateSenhasSenhaInvalida.Location = new Point(136, 221);
+            lbCreateSenhasSenhaInvalida.Name = "lbCreateSenhasSenhaInvalida";
+            lbCreateSenhasSenhaInvalida.Size = new Size(83, 15);
+            lbCreateSenhasSenhaInvalida.TabIndex = 14;
+            lbCreateSenhasSenhaInvalida.Text = "Senha inválida!";
             // 
             // campCreateSenhasNome
             // 
@@ -125,16 +138,18 @@
             // campCreateSenhasSenha
             // 
             campCreateSenhasSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            campCreateSenhasSenha.Location = new Point(136, 189);
+            campCreateSenhasSenha.Location = new Point(136, 195);
             campCreateSenhasSenha.Name = "campCreateSenhasSenha";
             campCreateSenhasSenha.Size = new Size(100, 23);
             campCreateSenhasSenha.TabIndex = 8;
+            campCreateSenhasSenha.UseSystemPasswordChar = true;
             campCreateSenhasSenha.TextChanged += Campos_TextChanged;
+            campCreateSenhasSenha.Validating += PasswordValidator;
             // 
             // campCreateSenhasOrigem
             // 
             campCreateSenhasOrigem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            campCreateSenhasOrigem.Location = new Point(136, 227);
+            campCreateSenhasOrigem.Location = new Point(136, 244);
             campCreateSenhasOrigem.Name = "campCreateSenhasOrigem";
             campCreateSenhasOrigem.Size = new Size(100, 23);
             campCreateSenhasOrigem.TabIndex = 9;
@@ -151,8 +166,6 @@
             btCreateSenhasCriar.UseVisualStyleBackColor = true;
             btCreateSenhasCriar.EnabledChanged += btCreateSenhasCriar_EnabledChanged;
             btCreateSenhasCriar.Click += btCreateSenhasCriar_Click;
-            
-
             // 
             // btCreateSenhasCancelar
             // 
@@ -165,12 +178,37 @@
             btCreateSenhasCancelar.UseVisualStyleBackColor = true;
             btCreateSenhasCancelar.Click += btCreateSenhasCancelar_Click;
             // 
+            // btCreateSenhasGerar
+            // 
+            btCreateSenhasGerar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btCreateSenhasGerar.Location = new Point(283, 187);
+            btCreateSenhasGerar.Name = "btCreateSenhasGerar";
+            btCreateSenhasGerar.Size = new Size(83, 37);
+            btCreateSenhasGerar.TabIndex = 12;
+            btCreateSenhasGerar.Text = "Gerar senha";
+            btCreateSenhasGerar.UseVisualStyleBackColor = true;
+            btCreateSenhasGerar.Click += btCreateSenhasGerar_Click;
+            // 
+            // btCreateSenhasMostrar
+            // 
+            btCreateSenhasMostrar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btCreateSenhasMostrar.Location = new Point(294, 230);
+            btCreateSenhasMostrar.Name = "btCreateSenhasMostrar";
+            btCreateSenhasMostrar.Size = new Size(72, 37);
+            btCreateSenhasMostrar.TabIndex = 13;
+            btCreateSenhasMostrar.Text = "Mostrar";
+            btCreateSenhasMostrar.UseVisualStyleBackColor = true;
+            btCreateSenhasMostrar.Click += btCreateSenhasMostrar_Click;
+            // 
             // CreateSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(367, 450);
+            Controls.Add(lbCreateSenhasSenhaInvalida);
+            Controls.Add(btCreateSenhasMostrar);
+            Controls.Add(btCreateSenhasGerar);
             Controls.Add(btCreateSenhasCancelar);
             Controls.Add(btCreateSenhasCriar);
             Controls.Add(campCreateSenhasOrigem);
@@ -203,5 +241,8 @@
         private TextBox campCreateSenhasOrigem;
         private Button btCreateSenhasCriar;
         private Button btCreateSenhasCancelar;
+        private Button btCreateSenhasGerar;
+        private Button btCreateSenhasMostrar;
+        private Label lbCreateSenhasSenhaInvalida;
     }
 }

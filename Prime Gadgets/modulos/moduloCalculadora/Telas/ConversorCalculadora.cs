@@ -16,5 +16,15 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
         {
             InitializeComponent();
         }
+
+        private void btConversorCalculadoraCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btConversorCalculadoraConverter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

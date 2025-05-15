@@ -16,5 +16,15 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
         {
             InitializeComponent();
         }
+
+        private void btHistoricoCalculadoraVoltar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btHistoricoCalculadoraClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

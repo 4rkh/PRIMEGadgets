@@ -61,6 +61,7 @@
             btMainCalculadora1.TabIndex = 0;
             btMainCalculadora1.Text = "1";
             btMainCalculadora1.UseVisualStyleBackColor = true;
+            btMainCalculadora1.Click += btMainCalculadora1_Click;
             // 
             // btMainCalculadora2
             // 
@@ -70,6 +71,7 @@
             btMainCalculadora2.TabIndex = 1;
             btMainCalculadora2.Text = "2";
             btMainCalculadora2.UseVisualStyleBackColor = true;
+            btMainCalculadora2.Click += btMainCalculadora2_Click;
             // 
             // btMainCalculadora3
             // 
@@ -79,6 +81,7 @@
             btMainCalculadora3.TabIndex = 2;
             btMainCalculadora3.Text = "3";
             btMainCalculadora3.UseVisualStyleBackColor = true;
+            btMainCalculadora3.Click += btMainCalculadora3_Click;
             // 
             // btMainCalculadora4
             // 
@@ -88,6 +91,7 @@
             btMainCalculadora4.TabIndex = 3;
             btMainCalculadora4.Text = "4";
             btMainCalculadora4.UseVisualStyleBackColor = true;
+            btMainCalculadora4.Click += btMainCalculadora4_Click;
             // 
             // btMainCalculadora5
             // 
@@ -97,6 +101,7 @@
             btMainCalculadora5.TabIndex = 4;
             btMainCalculadora5.Text = "5";
             btMainCalculadora5.UseVisualStyleBackColor = true;
+            btMainCalculadora5.Click += btMainCalculadora5_Click;
             // 
             // btMainCalculadora6
             // 
@@ -106,6 +111,7 @@
             btMainCalculadora6.TabIndex = 5;
             btMainCalculadora6.Text = "6";
             btMainCalculadora6.UseVisualStyleBackColor = true;
+            btMainCalculadora6.Click += btMainCalculadora6_Click;
             // 
             // btMainCalculadora7
             // 
@@ -115,6 +121,7 @@
             btMainCalculadora7.TabIndex = 6;
             btMainCalculadora7.Text = "7";
             btMainCalculadora7.UseVisualStyleBackColor = true;
+            btMainCalculadora7.Click += btMainCalculadora7_Click;
             // 
             // btMainCalculadora8
             // 
@@ -124,6 +131,7 @@
             btMainCalculadora8.TabIndex = 7;
             btMainCalculadora8.Text = "8";
             btMainCalculadora8.UseVisualStyleBackColor = true;
+            btMainCalculadora8.Click += btMainCalculadora8_Click;
             // 
             // btMainCalculadora9
             // 
@@ -133,6 +141,7 @@
             btMainCalculadora9.TabIndex = 8;
             btMainCalculadora9.Text = "9";
             btMainCalculadora9.UseVisualStyleBackColor = true;
+            btMainCalculadora9.Click += btMainCalculadora9_Click;
             // 
             // btMainCalculadora0
             // 
@@ -142,6 +151,7 @@
             btMainCalculadora0.TabIndex = 9;
             btMainCalculadora0.Text = "0";
             btMainCalculadora0.UseVisualStyleBackColor = true;
+            btMainCalculadora0.Click += btMainCalculadora0_Click;
             // 
             // btMainCalculadoraComma
             // 
@@ -151,6 +161,7 @@
             btMainCalculadoraComma.TabIndex = 10;
             btMainCalculadoraComma.Text = ",";
             btMainCalculadoraComma.UseVisualStyleBackColor = true;
+            btMainCalculadoraComma.Click += btMainCalculadoraComma_Click;
             // 
             // btMainCalculadoraClear
             // 
@@ -160,6 +171,7 @@
             btMainCalculadoraClear.TabIndex = 11;
             btMainCalculadoraClear.Text = "Clear";
             btMainCalculadoraClear.UseVisualStyleBackColor = true;
+            btMainCalculadoraClear.Click += btMainCalculadoraClear_Click;
             // 
             // btMainCalculadoraSum
             // 
@@ -169,6 +181,7 @@
             btMainCalculadoraSum.TabIndex = 12;
             btMainCalculadoraSum.Text = "+";
             btMainCalculadoraSum.UseVisualStyleBackColor = true;
+            btMainCalculadoraSum.Click += btMainCalculadoraSum_Click;
             // 
             // btMainCalculadoraSubtraction
             // 
@@ -178,6 +191,7 @@
             btMainCalculadoraSubtraction.TabIndex = 13;
             btMainCalculadoraSubtraction.Text = "-";
             btMainCalculadoraSubtraction.UseVisualStyleBackColor = true;
+            btMainCalculadoraSubtraction.Click += btMainCalculadoraSubtraction_Click;
             // 
             // btMainCalculadoraMultiplication
             // 
@@ -187,6 +201,7 @@
             btMainCalculadoraMultiplication.TabIndex = 14;
             btMainCalculadoraMultiplication.Text = "*";
             btMainCalculadoraMultiplication.UseVisualStyleBackColor = true;
+            btMainCalculadoraMultiplication.Click += btMainCalculadoraMultiplication_Click;
             // 
             // btMainCalculadoraDivision
             // 
@@ -196,6 +211,7 @@
             btMainCalculadoraDivision.TabIndex = 15;
             btMainCalculadoraDivision.Text = "/";
             btMainCalculadoraDivision.UseVisualStyleBackColor = true;
+            btMainCalculadoraDivision.Click += btMainCalculadoraDivision_Click;
             // 
             // btMainCalculadoraEnter
             // 
@@ -205,6 +221,7 @@
             btMainCalculadoraEnter.TabIndex = 16;
             btMainCalculadoraEnter.Text = "Enter";
             btMainCalculadoraEnter.UseVisualStyleBackColor = true;
+            btMainCalculadoraEnter.Click += btMainCalculadoraEnter_Click;
             // 
             // pnMainCalculadoraResult
             // 

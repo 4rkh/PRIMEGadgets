@@ -31,7 +31,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
 
         private void btMainCalculadoraOntop_Click(object sender, EventArgs e)
         {
-            if(this.TopMost)
+            if (this.TopMost)
             {
                 this.TopMost = false;
                 btMainCalculadoraOntop.Text = "On top";
@@ -52,6 +52,91 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
         {
             ConversorCalculadora conversorCalculadora = new ConversorCalculadora();
             conversorCalculadora.ShowDialog();
+        }
+
+        private void btMainCalculadoraSum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraSubtraction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraMultiplication_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraDivision_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadora9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraComma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalculadoraEnter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

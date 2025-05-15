@@ -40,6 +40,11 @@
             lbUpdateSenhasEmail = new Label();
             lbUpdateSenhasNome = new Label();
             lbUpdateSenhasTitulo = new Label();
+            campUpdateSenhasId = new TextBox();
+            lbUpdateSenhasId = new Label();
+            lbUpdateSenhasSenhaInvalida = new Label();
+            btUpdateSenhasMostrar = new Button();
+            btUpdateSenhasGerar = new Button();
             SuspendLayout();
             // 
             // btUpdateSenhasCancelar
@@ -79,6 +84,9 @@
             campUpdateSenhasSenha.Name = "campUpdateSenhasSenha";
             campUpdateSenhasSenha.Size = new Size(100, 23);
             campUpdateSenhasSenha.TabIndex = 20;
+            campUpdateSenhasSenha.UseSystemPasswordChar = true;
+            campUpdateSenhasSenha.TextChanged += Campos_TextChanged;
+            campUpdateSenhasSenha.Validating += PasswordValidator;
             // 
             // campUpdateSenhasEmail
             // 
@@ -87,6 +95,7 @@
             campUpdateSenhasEmail.Name = "campUpdateSenhasEmail";
             campUpdateSenhasEmail.Size = new Size(100, 23);
             campUpdateSenhasEmail.TabIndex = 19;
+            campUpdateSenhasEmail.Validating += campUpdateSenhasEmail_Validating;
             // 
             // campUpdateSenhasNome
             // 
@@ -95,12 +104,13 @@
             campUpdateSenhasNome.Name = "campUpdateSenhasNome";
             campUpdateSenhasNome.Size = new Size(100, 23);
             campUpdateSenhasNome.TabIndex = 18;
+            campUpdateSenhasNome.KeyPress += campUpdateSenhasNome_KeyPress;
             // 
             // lbUpdateSenhasEmailInvalido
             // 
             lbUpdateSenhasEmailInvalido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbUpdateSenhasEmailInvalido.AutoSize = true;
-            lbUpdateSenhasEmailInvalido.Location = new Point(156, 279);
+            lbUpdateSenhasEmailInvalido.Location = new Point(156, 178);
             lbUpdateSenhasEmailInvalido.Name = "lbUpdateSenhasEmailInvalido";
             lbUpdateSenhasEmailInvalido.Size = new Size(86, 15);
             lbUpdateSenhasEmailInvalido.TabIndex = 17;
@@ -157,12 +167,68 @@
             lbUpdateSenhasTitulo.TabIndex = 12;
             lbUpdateSenhasTitulo.Text = "Atualizar Conta";
             // 
+            // campUpdateSenhasId
+            // 
+            campUpdateSenhasId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            campUpdateSenhasId.Location = new Point(156, 80);
+            campUpdateSenhasId.Name = "campUpdateSenhasId";
+            campUpdateSenhasId.Size = new Size(100, 23);
+            campUpdateSenhasId.TabIndex = 25;
+            campUpdateSenhasId.KeyPress += campUpdateSenhasId_KeyPress;
+            // 
+            // lbUpdateSenhasId
+            // 
+            lbUpdateSenhasId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbUpdateSenhasId.AutoSize = true;
+            lbUpdateSenhasId.Location = new Point(32, 83);
+            lbUpdateSenhasId.Name = "lbUpdateSenhasId";
+            lbUpdateSenhasId.Size = new Size(18, 15);
+            lbUpdateSenhasId.TabIndex = 24;
+            lbUpdateSenhasId.Text = "ID";
+            // 
+            // lbUpdateSenhasSenhaInvalida
+            // 
+            lbUpdateSenhasSenhaInvalida.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbUpdateSenhasSenhaInvalida.AutoSize = true;
+            lbUpdateSenhasSenhaInvalida.Location = new Point(153, 217);
+            lbUpdateSenhasSenhaInvalida.Name = "lbUpdateSenhasSenhaInvalida";
+            lbUpdateSenhasSenhaInvalida.Size = new Size(86, 15);
+            lbUpdateSenhasSenhaInvalida.TabIndex = 28;
+            lbUpdateSenhasSenhaInvalida.Text = "Senha inválida!";
+            // 
+            // btUpdateSenhasMostrar
+            // 
+            btUpdateSenhasMostrar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btUpdateSenhasMostrar.Location = new Point(292, 225);
+            btUpdateSenhasMostrar.Name = "btUpdateSenhasMostrar";
+            btUpdateSenhasMostrar.Size = new Size(72, 37);
+            btUpdateSenhasMostrar.TabIndex = 27;
+            btUpdateSenhasMostrar.Text = "Mostrar";
+            btUpdateSenhasMostrar.UseVisualStyleBackColor = true;
+            btUpdateSenhasMostrar.Click += btUpdateSenhasMostrar_Click;
+            // 
+            // btUpdateSenhasGerar
+            // 
+            btUpdateSenhasGerar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btUpdateSenhasGerar.Location = new Point(281, 182);
+            btUpdateSenhasGerar.Name = "btUpdateSenhasGerar";
+            btUpdateSenhasGerar.Size = new Size(83, 37);
+            btUpdateSenhasGerar.TabIndex = 26;
+            btUpdateSenhasGerar.Text = "Gerar senha";
+            btUpdateSenhasGerar.UseVisualStyleBackColor = true;
+            btUpdateSenhasGerar.Click += btUpdateSenhasGerar_Click;
+            // 
             // UpdateSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(367, 450);
+            Controls.Add(lbUpdateSenhasSenhaInvalida);
+            Controls.Add(btUpdateSenhasMostrar);
+            Controls.Add(btUpdateSenhasGerar);
+            Controls.Add(campUpdateSenhasId);
+            Controls.Add(lbUpdateSenhasId);
             Controls.Add(btUpdateSenhasCancelar);
             Controls.Add(btUpdateSenhasAtualizar);
             Controls.Add(campUpdateSenhasOrigem);
@@ -195,5 +261,10 @@
         private Label lbUpdateSenhasEmail;
         private Label lbUpdateSenhasNome;
         private Label lbUpdateSenhasTitulo;
+        private TextBox campUpdateSenhasId;
+        private Label lbUpdateSenhasId;
+        private Label lbUpdateSenhasSenhaInvalida;
+        private Button btUpdateSenhasMostrar;
+        private Button btUpdateSenhasGerar;
     }
 }

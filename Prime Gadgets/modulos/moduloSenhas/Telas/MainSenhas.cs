@@ -112,7 +112,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         private void btMainSenhasUpdate_Click(object sender, EventArgs e)
         {
             var senha = SenhaSelect();
-            UpdateSenhas updateSenhas = new UpdateSenhas(/*senha*/);
+            UpdateSenhas updateSenhas = new UpdateSenhas(senha);
             updateSenhas.ShowDialog();
             LerTabela();
         }

@@ -12,7 +12,7 @@ namespace Prime_Gadgets
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new MenuPrincipal());
+            Application.Run(new TelaPrincipal());
 
         }
     }

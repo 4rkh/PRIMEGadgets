@@ -116,6 +116,11 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             updateSenhas.ShowDialog();
             LerTabela();
         }
+
+        private void btMainSenhasHome_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
 

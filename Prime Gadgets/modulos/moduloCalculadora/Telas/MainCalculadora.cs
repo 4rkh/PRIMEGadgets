@@ -20,7 +20,11 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
 
         private void btMainCalculadoraReturn_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Form telaAtual = this.FindForm();
+            TelaPrincipal mainPrincipal = new TelaPrincipal();
+            mainPrincipal.FormClosed += (s, args) => telaAtual.Close();
+            mainPrincipal.Show();
+            telaAtual.Hide();
         }
 
         private void btMainCalculadoraHistory_Click(object sender, EventArgs e)
@@ -29,17 +33,19 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
             historicoCalculadora.ShowDialog();
         }
 
+        Bitmap btmOntop = Properties.Resources.ontop;
+        Bitmap btmOfftop = Properties.Resources.offtop;
         private void btMainCalculadoraOntop_Click(object sender, EventArgs e)
         {
             if (this.TopMost)
             {
                 this.TopMost = false;
-                btMainCalculadoraOntop.Text = "On top";
+                btMainCalculadoraOntop.Image = btmOntop;
             }
             else
             {
                 this.TopMost = true;
-                btMainCalculadoraOntop.Text = "Off top";
+                btMainCalculadoraOntop.Image = btmOfftop;
             }
         }
 
@@ -135,6 +141,11 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
         }
 
         private void btMainCalculadoraEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Colar(object sender, PopupEventArgs e)
         {
 
         }

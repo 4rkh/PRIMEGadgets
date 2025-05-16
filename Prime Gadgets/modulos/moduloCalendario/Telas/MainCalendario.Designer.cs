@@ -1,6 +1,6 @@
 ﻿namespace Prime_Gadgets.modulos.moduloCalendario
 {
-    partial class PrincipalCalendario
+    partial class MainCalendario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCalendario));
+            menu1 = new Menu();
             SuspendLayout();
             // 
-            // PrincipalCalendario
+            // menu1
+            // 
+            menu1.BackColor = Color.FromArgb(230, 34, 34);
+            menu1.Dock = DockStyle.Left;
+            menu1.Location = new Point(0, 0);
+            menu1.Name = "menu1";
+            menu1.Size = new Size(212, 515);
+            menu1.TabIndex = 0;
+            // 
+            // MainCalendario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "PrincipalCalendario";
+            BackColor = Color.FromArgb(183, 190, 191);
+            ClientSize = new Size(800, 515);
+            Controls.Add(menu1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "MainCalendario";
             Text = "PrincipalCalendario";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Menu menu1;
     }
 }

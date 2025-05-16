@@ -9,7 +9,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows.Forms;
-    partial class PrincipalContato
+    partial class MainContato
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,18 +37,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainContato));
             btPrincipalContatosCreate = new Button();
             btPrincipalContatosUpdate = new Button();
             btPrincipalContatosDelete = new Button();
             label1 = new Label();
             ContatosTable = new DataGridView();
+            menu1 = new Menu();
             ((ISupportInitialize)ContatosTable).BeginInit();
             SuspendLayout();
             // 
             // btPrincipalContatosCreate
             // 
             btPrincipalContatosCreate.BackColor = Color.Lime;
-            btPrincipalContatosCreate.Location = new Point(23, 78);
+            btPrincipalContatosCreate.Location = new Point(242, 78);
             btPrincipalContatosCreate.Name = "btPrincipalContatosCreate";
             btPrincipalContatosCreate.Size = new Size(191, 37);
             btPrincipalContatosCreate.TabIndex = 1;
@@ -59,7 +61,7 @@
             // btPrincipalContatosUpdate
             // 
             btPrincipalContatosUpdate.Anchor = AnchorStyles.Top;
-            btPrincipalContatosUpdate.Location = new Point(241, 78);
+            btPrincipalContatosUpdate.Location = new Point(589, 78);
             btPrincipalContatosUpdate.Name = "btPrincipalContatosUpdate";
             btPrincipalContatosUpdate.Size = new Size(191, 37);
             btPrincipalContatosUpdate.TabIndex = 2;
@@ -70,7 +72,7 @@
             // btPrincipalContatosDelete
             // 
             btPrincipalContatosDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btPrincipalContatosDelete.Location = new Point(456, 78);
+            btPrincipalContatosDelete.Location = new Point(936, 78);
             btPrincipalContatosDelete.Name = "btPrincipalContatosDelete";
             btPrincipalContatosDelete.Size = new Size(191, 37);
             btPrincipalContatosDelete.TabIndex = 3;
@@ -82,9 +84,9 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 9);
+            label1.Location = new Point(578, 11);
             label1.Name = "label1";
-            label1.Size = new Size(624, 56);
+            label1.Size = new Size(208, 56);
             label1.TabIndex = 4;
             label1.Text = "Lista de Contatos";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -96,26 +98,38 @@
             ContatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ContatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ContatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ContatosTable.Location = new Point(23, 140);
+            ContatosTable.Location = new Point(242, 140);
             ContatosTable.MultiSelect = false;
             ContatosTable.Name = "ContatosTable";
             ContatosTable.RowHeadersVisible = false;
             ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ContatosTable.Size = new Size(624, 432);
+            ContatosTable.Size = new Size(885, 476);
             ContatosTable.TabIndex = 5;
             // 
-            // PrincipalContato
+            // menu1
+            // 
+            menu1.BackColor = Color.FromArgb(230, 34, 34);
+            menu1.Dock = DockStyle.Left;
+            menu1.Location = new Point(0, 0);
+            menu1.Name = "menu1";
+            menu1.Size = new Size(212, 648);
+            menu1.TabIndex = 6;
+            // 
+            // MainContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(673, 604);
+            BackColor = Color.FromArgb(183, 190, 191);
+            ClientSize = new Size(1153, 648);
+            Controls.Add(menu1);
             Controls.Add(ContatosTable);
             Controls.Add(label1);
             Controls.Add(btPrincipalContatosDelete);
             Controls.Add(btPrincipalContatosUpdate);
             Controls.Add(btPrincipalContatosCreate);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(689, 643);
-            Name = "PrincipalContato";
+            Name = "MainContato";
             Text = "Contatos";
             WindowState = FormWindowState.Maximized;
             ((ISupportInitialize)ContatosTable).EndInit();
@@ -129,5 +143,6 @@
         private Button btPrincipalContatosDelete;
         private Label label1;
         private DataGridView ContatosTable;
+        private Menu menu1;
     }
 }

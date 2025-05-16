@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Prime_Gadgets.modulos.moduloCalendario
 {
-    public partial class PrincipalCalendario : Form
+    public partial class MainCalendario : Form
     {
-        public PrincipalCalendario()
+        public MainCalendario()
         {
             InitializeComponent();
         }

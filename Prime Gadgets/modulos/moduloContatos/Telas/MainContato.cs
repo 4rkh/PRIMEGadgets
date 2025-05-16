@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace Prime_Gadgets.modulos.moduloContatos
 {
 
-    public partial class PrincipalContato : Form
+    public partial class MainContato : Form
     {
         
-        public PrincipalContato()
+        public MainContato()
         {
             try
             {

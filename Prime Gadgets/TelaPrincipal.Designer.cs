@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
-            menu1 = new Menu();
+            panelPrime = new Panel();
             SuspendLayout();
             // 
-            // menu1
+            // panelPrime
             // 
-            menu1.Dock = DockStyle.Left;
-            menu1.Location = new Point(0, 0);
-            menu1.Name = "menu1";
-            menu1.Size = new Size(212, 642);
-            menu1.TabIndex = 0;
+            panelPrime.Dock = DockStyle.Fill;
+            panelPrime.Location = new Point(0, 0);
+            panelPrime.Name = "panelPrime";
+            panelPrime.Size = new Size(1405, 642);
+            panelPrime.TabIndex = 1;
+            panelPrime.MouseEnter += panelHome_Enter;
             // 
             // TelaPrincipal
             // 
@@ -46,7 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1405, 642);
-            Controls.Add(menu1);
+            Controls.Add(panelPrime);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaPrincipal";
             Text = "MenuPrincipal";
@@ -55,7 +56,6 @@
         }
 
         #endregion
-
-        private Menu menu1;
+        private Panel panelPrime;
     }
 }

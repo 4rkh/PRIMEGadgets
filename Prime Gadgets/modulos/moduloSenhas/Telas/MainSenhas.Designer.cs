@@ -98,6 +98,7 @@
             // 
             // menu1
             // 
+            menu1.BackColor = Color.FromArgb(230, 34, 34);
             menu1.Dock = DockStyle.Left;
             menu1.Location = new Point(0, 0);
             menu1.Name = "menu1";
@@ -116,6 +117,7 @@
             Controls.Add(lbMainSenhasTitulo);
             Controls.Add(btMainSenhasUpdate);
             Controls.Add(btMainSenhasCreate);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainSenhas";
             Text = "MainSenhas";

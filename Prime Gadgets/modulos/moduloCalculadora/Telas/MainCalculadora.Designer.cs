@@ -452,6 +452,7 @@
             Controls.Add(btMainCalculadora1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "MainCalculadora";
             Text = "MainCalculadora";
             ResumeLayout(false);

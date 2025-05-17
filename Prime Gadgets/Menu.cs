@@ -11,11 +11,13 @@ using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloSenhas;
 using Prime_Gadgets.modulos.moduloCalculadora.Telas;
+using Prime_Gadgets.modulos.moduloHome;
 
 namespace Prime_Gadgets
 {
     public partial class Menu : UserControl
     {
+        private static MainCalculadora instanciaCalc = null;
         public Menu()
         {
             InitializeComponent();
@@ -24,23 +26,31 @@ namespace Prime_Gadgets
         private void btHome_Click(object sender, EventArgs e)
         {
             Form telaAtual = this.FindForm();
-            if (telaAtual is TelaPrincipal)
+            if (telaAtual is telaHome)
             {
                 return;
             }
-            TelaPrincipal mainPrincipal = new TelaPrincipal();
-            mainPrincipal.FormClosed += (s, args) => telaAtual.Close();
-            mainPrincipal.Show();
-            telaAtual.Hide();
+            telaHome homeTela = new telaHome();
+            homeTela.Dock = DockStyle.Fill;
+            homeTela.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(homeTela);
+            homeTela.Show();
         }
 
         private void btCalculadora_Click(object sender, EventArgs e)
         {
-            Form telaAtual = this.FindForm();
-            MainCalculadora mainCalculadora = new MainCalculadora();
-            mainCalculadora.FormClosed += (s, args) => telaAtual.Close();
-            mainCalculadora.Show();
-            telaAtual.Hide();
+            if (instanciaCalc == null || instanciaCalc.IsDisposed)
+            {
+                instanciaCalc = new MainCalculadora();
+                instanciaCalc.FormClosed += (s, args) => instanciaCalc = null;
+                instanciaCalc.Show();
+            }
+            else
+            {
+                instanciaCalc.BringToFront();
+                instanciaCalc.WindowState = FormWindowState.Normal;
+            }
         }
 
         private void btContatos_Click(object sender, EventArgs e)
@@ -51,9 +61,11 @@ namespace Prime_Gadgets
                 return;
             }
             MainContato mainContatos = new MainContato();
-            mainContatos.FormClosed += (s, args) => telaAtual.Close();
+            mainContatos.Dock = DockStyle.Fill;
+            mainContatos.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainContatos);
             mainContatos.Show();
-            telaAtual.Hide();
         }
 
         private void btCalendario_Click(object sender, EventArgs e)
@@ -64,9 +76,11 @@ namespace Prime_Gadgets
                 return;
             }
             MainCalendario mainCalendario = new MainCalendario();
-            mainCalendario.FormClosed += (s, args) => telaAtual.Close();
+            mainCalendario.Dock = DockStyle.Fill;
+            mainCalendario.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainCalendario);
             mainCalendario.Show();
-            telaAtual.Hide();
         }
 
         private void btSenhas_Click(object sender, EventArgs e)
@@ -77,9 +91,11 @@ namespace Prime_Gadgets
                 return;
             }
             MainSenhas mainSenhas = new MainSenhas();
-            mainSenhas.FormClosed += (s, args) => telaAtual.Close();
+            mainSenhas.Dock = DockStyle.Fill;
+            mainSenhas.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainSenhas);
             mainSenhas.Show();
-            telaAtual.Hide();
             }
         }
     }

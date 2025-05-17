@@ -13,7 +13,6 @@ namespace Prime_Gadgets.modulos.moduloContatos
 
     public partial class MainContato : Form
     {
-        
         public MainContato()
         {
             try

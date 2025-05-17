@@ -127,6 +127,7 @@
             Controls.Add(btPrincipalContatosDelete);
             Controls.Add(btPrincipalContatosUpdate);
             Controls.Add(btPrincipalContatosCreate);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(689, 643);
             Name = "MainContato";

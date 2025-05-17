@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prime_Gadgets.modulos.moduloSenhas;
+using Prime_Gadgets.modulos.moduloHome;
 
 namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
 {
@@ -21,10 +22,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
         private void btMainCalculadoraReturn_Click(object sender, EventArgs e)
         {
             Form telaAtual = this.FindForm();
-            TelaPrincipal mainPrincipal = new TelaPrincipal();
-            mainPrincipal.FormClosed += (s, args) => telaAtual.Close();
-            mainPrincipal.Show();
-            telaAtual.Hide();
+            telaAtual.Close();
         }
 
         private void btMainCalculadoraHistory_Click(object sender, EventArgs e)

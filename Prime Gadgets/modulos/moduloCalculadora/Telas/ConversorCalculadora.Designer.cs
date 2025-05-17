@@ -1,4 +1,4 @@
-﻿namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
+﻿namespace Prime_Gadgets.modulos.moduloCalculadora
 {
     partial class ConversorCalculadora
     {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloSenhas;
-using Prime_Gadgets.modulos.moduloCalculadora.Telas;
+using Prime_Gadgets.modulos.moduloCalculadora;
 using Prime_Gadgets.modulos.moduloHome;
 
 namespace Prime_Gadgets

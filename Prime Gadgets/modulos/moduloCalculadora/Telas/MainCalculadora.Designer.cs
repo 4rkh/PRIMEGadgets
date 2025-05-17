@@ -1,4 +1,4 @@
-﻿namespace Prime_Gadgets.modulos.moduloCalculadora.Telas
+﻿namespace Prime_Gadgets.modulos.moduloCalculadora
 {
     partial class MainCalculadora
     {
@@ -48,6 +48,7 @@
             btMainCalculadoraDivision = new Button();
             btMainCalculadoraEnter = new Button();
             pnMainCalculadoraResult = new Panel();
+            campMainCalculadoraResult = new TextBox();
             btMainCalculadoraReturn = new Button();
             btMainCalculadoraHistory = new Button();
             btMainCalculadoraConversor = new Button();
@@ -57,6 +58,7 @@
             toolTip2 = new ToolTip(components);
             toolTip3 = new ToolTip(components);
             toolTip4 = new ToolTip(components);
+            pnMainCalculadoraResult.SuspendLayout();
             SuspendLayout();
             // 
             // btMainCalculadora1
@@ -333,11 +335,20 @@
             // 
             pnMainCalculadoraResult.BackColor = Color.FromArgb(255, 252, 237);
             pnMainCalculadoraResult.BorderStyle = BorderStyle.Fixed3D;
+            pnMainCalculadoraResult.Controls.Add(campMainCalculadoraResult);
             pnMainCalculadoraResult.ForeColor = Color.FromArgb(230, 34, 34);
             pnMainCalculadoraResult.Location = new Point(5, 76);
             pnMainCalculadoraResult.Name = "pnMainCalculadoraResult";
             pnMainCalculadoraResult.Size = new Size(255, 100);
             pnMainCalculadoraResult.TabIndex = 17;
+            // 
+            // campMainCalculadoraResult
+            // 
+            campMainCalculadoraResult.Location = new Point(-2, 40);
+            campMainCalculadoraResult.Name = "campMainCalculadoraResult";
+            campMainCalculadoraResult.ReadOnly = true;
+            campMainCalculadoraResult.Size = new Size(255, 23);
+            campMainCalculadoraResult.TabIndex = 0;
             // 
             // btMainCalculadoraReturn
             // 
@@ -455,6 +466,9 @@
             MaximizeBox = false;
             Name = "MainCalculadora";
             Text = "MainCalculadora";
+            Load += MainCalculadora_Load;
+            pnMainCalculadoraResult.ResumeLayout(false);
+            pnMainCalculadoraResult.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -487,5 +501,6 @@
         private ToolTip toolTip4;
         private ToolTip toolTip3;
         private ToolTip toolTip2;
+        private TextBox campMainCalculadoraResult;
     }
 }

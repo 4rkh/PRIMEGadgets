@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prime_Gadgets.modulos.moduloContatos;
 
 namespace Prime_Gadgets.modulos.moduloSenhas
 {

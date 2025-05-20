@@ -114,11 +114,13 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         {
             if (btCreateSenhasCriar.Enabled)
             {
-                btCreateSenhasCriar.BackColor = Color.Green; // Cor quando o botão está ativado
+                btCreateSenhasCriar.BackColor = Color.FromArgb(230, 34, 34); // Cor quando o botão está ativado
+                btCreateSenhasCriar.ForeColor = Color.FromArgb(255, 252, 237);
             }
             else
             {
-                btCreateSenhasCriar.BackColor = Color.Red; // Cor quando o botão está desativado
+                btCreateSenhasCriar.BackColor = Color.FromArgb(52, 60, 76); // Cor quando o botão está desativado
+                btCreateSenhasCriar.ForeColor = Color.FromArgb(183, 190, 191);
             }
         }
         private void btCreateSenhasCriar_EnabledChanged(object sender, EventArgs e)
@@ -166,18 +168,19 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         {
             campCreateSenhasSenha.Text = GerarSenha(15);
         }
-
+        Bitmap btmShow = Properties.Resources.showon;
+        Bitmap btmHide = Properties.Resources.showoff;
         private void btCreateSenhasMostrar_Click(object sender, EventArgs e)
         {
             if (campCreateSenhasSenha.UseSystemPasswordChar)
             {
                 campCreateSenhasSenha.UseSystemPasswordChar = false;
-                btCreateSenhasMostrar.Text = "Ocultar";
+                btCreateSenhasMostrar.Image = btmHide;
             }
             else
             {
                 campCreateSenhasSenha.UseSystemPasswordChar = true;
-                btCreateSenhasMostrar.Text = "Mostrar";
+                btCreateSenhasMostrar.Image = btmShow;
             }
         }
     }

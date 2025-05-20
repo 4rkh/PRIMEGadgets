@@ -39,7 +39,6 @@
             panelPrime.Name = "panelPrime";
             panelPrime.Size = new Size(1405, 642);
             panelPrime.TabIndex = 1;
-            panelPrime.MouseEnter += panelHome_Enter;
             // 
             // TelaPrincipal
             // 
@@ -52,6 +51,7 @@
             Name = "TelaPrincipal";
             Text = "MenuPrincipal";
             WindowState = FormWindowState.Maximized;
+            Load += panelHome_Enter;
             ResumeLayout(false);
         }
 

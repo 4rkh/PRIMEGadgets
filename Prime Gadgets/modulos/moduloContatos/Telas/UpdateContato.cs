@@ -114,7 +114,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
                                  IsValidEmail(campUpdateContatosEmail.Text);
 
             btUpdateContatosCriar.Enabled = camposValidos;
-            btUpdateContatosCriar.BackColor = camposValidos ? Color.Lime : Color.Gray;
+            btUpdateContatosCriar.BackColor = camposValidos ? Color.FromArgb(230, 34, 34) : Color.FromArgb(52, 60, 76);
         }
 
         private void btUpdateContatosAtualizar_Click(object sender, EventArgs e)

@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btUpdateSenhasMostrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
+        NgAACTYBKxMdPQAAAM9JREFUWEftjlEOgzAMxbj/XXeDSUwpL1MIToEJDT5qyR8kbuk0GAwq5vdrNvX5
+        f/wBj3xEnGeVXEd1eZxXKv2ds5dSb2p9HLokqgyh3tR6HzpMKkeod5UwdMBVsmo0QmKXVbKGwqiyRjWP
+        xIZUtkBBVmmjt3NyQx4OzRaLvb1BDXk4bqGgval1g/ZZpQsURJV9ocbUukF7V8kWil0lSNXFOe0ROmRq
+        XVK11bxLPJRVsqHX9c51yZeeVddcA/2AzG07fAfjEc6tPx8MHs40fQAkPSWtJRjBSgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <data name="btUpdateSenhasGerar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
+        NgAACTYBKxMdPQAAANFJREFUWEftjlEKwzAMQ3v/u+4Gg46kCjianNrptnysDwQhliVvN3/B/nzseK6h
+        HLD0iHaAe4Q1DI2TDLN5qASri9o5E1YPlEEJ9oqazwhxPcpYhPF3yxk22wAl2DqiPgmbOYjniqzfhYOa
+        MHbJeIfYoExgxjvEFmdCo75TZso/BpffB+A7xOVjuTwbOLPTYYs5zL491F4Yu8wh3j8T9b3Bi00Yu/OI
+        EHGgDJ6wcqm8KR1UFwjly+g0pBoCqN2RsPYblpYXlpYXlpYXlpbfjNm2F92baAQcQpU9AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

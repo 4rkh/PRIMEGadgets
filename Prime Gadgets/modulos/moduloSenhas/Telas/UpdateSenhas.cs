@@ -60,7 +60,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                                  IsValidEmail(campUpdateSenhasEmail.Text);
 
             btUpdateSenhasAtualizar.Enabled = camposValidos;
-            btUpdateSenhasAtualizar.BackColor = camposValidos ? Color.Lime : Color.Gray;
+            btUpdateSenhasAtualizar.BackColor = camposValidos ? Color.FromArgb(230, 34, 34) : Color.FromArgb(52, 60, 76);
         }
         private bool IsValidEmail(string email)
         {
@@ -185,18 +185,19 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         {
             campUpdateSenhasSenha.Text = GerarSenha(15);
         }
-
+        Bitmap btmShow = Properties.Resources.showon;
+        Bitmap btmHide = Properties.Resources.showoff;
         private void btUpdateSenhasMostrar_Click(object sender, EventArgs e)
         {
             if (campUpdateSenhasSenha.UseSystemPasswordChar)
             {
                 campUpdateSenhasSenha.UseSystemPasswordChar = false;
-                btUpdateSenhasMostrar.Text = "Ocultar";
+                btUpdateSenhasMostrar.Image = btmHide;
             }
             else
             {
                 campUpdateSenhasSenha.UseSystemPasswordChar = true;
-                btUpdateSenhasMostrar.Text = "Mostrar";
+                btUpdateSenhasMostrar.Image = btmShow;
             }
         }
     }

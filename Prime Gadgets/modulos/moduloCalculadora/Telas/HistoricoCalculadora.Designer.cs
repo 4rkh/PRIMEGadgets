@@ -36,7 +36,9 @@
             // 
             // lvHistoricoCalculadoraHistorico
             // 
+            lvHistoricoCalculadoraHistorico.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lvHistoricoCalculadoraHistorico.BackColor = Color.FromArgb(255, 252, 237);
+            lvHistoricoCalculadoraHistorico.BorderStyle = BorderStyle.None;
             lvHistoricoCalculadoraHistorico.Location = new Point(12, 12);
             lvHistoricoCalculadoraHistorico.Name = "lvHistoricoCalculadoraHistorico";
             lvHistoricoCalculadoraHistorico.Size = new Size(635, 426);
@@ -45,6 +47,7 @@
             // 
             // btHistoricoCalculadoraVoltar
             // 
+            btHistoricoCalculadoraVoltar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btHistoricoCalculadoraVoltar.BackColor = Color.FromArgb(230, 34, 34);
             btHistoricoCalculadoraVoltar.FlatAppearance.BorderSize = 0;
             btHistoricoCalculadoraVoltar.FlatStyle = FlatStyle.Flat;
@@ -58,6 +61,7 @@
             // 
             // btHistoricoCalculadoraClear
             // 
+            btHistoricoCalculadoraClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btHistoricoCalculadoraClear.BackColor = Color.FromArgb(230, 34, 34);
             btHistoricoCalculadoraClear.FlatAppearance.BorderSize = 0;
             btHistoricoCalculadoraClear.FlatStyle = FlatStyle.Flat;

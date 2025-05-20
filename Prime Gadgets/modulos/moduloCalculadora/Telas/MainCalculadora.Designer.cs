@@ -344,10 +344,14 @@
             // 
             // campMainCalculadoraResult
             // 
-            campMainCalculadoraResult.Location = new Point(-2, 40);
+            campMainCalculadoraResult.BackColor = Color.FromArgb(255, 252, 237);
+            campMainCalculadoraResult.BorderStyle = BorderStyle.None;
+            campMainCalculadoraResult.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            campMainCalculadoraResult.ForeColor = Color.FromArgb(230, 34, 34);
+            campMainCalculadoraResult.Location = new Point(3, 39);
             campMainCalculadoraResult.Name = "campMainCalculadoraResult";
             campMainCalculadoraResult.ReadOnly = true;
-            campMainCalculadoraResult.Size = new Size(255, 23);
+            campMainCalculadoraResult.Size = new Size(250, 19);
             campMainCalculadoraResult.TabIndex = 0;
             // 
             // btMainCalculadoraReturn

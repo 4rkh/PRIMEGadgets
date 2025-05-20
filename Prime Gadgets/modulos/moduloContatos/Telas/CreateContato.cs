@@ -95,11 +95,13 @@ namespace Prime_Gadgets.modulos.moduloContatos
         {
             if (btAddContatosCriar.Enabled)
             {
-                btAddContatosCriar.BackColor = Color.Green; // Cor quando o botão está ativado
+                btAddContatosCriar.BackColor = Color.FromArgb(230, 34, 34); // Cor quando o botão está ativado
+                btAddContatosCriar.ForeColor = Color.FromArgb(255, 252, 237);
             }
             else
             {
-                btAddContatosCriar.BackColor = Color.Red; // Cor quando o botão está desativado
+                btAddContatosCriar.BackColor = Color.FromArgb(52, 60, 76); // Cor quando o botão está desativado
+                btAddContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
             }
         }
 

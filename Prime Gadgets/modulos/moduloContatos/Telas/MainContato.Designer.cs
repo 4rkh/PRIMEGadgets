@@ -44,6 +44,13 @@
             label1 = new Label();
             ContatosTable = new DataGridView();
             menu1 = new Menu();
+            btPrincipalContatosNext = new Button();
+            btPrincipalContatosLast = new Button();
+            btPrincipalContatosBack = new Button();
+            btPrincipalContatosFirst = new Button();
+            lbPrincipalContatosPgAtual = new Label();
+            lbPrincipalContatosTexto1 = new Label();
+            lbPrincipalContatosPgFinal = new Label();
             ((ISupportInitialize)ContatosTable).BeginInit();
             SuspendLayout();
             // 
@@ -122,7 +129,7 @@
             ContatosTable.Name = "ContatosTable";
             ContatosTable.RowHeadersVisible = false;
             ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ContatosTable.Size = new Size(925, 491);
+            ContatosTable.Size = new Size(925, 458);
             ContatosTable.TabIndex = 5;
             // 
             // menu1
@@ -134,12 +141,98 @@
             menu1.Size = new Size(212, 663);
             menu1.TabIndex = 6;
             // 
+            // btPrincipalContatosNext
+            // 
+            btPrincipalContatosNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btPrincipalContatosNext.Image = (Image)resources.GetObject("btPrincipalContatosNext.Image");
+            btPrincipalContatosNext.Location = new Point(851, 604);
+            btPrincipalContatosNext.Name = "btPrincipalContatosNext";
+            btPrincipalContatosNext.Size = new Size(55, 59);
+            btPrincipalContatosNext.TabIndex = 7;
+            btPrincipalContatosNext.UseVisualStyleBackColor = true;
+            btPrincipalContatosNext.Click += btPrincipalContatosNext_Click;
+            // 
+            // btPrincipalContatosLast
+            // 
+            btPrincipalContatosLast.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btPrincipalContatosLast.Image = (Image)resources.GetObject("btPrincipalContatosLast.Image");
+            btPrincipalContatosLast.Location = new Point(927, 604);
+            btPrincipalContatosLast.Name = "btPrincipalContatosLast";
+            btPrincipalContatosLast.Size = new Size(55, 59);
+            btPrincipalContatosLast.TabIndex = 8;
+            btPrincipalContatosLast.UseVisualStyleBackColor = true;
+            btPrincipalContatosLast.Click += btPrincipalContatosLast_Click;
+            // 
+            // btPrincipalContatosBack
+            // 
+            btPrincipalContatosBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btPrincipalContatosBack.Image = Properties.Resources.icons8_à_esquerda_dentro_de_um_círculo_50;
+            btPrincipalContatosBack.Location = new Point(531, 604);
+            btPrincipalContatosBack.Name = "btPrincipalContatosBack";
+            btPrincipalContatosBack.Size = new Size(55, 59);
+            btPrincipalContatosBack.TabIndex = 9;
+            btPrincipalContatosBack.UseVisualStyleBackColor = true;
+            btPrincipalContatosBack.Click += btPrincipalContatosBack_Click;
+            // 
+            // btPrincipalContatosFirst
+            // 
+            btPrincipalContatosFirst.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btPrincipalContatosFirst.Image = Properties.Resources.icons8_à_esquerda_dentro_de_um_círculo_50;
+            btPrincipalContatosFirst.Location = new Point(457, 604);
+            btPrincipalContatosFirst.Name = "btPrincipalContatosFirst";
+            btPrincipalContatosFirst.Size = new Size(55, 59);
+            btPrincipalContatosFirst.TabIndex = 10;
+            btPrincipalContatosFirst.UseVisualStyleBackColor = true;
+            btPrincipalContatosFirst.Click += btPrincipalContatosFirst_Click;
+            // 
+            // lbPrincipalContatosPgAtual
+            // 
+            lbPrincipalContatosPgAtual.Anchor = AnchorStyles.Bottom;
+            lbPrincipalContatosPgAtual.AutoSize = true;
+            lbPrincipalContatosPgAtual.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPrincipalContatosPgAtual.ForeColor = Color.Red;
+            lbPrincipalContatosPgAtual.Location = new Point(654, 620);
+            lbPrincipalContatosPgAtual.Name = "lbPrincipalContatosPgAtual";
+            lbPrincipalContatosPgAtual.Size = new Size(19, 21);
+            lbPrincipalContatosPgAtual.TabIndex = 11;
+            lbPrincipalContatosPgAtual.Text = "1";
+            // 
+            // lbPrincipalContatosTexto1
+            // 
+            lbPrincipalContatosTexto1.Anchor = AnchorStyles.Bottom;
+            lbPrincipalContatosTexto1.AutoSize = true;
+            lbPrincipalContatosTexto1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPrincipalContatosTexto1.Location = new Point(699, 622);
+            lbPrincipalContatosTexto1.Name = "lbPrincipalContatosTexto1";
+            lbPrincipalContatosTexto1.Size = new Size(26, 20);
+            lbPrincipalContatosTexto1.TabIndex = 12;
+            lbPrincipalContatosTexto1.Text = "de";
+            // 
+            // lbPrincipalContatosPgFinal
+            // 
+            lbPrincipalContatosPgFinal.Anchor = AnchorStyles.Bottom;
+            lbPrincipalContatosPgFinal.AutoSize = true;
+            lbPrincipalContatosPgFinal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPrincipalContatosPgFinal.ForeColor = Color.FromArgb(0, 0, 192);
+            lbPrincipalContatosPgFinal.Location = new Point(750, 617);
+            lbPrincipalContatosPgFinal.Name = "lbPrincipalContatosPgFinal";
+            lbPrincipalContatosPgFinal.Size = new Size(23, 25);
+            lbPrincipalContatosPgFinal.TabIndex = 13;
+            lbPrincipalContatosPgFinal.Text = "1";
+            // 
             // MainContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1193, 663);
+            Controls.Add(lbPrincipalContatosPgFinal);
+            Controls.Add(lbPrincipalContatosTexto1);
+            Controls.Add(lbPrincipalContatosPgAtual);
+            Controls.Add(btPrincipalContatosFirst);
+            Controls.Add(btPrincipalContatosBack);
+            Controls.Add(btPrincipalContatosLast);
+            Controls.Add(btPrincipalContatosNext);
             Controls.Add(menu1);
             Controls.Add(ContatosTable);
             Controls.Add(label1);
@@ -154,6 +247,7 @@
             WindowState = FormWindowState.Maximized;
             ((ISupportInitialize)ContatosTable).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -164,5 +258,12 @@
         private Label label1;
         private DataGridView ContatosTable;
         private Menu menu1;
+        private Button btPrincipalContatosNext;
+        private Button btPrincipalContatosLast;
+        private Button btPrincipalContatosBack;
+        private Button btPrincipalContatosFirst;
+        private Label lbPrincipalContatosPgAtual;
+        private Label lbPrincipalContatosTexto1;
+        private Label lbPrincipalContatosPgFinal;
     }
 }

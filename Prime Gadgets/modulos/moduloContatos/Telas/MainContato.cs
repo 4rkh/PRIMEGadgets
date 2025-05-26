@@ -13,6 +13,11 @@ namespace Prime_Gadgets.modulos.moduloContatos
 
     public partial class MainContato : Form
     {
+        private List<Contatos> _contatos = new();
+        private int _paginaAtual = 1;
+        private int _totalPaginas = 1;
+        private const int _tamanhoPagina = 30;
+
         public MainContato()
         {
             try
@@ -42,18 +47,26 @@ namespace Prime_Gadgets.modulos.moduloContatos
         public void LerTabela()
         {
             var contatoAccess = new ContatoAccess();
-            List<Contatos> contatos = contatoAccess.LerContatos();
-            contatos = contatoAccess.OrdenarContatosPorId(contatos);
+            _contatos = contatoAccess.OrdenarContatosPorId(contatoAccess.LerContatos());
+
+            // Calcula o total de páginas
+            _totalPaginas = (_contatos.Count + _tamanhoPagina - 1) / _tamanhoPagina;
+            if (_totalPaginas == 0) _totalPaginas = 1;
+            if (_paginaAtual > _totalPaginas) _paginaAtual = _totalPaginas;
+            if (_paginaAtual < 1) _paginaAtual = 1;
+
+            // Seleciona os contatos da página atual
+            int inicio = (_paginaAtual - 1) * _tamanhoPagina;
+            var contatosPagina = _contatos.Skip(inicio).Take(_tamanhoPagina);
 
             DataTable dataTable = new DataTable();
-
             dataTable.Columns.Add("ID", typeof(int));
             dataTable.Columns.Add("Nome");
             dataTable.Columns.Add("Sobrenome");
             dataTable.Columns.Add("Telefone");
             dataTable.Columns.Add("Email");
 
-            foreach (var contato in contatos)
+            foreach (var contato in contatosPagina)
             {
                 var row = dataTable.NewRow();
                 row["ID"] = contato.Id;
@@ -65,7 +78,13 @@ namespace Prime_Gadgets.modulos.moduloContatos
             }
 
             this.ContatosTable.DataSource = dataTable;
+
+            // Atualiza as labels de página
+            lbPrincipalContatosPgAtual.Text = _paginaAtual.ToString();
+            lbPrincipalContatosPgFinal.Text = _totalPaginas.ToString();
+            AtualizarEstadoBotoesNavegacao();
         }
+
         public Contatos ContatoSelect()
         {
             if (ContatosTable.SelectedRows.Count > 0)
@@ -106,10 +125,10 @@ namespace Prime_Gadgets.modulos.moduloContatos
                 MessageBox.Show("Nenhum contato selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         //clicar botao chama UpdateContato()
-        //inicializar uam list<contatos>
+        //inicializar uma list<contatos>
         //update contato exibe a tela e os campo que sao capturados anteriormente na linha selecionada
         //substituir os valore na list<contatos>
         //fazer o sort na lista
@@ -121,6 +140,79 @@ namespace Prime_Gadgets.modulos.moduloContatos
             UpdateContato updateContato = new UpdateContato(contato);
             updateContato.ShowDialog();
             LerTabela();
+        }
+
+        private void btPrincipalContatosFirst_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual != 1)
+            {
+                _paginaAtual = 1;
+                LerTabela();
+            }
+        }
+
+        // Botão VOLTAR página
+        private void btPrincipalContatosBack_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual > 1)
+            {
+                _paginaAtual--;
+                LerTabela();
+            }
+        }
+
+        // Botão AVANÇAR página
+        private void btPrincipalContatosNext_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual < _totalPaginas)
+            {
+                _paginaAtual++;
+                LerTabela();
+            }
+        }
+
+        // Botão ÚLTIMA página
+        private void btPrincipalContatosLast_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual != _totalPaginas)
+            {
+                _paginaAtual = _totalPaginas;
+                LerTabela();
+            }
+        }
+        private void AtualizarEstadoBotoesNavegacao()
+        {
+            // Primeira página: desabilita 'first' e 'back'
+            if (_paginaAtual == 1)
+            {
+                btPrincipalContatosFirst.Enabled = false;
+                btPrincipalContatosBack.Enabled = false;
+                btPrincipalContatosFirst.BackColor = Color.LightGray;
+                btPrincipalContatosBack.BackColor = Color.LightGray;
+            }
+            else
+            {
+                btPrincipalContatosFirst.Enabled = true;
+                btPrincipalContatosBack.Enabled = true;
+                btPrincipalContatosFirst.BackColor = SystemColors.Control;
+                btPrincipalContatosBack.BackColor = SystemColors.Control;
+            }
+
+            // Última página: desabilita 'end' e 'next'
+            if (_paginaAtual == _totalPaginas)
+            {
+                btPrincipalContatosLast.Enabled = false;
+                btPrincipalContatosNext.Enabled = false;
+                btPrincipalContatosLast.BackColor = Color.LightGray;
+                btPrincipalContatosNext.BackColor = Color.LightGray;
+            }
+            else
+            {
+                btPrincipalContatosLast.Enabled = true;
+                btPrincipalContatosNext.Enabled = true;
+                btPrincipalContatosLast.BackColor = SystemColors.Control;
+                btPrincipalContatosNext.BackColor = SystemColors.Control;
+            }
         }
     }
 }

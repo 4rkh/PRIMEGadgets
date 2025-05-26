@@ -26,7 +26,7 @@ namespace Prime_Gadgets
 
         private void panelHome_Enter(object sender, EventArgs e)
         {
-            telaHome homeTela = new telaHome();
+            MainHome homeTela = new MainHome();
             homeTela.Dock = DockStyle.Fill;
             homeTela.TopLevel = false;
             panelPrime.Controls.Clear();

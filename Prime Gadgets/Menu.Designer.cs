@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            button1 = new Button();
+            btMenuPrincipalHome = new Button();
             btMenuPrincipalRotina = new Button();
             btMenuPrincipalSenhas = new Button();
             btMenuPrincipalLembretes = new Button();
@@ -39,24 +39,24 @@
             btMenuPrincipalContatos = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btMenuPrincipalHome
             // 
-            button1.BackColor = Color.FromArgb(230, 34, 34);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 18F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(255, 252, 237);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(0, 8);
-            button1.Name = "button1";
-            button1.Size = new Size(212, 113);
-            button1.TabIndex = 17;
-            button1.Text = "PRIME Gadgets";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += btHome_Click;
+            btMenuPrincipalHome.BackColor = Color.FromArgb(230, 34, 34);
+            btMenuPrincipalHome.Cursor = Cursors.Hand;
+            btMenuPrincipalHome.FlatAppearance.BorderSize = 0;
+            btMenuPrincipalHome.FlatStyle = FlatStyle.Flat;
+            btMenuPrincipalHome.Font = new Font("Arial", 18F, FontStyle.Bold);
+            btMenuPrincipalHome.ForeColor = Color.FromArgb(255, 252, 237);
+            btMenuPrincipalHome.Image = (Image)resources.GetObject("btMenuPrincipalHome.Image");
+            btMenuPrincipalHome.ImageAlign = ContentAlignment.TopCenter;
+            btMenuPrincipalHome.Location = new Point(0, 8);
+            btMenuPrincipalHome.Name = "btMenuPrincipalHome";
+            btMenuPrincipalHome.Size = new Size(212, 113);
+            btMenuPrincipalHome.TabIndex = 17;
+            btMenuPrincipalHome.Text = "PRIME Gadgets";
+            btMenuPrincipalHome.TextAlign = ContentAlignment.BottomCenter;
+            btMenuPrincipalHome.UseVisualStyleBackColor = false;
+            btMenuPrincipalHome.Click += btHome_Click;
             // 
             // btMenuPrincipalRotina
             // 
@@ -186,7 +186,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 34, 34);
-            Controls.Add(button1);
+            Controls.Add(btMenuPrincipalHome);
             Controls.Add(btMenuPrincipalRotina);
             Controls.Add(btMenuPrincipalSenhas);
             Controls.Add(btMenuPrincipalLembretes);
@@ -201,7 +201,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btMenuPrincipalHome;
         private Button btMenuPrincipalRotina;
         private Button btMenuPrincipalSenhas;
         private Button btMenuPrincipalLembretes;

@@ -26,11 +26,11 @@ namespace Prime_Gadgets
         private void btHome_Click(object sender, EventArgs e)
         {
             Form telaAtual = this.FindForm();
-            if (telaAtual is telaHome)
+            if (telaAtual is MainHome)
             {
                 return;
             }
-            telaHome homeTela = new telaHome();
+            MainHome homeTela = new MainHome();
             homeTela.Dock = DockStyle.Fill;
             homeTela.TopLevel = false;
             TelaPrincipal.mainPanel.Controls.Clear();

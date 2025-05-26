@@ -41,7 +41,7 @@
             btPrincipalContatosCreate = new Button();
             btPrincipalContatosUpdate = new Button();
             btPrincipalContatosDelete = new Button();
-            label1 = new Label();
+            lbPrincipalContatosTitulo = new Label();
             ContatosTable = new DataGridView();
             menu1 = new Menu();
             btPrincipalContatosNext = new Button();
@@ -101,18 +101,18 @@
             btPrincipalContatosDelete.UseVisualStyleBackColor = false;
             btPrincipalContatosDelete.Click += btPrincipalContatosDelete_Click;
             // 
-            // label1
+            // lbPrincipalContatosTitulo
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(52, 60, 76);
-            label1.Location = new Point(578, 11);
-            label1.Name = "label1";
-            label1.Size = new Size(248, 56);
-            label1.TabIndex = 4;
-            label1.Text = "Lista de Contatos";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lbPrincipalContatosTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbPrincipalContatosTitulo.BackColor = Color.Transparent;
+            lbPrincipalContatosTitulo.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPrincipalContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbPrincipalContatosTitulo.Location = new Point(578, 11);
+            lbPrincipalContatosTitulo.Name = "lbPrincipalContatosTitulo";
+            lbPrincipalContatosTitulo.Size = new Size(248, 56);
+            lbPrincipalContatosTitulo.TabIndex = 4;
+            lbPrincipalContatosTitulo.Text = "Lista de Contatos";
+            lbPrincipalContatosTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ContatosTable
             // 
@@ -235,7 +235,7 @@
             Controls.Add(btPrincipalContatosNext);
             Controls.Add(menu1);
             Controls.Add(ContatosTable);
-            Controls.Add(label1);
+            Controls.Add(lbPrincipalContatosTitulo);
             Controls.Add(btPrincipalContatosDelete);
             Controls.Add(btPrincipalContatosUpdate);
             Controls.Add(btPrincipalContatosCreate);
@@ -255,7 +255,7 @@
         private Button btPrincipalContatosCreate;
         private Button btPrincipalContatosUpdate;
         private Button btPrincipalContatosDelete;
-        private Label label1;
+        private Label lbPrincipalContatosTitulo;
         private DataGridView ContatosTable;
         private Menu menu1;
         private Button btPrincipalContatosNext;

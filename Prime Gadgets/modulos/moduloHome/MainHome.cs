@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Prime_Gadgets.modulos.moduloHome
 {
-    public partial class telaHome : Form
+    public partial class MainHome : Form
     {
-        public telaHome()
+        public MainHome()
         {
             InitializeComponent();
         }

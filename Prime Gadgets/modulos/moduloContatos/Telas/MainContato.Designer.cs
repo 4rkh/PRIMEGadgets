@@ -118,6 +118,8 @@
             // 
             ContatosTable.AllowUserToAddRows = false;
             ContatosTable.AllowUserToDeleteRows = false;
+            ContatosTable.AllowUserToResizeColumns = false;
+            ContatosTable.AllowUserToResizeRows = false;
             ContatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ContatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ContatosTable.BackgroundColor = Color.FromArgb(255, 252, 237);
@@ -127,6 +129,7 @@
             ContatosTable.Location = new Point(242, 140);
             ContatosTable.MultiSelect = false;
             ContatosTable.Name = "ContatosTable";
+            ContatosTable.ReadOnly = true;
             ContatosTable.RowHeadersVisible = false;
             ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ContatosTable.Size = new Size(925, 458);

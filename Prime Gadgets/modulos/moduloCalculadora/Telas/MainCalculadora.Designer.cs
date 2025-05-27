@@ -348,10 +348,11 @@
             campMainCalculadoraResult.BorderStyle = BorderStyle.None;
             campMainCalculadoraResult.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             campMainCalculadoraResult.ForeColor = Color.FromArgb(230, 34, 34);
-            campMainCalculadoraResult.Location = new Point(3, 39);
+            campMainCalculadoraResult.Location = new Point(0, 3);
+            campMainCalculadoraResult.Multiline = true;
             campMainCalculadoraResult.Name = "campMainCalculadoraResult";
             campMainCalculadoraResult.ReadOnly = true;
-            campMainCalculadoraResult.Size = new Size(250, 19);
+            campMainCalculadoraResult.Size = new Size(250, 90);
             campMainCalculadoraResult.TabIndex = 0;
             // 
             // btMainCalculadoraReturn

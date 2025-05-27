@@ -121,20 +121,18 @@
   <data name="btMainCalculadoraClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAANxJREFUWEftjlEKwyAUwHr/u+4Gg46u0dY2WhFlMAzk6+X5XCaTyS9Y3691hDxf
-        hz3QW06VscVRctKxhZFy9o7FJvljT1bsSFIsNMkj1mwyjlizyfjAopysJLQ0QcY7FjzJakLNzCRp+0iQ
-        Jx6x3bNVUY3fhwrYztUuHwly94a15n9+hrtZbOdqdVjy+0gFtnuWrP1DrCfUzEySHQtKspbQ0gQZH1iU
-        k5WINZuMI9ZsMk6xMCcrjztkxY7kjsWj5bRjCyPlbB5bGiUny9hibzlVjz3SQ56fTCadWJYPeXnEUnKp
-        2TEAAAAASUVORK5CYII=
+        rAAACawBHEBKiAAAAMRJREFUWEftjkEOwjAMBPv/v/IDpCJQGtWDnazSGi4eaU4dd7NtRVH8gf352DPk
+        zhAeZ8hNFx5lym0D42y532EYqfZK18fPMIpU71a7MPTk7ZuVxm35UdH8oKF885SimWZtAO+oFClymLD3
+        lCJVPuCAXaQcKvIRB+wi5XAmH0DYe8rhSA5H8I7KYaRZayjfPOXQ0xw3VpqwZTBSvV3tPjAaqd4oXX8A
+        YfgL+QYD42y5/wUPMuW2C48y5OYU/uAuuVMUxVVeeXnEUtcQKw0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btMainCalculadoraReturn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rgAACa4BY76JAQAAAKJJREFUWEftjkEKhDAAxPr/v/qDBUU2gyi5Ogo2kEPplGZMJi3W37LucnyOhDwe
-        dA2JXPewiMikgwVEJh0sIDLpYAGRSQcLiEw6WEBk0sECIpMOFhCZdLCAu+XrMzZsScKBjZqS8ccGLUk4
-        Y8O75WvHHkQmXSwkMuliIZFJFwuJTLpYSGTSxUIiky4WEpl0sZDIpIuF7HLd5zUh4TUhkw8zxgZVVWQd
-        zmcQhgAAAABJRU5ErkJggg==
+        rAAACawBHEBKiAAAAHJJREFUWEftzjEKwDAMBEH//6/5QcDBARXeKo1PB7kFNUZGM0ZKouZ9zTV8l1eQ
+        dhAhbSAC2jA8HgiPB8LjgfC4JeTU0PDGJeXQ0opZY4PZIBWXFEPDFpc/fzwVEQExIgJiRATEiLAFcU+W
+        DaSygaRf9wBVVWQd/jBJTgAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -143,11 +141,11 @@
   <data name="btMainCalculadoraHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACIAAAAjCAYAAADxG9hnAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rQAACa0BzgeobAAAAQFJREFUWEftjgEKwjAUQ3f/u3oDYTJJR/bN1qSbqOCDgLYv6aafYb7fZvz8LF/x
-        IctHtOBohe84uL6W+gD/d/IcOYsaHg0mc9TYFcG8jxpRgb5BeRxofVSZA62L6rZAOUYVa6BaDPVVSQX6
-        ijpjav/QV/JRUNv0cCRhz/FjkmF2HT8iGWbX7diko+y7HYt0lH23Y5GOsu92LNJR9t2ORTrKvtuxSIdT
-        36YO98YTN6aOHz3gesM4D1RnzztN7wG+33NeiAsdeM/eHSp1GNqrpRZcx5zaUuUluLZQ/SW49lEjLVAk
-        ym+BkqPGRoPJcdRoGkxdg3qgF1Tfg3qwBuqfQabpAVIKZbp1UfOkAAAAAElFTkSuQmCC
+        rAAACawBHEBKiAAAANZJREFUWEftjkEKwzAQA/P/v/YHhZQUAs2w3pVs06bgAV0Sabzb9i/sz8fObz/h
+        FoccR5zJ/mW9KfABPlqFvi4oHQndMhTNCt8poaAV7g7YYdhvwiHDfgvubAdHUbjJ4Fbac9BKtOO3T7hP
+        +yxWiXZX4xXuq76NI77tIcpGxpWuQ8g6hHzlEEXs9mUoruRO14by7AG1143yADut3jDVA11H2IMCHiF5
+        OZBGBV0+jqxxAD2Wi0NbMMnxhgJVxq66S6FoJHTbUNgTOoegXAkdU+FjUbhZuLwAUgplumrhUfoAAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -159,12 +157,12 @@
   <data name="btMainCalculadoraPaste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACIAAAAjCAYAAADxG9hnAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAASlJREFUWEfFjlsOwyAMBHP/u/YGldpibSSLDLCQR0eaH9Zrs63web8+u3p6nvyJ
-        v32GDj/6mf0YHe1ll1Ifqo+N8mXqZfmAq6qHXTZ52b6gfnNs7bKoi7lMWUtV7vlIgfJajQajvAkVi4qn
-        oD1FxX2oeLU61YeKd6hzbajkqHqXqU497Kiqhd2tBx1VtbD7NDhSVRtrBw2NVHWK4R4aGKlqQHlR8YHm
-        TA5cVR12NXYA81x0VTWgvKgYwZlcdlV1GdyTD7iqugzuyQdcVQ0oJzUe0Nupj1DWU7XrP1KgnNR4QG+n
-        P7IC7skHXFVdBvfkA66qBpSTGg/o7dRHKOup2vUfKVBOajygt9MfWQH35AOuqi6De/KBGVWfprsjh0+p
-        00do+C518se2fQFRM8nWnTs5RQAAAABJRU5ErkJggg==
+        rAAACawBHEBKiAAAAR5JREFUWEfFkEEOxCAMA/v/v/YHK7WnRWHqgImWriVfkniMOI6Crs95fc3da4qP
+        +NtjVLGabdPoB0a7n4pFLOOO+7IIY4ljZhvclQJy5ljl2JWKwRjmfOQs04pmYpBh7pRn93GfiqGlMETG
+        EouhHWanFEO7zN6HGHBNjtJShseOyRjJzvLQMRkjMZvmeeSYjJmYlwweOCbDERkPDpeOnXy8iUpvCHDs
+        ZruiILln2LGTjzeUvCHAcQcoSHJY4rgDFCQ5LHFcyatMnNkgBeV8ZubaIyowArjLrDJxZoMyaEWSwxLH
+        HaAgyWGJ40peZeLMBiko5zMz1x5RgRHAXWaViTMblEErkhyWOO4ABUkOS1x3kAUNGSx5w3xDEw93Ovbe
+        UTPJ1iYYMm4AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

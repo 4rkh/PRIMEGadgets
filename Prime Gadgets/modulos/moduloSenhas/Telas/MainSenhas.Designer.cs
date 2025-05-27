@@ -101,13 +101,17 @@
             // 
             tbMainSenhasDados.AllowUserToAddRows = false;
             tbMainSenhasDados.AllowUserToDeleteRows = false;
+            tbMainSenhasDados.AllowUserToResizeColumns = false;
+            tbMainSenhasDados.AllowUserToResizeRows = false;
             tbMainSenhasDados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbMainSenhasDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tbMainSenhasDados.BackgroundColor = Color.FromArgb(255, 252, 237);
             tbMainSenhasDados.BorderStyle = BorderStyle.None;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbMainSenhasDados.Location = new Point(242, 140);
             tbMainSenhasDados.MultiSelect = false;
             tbMainSenhasDados.Name = "tbMainSenhasDados";
+            tbMainSenhasDados.ReadOnly = true;
             tbMainSenhasDados.RowHeadersVisible = false;
             tbMainSenhasDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tbMainSenhasDados.Size = new Size(925, 491);

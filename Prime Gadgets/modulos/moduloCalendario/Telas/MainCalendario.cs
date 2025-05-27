@@ -16,5 +16,25 @@ namespace Prime_Gadgets.modulos.moduloCalendario
         {
             InitializeComponent();
         }
+
+        private void lbMainCalendarioDia1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalendarioBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btMainCalendarioNext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ddMainCalendarioSelectMes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

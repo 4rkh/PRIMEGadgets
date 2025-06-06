@@ -16,27 +16,27 @@ namespace Prime_Gadgets.modulos.moduloContatos
         public CreateContato()
         {
             InitializeComponent();
-            btAddContatosCancelar.CausesValidation = false; // Desabilita a validação de campos para o botão "Cancelar"
-            lbAddContatoEmailInvalid.Hide();
-            btAddContatosCriar.Enabled = false; // Desabilita o botão "Criar" inicialmente
+            btCreateContatosCancelar.CausesValidation = false; // Desabilita a validação de campos para o botão "Cancelar"
+            lbCreateContatoEmailInvalid.Hide();
+            btCreateContatosCriar.Enabled = false; // Desabilita o botão "Criar" inicialmente
             AtualizarCorBotao(); // Atualiza a cor do botão inicialmente
         }
 
-        private void btContatoAddCancelar_Click(object sender, EventArgs e)
+        private void btCreateContatoCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void btContatoAddCriar_Click(object sender, EventArgs e)
+        private void btCreateContatoCriar_Click(object sender, EventArgs e)
         {
             Contatos contato = new Contatos();
             var contatoAccess = new ContatoAccess();
 
             contato.Id = contatoAccess.LerUltimoId() + 1;
-            contato.Nome = campAddContatosNome.Text;
-            contato.Sobrenome = campAddContatosSobrenome.Text;
-            contato.Telefone = campAddContatosTelefone.Text;
-            contato.Email = campAddContatosEmail.Text;
+            contato.Nome = campCreateContatosNome.Text;
+            contato.Sobrenome = campCreateContatosSobrenome.Text;
+            contato.Telefone = campCreateContatosTelefone.Text;
+            contato.Email = campCreateContatosEmail.Text;
 
             
             contatoAccess.AdicionarContato(contato);
@@ -52,7 +52,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             }
         }
 
-        private void campAddContatosTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        private void campCreateContatosTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permite apenas números e a tecla de controle (como backspace)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -61,15 +61,15 @@ namespace Prime_Gadgets.modulos.moduloContatos
             }
         }
 
-        private void campAddContatosEmail_Validating(object sender, CancelEventArgs e)
+        private void campCreateContatosEmail_Validating(object sender, CancelEventArgs e)
         {
 
                 // Valida o formato do e-mail
-                var email = campAddContatosEmail.Text;
+                var email = campCreateContatosEmail.Text;
                 if (!IsValidEmail(email))
                 {
                     e.Cancel = true;
-                   lbAddContatoEmailInvalid.Show();
+                   lbCreateContatoEmailInvalid.Show();
                 }
                 VerificarCampos();
         }
@@ -81,31 +81,31 @@ namespace Prime_Gadgets.modulos.moduloContatos
         private void VerificarCampos()
         {
             // Verifica se todos os campos estão preenchidos e se o e-mail é válido
-            bool camposPreenchidos = !string.IsNullOrWhiteSpace(campAddContatosNome.Text) &&
-                                     !string.IsNullOrWhiteSpace(campAddContatosSobrenome.Text) &&
-                                     !string.IsNullOrWhiteSpace(campAddContatosTelefone.Text) &&
-                                     !string.IsNullOrWhiteSpace(campAddContatosEmail.Text) &&
-                                     IsValidEmail(campAddContatosEmail.Text);
+            bool camposPreenchidos = !string.IsNullOrWhiteSpace(campCreateContatosNome.Text) &&
+                                     !string.IsNullOrWhiteSpace(campCreateContatosSobrenome.Text) &&
+                                     !string.IsNullOrWhiteSpace(campCreateContatosTelefone.Text) &&
+                                     !string.IsNullOrWhiteSpace(campCreateContatosEmail.Text) &&
+                                     IsValidEmail(campCreateContatosEmail.Text);
 
-            btAddContatosCriar.Enabled = camposPreenchidos;
+            btCreateContatosCriar.Enabled = camposPreenchidos;
             AtualizarCorBotao();
         }
 
         private void AtualizarCorBotao()
         {
-            if (btAddContatosCriar.Enabled)
+            if (btCreateContatosCriar.Enabled)
             {
-                btAddContatosCriar.BackColor = Color.FromArgb(230, 34, 34); // Cor quando o botão está ativado
-                btAddContatosCriar.ForeColor = Color.FromArgb(255, 252, 237);
+                btCreateContatosCriar.BackColor = Color.FromArgb(230, 34, 34); // Cor quando o botão está ativado
+                btCreateContatosCriar.ForeColor = Color.FromArgb(255, 252, 237);
             }
             else
             {
-                btAddContatosCriar.BackColor = Color.FromArgb(52, 60, 76); // Cor quando o botão está desativado
-                btAddContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
+                btCreateContatosCriar.BackColor = Color.FromArgb(52, 60, 76); // Cor quando o botão está desativado
+                btCreateContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
             }
         }
 
-        private void btContatoAddCriar_EnabledChanged(object sender, EventArgs e)
+        private void btCreateContatoCriar_EnabledChanged(object sender, EventArgs e)
         {
             AtualizarCorBotao();
         }
@@ -115,12 +115,12 @@ namespace Prime_Gadgets.modulos.moduloContatos
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
-                lbAddContatoEmailInvalid.Hide(); 
+                lbCreateContatoEmailInvalid.Hide(); 
                 return addr.Address == email;
             }
             catch
             {
-                lbAddContatoEmailInvalid.Show();
+                lbCreateContatoEmailInvalid.Show();
                 return false;
             }
         }

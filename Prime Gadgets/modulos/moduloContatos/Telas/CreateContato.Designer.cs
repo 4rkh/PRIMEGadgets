@@ -38,167 +38,167 @@
         private void InitializeComponent()
         {
             ComponentResourceManager resources = new ComponentResourceManager(typeof(CreateContato));
-            lbAddContatosTitulo = new Label();
-            btAddContatosCriar = new Button();
-            btAddContatosCancelar = new Button();
-            campAddContatosNome = new TextBox();
-            campAddContatosSobrenome = new TextBox();
-            campAddContatosTelefone = new TextBox();
-            campAddContatosEmail = new TextBox();
-            lbAddContatosNome = new Label();
-            lbAddContatosSobrenome = new Label();
-            lbAddContatosTelefone = new Label();
-            lbAddContatosEmail = new Label();
-            lbAddContatoEmailInvalid = new Label();
+            lbCreateContatosTitulo = new Label();
+            btCreateContatosCriar = new Button();
+            btCreateContatosCancelar = new Button();
+            campCreateContatosNome = new TextBox();
+            campCreateContatosSobrenome = new TextBox();
+            campCreateContatosTelefone = new TextBox();
+            campCreateContatosEmail = new TextBox();
+            lbCreateContatosNome = new Label();
+            lbCreateContatosSobrenome = new Label();
+            lbCreateContatosTelefone = new Label();
+            lbCreateContatosEmail = new Label();
+            lbCreateContatoEmailInvalid = new Label();
             SuspendLayout();
             // 
-            // lbAddContatosTitulo
+            // lbCreateContatosTitulo
             // 
-            lbAddContatosTitulo.AutoSize = true;
-            lbAddContatosTitulo.BackColor = Color.Transparent;
-            lbAddContatosTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbAddContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
-            lbAddContatosTitulo.Location = new Point(49, 47);
-            lbAddContatosTitulo.Name = "lbAddContatosTitulo";
-            lbAddContatosTitulo.Size = new Size(265, 36);
-            lbAddContatosTitulo.TabIndex = 0;
-            lbAddContatosTitulo.Text = "Adicionar Contato";
+            lbCreateContatosTitulo.AutoSize = true;
+            lbCreateContatosTitulo.BackColor = Color.Transparent;
+            lbCreateContatosTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbCreateContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosTitulo.Location = new Point(49, 47);
+            lbCreateContatosTitulo.Name = "lbCreateContatosTitulo";
+            lbCreateContatosTitulo.Size = new Size(265, 36);
+            lbCreateContatosTitulo.TabIndex = 0;
+            lbCreateContatosTitulo.Text = "Adicionar Contato";
             // 
-            // btAddContatosCriar
+            // btCreateContatosCriar
             // 
-            btAddContatosCriar.BackColor = Color.FromArgb(52, 60, 76);
-            btAddContatosCriar.Enabled = false;
-            btAddContatosCriar.FlatAppearance.BorderSize = 0;
-            btAddContatosCriar.FlatStyle = FlatStyle.Flat;
-            btAddContatosCriar.Font = new Font("Arial", 12.75F);
-            btAddContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
-            btAddContatosCriar.Location = new Point(47, 382);
-            btAddContatosCriar.Name = "btAddContatosCriar";
-            btAddContatosCriar.Size = new Size(118, 37);
-            btAddContatosCriar.TabIndex = 1;
-            btAddContatosCriar.Text = "Criar";
-            btAddContatosCriar.UseVisualStyleBackColor = false;
-            btAddContatosCriar.EnabledChanged += btContatoAddCriar_EnabledChanged;
-            btAddContatosCriar.Click += btContatoAddCriar_Click;
+            btCreateContatosCriar.BackColor = Color.FromArgb(52, 60, 76);
+            btCreateContatosCriar.Enabled = false;
+            btCreateContatosCriar.FlatAppearance.BorderSize = 0;
+            btCreateContatosCriar.FlatStyle = FlatStyle.Flat;
+            btCreateContatosCriar.Font = new Font("Arial", 12.75F);
+            btCreateContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
+            btCreateContatosCriar.Location = new Point(47, 382);
+            btCreateContatosCriar.Name = "btCreateContatosCriar";
+            btCreateContatosCriar.Size = new Size(118, 37);
+            btCreateContatosCriar.TabIndex = 1;
+            btCreateContatosCriar.Text = "Criar";
+            btCreateContatosCriar.UseVisualStyleBackColor = false;
+            btCreateContatosCriar.EnabledChanged += btCreateContatoCriar_EnabledChanged;
+            btCreateContatosCriar.Click += btCreateContatoCriar_Click;
             // 
-            // btAddContatosCancelar
+            // btCreateContatosCancelar
             // 
-            btAddContatosCancelar.BackColor = Color.FromArgb(230, 34, 34);
-            btAddContatosCancelar.FlatAppearance.BorderSize = 0;
-            btAddContatosCancelar.FlatStyle = FlatStyle.Flat;
-            btAddContatosCancelar.Font = new Font("Arial", 12.75F);
-            btAddContatosCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btAddContatosCancelar.Location = new Point(199, 382);
-            btAddContatosCancelar.Name = "btAddContatosCancelar";
-            btAddContatosCancelar.Size = new Size(118, 37);
-            btAddContatosCancelar.TabIndex = 2;
-            btAddContatosCancelar.Text = "Cancelar";
-            btAddContatosCancelar.UseVisualStyleBackColor = false;
-            btAddContatosCancelar.Click += btContatoAddCancelar_Click;
+            btCreateContatosCancelar.BackColor = Color.FromArgb(230, 34, 34);
+            btCreateContatosCancelar.FlatAppearance.BorderSize = 0;
+            btCreateContatosCancelar.FlatStyle = FlatStyle.Flat;
+            btCreateContatosCancelar.Font = new Font("Arial", 12.75F);
+            btCreateContatosCancelar.ForeColor = Color.FromArgb(255, 252, 237);
+            btCreateContatosCancelar.Location = new Point(199, 382);
+            btCreateContatosCancelar.Name = "btCreateContatosCancelar";
+            btCreateContatosCancelar.Size = new Size(118, 37);
+            btCreateContatosCancelar.TabIndex = 2;
+            btCreateContatosCancelar.Text = "Cancelar";
+            btCreateContatosCancelar.UseVisualStyleBackColor = false;
+            btCreateContatosCancelar.Click += btCreateContatoCancelar_Click;
             // 
-            // campAddContatosNome
+            // campCreateContatosNome
             // 
-            campAddContatosNome.BackColor = Color.FromArgb(255, 252, 237);
-            campAddContatosNome.BorderStyle = BorderStyle.None;
-            campAddContatosNome.Font = new Font("Arial", 12.75F);
-            campAddContatosNome.ForeColor = Color.FromArgb(230, 34, 34);
-            campAddContatosNome.Location = new Point(131, 157);
-            campAddContatosNome.Name = "campAddContatosNome";
-            campAddContatosNome.Size = new Size(156, 20);
-            campAddContatosNome.TabIndex = 4;
-            campAddContatosNome.TextChanged += Campos_TextChanged;
+            campCreateContatosNome.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateContatosNome.BorderStyle = BorderStyle.None;
+            campCreateContatosNome.Font = new Font("Arial", 12.75F);
+            campCreateContatosNome.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateContatosNome.Location = new Point(131, 157);
+            campCreateContatosNome.Name = "campCreateContatosNome";
+            campCreateContatosNome.Size = new Size(156, 20);
+            campCreateContatosNome.TabIndex = 4;
+            campCreateContatosNome.TextChanged += Campos_TextChanged;
             // 
-            // campAddContatosSobrenome
+            // campCreateContatosSobrenome
             // 
-            campAddContatosSobrenome.BackColor = Color.FromArgb(255, 252, 237);
-            campAddContatosSobrenome.BorderStyle = BorderStyle.None;
-            campAddContatosSobrenome.Font = new Font("Arial", 12.75F);
-            campAddContatosSobrenome.ForeColor = Color.FromArgb(230, 34, 34);
-            campAddContatosSobrenome.Location = new Point(131, 186);
-            campAddContatosSobrenome.Name = "campAddContatosSobrenome";
-            campAddContatosSobrenome.Size = new Size(156, 20);
-            campAddContatosSobrenome.TabIndex = 5;
+            campCreateContatosSobrenome.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateContatosSobrenome.BorderStyle = BorderStyle.None;
+            campCreateContatosSobrenome.Font = new Font("Arial", 12.75F);
+            campCreateContatosSobrenome.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateContatosSobrenome.Location = new Point(131, 186);
+            campCreateContatosSobrenome.Name = "campCreateContatosSobrenome";
+            campCreateContatosSobrenome.Size = new Size(156, 20);
+            campCreateContatosSobrenome.TabIndex = 5;
             // 
-            // campAddContatosTelefone
+            // campCreateContatosTelefone
             // 
-            campAddContatosTelefone.BackColor = Color.FromArgb(255, 252, 237);
-            campAddContatosTelefone.BorderStyle = BorderStyle.None;
-            campAddContatosTelefone.Font = new Font("Arial", 12.75F);
-            campAddContatosTelefone.ForeColor = Color.FromArgb(230, 34, 34);
-            campAddContatosTelefone.Location = new Point(131, 215);
-            campAddContatosTelefone.Name = "campAddContatosTelefone";
-            campAddContatosTelefone.Size = new Size(156, 20);
-            campAddContatosTelefone.TabIndex = 6;
-            campAddContatosTelefone.TextChanged += Campos_TextChanged;
-            campAddContatosTelefone.KeyPress += campAddContatosTelefone_KeyPress;
+            campCreateContatosTelefone.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateContatosTelefone.BorderStyle = BorderStyle.None;
+            campCreateContatosTelefone.Font = new Font("Arial", 12.75F);
+            campCreateContatosTelefone.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateContatosTelefone.Location = new Point(131, 215);
+            campCreateContatosTelefone.Name = "campCreateContatosTelefone";
+            campCreateContatosTelefone.Size = new Size(156, 20);
+            campCreateContatosTelefone.TabIndex = 6;
+            campCreateContatosTelefone.TextChanged += Campos_TextChanged;
+            campCreateContatosTelefone.KeyPress += campCreateContatosTelefone_KeyPress;
             // 
-            // campAddContatosEmail
+            // campCreateContatosEmail
             // 
-            campAddContatosEmail.BackColor = Color.FromArgb(255, 252, 237);
-            campAddContatosEmail.BorderStyle = BorderStyle.None;
-            campAddContatosEmail.Font = new Font("Arial", 12.75F);
-            campAddContatosEmail.ForeColor = Color.FromArgb(230, 34, 34);
-            campAddContatosEmail.Location = new Point(131, 244);
-            campAddContatosEmail.Name = "campAddContatosEmail";
-            campAddContatosEmail.Size = new Size(156, 20);
-            campAddContatosEmail.TabIndex = 7;
-            campAddContatosEmail.TextChanged += Campos_TextChanged;
-            campAddContatosEmail.Validating += campAddContatosEmail_Validating;
+            campCreateContatosEmail.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateContatosEmail.BorderStyle = BorderStyle.None;
+            campCreateContatosEmail.Font = new Font("Arial", 12.75F);
+            campCreateContatosEmail.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateContatosEmail.Location = new Point(131, 244);
+            campCreateContatosEmail.Name = "campCreateContatosEmail";
+            campCreateContatosEmail.Size = new Size(156, 20);
+            campCreateContatosEmail.TabIndex = 7;
+            campCreateContatosEmail.TextChanged += Campos_TextChanged;
+            campCreateContatosEmail.Validating += campCreateContatosEmail_Validating;
             // 
-            // lbAddContatosNome
+            // lbCreateContatosNome
             // 
-            lbAddContatosNome.AutoSize = true;
-            lbAddContatosNome.Font = new Font("Arial", 12.75F);
-            lbAddContatosNome.ForeColor = Color.FromArgb(52, 60, 76);
-            lbAddContatosNome.Location = new Point(54, 161);
-            lbAddContatosNome.Name = "lbAddContatosNome";
-            lbAddContatosNome.Size = new Size(51, 19);
-            lbAddContatosNome.TabIndex = 9;
-            lbAddContatosNome.Text = "Nome";
+            lbCreateContatosNome.AutoSize = true;
+            lbCreateContatosNome.Font = new Font("Arial", 12.75F);
+            lbCreateContatosNome.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosNome.Location = new Point(54, 161);
+            lbCreateContatosNome.Name = "lbCreateContatosNome";
+            lbCreateContatosNome.Size = new Size(51, 19);
+            lbCreateContatosNome.TabIndex = 9;
+            lbCreateContatosNome.Text = "Nome";
             // 
-            // lbAddContatosSobrenome
+            // lbCreateContatosSobrenome
             // 
-            lbAddContatosSobrenome.AutoSize = true;
-            lbAddContatosSobrenome.Font = new Font("Arial", 12.75F);
-            lbAddContatosSobrenome.ForeColor = Color.FromArgb(52, 60, 76);
-            lbAddContatosSobrenome.Location = new Point(32, 190);
-            lbAddContatosSobrenome.Name = "lbAddContatosSobrenome";
-            lbAddContatosSobrenome.Size = new Size(93, 19);
-            lbAddContatosSobrenome.TabIndex = 10;
-            lbAddContatosSobrenome.Text = "Sobrenome";
+            lbCreateContatosSobrenome.AutoSize = true;
+            lbCreateContatosSobrenome.Font = new Font("Arial", 12.75F);
+            lbCreateContatosSobrenome.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosSobrenome.Location = new Point(32, 190);
+            lbCreateContatosSobrenome.Name = "lbCreateContatosSobrenome";
+            lbCreateContatosSobrenome.Size = new Size(93, 19);
+            lbCreateContatosSobrenome.TabIndex = 10;
+            lbCreateContatosSobrenome.Text = "Sobrenome";
             // 
-            // lbAddContatosTelefone
+            // lbCreateContatosTelefone
             // 
-            lbAddContatosTelefone.AutoSize = true;
-            lbAddContatosTelefone.Font = new Font("Arial", 12.75F);
-            lbAddContatosTelefone.ForeColor = Color.FromArgb(52, 60, 76);
-            lbAddContatosTelefone.Location = new Point(47, 219);
-            lbAddContatosTelefone.Name = "lbAddContatosTelefone";
-            lbAddContatosTelefone.Size = new Size(69, 19);
-            lbAddContatosTelefone.TabIndex = 11;
-            lbAddContatosTelefone.Text = "Telefone";
+            lbCreateContatosTelefone.AutoSize = true;
+            lbCreateContatosTelefone.Font = new Font("Arial", 12.75F);
+            lbCreateContatosTelefone.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosTelefone.Location = new Point(47, 219);
+            lbCreateContatosTelefone.Name = "lbCreateContatosTelefone";
+            lbCreateContatosTelefone.Size = new Size(69, 19);
+            lbCreateContatosTelefone.TabIndex = 11;
+            lbCreateContatosTelefone.Text = "Telefone";
             // 
-            // lbAddContatosEmail
+            // lbCreateContatosEmail
             // 
-            lbAddContatosEmail.AutoSize = true;
-            lbAddContatosEmail.Font = new Font("Arial", 12.75F);
-            lbAddContatosEmail.ForeColor = Color.FromArgb(52, 60, 76);
-            lbAddContatosEmail.Location = new Point(56, 248);
-            lbAddContatosEmail.Name = "lbAddContatosEmail";
-            lbAddContatosEmail.Size = new Size(49, 19);
-            lbAddContatosEmail.TabIndex = 12;
-            lbAddContatosEmail.Text = "Email";
+            lbCreateContatosEmail.AutoSize = true;
+            lbCreateContatosEmail.Font = new Font("Arial", 12.75F);
+            lbCreateContatosEmail.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosEmail.Location = new Point(56, 248);
+            lbCreateContatosEmail.Name = "lbCreateContatosEmail";
+            lbCreateContatosEmail.Size = new Size(49, 19);
+            lbCreateContatosEmail.TabIndex = 12;
+            lbCreateContatosEmail.Text = "Email";
             // 
-            // lbAddContatoEmailInvalid
+            // lbCreateContatoEmailInvalid
             // 
-            lbAddContatoEmailInvalid.AutoSize = true;
-            lbAddContatoEmailInvalid.Font = new Font("Arial", 9F);
-            lbAddContatoEmailInvalid.ForeColor = Color.FromArgb(230, 34, 34);
-            lbAddContatoEmailInvalid.Location = new Point(168, 270);
-            lbAddContatoEmailInvalid.Name = "lbAddContatoEmailInvalid";
-            lbAddContatoEmailInvalid.Size = new Size(84, 15);
-            lbAddContatoEmailInvalid.TabIndex = 13;
-            lbAddContatoEmailInvalid.Text = "Email Inválido";
+            lbCreateContatoEmailInvalid.AutoSize = true;
+            lbCreateContatoEmailInvalid.Font = new Font("Arial", 9F);
+            lbCreateContatoEmailInvalid.ForeColor = Color.FromArgb(230, 34, 34);
+            lbCreateContatoEmailInvalid.Location = new Point(168, 270);
+            lbCreateContatoEmailInvalid.Name = "lbCreateContatoEmailInvalid";
+            lbCreateContatoEmailInvalid.Size = new Size(84, 15);
+            lbCreateContatoEmailInvalid.TabIndex = 13;
+            lbCreateContatoEmailInvalid.Text = "Email Inválido";
             // 
             // CreateContato
             // 
@@ -207,18 +207,18 @@
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(367, 450);
             ControlBox = false;
-            Controls.Add(lbAddContatoEmailInvalid);
-            Controls.Add(lbAddContatosEmail);
-            Controls.Add(lbAddContatosTelefone);
-            Controls.Add(lbAddContatosSobrenome);
-            Controls.Add(lbAddContatosNome);
-            Controls.Add(campAddContatosEmail);
-            Controls.Add(campAddContatosTelefone);
-            Controls.Add(campAddContatosSobrenome);
-            Controls.Add(campAddContatosNome);
-            Controls.Add(btAddContatosCancelar);
-            Controls.Add(btAddContatosCriar);
-            Controls.Add(lbAddContatosTitulo);
+            Controls.Add(lbCreateContatoEmailInvalid);
+            Controls.Add(lbCreateContatosEmail);
+            Controls.Add(lbCreateContatosTelefone);
+            Controls.Add(lbCreateContatosSobrenome);
+            Controls.Add(lbCreateContatosNome);
+            Controls.Add(campCreateContatosEmail);
+            Controls.Add(campCreateContatosTelefone);
+            Controls.Add(campCreateContatosSobrenome);
+            Controls.Add(campCreateContatosNome);
+            Controls.Add(btCreateContatosCancelar);
+            Controls.Add(btCreateContatosCriar);
+            Controls.Add(lbCreateContatosTitulo);
             ForeColor = Color.FromArgb(52, 60, 76);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -232,17 +232,17 @@
 
         #endregion
 
-        private Label lbAddContatosTitulo;
-        private Button btAddContatosCriar;
-        private Button btAddContatosCancelar;
-        private TextBox campAddContatosNome;
-        private TextBox campAddContatosSobrenome;
-        private TextBox campAddContatosTelefone;
-        private TextBox campAddContatosEmail;
-        private Label lbAddContatosNome;
-        private Label lbAddContatosSobrenome;
-        private Label lbAddContatosTelefone;
-        private Label lbAddContatosEmail;
-        private Label lbAddContatoEmailInvalid;
+        private Label lbCreateContatosTitulo;
+        private Button btCreateContatosCriar;
+        private Button btCreateContatosCancelar;
+        private TextBox campCreateContatosNome;
+        private TextBox campCreateContatosSobrenome;
+        private TextBox campCreateContatosTelefone;
+        private TextBox campCreateContatosEmail;
+        private Label lbCreateContatosNome;
+        private Label lbCreateContatosSobrenome;
+        private Label lbCreateContatosTelefone;
+        private Label lbCreateContatosEmail;
+        private Label lbCreateContatoEmailInvalid;
     }
 }

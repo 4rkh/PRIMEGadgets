@@ -12,6 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="prime-icon.ico" />
   </ItemGroup>
 

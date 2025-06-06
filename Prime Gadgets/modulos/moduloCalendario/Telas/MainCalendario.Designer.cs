@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCalendario));
-            menu1 = new Menu();
+            menuGlobal = new Menu();
             lbMainCalendarioDiaDom = new Label();
             lbMainCalendarioDiaSeg = new Label();
             lbMainCalendarioDiaTer = new Label();
@@ -83,14 +83,14 @@
             lbMainCalendarioDia29 = new Label();
             SuspendLayout();
             // 
-            // menu1
+            // menuGlobal
             // 
-            menu1.BackColor = Color.FromArgb(230, 34, 34);
-            menu1.Dock = DockStyle.Left;
-            menu1.Location = new Point(0, 0);
-            menu1.Name = "menu1";
-            menu1.Size = new Size(212, 927);
-            menu1.TabIndex = 0;
+            menuGlobal.BackColor = Color.FromArgb(230, 34, 34);
+            menuGlobal.Dock = DockStyle.Left;
+            menuGlobal.Location = new Point(0, 0);
+            menuGlobal.Name = "menuGlobal";
+            menuGlobal.Size = new Size(212, 927);
+            menuGlobal.TabIndex = 0;
             // 
             // lbMainCalendarioDiaDom
             // 
@@ -352,14 +352,15 @@
             // lbMainCalendarioDia14
             // 
             lbMainCalendarioDia14.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia14.BackColor = Color.FromArgb(192, 255, 255);
+            lbMainCalendarioDia14.BackColor = Color.FromArgb(255, 255, 192);
             lbMainCalendarioDia14.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia14.Image = Properties.Resources.right;
             lbMainCalendarioDia14.Location = new Point(1025, 420);
             lbMainCalendarioDia14.Name = "lbMainCalendarioDia14";
             lbMainCalendarioDia14.Size = new Size(112, 87);
             lbMainCalendarioDia14.TabIndex = 30;
             lbMainCalendarioDia14.Text = "14";
-            lbMainCalendarioDia14.TextAlign = ContentAlignment.MiddleCenter;
+            lbMainCalendarioDia14.TextAlign = ContentAlignment.TopRight;
             // 
             // lbMainCalendarioDia13
             // 
@@ -739,7 +740,7 @@
             Controls.Add(lbMainCalendarioDiaTer);
             Controls.Add(lbMainCalendarioDiaSeg);
             Controls.Add(lbMainCalendarioDiaDom);
-            Controls.Add(menu1);
+            Controls.Add(menuGlobal);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainCalendario";
@@ -751,7 +752,7 @@
 
         #endregion
 
-        private Menu menu1;
+        private Menu menuGlobal;
         private Label lbMainCalendarioDiaDom;
         private Label lbMainCalendarioDiaSeg;
         private Label lbMainCalendarioDiaTer;

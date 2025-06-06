@@ -36,7 +36,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             }
             catch (Exception e)
             {
-                MessageBox.Show("PrincipalContato error. Problema ao tentar ler o arquivo Contatos.prime " + e.Message);
+                MessageBox.Show("MainContato error. Problema ao tentar ler o arquivo Contatos.prime " + e.Message);
 
             }
 
@@ -77,19 +77,19 @@ namespace Prime_Gadgets.modulos.moduloContatos
                 dataTable.Rows.Add(row);
             }
 
-            this.ContatosTable.DataSource = dataTable;
+            this.dtMainContatosLista.DataSource = dataTable;
 
             // Atualiza as labels de página
-            lbPrincipalContatosPgAtual.Text = _paginaAtual.ToString();
-            lbPrincipalContatosPgFinal.Text = _totalPaginas.ToString();
+            lbMainContatosPgAtual.Text = _paginaAtual.ToString();
+            lbMainContatosPgFinal.Text = _totalPaginas.ToString();
             AtualizarEstadoBotoesNavegacao();
         }
 
         public Contatos ContatoSelect()
         {
-            if (ContatosTable.SelectedRows.Count > 0)
+            if (dtMainContatosLista.SelectedRows.Count > 0)
             {
-                var selectedRow = ContatosTable.SelectedRows[0];
+                var selectedRow = dtMainContatosLista.SelectedRows[0];
                 return new Contatos
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["ID"].Value),
@@ -107,7 +107,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             createContato.ShowDialog();
             LerTabela();
         }
-        private void btPrincipalContatosDelete_Click(object sender, EventArgs e)
+        private void btMainContatosDelete_Click(object sender, EventArgs e)
         {
             var contato = ContatoSelect();
             if (contato != null)
@@ -134,7 +134,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
         //fazer o sort na lista
         //salvar a lista no arquivo
 
-        private void btPrincipalContatosUpdate_Click(object sender, EventArgs e)
+        private void btMainContatosUpdate_Click(object sender, EventArgs e)
         {
             var contato = ContatoSelect();
             UpdateContato updateContato = new UpdateContato(contato);
@@ -142,7 +142,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             LerTabela();
         }
 
-        private void btPrincipalContatosFirst_Click(object sender, EventArgs e)
+        private void btMainContatosFirst_Click(object sender, EventArgs e)
         {
             if (_paginaAtual != 1)
             {
@@ -152,7 +152,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
         }
 
         // Botão VOLTAR página
-        private void btPrincipalContatosBack_Click(object sender, EventArgs e)
+        private void btMainContatosBack_Click(object sender, EventArgs e)
         {
             if (_paginaAtual > 1)
             {
@@ -162,7 +162,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
         }
 
         // Botão AVANÇAR página
-        private void btPrincipalContatosNext_Click(object sender, EventArgs e)
+        private void btMainContatosNext_Click(object sender, EventArgs e)
         {
             if (_paginaAtual < _totalPaginas)
             {
@@ -172,7 +172,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
         }
 
         // Botão ÚLTIMA página
-        private void btPrincipalContatosLast_Click(object sender, EventArgs e)
+        private void btMainContatosLast_Click(object sender, EventArgs e)
         {
             if (_paginaAtual != _totalPaginas)
             {
@@ -185,35 +185,34 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // Primeira página: desabilita 'first' e 'back'
             if (_paginaAtual == 1)
             {
-                btPrincipalContatosFirst.Enabled = false;
-                btPrincipalContatosBack.Enabled = false;
-                btPrincipalContatosFirst.BackColor = Color.LightGray;
-                btPrincipalContatosBack.BackColor = Color.LightGray;
+                btMainContatosFirst.Enabled = false;
+                btMainContatosBack.Enabled = false;
+                btMainContatosFirst.BackColor = Color.LightGray;
+                btMainContatosBack.BackColor = Color.LightGray;
             }
             else
             {
-                btPrincipalContatosFirst.Enabled = true;
-                btPrincipalContatosBack.Enabled = true;
-                btPrincipalContatosFirst.BackColor = SystemColors.Control;
-                btPrincipalContatosBack.BackColor = SystemColors.Control;
+                btMainContatosFirst.Enabled = true;
+                btMainContatosBack.Enabled = true;
+                btMainContatosFirst.BackColor = SystemColors.Control;
+                btMainContatosBack.BackColor = SystemColors.Control;
             }
 
             // Última página: desabilita 'end' e 'next'
             if (_paginaAtual == _totalPaginas)
             {
-                btPrincipalContatosLast.Enabled = false;
-                btPrincipalContatosNext.Enabled = false;
-                btPrincipalContatosLast.BackColor = Color.LightGray;
-                btPrincipalContatosNext.BackColor = Color.LightGray;
+                btMainContatosLast.Enabled = false;
+                btMainContatosNext.Enabled = false;
+                btMainContatosLast.BackColor = Color.LightGray;
+                btMainContatosNext.BackColor = Color.LightGray;
             }
             else
             {
-                btPrincipalContatosLast.Enabled = true;
-                btPrincipalContatosNext.Enabled = true;
-                btPrincipalContatosLast.BackColor = SystemColors.Control;
-                btPrincipalContatosNext.BackColor = SystemColors.Control;
+                btMainContatosLast.Enabled = true;
+                btMainContatosNext.Enabled = true;
+                btMainContatosLast.BackColor = SystemColors.Control;
+                btMainContatosNext.BackColor = SystemColors.Control;
             }
         }
     }
 }
-

@@ -34,7 +34,7 @@
             lbMainSenhasTitulo = new Label();
             btMainSenhasDelete = new Button();
             tbMainSenhasDados = new DataGridView();
-            menu1 = new Menu();
+            menuGlobal = new Menu();
             ((System.ComponentModel.ISupportInitialize)tbMainSenhasDados).BeginInit();
             SuspendLayout();
             // 
@@ -117,14 +117,14 @@
             tbMainSenhasDados.Size = new Size(925, 491);
             tbMainSenhasDados.TabIndex = 5;
             // 
-            // menu1
+            // menuGlobal
             // 
-            menu1.BackColor = Color.FromArgb(230, 34, 34);
-            menu1.Dock = DockStyle.Left;
-            menu1.Location = new Point(0, 0);
-            menu1.Name = "menu1";
-            menu1.Size = new Size(212, 663);
-            menu1.TabIndex = 6;
+            menuGlobal.BackColor = Color.FromArgb(230, 34, 34);
+            menuGlobal.Dock = DockStyle.Left;
+            menuGlobal.Location = new Point(0, 0);
+            menuGlobal.Name = "menuGlobal";
+            menuGlobal.Size = new Size(212, 663);
+            menuGlobal.TabIndex = 6;
             // 
             // MainSenhas
             // 
@@ -132,7 +132,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1193, 663);
-            Controls.Add(menu1);
+            Controls.Add(menuGlobal);
             Controls.Add(tbMainSenhasDados);
             Controls.Add(btMainSenhasDelete);
             Controls.Add(lbMainSenhasTitulo);
@@ -155,6 +155,6 @@
         private Button btMainSenhasDelete;
         private Label lbMainSenhasTitulo;
         private DataGridView tbMainSenhasDados;
-        private Menu menu1;
+        private Menu menuGlobal;
     }
 }

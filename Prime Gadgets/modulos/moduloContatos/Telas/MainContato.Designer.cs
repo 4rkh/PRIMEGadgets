@@ -38,190 +38,192 @@
         private void InitializeComponent()
         {
             ComponentResourceManager resources = new ComponentResourceManager(typeof(MainContato));
-            btPrincipalContatosCreate = new Button();
-            btPrincipalContatosUpdate = new Button();
-            btPrincipalContatosDelete = new Button();
-            lbPrincipalContatosTitulo = new Label();
-            ContatosTable = new DataGridView();
-            menu1 = new Menu();
-            btPrincipalContatosNext = new Button();
-            btPrincipalContatosLast = new Button();
-            btPrincipalContatosBack = new Button();
-            btPrincipalContatosFirst = new Button();
-            lbPrincipalContatosPgAtual = new Label();
-            lbPrincipalContatosTexto1 = new Label();
-            lbPrincipalContatosPgFinal = new Label();
-            ((ISupportInitialize)ContatosTable).BeginInit();
+            btMainContatosCreate = new Button();
+            btMainContatosUpdate = new Button();
+            btMainContatosDelete = new Button();
+            lbMainContatosTitulo = new Label();
+            dtMainContatosLista = new DataGridView();
+            menuGlobal = new Menu();
+            btMainContatosNext = new Button();
+            btMainContatosLast = new Button();
+            btMainContatosBack = new Button();
+            btMainContatosFirst = new Button();
+            lbMainContatosPgAtual = new Label();
+            lbMainContatosTexto1 = new Label();
+            lbMainContatosPgFinal = new Label();
+            ((ISupportInitialize)dtMainContatosLista).BeginInit();
             SuspendLayout();
             // 
-            // btPrincipalContatosCreate
+            // btMainContatosCreate
             // 
-            btPrincipalContatosCreate.BackColor = Color.FromArgb(230, 34, 34);
-            btPrincipalContatosCreate.FlatAppearance.BorderSize = 0;
-            btPrincipalContatosCreate.FlatStyle = FlatStyle.Flat;
-            btPrincipalContatosCreate.Font = new Font("Arial", 12.75F);
-            btPrincipalContatosCreate.ForeColor = Color.FromArgb(255, 252, 237);
-            btPrincipalContatosCreate.Location = new Point(242, 78);
-            btPrincipalContatosCreate.Name = "btPrincipalContatosCreate";
-            btPrincipalContatosCreate.Size = new Size(191, 37);
-            btPrincipalContatosCreate.TabIndex = 1;
-            btPrincipalContatosCreate.Text = "Adicionar";
-            btPrincipalContatosCreate.UseVisualStyleBackColor = false;
-            btPrincipalContatosCreate.Click += Create_Click;
+            btMainContatosCreate.BackColor = Color.FromArgb(230, 34, 34);
+            btMainContatosCreate.FlatAppearance.BorderSize = 0;
+            btMainContatosCreate.FlatStyle = FlatStyle.Flat;
+            btMainContatosCreate.Font = new Font("Arial", 12.75F);
+            btMainContatosCreate.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainContatosCreate.Location = new Point(242, 78);
+            btMainContatosCreate.Name = "btMainContatosCreate";
+            btMainContatosCreate.Size = new Size(191, 37);
+            btMainContatosCreate.TabIndex = 1;
+            btMainContatosCreate.Text = "Adicionar";
+            btMainContatosCreate.UseVisualStyleBackColor = false;
+            btMainContatosCreate.Click += Create_Click;
             // 
-            // btPrincipalContatosUpdate
+            // btMainContatosUpdate
             // 
-            btPrincipalContatosUpdate.Anchor = AnchorStyles.Top;
-            btPrincipalContatosUpdate.BackColor = Color.FromArgb(230, 34, 34);
-            btPrincipalContatosUpdate.FlatAppearance.BorderSize = 0;
-            btPrincipalContatosUpdate.FlatStyle = FlatStyle.Flat;
-            btPrincipalContatosUpdate.Font = new Font("Arial", 12.75F);
-            btPrincipalContatosUpdate.ForeColor = Color.FromArgb(255, 252, 237);
-            btPrincipalContatosUpdate.Location = new Point(609, 78);
-            btPrincipalContatosUpdate.Name = "btPrincipalContatosUpdate";
-            btPrincipalContatosUpdate.Size = new Size(191, 37);
-            btPrincipalContatosUpdate.TabIndex = 2;
-            btPrincipalContatosUpdate.Text = "Atualizar";
-            btPrincipalContatosUpdate.UseVisualStyleBackColor = false;
-            btPrincipalContatosUpdate.Click += btPrincipalContatosUpdate_Click;
+            btMainContatosUpdate.Anchor = AnchorStyles.Top;
+            btMainContatosUpdate.BackColor = Color.FromArgb(230, 34, 34);
+            btMainContatosUpdate.FlatAppearance.BorderSize = 0;
+            btMainContatosUpdate.FlatStyle = FlatStyle.Flat;
+            btMainContatosUpdate.Font = new Font("Arial", 12.75F);
+            btMainContatosUpdate.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainContatosUpdate.Location = new Point(609, 78);
+            btMainContatosUpdate.Name = "btMainContatosUpdate";
+            btMainContatosUpdate.Size = new Size(191, 37);
+            btMainContatosUpdate.TabIndex = 2;
+            btMainContatosUpdate.Text = "Atualizar";
+            btMainContatosUpdate.UseVisualStyleBackColor = false;
+            btMainContatosUpdate.Click += btMainContatosUpdate_Click;
             // 
-            // btPrincipalContatosDelete
+            // btMainContatosDelete
             // 
-            btPrincipalContatosDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btPrincipalContatosDelete.BackColor = Color.FromArgb(230, 34, 34);
-            btPrincipalContatosDelete.FlatAppearance.BorderSize = 0;
-            btPrincipalContatosDelete.FlatStyle = FlatStyle.Flat;
-            btPrincipalContatosDelete.Font = new Font("Arial", 12.75F);
-            btPrincipalContatosDelete.ForeColor = Color.FromArgb(255, 252, 237);
-            btPrincipalContatosDelete.Location = new Point(976, 78);
-            btPrincipalContatosDelete.Name = "btPrincipalContatosDelete";
-            btPrincipalContatosDelete.Size = new Size(191, 37);
-            btPrincipalContatosDelete.TabIndex = 3;
-            btPrincipalContatosDelete.Text = "Excluir";
-            btPrincipalContatosDelete.UseVisualStyleBackColor = false;
-            btPrincipalContatosDelete.Click += btPrincipalContatosDelete_Click;
+            btMainContatosDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btMainContatosDelete.BackColor = Color.FromArgb(230, 34, 34);
+            btMainContatosDelete.FlatAppearance.BorderSize = 0;
+            btMainContatosDelete.FlatStyle = FlatStyle.Flat;
+            btMainContatosDelete.Font = new Font("Arial", 12.75F);
+            btMainContatosDelete.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainContatosDelete.Location = new Point(976, 78);
+            btMainContatosDelete.Name = "btMainContatosDelete";
+            btMainContatosDelete.Size = new Size(191, 37);
+            btMainContatosDelete.TabIndex = 3;
+            btMainContatosDelete.Text = "Excluir";
+            btMainContatosDelete.UseVisualStyleBackColor = false;
+            btMainContatosDelete.Click += btMainContatosDelete_Click;
             // 
-            // lbPrincipalContatosTitulo
+            // lbMainContatosTitulo
             // 
-            lbPrincipalContatosTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbPrincipalContatosTitulo.BackColor = Color.Transparent;
-            lbPrincipalContatosTitulo.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbPrincipalContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
-            lbPrincipalContatosTitulo.Location = new Point(578, 11);
-            lbPrincipalContatosTitulo.Name = "lbPrincipalContatosTitulo";
-            lbPrincipalContatosTitulo.Size = new Size(248, 56);
-            lbPrincipalContatosTitulo.TabIndex = 4;
-            lbPrincipalContatosTitulo.Text = "Lista de Contatos";
-            lbPrincipalContatosTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            lbMainContatosTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbMainContatosTitulo.BackColor = Color.Transparent;
+            lbMainContatosTitulo.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbMainContatosTitulo.Location = new Point(578, 11);
+            lbMainContatosTitulo.Name = "lbMainContatosTitulo";
+            lbMainContatosTitulo.Size = new Size(248, 56);
+            lbMainContatosTitulo.TabIndex = 4;
+            lbMainContatosTitulo.Text = "Lista de Contatos";
+            lbMainContatosTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // ContatosTable
+            // dtMainContatosLista
             // 
-            ContatosTable.AllowUserToAddRows = false;
-            ContatosTable.AllowUserToDeleteRows = false;
-            ContatosTable.AllowUserToResizeColumns = false;
-            ContatosTable.AllowUserToResizeRows = false;
-            ContatosTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            ContatosTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            ContatosTable.BackgroundColor = Color.FromArgb(255, 252, 237);
-            ContatosTable.BorderStyle = BorderStyle.None;
-            ContatosTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ContatosTable.GridColor = SystemColors.WindowText;
-            ContatosTable.Location = new Point(242, 140);
-            ContatosTable.MultiSelect = false;
-            ContatosTable.Name = "ContatosTable";
-            ContatosTable.ReadOnly = true;
-            ContatosTable.RowHeadersVisible = false;
-            ContatosTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ContatosTable.Size = new Size(925, 458);
-            ContatosTable.TabIndex = 5;
+            dtMainContatosLista.AllowUserToAddRows = false;
+            dtMainContatosLista.AllowUserToDeleteRows = false;
+            dtMainContatosLista.AllowUserToResizeColumns = false;
+            dtMainContatosLista.AllowUserToResizeRows = false;
+            dtMainContatosLista.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtMainContatosLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtMainContatosLista.BackgroundColor = Color.FromArgb(255, 252, 237);
+            dtMainContatosLista.BorderStyle = BorderStyle.None;
+            dtMainContatosLista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtMainContatosLista.GridColor = SystemColors.WindowText;
+            dtMainContatosLista.Location = new Point(242, 140);
+            dtMainContatosLista.MultiSelect = false;
+            dtMainContatosLista.Name = "dtMainContatosLista";
+            dtMainContatosLista.ReadOnly = true;
+            dtMainContatosLista.RowHeadersVisible = false;
+            dtMainContatosLista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtMainContatosLista.Size = new Size(925, 458);
+            dtMainContatosLista.TabIndex = 5;
             // 
-            // menu1
+            // menuGlobal
             // 
-            menu1.BackColor = Color.FromArgb(230, 34, 34);
-            menu1.Dock = DockStyle.Left;
-            menu1.Location = new Point(0, 0);
-            menu1.Name = "menu1";
-            menu1.Size = new Size(212, 663);
-            menu1.TabIndex = 6;
+            menuGlobal.BackColor = Color.FromArgb(230, 34, 34);
+            menuGlobal.Dock = DockStyle.Left;
+            menuGlobal.Location = new Point(0, 0);
+            menuGlobal.Name = "menuGlobal";
+            menuGlobal.Size = new Size(212, 663);
+            menuGlobal.TabIndex = 6;
             // 
-            // btPrincipalContatosNext
+            // btMainContatosNext
             // 
-            btPrincipalContatosNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btPrincipalContatosNext.Image = (Image)resources.GetObject("btPrincipalContatosNext.Image");
-            btPrincipalContatosNext.Location = new Point(851, 604);
-            btPrincipalContatosNext.Name = "btPrincipalContatosNext";
-            btPrincipalContatosNext.Size = new Size(55, 59);
-            btPrincipalContatosNext.TabIndex = 7;
-            btPrincipalContatosNext.UseVisualStyleBackColor = true;
-            btPrincipalContatosNext.Click += btPrincipalContatosNext_Click;
+            btMainContatosNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btMainContatosNext.BackgroundImage = Properties.Resources.right;
+            btMainContatosNext.BackgroundImageLayout = ImageLayout.Center;
+            btMainContatosNext.Location = new Point(851, 604);
+            btMainContatosNext.Name = "btMainContatosNext";
+            btMainContatosNext.Size = new Size(55, 59);
+            btMainContatosNext.TabIndex = 7;
+            btMainContatosNext.UseVisualStyleBackColor = true;
+            btMainContatosNext.Click += btMainContatosNext_Click;
             // 
-            // btPrincipalContatosLast
+            // btMainContatosLast
             // 
-            btPrincipalContatosLast.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btPrincipalContatosLast.Image = (Image)resources.GetObject("btPrincipalContatosLast.Image");
-            btPrincipalContatosLast.Location = new Point(927, 604);
-            btPrincipalContatosLast.Name = "btPrincipalContatosLast";
-            btPrincipalContatosLast.Size = new Size(55, 59);
-            btPrincipalContatosLast.TabIndex = 8;
-            btPrincipalContatosLast.UseVisualStyleBackColor = true;
-            btPrincipalContatosLast.Click += btPrincipalContatosLast_Click;
+            btMainContatosLast.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btMainContatosLast.BackgroundImage = Properties.Resources.right;
+            btMainContatosLast.BackgroundImageLayout = ImageLayout.Center;
+            btMainContatosLast.Location = new Point(927, 604);
+            btMainContatosLast.Name = "btMainContatosLast";
+            btMainContatosLast.Size = new Size(55, 59);
+            btMainContatosLast.TabIndex = 8;
+            btMainContatosLast.UseVisualStyleBackColor = true;
+            btMainContatosLast.Click += btMainContatosLast_Click;
             // 
-            // btPrincipalContatosBack
+            // btMainContatosBack
             // 
-            btPrincipalContatosBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btPrincipalContatosBack.Image = Properties.Resources.icons8_à_esquerda_dentro_de_um_círculo_50;
-            btPrincipalContatosBack.Location = new Point(531, 604);
-            btPrincipalContatosBack.Name = "btPrincipalContatosBack";
-            btPrincipalContatosBack.Size = new Size(55, 59);
-            btPrincipalContatosBack.TabIndex = 9;
-            btPrincipalContatosBack.UseVisualStyleBackColor = true;
-            btPrincipalContatosBack.Click += btPrincipalContatosBack_Click;
+            btMainContatosBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btMainContatosBack.Image = Properties.Resources.left;
+            btMainContatosBack.Location = new Point(531, 604);
+            btMainContatosBack.Name = "btMainContatosBack";
+            btMainContatosBack.Size = new Size(55, 59);
+            btMainContatosBack.TabIndex = 9;
+            btMainContatosBack.UseVisualStyleBackColor = true;
+            btMainContatosBack.Click += btMainContatosBack_Click;
             // 
-            // btPrincipalContatosFirst
+            // btMainContatosFirst
             // 
-            btPrincipalContatosFirst.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btPrincipalContatosFirst.Image = Properties.Resources.icons8_à_esquerda_dentro_de_um_círculo_50;
-            btPrincipalContatosFirst.Location = new Point(457, 604);
-            btPrincipalContatosFirst.Name = "btPrincipalContatosFirst";
-            btPrincipalContatosFirst.Size = new Size(55, 59);
-            btPrincipalContatosFirst.TabIndex = 10;
-            btPrincipalContatosFirst.UseVisualStyleBackColor = true;
-            btPrincipalContatosFirst.Click += btPrincipalContatosFirst_Click;
+            btMainContatosFirst.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btMainContatosFirst.Image = Properties.Resources.left;
+            btMainContatosFirst.Location = new Point(457, 604);
+            btMainContatosFirst.Name = "btMainContatosFirst";
+            btMainContatosFirst.Size = new Size(55, 59);
+            btMainContatosFirst.TabIndex = 10;
+            btMainContatosFirst.UseVisualStyleBackColor = true;
+            btMainContatosFirst.Click += btMainContatosFirst_Click;
             // 
-            // lbPrincipalContatosPgAtual
+            // lbMainContatosPgAtual
             // 
-            lbPrincipalContatosPgAtual.Anchor = AnchorStyles.Bottom;
-            lbPrincipalContatosPgAtual.AutoSize = true;
-            lbPrincipalContatosPgAtual.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbPrincipalContatosPgAtual.ForeColor = Color.Red;
-            lbPrincipalContatosPgAtual.Location = new Point(654, 620);
-            lbPrincipalContatosPgAtual.Name = "lbPrincipalContatosPgAtual";
-            lbPrincipalContatosPgAtual.Size = new Size(19, 21);
-            lbPrincipalContatosPgAtual.TabIndex = 11;
-            lbPrincipalContatosPgAtual.Text = "1";
+            lbMainContatosPgAtual.Anchor = AnchorStyles.Bottom;
+            lbMainContatosPgAtual.AutoSize = true;
+            lbMainContatosPgAtual.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainContatosPgAtual.ForeColor = Color.Red;
+            lbMainContatosPgAtual.Location = new Point(654, 620);
+            lbMainContatosPgAtual.Name = "lbMainContatosPgAtual";
+            lbMainContatosPgAtual.Size = new Size(19, 21);
+            lbMainContatosPgAtual.TabIndex = 11;
+            lbMainContatosPgAtual.Text = "1";
             // 
-            // lbPrincipalContatosTexto1
+            // lbMainContatosTexto1
             // 
-            lbPrincipalContatosTexto1.Anchor = AnchorStyles.Bottom;
-            lbPrincipalContatosTexto1.AutoSize = true;
-            lbPrincipalContatosTexto1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbPrincipalContatosTexto1.Location = new Point(699, 622);
-            lbPrincipalContatosTexto1.Name = "lbPrincipalContatosTexto1";
-            lbPrincipalContatosTexto1.Size = new Size(26, 20);
-            lbPrincipalContatosTexto1.TabIndex = 12;
-            lbPrincipalContatosTexto1.Text = "de";
+            lbMainContatosTexto1.Anchor = AnchorStyles.Bottom;
+            lbMainContatosTexto1.AutoSize = true;
+            lbMainContatosTexto1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainContatosTexto1.Location = new Point(699, 622);
+            lbMainContatosTexto1.Name = "lbMainContatosTexto1";
+            lbMainContatosTexto1.Size = new Size(26, 20);
+            lbMainContatosTexto1.TabIndex = 12;
+            lbMainContatosTexto1.Text = "de";
             // 
-            // lbPrincipalContatosPgFinal
+            // lbMainContatosPgFinal
             // 
-            lbPrincipalContatosPgFinal.Anchor = AnchorStyles.Bottom;
-            lbPrincipalContatosPgFinal.AutoSize = true;
-            lbPrincipalContatosPgFinal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbPrincipalContatosPgFinal.ForeColor = Color.FromArgb(0, 0, 192);
-            lbPrincipalContatosPgFinal.Location = new Point(750, 617);
-            lbPrincipalContatosPgFinal.Name = "lbPrincipalContatosPgFinal";
-            lbPrincipalContatosPgFinal.Size = new Size(23, 25);
-            lbPrincipalContatosPgFinal.TabIndex = 13;
-            lbPrincipalContatosPgFinal.Text = "1";
+            lbMainContatosPgFinal.Anchor = AnchorStyles.Bottom;
+            lbMainContatosPgFinal.AutoSize = true;
+            lbMainContatosPgFinal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainContatosPgFinal.ForeColor = Color.FromArgb(0, 0, 192);
+            lbMainContatosPgFinal.Location = new Point(750, 617);
+            lbMainContatosPgFinal.Name = "lbMainContatosPgFinal";
+            lbMainContatosPgFinal.Size = new Size(23, 25);
+            lbMainContatosPgFinal.TabIndex = 13;
+            lbMainContatosPgFinal.Text = "1";
             // 
             // MainContato
             // 
@@ -229,44 +231,44 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1193, 663);
-            Controls.Add(lbPrincipalContatosPgFinal);
-            Controls.Add(lbPrincipalContatosTexto1);
-            Controls.Add(lbPrincipalContatosPgAtual);
-            Controls.Add(btPrincipalContatosFirst);
-            Controls.Add(btPrincipalContatosBack);
-            Controls.Add(btPrincipalContatosLast);
-            Controls.Add(btPrincipalContatosNext);
-            Controls.Add(menu1);
-            Controls.Add(ContatosTable);
-            Controls.Add(lbPrincipalContatosTitulo);
-            Controls.Add(btPrincipalContatosDelete);
-            Controls.Add(btPrincipalContatosUpdate);
-            Controls.Add(btPrincipalContatosCreate);
+            Controls.Add(lbMainContatosPgFinal);
+            Controls.Add(lbMainContatosTexto1);
+            Controls.Add(lbMainContatosPgAtual);
+            Controls.Add(btMainContatosFirst);
+            Controls.Add(btMainContatosBack);
+            Controls.Add(btMainContatosLast);
+            Controls.Add(btMainContatosNext);
+            Controls.Add(menuGlobal);
+            Controls.Add(dtMainContatosLista);
+            Controls.Add(lbMainContatosTitulo);
+            Controls.Add(btMainContatosDelete);
+            Controls.Add(btMainContatosUpdate);
+            Controls.Add(btMainContatosCreate);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(689, 643);
             Name = "MainContato";
             Text = "Contatos";
             WindowState = FormWindowState.Maximized;
-            ((ISupportInitialize)ContatosTable).EndInit();
+            ((ISupportInitialize)dtMainContatosLista).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btPrincipalContatosCreate;
-        private Button btPrincipalContatosUpdate;
-        private Button btPrincipalContatosDelete;
-        private Label lbPrincipalContatosTitulo;
-        private DataGridView ContatosTable;
-        private Menu menu1;
-        private Button btPrincipalContatosNext;
-        private Button btPrincipalContatosLast;
-        private Button btPrincipalContatosBack;
-        private Button btPrincipalContatosFirst;
-        private Label lbPrincipalContatosPgAtual;
-        private Label lbPrincipalContatosTexto1;
-        private Label lbPrincipalContatosPgFinal;
+        private Button btMainContatosCreate;
+        private Button btMainContatosUpdate;
+        private Button btMainContatosDelete;
+        private Label lbMainContatosTitulo;
+        private DataGridView dtMainContatosLista;
+        private Menu menuGlobal;
+        private Button btMainContatosNext;
+        private Button btMainContatosLast;
+        private Button btMainContatosBack;
+        private Button btMainContatosFirst;
+        private Label lbMainContatosPgAtual;
+        private Label lbMainContatosTexto1;
+        private Label lbMainContatosPgFinal;
     }
 }

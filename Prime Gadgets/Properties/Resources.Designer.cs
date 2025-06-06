@@ -63,19 +63,9 @@ namespace Prime_Gadgets.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_à_direita_dentro_de_um_círculo_50 {
+        internal static System.Drawing.Bitmap left {
             get {
-                object obj = ResourceManager.GetObject("icons8-à-direita-dentro-de-um-círculo-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_à_esquerda_dentro_de_um_círculo_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-à-esquerda-dentro-de-um-círculo-50", resourceCulture);
+                object obj = ResourceManager.GetObject("left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +86,16 @@ namespace Prime_Gadgets.Properties {
         internal static System.Drawing.Bitmap ontop {
             get {
                 object obj = ResourceManager.GetObject("ontop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right {
+            get {
+                object obj = ResourceManager.GetObject("right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

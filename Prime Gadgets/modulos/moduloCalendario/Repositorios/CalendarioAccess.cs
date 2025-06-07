@@ -43,7 +43,9 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             var eventos = new List<Evento>();
             try
             {
-                var linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                // Leia o conteúdo do arquivo sempre que for chamado
+                string conteudoAtual = File.ReadAllText(caminho);
+                var linhas = conteudoAtual.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
                 eventos = OrdenarEventosPorId(eventos);
                 foreach (var linha in linhas)
                 {

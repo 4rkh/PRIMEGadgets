@@ -36,7 +36,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
 
         private void VerificarCampos()
         {
-            bool camposValidos = 
+            bool camposValidos =
                 !string.IsNullOrWhiteSpace(campUpdateEventoLocal.Text) &&
                 !string.IsNullOrWhiteSpace(campUpdateEventoDescricao.Text);
 
@@ -67,6 +67,23 @@ namespace Prime_Gadgets.modulos.moduloCalendario
                 };
                 eventoAccess.UpdateEvento(evento, oldId);
                 MessageBox.Show("Evento atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+        }
+
+        private void btUpdateEventoDeletar_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+                "Deseja realmente deletar este evento?",
+                "Confirmação de Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (confirm == DialogResult.Yes)
+            {
+                EventoAccess eventoAccess = new EventoAccess();
+                eventoAccess.DeleteEvento(UpdatedEvento.Id);
+                MessageBox.Show("Evento deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }
         }

@@ -22,6 +22,12 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             InitializeComponent();
             this.AcceptButton = null;
         }
+        private void CorrecaoEnter()
+        {
+            this.ActiveControl = campMainCalculadoraResult;
+            campMainCalculadoraResult.SelectionStart = campMainCalculadoraResult.Text.Length;
+            campMainCalculadoraResult.SelectionLength = 0;
+        }
 
         private void btMainCalculadoraReturn_Click(object sender, EventArgs e)
         {
@@ -85,41 +91,45 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
         private void btMainCalculadoraSum_Click(object sender, EventArgs e)
         {
             string conta = campMainCalculadoraResult.Text;
-            
-            if (System.Text.RegularExpressions.Regex.IsMatch(conta, @"^\s*\d+(\.\d+)?\s*$"))
+
+            if (Regex.IsMatch(conta, @"^\s*\d+(,\d+)?\s*$"))
             {
                 campMainCalculadoraResult.Text += " + ";
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadoraSubtraction_Click(object sender, EventArgs e)
         {
             string conta = campMainCalculadoraResult.Text;
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(conta, @"^\s*\d+(\.\d+)?\s*$"))
+            if (Regex.IsMatch(conta, @"^\s*\d+(,\d+)?\s*$"))
             {
                 campMainCalculadoraResult.Text += " - ";
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadoraMultiplication_Click(object sender, EventArgs e)
         {
             string conta = campMainCalculadoraResult.Text;
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(conta, @"^\s*\d+(\.\d+)?\s*$"))
+            if (Regex.IsMatch(conta, @"^\s*\d+(,\d+)?\s*$"))
             {
                 campMainCalculadoraResult.Text += " * ";
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadoraDivision_Click(object sender, EventArgs e)
         {
             string conta = campMainCalculadoraResult.Text;
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(conta, @"^\s*\d+(\.\d+)?\s*$"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(conta, @"^\s*\d+(,\d+)?\s*$"))
             {
                 campMainCalculadoraResult.Text += " / ";
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora0_Click(object sender, EventArgs e)
@@ -132,6 +142,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 0;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora1_Click(object sender, EventArgs e)
@@ -148,7 +159,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 1;
             }
-                
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora2_Click(object sender, EventArgs e)
@@ -165,6 +176,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 2;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora3_Click(object sender, EventArgs e)
@@ -181,6 +193,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 3;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora4_Click(object sender, EventArgs e)
@@ -197,6 +210,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 4;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora5_Click(object sender, EventArgs e)
@@ -213,6 +227,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 5;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora6_Click(object sender, EventArgs e)
@@ -229,6 +244,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 6;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora7_Click(object sender, EventArgs e)
@@ -245,6 +261,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 7;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora8_Click(object sender, EventArgs e)
@@ -261,6 +278,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 8;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadora9_Click(object sender, EventArgs e)
@@ -277,36 +295,45 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += 9;
             }
+            CorrecaoEnter();
         }
 
         private void btMainCalculadoraComma_Click(object sender, EventArgs e)
         {
             string conta = campMainCalculadoraResult.Text;
+
+            // Se estiver vazio ou terminar com operador, adicione "0,"
             if (string.IsNullOrEmpty(conta) || conta.EndsWith("+") || conta.EndsWith("-") || conta.EndsWith("*") || conta.EndsWith("/"))
             {
-                campMainCalculadoraResult.Text += "0.";
+                campMainCalculadoraResult.Text += "0,";
+                return;
             }
 
-
-            string[] partes = Regex.Split(conta, @"(?<=[+\-*/])");
+            // Divide a conta e pega o último número após o último operador
+            string[] partes = Regex.Split(conta, @"[+\-*/]");
             string ultimoNumero = partes[partes.Length - 1];
+
+            // Verifica se já tem vírgula no número atual e se ele contém dígitos
             bool contemNumero = Regex.IsMatch(ultimoNumero, @"\d");
 
-            if (!ultimoNumero.Contains(".") && contemNumero)
+            if (!ultimoNumero.Contains(",") && contemNumero)
             {
-                campMainCalculadoraResult.Text += ".";
+                campMainCalculadoraResult.Text += ",";
             }
+            CorrecaoEnter();
         }
+
 
         private void btMainCalculadoraClear_Click(object sender, EventArgs e)
         {
             campMainCalculadoraResult.Text = "";
+            CorrecaoEnter();
         }
 
         private void btMainCalculadoraEnter_Click(object sender, EventArgs e)
         {
             string padrao = @"(\d+(\.\d+)?)\s*([\+\-\*/])\s*(\d+(\.\d+)?)";
-            string conta = campMainCalculadoraResult.Text;
+            string conta = campMainCalculadoraResult.Text.Replace(",", ".");
             Match match = Regex.Match(conta, padrao);
 
             if (match.Success)
@@ -324,33 +351,37 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                         break;
 
                     case "-":
-                    resultado = numero1 - numero2;
+                        resultado = numero1 - numero2;
                         break;
 
                     case "*":
-                    resultado = numero1 * numero2;
+                        resultado = numero1 * numero2;
                         break;
                     case "/":
                         if (numero2 != 0)
-                    {
-                        resultado = numero1 / numero2;
-                        
-                    }
-                    else
-                    {
-                        campMainCalculadoraResult.Text += " = " + "Não é possível dividir por zero";
-                    }
+                        {
+                            resultado = numero1 / numero2;
+
+                        }
+                        else
+                        {
+                            campMainCalculadoraResult.Text += " = " + "Não é possível dividir por zero";
+                        }
                         break;
                     default:
                         MessageBox.Show("Operador inválido!");
                         return;
                 }
-                campMainCalculadoraResult.Text += " = " + resultado.ToString();
+                if (!conta.Contains("="))
+                {
+                    campMainCalculadoraResult.Text += " = " + resultado.ToString().Replace(".", ",");
+                }
             }
-            else if (!conta.Contains("=") || conta != "")
+            else if (!conta.Contains("=") && conta != "")
             {
                 campMainCalculadoraResult.Text += " = " + conta;
             }
+            
         }
         private void MainCalculadora_Load(object sender, EventArgs e)
         {
@@ -435,7 +466,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 btMainCalculadoraComma.PerformClick();
             }
             // Botão de limpar (C)
-            if (e.KeyCode == Keys.Back || e.KeyCode == Keys.C)
+            if (!e.Control && (e.KeyCode == Keys.Back || e.KeyCode == Keys.C))
             {
                 btMainCalculadoraClear.PerformClick();
             }
@@ -454,8 +485,8 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 btMainCalculadoraHistory.PerformClick();
             }
-            // Botão de conversor (CTRL + C)
-            if (e.Control && e.KeyCode == Keys.C)
+            // Botão de conversor (CTRL + B)
+            if (e.Control && e.KeyCode == Keys.B)
             {
                 btMainCalculadoraConversor.PerformClick();
             }

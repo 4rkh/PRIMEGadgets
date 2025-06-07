@@ -48,6 +48,7 @@
             btUpdateSenhasMostrar = new Button();
             btUpdateSenhasGerar = new Button();
             toolTip1 = new ToolTip(components);
+            btUpdateSenhasGerarConfig = new Button();
             toolTip2 = new ToolTip(components);
             SuspendLayout();
             // 
@@ -233,7 +234,7 @@
             lbUpdateSenhasSenhaInvalida.AutoSize = true;
             lbUpdateSenhasSenhaInvalida.Font = new Font("Arial", 9F);
             lbUpdateSenhasSenhaInvalida.ForeColor = Color.FromArgb(230, 34, 34);
-            lbUpdateSenhasSenhaInvalida.Location = new Point(51, 288);
+            lbUpdateSenhasSenhaInvalida.Location = new Point(168, 285);
             lbUpdateSenhasSenhaInvalida.Name = "lbUpdateSenhasSenhaInvalida";
             lbUpdateSenhasSenhaInvalida.Size = new Size(91, 15);
             lbUpdateSenhasSenhaInvalida.TabIndex = 28;
@@ -246,7 +247,7 @@
             btUpdateSenhasMostrar.FlatAppearance.BorderSize = 0;
             btUpdateSenhasMostrar.FlatStyle = FlatStyle.Flat;
             btUpdateSenhasMostrar.Image = (Image)resources.GetObject("btUpdateSenhasMostrar.Image");
-            btUpdateSenhasMostrar.Location = new Point(277, 244);
+            btUpdateSenhasMostrar.Location = new Point(277, 148);
             btUpdateSenhasMostrar.Name = "btUpdateSenhasMostrar";
             btUpdateSenhasMostrar.Size = new Size(40, 40);
             btUpdateSenhasMostrar.TabIndex = 27;
@@ -269,6 +270,21 @@
             btUpdateSenhasGerar.UseVisualStyleBackColor = false;
             btUpdateSenhasGerar.Click += btUpdateSenhasGerar_Click;
             // 
+            // btUpdateSenhasGerarConfig
+            // 
+            btUpdateSenhasGerarConfig.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btUpdateSenhasGerarConfig.BackColor = Color.FromArgb(230, 34, 34);
+            btUpdateSenhasGerarConfig.FlatAppearance.BorderSize = 0;
+            btUpdateSenhasGerarConfig.FlatStyle = FlatStyle.Flat;
+            btUpdateSenhasGerarConfig.Image = (Image)resources.GetObject("btUpdateSenhasGerarConfig.Image");
+            btUpdateSenhasGerarConfig.Location = new Point(323, 195);
+            btUpdateSenhasGerarConfig.Name = "btUpdateSenhasGerarConfig";
+            btUpdateSenhasGerarConfig.Size = new Size(40, 40);
+            btUpdateSenhasGerarConfig.TabIndex = 29;
+            toolTip1.SetToolTip(btUpdateSenhasGerarConfig, "Configurar geração de senhas com os padrões de segurança");
+            btUpdateSenhasGerarConfig.UseVisualStyleBackColor = false;
+            btUpdateSenhasGerarConfig.Click += btUpdateSenhasGerarConfig_Click;
+            // 
             // UpdateSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -276,6 +292,7 @@
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(367, 450);
             ControlBox = false;
+            Controls.Add(btUpdateSenhasGerarConfig);
             Controls.Add(lbUpdateSenhasSenhaInvalida);
             Controls.Add(btUpdateSenhasMostrar);
             Controls.Add(btUpdateSenhasGerar);
@@ -324,5 +341,6 @@
         private Button btUpdateSenhasGerar;
         private ToolTip toolTip1;
         private ToolTip toolTip2;
+        private Button btUpdateSenhasGerarConfig;
     }
 }

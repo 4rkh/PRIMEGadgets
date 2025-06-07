@@ -200,5 +200,11 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 btUpdateSenhasMostrar.Image = btmShow;
             }
         }
+
+        private void btUpdateSenhasGerarConfig_Click(object sender, EventArgs e)
+        {
+            GeradorSenhas gerarSenhas = new GeradorSenhas();
+            gerarSenhas.ShowDialog();
+        }
     }
 }

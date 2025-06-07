@@ -35,6 +35,13 @@
             btMainSenhasDelete = new Button();
             tbMainSenhasDados = new DataGridView();
             menuGlobal = new Menu();
+            lbMainSenhasPgFinal = new Label();
+            lbMainSenhasTexto1 = new Label();
+            lbMainSenhasPgAtual = new Label();
+            btMainSenhasFirst = new Button();
+            btMainSenhasBack = new Button();
+            btMainSenhasLast = new Button();
+            btMainSenhasNext = new Button();
             ((System.ComponentModel.ISupportInitialize)tbMainSenhasDados).BeginInit();
             SuspendLayout();
             // 
@@ -114,7 +121,7 @@
             tbMainSenhasDados.ReadOnly = true;
             tbMainSenhasDados.RowHeadersVisible = false;
             tbMainSenhasDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tbMainSenhasDados.Size = new Size(925, 491);
+            tbMainSenhasDados.Size = new Size(925, 458);
             tbMainSenhasDados.TabIndex = 5;
             // 
             // menuGlobal
@@ -126,12 +133,100 @@
             menuGlobal.Size = new Size(212, 663);
             menuGlobal.TabIndex = 6;
             // 
+            // lbMainSenhasPgFinal
+            // 
+            lbMainSenhasPgFinal.Anchor = AnchorStyles.Bottom;
+            lbMainSenhasPgFinal.AutoSize = true;
+            lbMainSenhasPgFinal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainSenhasPgFinal.ForeColor = Color.FromArgb(0, 0, 192);
+            lbMainSenhasPgFinal.Location = new Point(750, 617);
+            lbMainSenhasPgFinal.Name = "lbMainSenhasPgFinal";
+            lbMainSenhasPgFinal.Size = new Size(23, 25);
+            lbMainSenhasPgFinal.TabIndex = 20;
+            lbMainSenhasPgFinal.Text = "1";
+            // 
+            // lbMainSenhasTexto1
+            // 
+            lbMainSenhasTexto1.Anchor = AnchorStyles.Bottom;
+            lbMainSenhasTexto1.AutoSize = true;
+            lbMainSenhasTexto1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainSenhasTexto1.Location = new Point(699, 622);
+            lbMainSenhasTexto1.Name = "lbMainSenhasTexto1";
+            lbMainSenhasTexto1.Size = new Size(26, 20);
+            lbMainSenhasTexto1.TabIndex = 19;
+            lbMainSenhasTexto1.Text = "de";
+            // 
+            // lbMainSenhasPgAtual
+            // 
+            lbMainSenhasPgAtual.Anchor = AnchorStyles.Bottom;
+            lbMainSenhasPgAtual.AutoSize = true;
+            lbMainSenhasPgAtual.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainSenhasPgAtual.ForeColor = Color.Red;
+            lbMainSenhasPgAtual.Location = new Point(654, 620);
+            lbMainSenhasPgAtual.Name = "lbMainSenhasPgAtual";
+            lbMainSenhasPgAtual.Size = new Size(19, 21);
+            lbMainSenhasPgAtual.TabIndex = 18;
+            lbMainSenhasPgAtual.Text = "1";
+            // 
+            // btMainSenhasFirst
+            // 
+            btMainSenhasFirst.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btMainSenhasFirst.Image = Properties.Resources.left;
+            btMainSenhasFirst.Location = new Point(457, 604);
+            btMainSenhasFirst.Name = "btMainSenhasFirst";
+            btMainSenhasFirst.Size = new Size(55, 59);
+            btMainSenhasFirst.TabIndex = 17;
+            btMainSenhasFirst.UseVisualStyleBackColor = true;
+            btMainSenhasFirst.Click += btMainSenhasFirst_Click;
+            // 
+            // btMainSenhasBack
+            // 
+            btMainSenhasBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btMainSenhasBack.Image = Properties.Resources.left;
+            btMainSenhasBack.Location = new Point(531, 604);
+            btMainSenhasBack.Name = "btMainSenhasBack";
+            btMainSenhasBack.Size = new Size(55, 59);
+            btMainSenhasBack.TabIndex = 16;
+            btMainSenhasBack.UseVisualStyleBackColor = true;
+            btMainSenhasBack.Click += btMainSenhasBack_Click;
+            // 
+            // btMainSenhasLast
+            // 
+            btMainSenhasLast.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btMainSenhasLast.BackgroundImage = Properties.Resources.right;
+            btMainSenhasLast.BackgroundImageLayout = ImageLayout.Center;
+            btMainSenhasLast.Location = new Point(927, 604);
+            btMainSenhasLast.Name = "btMainSenhasLast";
+            btMainSenhasLast.Size = new Size(55, 59);
+            btMainSenhasLast.TabIndex = 15;
+            btMainSenhasLast.UseVisualStyleBackColor = true;
+            btMainSenhasLast.Click += btMainSenhasLast_Click;
+            // 
+            // btMainSenhasNext
+            // 
+            btMainSenhasNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btMainSenhasNext.BackgroundImage = Properties.Resources.right;
+            btMainSenhasNext.BackgroundImageLayout = ImageLayout.Center;
+            btMainSenhasNext.Location = new Point(851, 604);
+            btMainSenhasNext.Name = "btMainSenhasNext";
+            btMainSenhasNext.Size = new Size(55, 59);
+            btMainSenhasNext.TabIndex = 14;
+            btMainSenhasNext.UseVisualStyleBackColor = true;
+            btMainSenhasNext.Click += btMainSenhasNext_Click;
+            // 
             // MainSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1193, 663);
+            Controls.Add(lbMainSenhasPgFinal);
+            Controls.Add(lbMainSenhasTexto1);
+            Controls.Add(lbMainSenhasPgAtual);
+            Controls.Add(btMainSenhasFirst);
+            Controls.Add(btMainSenhasBack);
+            Controls.Add(btMainSenhasLast);
+            Controls.Add(btMainSenhasNext);
             Controls.Add(menuGlobal);
             Controls.Add(tbMainSenhasDados);
             Controls.Add(btMainSenhasDelete);
@@ -156,5 +251,12 @@
         private Label lbMainSenhasTitulo;
         private DataGridView tbMainSenhasDados;
         private Menu menuGlobal;
+        private Label lbMainSenhasPgFinal;
+        private Label lbMainSenhasTexto1;
+        private Label lbMainSenhasPgAtual;
+        private Button btMainSenhasFirst;
+        private Button btMainSenhasBack;
+        private Button btMainSenhasLast;
+        private Button btMainSenhasNext;
     }
 }

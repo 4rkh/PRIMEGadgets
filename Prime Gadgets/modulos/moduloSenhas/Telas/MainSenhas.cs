@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prime_Gadgets.modulos.moduloContatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace Prime_Gadgets.modulos.moduloSenhas
 {
     public partial class MainSenhas : Form
     {
+        private List<Senhas> _senhas = new();
+        private int _paginaAtual = 1;
+        private int _totalPaginas = 1;
+        private const int _tamanhoPagina = 30;
         public MainSenhas()
         {
             try
@@ -40,8 +45,17 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         public void LerTabela()
         {
             var senhaAccess = new SenhaAccess();
-            List<Senhas> senhas = senhaAccess.LerSenhas();
-            senhas = senhaAccess.OrdenarSenhasPorId(senhas);
+            _senhas = senhaAccess.OrdenarSenhasPorId(senhaAccess.LerSenhas());
+
+            // Calcula o total de páginas
+            _totalPaginas = (_senhas.Count + _tamanhoPagina - 1) / _tamanhoPagina;
+            if (_totalPaginas == 0) _totalPaginas = 1;
+            if (_paginaAtual > _totalPaginas) _paginaAtual = _totalPaginas;
+            if (_paginaAtual < 1) _paginaAtual = 1;
+
+            // Seleciona as senhas da página atual
+            int inicio = (_paginaAtual - 1) * _tamanhoPagina;
+            var senhasPagina = _senhas.Skip(inicio).Take(_tamanhoPagina);
 
             DataTable dataTable = new DataTable();
 
@@ -51,7 +65,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             dataTable.Columns.Add("Senha");
             dataTable.Columns.Add("Origem");
 
-            foreach (var senha in senhas)
+            foreach (var senha in senhasPagina)
             {
                 var row = dataTable.NewRow();
                 row["ID"] = senha.Id;
@@ -63,6 +77,11 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             }
 
             this.tbMainSenhasDados.DataSource = dataTable;
+
+            // Atualiza as labels de página
+            lbMainSenhasPgAtual.Text = _paginaAtual.ToString();
+            lbMainSenhasPgFinal.Text = _totalPaginas.ToString();
+            AtualizarEstadoBotoesNavegacao();
         }
 
 
@@ -120,6 +139,76 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         private void btMainSenhasHome_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        private void AtualizarEstadoBotoesNavegacao()
+        {
+            // Primeira página: desabilita 'first' e 'back'
+            if (_paginaAtual == 1)
+            {
+                btMainSenhasFirst.Enabled = false;
+                btMainSenhasBack.Enabled = false;
+                btMainSenhasFirst.BackColor = Color.LightGray;
+                btMainSenhasBack.BackColor = Color.LightGray;
+            }
+            else
+            {
+                btMainSenhasFirst.Enabled = true;
+                btMainSenhasBack.Enabled = true;
+                btMainSenhasFirst.BackColor = SystemColors.Control;
+                btMainSenhasBack.BackColor = SystemColors.Control;
+            }
+
+            // Última página: desabilita 'end' e 'next'
+            if (_paginaAtual == _totalPaginas)
+            {
+                btMainSenhasLast.Enabled = false;
+                btMainSenhasNext.Enabled = false;
+                btMainSenhasLast.BackColor = Color.LightGray;
+                btMainSenhasNext.BackColor = Color.LightGray;
+            }
+            else
+            {
+                btMainSenhasLast.Enabled = true;
+                btMainSenhasNext.Enabled = true;
+                btMainSenhasLast.BackColor = SystemColors.Control;
+                btMainSenhasNext.BackColor = SystemColors.Control;
+            }
+        }
+
+        private void btMainSenhasLast_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual != _totalPaginas)
+            {
+                _paginaAtual = _totalPaginas;
+                LerTabela();
+            }
+        }
+
+        private void btMainSenhasNext_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual < _totalPaginas)
+            {
+                _paginaAtual++;
+                LerTabela();
+            }
+        }
+
+        private void btMainSenhasBack_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual > 1)
+            {
+                _paginaAtual--;
+                LerTabela();
+            }
+        }
+
+        private void btMainSenhasFirst_Click(object sender, EventArgs e)
+        {
+            if (_paginaAtual != 1)
+            {
+                _paginaAtual = 1;
+                LerTabela();
+            }
         }
     }
 }

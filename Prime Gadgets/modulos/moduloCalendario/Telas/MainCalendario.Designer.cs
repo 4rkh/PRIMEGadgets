@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCalendario));
             menuGlobal = new Menu();
             lbMainCalendarioDiaDom = new Label();
@@ -43,7 +42,6 @@
             btMainCalendarioBack = new Button();
             btMainCalendarioNext = new Button();
             lbMainCalendarioDia1 = new Label();
-            contextMenuStrip1 = new ContextMenuStrip(components);
             campMainCalendarioSelectAno = new TextBox();
             lbMainCalendarioMes = new Label();
             lbMainCalendarioAno = new Label();
@@ -81,6 +79,16 @@
             lbMainCalendarioDia31 = new Label();
             lbMainCalendarioDia30 = new Label();
             lbMainCalendarioDia29 = new Label();
+            btMainCalendarioChangeAno = new Button();
+            debugbtMainCalendarioCreate = new Button();
+            btMainCalendarioMostrarEventos = new Button();
+            lbMainCalendarioDia42 = new Label();
+            lbMainCalendarioDia41 = new Label();
+            lbMainCalendarioDia40 = new Label();
+            lbMainCalendarioDia39 = new Label();
+            lbMainCalendarioDia38 = new Label();
+            lbMainCalendarioDia37 = new Label();
+            lbMainCalendarioDia36 = new Label();
             SuspendLayout();
             // 
             // menuGlobal
@@ -206,7 +214,7 @@
             // btMainCalendarioBack
             // 
             btMainCalendarioBack.Anchor = AnchorStyles.Top;
-            btMainCalendarioBack.Location = new Point(562, 806);
+            btMainCalendarioBack.Location = new Point(504, 896);
             btMainCalendarioBack.Name = "btMainCalendarioBack";
             btMainCalendarioBack.Size = new Size(128, 31);
             btMainCalendarioBack.TabIndex = 11;
@@ -217,7 +225,7 @@
             // btMainCalendarioNext
             // 
             btMainCalendarioNext.Anchor = AnchorStyles.Top;
-            btMainCalendarioNext.Location = new Point(785, 806);
+            btMainCalendarioNext.Location = new Point(727, 896);
             btMainCalendarioNext.Name = "btMainCalendarioNext";
             btMainCalendarioNext.Size = new Size(128, 31);
             btMainCalendarioNext.TabIndex = 12;
@@ -228,20 +236,16 @@
             // lbMainCalendarioDia1
             // 
             lbMainCalendarioDia1.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia1.BackColor = Color.FromArgb(192, 255, 255);
+            lbMainCalendarioDia1.BackColor = Color.Gray;
             lbMainCalendarioDia1.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia1.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia1.Location = new Point(353, 333);
             lbMainCalendarioDia1.Name = "lbMainCalendarioDia1";
             lbMainCalendarioDia1.Size = new Size(112, 87);
             lbMainCalendarioDia1.TabIndex = 13;
-            lbMainCalendarioDia1.Text = "1";
+            lbMainCalendarioDia1.Text = " ";
             lbMainCalendarioDia1.TextAlign = ContentAlignment.MiddleCenter;
             lbMainCalendarioDia1.Click += lbMainCalendarioDia1_Click;
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // campMainCalendarioSelectAno
             // 
@@ -261,7 +265,7 @@
             lbMainCalendarioMes.Name = "lbMainCalendarioMes";
             lbMainCalendarioMes.Size = new Size(184, 54);
             lbMainCalendarioMes.TabIndex = 16;
-            lbMainCalendarioMes.Text = "Dezembro";
+            lbMainCalendarioMes.Text = "Julho";
             lbMainCalendarioMes.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioAno
@@ -280,13 +284,14 @@
             // lbMainCalendarioDia2
             // 
             lbMainCalendarioDia2.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia2.BackColor = Color.FromArgb(192, 255, 255);
+            lbMainCalendarioDia2.BackColor = Color.Gray;
             lbMainCalendarioDia2.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia2.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia2.Location = new Point(465, 333);
             lbMainCalendarioDia2.Name = "lbMainCalendarioDia2";
             lbMainCalendarioDia2.Size = new Size(112, 87);
             lbMainCalendarioDia2.TabIndex = 18;
-            lbMainCalendarioDia2.Text = "2";
+            lbMainCalendarioDia2.Text = " ";
             lbMainCalendarioDia2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia3
@@ -294,11 +299,12 @@
             lbMainCalendarioDia3.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia3.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia3.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia3.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia3.Location = new Point(577, 333);
             lbMainCalendarioDia3.Name = "lbMainCalendarioDia3";
             lbMainCalendarioDia3.Size = new Size(112, 87);
             lbMainCalendarioDia3.TabIndex = 19;
-            lbMainCalendarioDia3.Text = "3";
+            lbMainCalendarioDia3.Text = "1";
             lbMainCalendarioDia3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia4
@@ -306,11 +312,12 @@
             lbMainCalendarioDia4.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia4.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia4.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia4.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia4.Location = new Point(689, 333);
             lbMainCalendarioDia4.Name = "lbMainCalendarioDia4";
             lbMainCalendarioDia4.Size = new Size(112, 87);
             lbMainCalendarioDia4.TabIndex = 20;
-            lbMainCalendarioDia4.Text = "4";
+            lbMainCalendarioDia4.Text = "2";
             lbMainCalendarioDia4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia5
@@ -318,11 +325,12 @@
             lbMainCalendarioDia5.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia5.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia5.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia5.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia5.Location = new Point(801, 333);
             lbMainCalendarioDia5.Name = "lbMainCalendarioDia5";
             lbMainCalendarioDia5.Size = new Size(112, 87);
             lbMainCalendarioDia5.TabIndex = 21;
-            lbMainCalendarioDia5.Text = "5";
+            lbMainCalendarioDia5.Text = "3";
             lbMainCalendarioDia5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia6
@@ -330,11 +338,12 @@
             lbMainCalendarioDia6.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia6.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia6.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia6.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia6.Location = new Point(913, 333);
             lbMainCalendarioDia6.Name = "lbMainCalendarioDia6";
             lbMainCalendarioDia6.Size = new Size(112, 87);
             lbMainCalendarioDia6.TabIndex = 22;
-            lbMainCalendarioDia6.Text = "6";
+            lbMainCalendarioDia6.Text = "4";
             lbMainCalendarioDia6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia7
@@ -342,36 +351,38 @@
             lbMainCalendarioDia7.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia7.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia7.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia7.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia7.Location = new Point(1025, 333);
             lbMainCalendarioDia7.Name = "lbMainCalendarioDia7";
             lbMainCalendarioDia7.Size = new Size(112, 87);
             lbMainCalendarioDia7.TabIndex = 23;
-            lbMainCalendarioDia7.Text = "7";
+            lbMainCalendarioDia7.Text = "5";
             lbMainCalendarioDia7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia14
             // 
             lbMainCalendarioDia14.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia14.BackColor = Color.FromArgb(255, 255, 192);
+            lbMainCalendarioDia14.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia14.BorderStyle = BorderStyle.FixedSingle;
-            lbMainCalendarioDia14.Image = Properties.Resources.right;
+            lbMainCalendarioDia14.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia14.Location = new Point(1025, 420);
             lbMainCalendarioDia14.Name = "lbMainCalendarioDia14";
             lbMainCalendarioDia14.Size = new Size(112, 87);
             lbMainCalendarioDia14.TabIndex = 30;
-            lbMainCalendarioDia14.Text = "14";
-            lbMainCalendarioDia14.TextAlign = ContentAlignment.TopRight;
+            lbMainCalendarioDia14.Text = "12";
+            lbMainCalendarioDia14.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia13
             // 
             lbMainCalendarioDia13.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia13.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia13.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia13.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia13.Location = new Point(913, 420);
             lbMainCalendarioDia13.Name = "lbMainCalendarioDia13";
             lbMainCalendarioDia13.Size = new Size(112, 87);
             lbMainCalendarioDia13.TabIndex = 29;
-            lbMainCalendarioDia13.Text = "13";
+            lbMainCalendarioDia13.Text = "11";
             lbMainCalendarioDia13.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia12
@@ -379,11 +390,12 @@
             lbMainCalendarioDia12.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia12.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia12.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia12.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia12.Location = new Point(801, 420);
             lbMainCalendarioDia12.Name = "lbMainCalendarioDia12";
             lbMainCalendarioDia12.Size = new Size(112, 87);
             lbMainCalendarioDia12.TabIndex = 28;
-            lbMainCalendarioDia12.Text = "12";
+            lbMainCalendarioDia12.Text = "10";
             lbMainCalendarioDia12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia11
@@ -391,11 +403,12 @@
             lbMainCalendarioDia11.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia11.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia11.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia11.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia11.Location = new Point(689, 420);
             lbMainCalendarioDia11.Name = "lbMainCalendarioDia11";
             lbMainCalendarioDia11.Size = new Size(112, 87);
             lbMainCalendarioDia11.TabIndex = 27;
-            lbMainCalendarioDia11.Text = "11";
+            lbMainCalendarioDia11.Text = "9";
             lbMainCalendarioDia11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia10
@@ -403,11 +416,12 @@
             lbMainCalendarioDia10.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia10.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia10.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia10.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia10.Location = new Point(577, 420);
             lbMainCalendarioDia10.Name = "lbMainCalendarioDia10";
             lbMainCalendarioDia10.Size = new Size(112, 87);
             lbMainCalendarioDia10.TabIndex = 26;
-            lbMainCalendarioDia10.Text = "10";
+            lbMainCalendarioDia10.Text = "8";
             lbMainCalendarioDia10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia9
@@ -415,11 +429,12 @@
             lbMainCalendarioDia9.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia9.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia9.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia9.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia9.Location = new Point(465, 420);
             lbMainCalendarioDia9.Name = "lbMainCalendarioDia9";
             lbMainCalendarioDia9.Size = new Size(112, 87);
             lbMainCalendarioDia9.TabIndex = 25;
-            lbMainCalendarioDia9.Text = "9";
+            lbMainCalendarioDia9.Text = "7";
             lbMainCalendarioDia9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia8
@@ -427,11 +442,12 @@
             lbMainCalendarioDia8.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia8.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia8.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia8.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia8.Location = new Point(353, 420);
             lbMainCalendarioDia8.Name = "lbMainCalendarioDia8";
             lbMainCalendarioDia8.Size = new Size(112, 87);
             lbMainCalendarioDia8.TabIndex = 24;
-            lbMainCalendarioDia8.Text = "8";
+            lbMainCalendarioDia8.Text = "6";
             lbMainCalendarioDia8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia21
@@ -439,11 +455,12 @@
             lbMainCalendarioDia21.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia21.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia21.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia21.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia21.Location = new Point(1025, 507);
             lbMainCalendarioDia21.Name = "lbMainCalendarioDia21";
             lbMainCalendarioDia21.Size = new Size(112, 87);
             lbMainCalendarioDia21.TabIndex = 37;
-            lbMainCalendarioDia21.Text = "21";
+            lbMainCalendarioDia21.Text = "19";
             lbMainCalendarioDia21.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia20
@@ -451,11 +468,12 @@
             lbMainCalendarioDia20.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia20.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia20.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia20.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia20.Location = new Point(913, 507);
             lbMainCalendarioDia20.Name = "lbMainCalendarioDia20";
             lbMainCalendarioDia20.Size = new Size(112, 87);
             lbMainCalendarioDia20.TabIndex = 36;
-            lbMainCalendarioDia20.Text = "20";
+            lbMainCalendarioDia20.Text = "18";
             lbMainCalendarioDia20.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia19
@@ -463,11 +481,12 @@
             lbMainCalendarioDia19.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia19.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia19.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia19.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia19.Location = new Point(801, 507);
             lbMainCalendarioDia19.Name = "lbMainCalendarioDia19";
             lbMainCalendarioDia19.Size = new Size(112, 87);
             lbMainCalendarioDia19.TabIndex = 35;
-            lbMainCalendarioDia19.Text = "19";
+            lbMainCalendarioDia19.Text = "17";
             lbMainCalendarioDia19.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia18
@@ -475,11 +494,12 @@
             lbMainCalendarioDia18.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia18.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia18.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia18.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia18.Location = new Point(689, 507);
             lbMainCalendarioDia18.Name = "lbMainCalendarioDia18";
             lbMainCalendarioDia18.Size = new Size(112, 87);
             lbMainCalendarioDia18.TabIndex = 34;
-            lbMainCalendarioDia18.Text = "18";
+            lbMainCalendarioDia18.Text = "16";
             lbMainCalendarioDia18.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia17
@@ -487,11 +507,12 @@
             lbMainCalendarioDia17.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia17.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia17.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia17.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia17.Location = new Point(577, 507);
             lbMainCalendarioDia17.Name = "lbMainCalendarioDia17";
             lbMainCalendarioDia17.Size = new Size(112, 87);
             lbMainCalendarioDia17.TabIndex = 33;
-            lbMainCalendarioDia17.Text = "17";
+            lbMainCalendarioDia17.Text = "15";
             lbMainCalendarioDia17.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia16
@@ -499,11 +520,12 @@
             lbMainCalendarioDia16.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia16.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia16.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia16.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia16.Location = new Point(465, 507);
             lbMainCalendarioDia16.Name = "lbMainCalendarioDia16";
             lbMainCalendarioDia16.Size = new Size(112, 87);
             lbMainCalendarioDia16.TabIndex = 32;
-            lbMainCalendarioDia16.Text = "16";
+            lbMainCalendarioDia16.Text = "14";
             lbMainCalendarioDia16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia15
@@ -511,11 +533,12 @@
             lbMainCalendarioDia15.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia15.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia15.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia15.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia15.Location = new Point(353, 507);
             lbMainCalendarioDia15.Name = "lbMainCalendarioDia15";
             lbMainCalendarioDia15.Size = new Size(112, 87);
             lbMainCalendarioDia15.TabIndex = 31;
-            lbMainCalendarioDia15.Text = "15";
+            lbMainCalendarioDia15.Text = "13";
             lbMainCalendarioDia15.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia28
@@ -523,11 +546,12 @@
             lbMainCalendarioDia28.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia28.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia28.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia28.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia28.Location = new Point(1025, 594);
             lbMainCalendarioDia28.Name = "lbMainCalendarioDia28";
             lbMainCalendarioDia28.Size = new Size(112, 87);
             lbMainCalendarioDia28.TabIndex = 44;
-            lbMainCalendarioDia28.Text = "28";
+            lbMainCalendarioDia28.Text = "26";
             lbMainCalendarioDia28.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia27
@@ -535,11 +559,12 @@
             lbMainCalendarioDia27.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia27.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia27.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia27.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia27.Location = new Point(913, 594);
             lbMainCalendarioDia27.Name = "lbMainCalendarioDia27";
             lbMainCalendarioDia27.Size = new Size(112, 87);
             lbMainCalendarioDia27.TabIndex = 43;
-            lbMainCalendarioDia27.Text = "27";
+            lbMainCalendarioDia27.Text = "25";
             lbMainCalendarioDia27.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia26
@@ -547,11 +572,12 @@
             lbMainCalendarioDia26.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia26.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia26.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia26.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia26.Location = new Point(801, 594);
             lbMainCalendarioDia26.Name = "lbMainCalendarioDia26";
             lbMainCalendarioDia26.Size = new Size(112, 87);
             lbMainCalendarioDia26.TabIndex = 42;
-            lbMainCalendarioDia26.Text = "26";
+            lbMainCalendarioDia26.Text = "24";
             lbMainCalendarioDia26.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia25
@@ -559,11 +585,12 @@
             lbMainCalendarioDia25.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia25.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia25.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia25.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia25.Location = new Point(689, 594);
             lbMainCalendarioDia25.Name = "lbMainCalendarioDia25";
             lbMainCalendarioDia25.Size = new Size(112, 87);
             lbMainCalendarioDia25.TabIndex = 41;
-            lbMainCalendarioDia25.Text = "25";
+            lbMainCalendarioDia25.Text = "23";
             lbMainCalendarioDia25.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia24
@@ -571,11 +598,12 @@
             lbMainCalendarioDia24.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia24.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia24.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia24.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia24.Location = new Point(577, 594);
             lbMainCalendarioDia24.Name = "lbMainCalendarioDia24";
             lbMainCalendarioDia24.Size = new Size(112, 87);
             lbMainCalendarioDia24.TabIndex = 40;
-            lbMainCalendarioDia24.Text = "24";
+            lbMainCalendarioDia24.Text = "22";
             lbMainCalendarioDia24.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia23
@@ -583,11 +611,12 @@
             lbMainCalendarioDia23.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia23.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia23.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia23.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia23.Location = new Point(465, 594);
             lbMainCalendarioDia23.Name = "lbMainCalendarioDia23";
             lbMainCalendarioDia23.Size = new Size(112, 87);
             lbMainCalendarioDia23.TabIndex = 39;
-            lbMainCalendarioDia23.Text = "23";
+            lbMainCalendarioDia23.Text = "21";
             lbMainCalendarioDia23.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia22
@@ -595,59 +624,64 @@
             lbMainCalendarioDia22.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia22.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia22.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia22.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia22.Location = new Point(353, 594);
             lbMainCalendarioDia22.Name = "lbMainCalendarioDia22";
             lbMainCalendarioDia22.Size = new Size(112, 87);
             lbMainCalendarioDia22.TabIndex = 38;
-            lbMainCalendarioDia22.Text = "22";
+            lbMainCalendarioDia22.Text = "20";
             lbMainCalendarioDia22.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia35
             // 
             lbMainCalendarioDia35.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia35.BackColor = Color.LightSalmon;
+            lbMainCalendarioDia35.BackColor = Color.Gray;
             lbMainCalendarioDia35.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia35.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia35.Location = new Point(1025, 681);
             lbMainCalendarioDia35.Name = "lbMainCalendarioDia35";
             lbMainCalendarioDia35.Size = new Size(112, 87);
             lbMainCalendarioDia35.TabIndex = 51;
-            lbMainCalendarioDia35.Text = "35";
+            lbMainCalendarioDia35.Text = " ";
             lbMainCalendarioDia35.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia34
             // 
             lbMainCalendarioDia34.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia34.BackColor = Color.LightSalmon;
+            lbMainCalendarioDia34.BackColor = Color.Gray;
             lbMainCalendarioDia34.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia34.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia34.Location = new Point(913, 681);
             lbMainCalendarioDia34.Name = "lbMainCalendarioDia34";
             lbMainCalendarioDia34.Size = new Size(112, 87);
             lbMainCalendarioDia34.TabIndex = 50;
-            lbMainCalendarioDia34.Text = "34";
+            lbMainCalendarioDia34.Text = " ";
             lbMainCalendarioDia34.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia33
             // 
             lbMainCalendarioDia33.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia33.BackColor = Color.LightSalmon;
+            lbMainCalendarioDia33.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia33.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia33.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia33.Location = new Point(801, 681);
             lbMainCalendarioDia33.Name = "lbMainCalendarioDia33";
             lbMainCalendarioDia33.Size = new Size(112, 87);
             lbMainCalendarioDia33.TabIndex = 49;
-            lbMainCalendarioDia33.Text = "33";
+            lbMainCalendarioDia33.Text = " 31";
             lbMainCalendarioDia33.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia32
             // 
             lbMainCalendarioDia32.Anchor = AnchorStyles.Top;
-            lbMainCalendarioDia32.BackColor = Color.LightSalmon;
+            lbMainCalendarioDia32.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia32.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia32.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia32.Location = new Point(689, 681);
             lbMainCalendarioDia32.Name = "lbMainCalendarioDia32";
             lbMainCalendarioDia32.Size = new Size(112, 87);
             lbMainCalendarioDia32.TabIndex = 48;
-            lbMainCalendarioDia32.Text = "32";
+            lbMainCalendarioDia32.Text = "30";
             lbMainCalendarioDia32.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia31
@@ -655,11 +689,12 @@
             lbMainCalendarioDia31.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia31.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia31.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia31.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia31.Location = new Point(577, 681);
             lbMainCalendarioDia31.Name = "lbMainCalendarioDia31";
             lbMainCalendarioDia31.Size = new Size(112, 87);
             lbMainCalendarioDia31.TabIndex = 47;
-            lbMainCalendarioDia31.Text = "31";
+            lbMainCalendarioDia31.Text = " 29";
             lbMainCalendarioDia31.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia30
@@ -667,11 +702,12 @@
             lbMainCalendarioDia30.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia30.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia30.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia30.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia30.Location = new Point(465, 681);
             lbMainCalendarioDia30.Name = "lbMainCalendarioDia30";
             lbMainCalendarioDia30.Size = new Size(112, 87);
             lbMainCalendarioDia30.TabIndex = 46;
-            lbMainCalendarioDia30.Text = "30";
+            lbMainCalendarioDia30.Text = "28";
             lbMainCalendarioDia30.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbMainCalendarioDia29
@@ -679,18 +715,153 @@
             lbMainCalendarioDia29.Anchor = AnchorStyles.Top;
             lbMainCalendarioDia29.BackColor = Color.FromArgb(192, 255, 255);
             lbMainCalendarioDia29.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia29.Font = new Font("Microsoft Sans Serif", 15F);
             lbMainCalendarioDia29.Location = new Point(353, 681);
             lbMainCalendarioDia29.Name = "lbMainCalendarioDia29";
             lbMainCalendarioDia29.Size = new Size(112, 87);
             lbMainCalendarioDia29.TabIndex = 45;
-            lbMainCalendarioDia29.Text = "29";
+            lbMainCalendarioDia29.Text = "27";
             lbMainCalendarioDia29.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btMainCalendarioChangeAno
+            // 
+            btMainCalendarioChangeAno.Anchor = AnchorStyles.Top;
+            btMainCalendarioChangeAno.Location = new Point(736, 244);
+            btMainCalendarioChangeAno.Name = "btMainCalendarioChangeAno";
+            btMainCalendarioChangeAno.Size = new Size(33, 23);
+            btMainCalendarioChangeAno.TabIndex = 52;
+            btMainCalendarioChangeAno.Text = "OK";
+            btMainCalendarioChangeAno.UseVisualStyleBackColor = true;
+            btMainCalendarioChangeAno.Click += btMainCalendarioChangeAno_Click;
+            // 
+            // debugbtMainCalendarioCreate
+            // 
+            debugbtMainCalendarioCreate.Anchor = AnchorStyles.Top;
+            debugbtMainCalendarioCreate.BackColor = Color.FromArgb(255, 255, 192);
+            debugbtMainCalendarioCreate.Location = new Point(218, 517);
+            debugbtMainCalendarioCreate.Name = "debugbtMainCalendarioCreate";
+            debugbtMainCalendarioCreate.Size = new Size(129, 31);
+            debugbtMainCalendarioCreate.TabIndex = 53;
+            debugbtMainCalendarioCreate.Text = "Criar Evento";
+            debugbtMainCalendarioCreate.UseVisualStyleBackColor = false;
+            debugbtMainCalendarioCreate.Click += debugbtMainCalendarioCreate_Click;
+            // 
+            // btMainCalendarioMostrarEventos
+            // 
+            btMainCalendarioMostrarEventos.Anchor = AnchorStyles.Top;
+            btMainCalendarioMostrarEventos.Location = new Point(950, 896);
+            btMainCalendarioMostrarEventos.Name = "btMainCalendarioMostrarEventos";
+            btMainCalendarioMostrarEventos.Size = new Size(129, 31);
+            btMainCalendarioMostrarEventos.TabIndex = 54;
+            btMainCalendarioMostrarEventos.Text = "Mostrar Eventos";
+            btMainCalendarioMostrarEventos.UseVisualStyleBackColor = true;
+            // 
+            // lbMainCalendarioDia42
+            // 
+            lbMainCalendarioDia42.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia42.BackColor = Color.Gray;
+            lbMainCalendarioDia42.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia42.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia42.Location = new Point(1025, 768);
+            lbMainCalendarioDia42.Name = "lbMainCalendarioDia42";
+            lbMainCalendarioDia42.Size = new Size(112, 87);
+            lbMainCalendarioDia42.TabIndex = 61;
+            lbMainCalendarioDia42.Text = " ";
+            lbMainCalendarioDia42.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia41
+            // 
+            lbMainCalendarioDia41.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia41.BackColor = Color.Gray;
+            lbMainCalendarioDia41.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia41.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia41.Location = new Point(913, 768);
+            lbMainCalendarioDia41.Name = "lbMainCalendarioDia41";
+            lbMainCalendarioDia41.Size = new Size(112, 87);
+            lbMainCalendarioDia41.TabIndex = 60;
+            lbMainCalendarioDia41.Text = " ";
+            lbMainCalendarioDia41.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia40
+            // 
+            lbMainCalendarioDia40.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia40.BackColor = Color.Gray;
+            lbMainCalendarioDia40.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia40.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia40.Location = new Point(801, 768);
+            lbMainCalendarioDia40.Name = "lbMainCalendarioDia40";
+            lbMainCalendarioDia40.Size = new Size(112, 87);
+            lbMainCalendarioDia40.TabIndex = 59;
+            lbMainCalendarioDia40.Text = " ";
+            lbMainCalendarioDia40.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia39
+            // 
+            lbMainCalendarioDia39.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia39.BackColor = Color.Gray;
+            lbMainCalendarioDia39.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia39.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia39.Location = new Point(689, 768);
+            lbMainCalendarioDia39.Name = "lbMainCalendarioDia39";
+            lbMainCalendarioDia39.Size = new Size(112, 87);
+            lbMainCalendarioDia39.TabIndex = 58;
+            lbMainCalendarioDia39.Text = " ";
+            lbMainCalendarioDia39.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia38
+            // 
+            lbMainCalendarioDia38.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia38.BackColor = Color.Gray;
+            lbMainCalendarioDia38.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia38.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia38.Location = new Point(577, 768);
+            lbMainCalendarioDia38.Name = "lbMainCalendarioDia38";
+            lbMainCalendarioDia38.Size = new Size(112, 87);
+            lbMainCalendarioDia38.TabIndex = 57;
+            lbMainCalendarioDia38.Text = " ";
+            lbMainCalendarioDia38.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia37
+            // 
+            lbMainCalendarioDia37.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia37.BackColor = Color.Gray;
+            lbMainCalendarioDia37.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia37.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia37.Location = new Point(465, 768);
+            lbMainCalendarioDia37.Name = "lbMainCalendarioDia37";
+            lbMainCalendarioDia37.Size = new Size(112, 87);
+            lbMainCalendarioDia37.TabIndex = 56;
+            lbMainCalendarioDia37.Text = " ";
+            lbMainCalendarioDia37.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbMainCalendarioDia36
+            // 
+            lbMainCalendarioDia36.Anchor = AnchorStyles.Top;
+            lbMainCalendarioDia36.BackColor = Color.Gray;
+            lbMainCalendarioDia36.BorderStyle = BorderStyle.FixedSingle;
+            lbMainCalendarioDia36.Font = new Font("Microsoft Sans Serif", 15F);
+            lbMainCalendarioDia36.Location = new Point(353, 768);
+            lbMainCalendarioDia36.Name = "lbMainCalendarioDia36";
+            lbMainCalendarioDia36.Size = new Size(112, 87);
+            lbMainCalendarioDia36.TabIndex = 55;
+            lbMainCalendarioDia36.Text = " ";
+            lbMainCalendarioDia36.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MainCalendario
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1321, 927);
+            Controls.Add(lbMainCalendarioDia42);
+            Controls.Add(lbMainCalendarioDia41);
+            Controls.Add(lbMainCalendarioDia40);
+            Controls.Add(lbMainCalendarioDia39);
+            Controls.Add(lbMainCalendarioDia38);
+            Controls.Add(lbMainCalendarioDia37);
+            Controls.Add(lbMainCalendarioDia36);
+            Controls.Add(btMainCalendarioMostrarEventos);
+            Controls.Add(debugbtMainCalendarioCreate);
+            Controls.Add(btMainCalendarioChangeAno);
             Controls.Add(lbMainCalendarioDia35);
             Controls.Add(lbMainCalendarioDia34);
             Controls.Add(lbMainCalendarioDia33);
@@ -765,7 +936,6 @@
         private Button btMainCalendarioBack;
         private Button btMainCalendarioNext;
         private Label lbMainCalendarioDia1;
-        private ContextMenuStrip contextMenuStrip1;
         private TextBox campMainCalendarioSelectAno;
         private Label lbMainCalendarioMes;
         private Label lbMainCalendarioAno;
@@ -803,5 +973,15 @@
         private Label lbMainCalendarioDia31;
         private Label lbMainCalendarioDia30;
         private Label lbMainCalendarioDia29;
+        private Button btMainCalendarioChangeAno;
+        private Button debugbtMainCalendarioCreate;
+        private Button btMainCalendarioMostrarEventos;
+        private Label lbMainCalendarioDia42;
+        private Label lbMainCalendarioDia41;
+        private Label lbMainCalendarioDia40;
+        private Label lbMainCalendarioDia39;
+        private Label lbMainCalendarioDia38;
+        private Label lbMainCalendarioDia37;
+        private Label lbMainCalendarioDia36;
     }
 }

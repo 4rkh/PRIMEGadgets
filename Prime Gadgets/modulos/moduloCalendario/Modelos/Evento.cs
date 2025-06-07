@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Prime_Gadgets.modulos.moduloContatos;
 
 namespace Prime_Gadgets.modulos.moduloCalendario
 {
@@ -13,6 +12,5 @@ namespace Prime_Gadgets.modulos.moduloCalendario
         public DateTime Data { get; set; }
         public string Local { get; set; } = "";
         public string Descricao { get; set; } = "";
-        public Contatos Contato { get; set; } = new Contatos();
     }
 }

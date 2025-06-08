@@ -16,5 +16,24 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         {
             InitializeComponent();
         }
+
+        private void btGeradorSenhasCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btGeradorSenhasSalvar_Click(object sender, EventArgs e)
+        {
+            SenhaConfig.comprimento = tbGeradorSenhasComprimento.Value;
+            SenhaConfig.letraMa = cbGeradorSenhasLetrasMa.Checked;
+            SenhaConfig.letraMi = cbGeradorSenhasLetrasMi.Checked;
+            SenhaConfig.CaracterEs = cbGeradorSenhasCaracterEs.Checked;
+            this.Dispose();
+        }
+
+        private void tbGerarSenhasComprimento_Scroll(object sender, EventArgs e)
+        {
+            lbGeradorSenhasComprimentoNumber.Text = tbGeradorSenhasComprimento.Value.ToString();
+        }
     }
 }

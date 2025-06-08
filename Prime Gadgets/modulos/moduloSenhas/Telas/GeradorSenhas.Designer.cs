@@ -30,89 +30,147 @@
         {
             btGeradorSenhasCancelar = new Button();
             btGeradorSenhasSalvar = new Button();
-            cbGerarSenhasLetrasM = new CheckBox();
-            lbGerarSenhasComprimento = new Label();
-            tbGerarSenhasComprimento = new TrackBar();
-            ((System.ComponentModel.ISupportInitialize)tbGerarSenhasComprimento).BeginInit();
+            cbGeradorSenhasLetrasMa = new CheckBox();
+            lbGeradorSenhasComprimento = new Label();
+            tbGeradorSenhasComprimento = new TrackBar();
+            cbGeradorSenhasCaracterEs = new CheckBox();
+            lbGeradorSenhasTitulo = new Label();
+            cbGeradorSenhasLetrasMi = new CheckBox();
+            lbGeradorSenhasComprimentoNumber = new Label();
+            ((System.ComponentModel.ISupportInitialize)tbGeradorSenhasComprimento).BeginInit();
             SuspendLayout();
             // 
             // btGeradorSenhasCancelar
             // 
-            btGeradorSenhasCancelar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btGeradorSenhasCancelar.Anchor = AnchorStyles.Left;
             btGeradorSenhasCancelar.BackColor = Color.FromArgb(230, 34, 34);
             btGeradorSenhasCancelar.FlatAppearance.BorderSize = 0;
             btGeradorSenhasCancelar.FlatStyle = FlatStyle.Flat;
             btGeradorSenhasCancelar.Font = new Font("Arial", 12.75F);
             btGeradorSenhasCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btGeradorSenhasCancelar.Location = new Point(398, 375);
+            btGeradorSenhasCancelar.Location = new Point(157, 232);
             btGeradorSenhasCancelar.Name = "btGeradorSenhasCancelar";
             btGeradorSenhasCancelar.Size = new Size(118, 37);
             btGeradorSenhasCancelar.TabIndex = 24;
             btGeradorSenhasCancelar.Text = "Cancelar";
             btGeradorSenhasCancelar.UseVisualStyleBackColor = false;
+            btGeradorSenhasCancelar.Click += btGeradorSenhasCancelar_Click;
             // 
             // btGeradorSenhasSalvar
             // 
-            btGeradorSenhasSalvar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btGeradorSenhasSalvar.Anchor = AnchorStyles.Left;
             btGeradorSenhasSalvar.BackColor = Color.FromArgb(230, 34, 34);
             btGeradorSenhasSalvar.FlatAppearance.BorderSize = 0;
             btGeradorSenhasSalvar.FlatStyle = FlatStyle.Flat;
             btGeradorSenhasSalvar.Font = new Font("Arial", 12.75F);
             btGeradorSenhasSalvar.ForeColor = Color.FromArgb(255, 252, 237);
-            btGeradorSenhasSalvar.Location = new Point(260, 375);
+            btGeradorSenhasSalvar.Location = new Point(19, 232);
             btGeradorSenhasSalvar.Name = "btGeradorSenhasSalvar";
             btGeradorSenhasSalvar.Size = new Size(118, 37);
             btGeradorSenhasSalvar.TabIndex = 25;
             btGeradorSenhasSalvar.Text = "Salvar";
             btGeradorSenhasSalvar.UseVisualStyleBackColor = false;
+            btGeradorSenhasSalvar.Click += btGeradorSenhasSalvar_Click;
             // 
-            // cbGerarSenhasLetrasM
+            // cbGeradorSenhasLetrasMa
             // 
-            cbGerarSenhasLetrasM.Checked = true;
-            cbGerarSenhasLetrasM.CheckState = CheckState.Checked;
-            cbGerarSenhasLetrasM.Location = new Point(260, 251);
-            cbGerarSenhasLetrasM.Name = "cbGerarSenhasLetrasM";
-            cbGerarSenhasLetrasM.Size = new Size(256, 30);
-            cbGerarSenhasLetrasM.TabIndex = 26;
-            cbGerarSenhasLetrasM.Text = "Letras maiúsculas";
-            cbGerarSenhasLetrasM.TextAlign = ContentAlignment.MiddleCenter;
-            cbGerarSenhasLetrasM.UseVisualStyleBackColor = true;
+            cbGeradorSenhasLetrasMa.Anchor = AnchorStyles.Left;
+            cbGeradorSenhasLetrasMa.Checked = SenhaConfig.letraMa;
+            cbGeradorSenhasLetrasMa.Location = new Point(19, 114);
+            cbGeradorSenhasLetrasMa.Name = "cbGeradorSenhasLetrasMa";
+            cbGeradorSenhasLetrasMa.Size = new Size(256, 30);
+            cbGeradorSenhasLetrasMa.TabIndex = 26;
+            cbGeradorSenhasLetrasMa.Text = "Letras maiúsculas";
+            cbGeradorSenhasLetrasMa.TextAlign = ContentAlignment.MiddleCenter;
+            cbGeradorSenhasLetrasMa.UseVisualStyleBackColor = SenhaConfig.letraMa;
             // 
-            // lbGerarSenhasComprimento
+            // lbGeradorSenhasComprimento
             // 
-            lbGerarSenhasComprimento.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbGerarSenhasComprimento.AutoSize = true;
-            lbGerarSenhasComprimento.Font = new Font("Arial", 12.75F);
-            lbGerarSenhasComprimento.Location = new Point(298, 180);
-            lbGerarSenhasComprimento.Name = "lbGerarSenhasComprimento";
-            lbGerarSenhasComprimento.Size = new Size(178, 19);
-            lbGerarSenhasComprimento.TabIndex = 27;
-            lbGerarSenhasComprimento.Text = "Comprimento da senha";
+            lbGeradorSenhasComprimento.Anchor = AnchorStyles.Left;
+            lbGeradorSenhasComprimento.Font = new Font("Arial", 12.75F);
+            lbGeradorSenhasComprimento.Location = new Point(19, 53);
+            lbGeradorSenhasComprimento.Name = "lbGeradorSenhasComprimento";
+            lbGeradorSenhasComprimento.Size = new Size(256, 19);
+            lbGeradorSenhasComprimento.TabIndex = 27;
+            lbGeradorSenhasComprimento.Text = "Comprimento da senha:";
+            lbGeradorSenhasComprimento.TextAlign = ContentAlignment.TopCenter;
             // 
             // tbGerarSenhasComprimento
             // 
-            tbGerarSenhasComprimento.Location = new Point(260, 202);
-            tbGerarSenhasComprimento.Maximum = 50;
-            tbGerarSenhasComprimento.Minimum = 8;
-            tbGerarSenhasComprimento.Name = "tbGerarSenhasComprimento";
-            tbGerarSenhasComprimento.Size = new Size(256, 45);
-            tbGerarSenhasComprimento.TabIndex = 30;
-            tbGerarSenhasComprimento.Value = 8;
+            tbGeradorSenhasComprimento.Anchor = AnchorStyles.Left;
+            tbGeradorSenhasComprimento.Location = new Point(19, 75);
+            tbGeradorSenhasComprimento.Maximum = 50;
+            tbGeradorSenhasComprimento.Minimum = 8;
+            tbGeradorSenhasComprimento.Name = "tbGerarSenhasComprimento";
+            tbGeradorSenhasComprimento.Size = new Size(256, 45);
+            tbGeradorSenhasComprimento.TabIndex = 30;
+            tbGeradorSenhasComprimento.Value = SenhaConfig.comprimento;
+            tbGeradorSenhasComprimento.Scroll += tbGerarSenhasComprimento_Scroll;
+            // 
+            // cbGeradorSenhasCaracterEs
+            // 
+            cbGeradorSenhasCaracterEs.Anchor = AnchorStyles.Left;
+            cbGeradorSenhasCaracterEs.Checked = SenhaConfig.CaracterEs;
+            cbGeradorSenhasCaracterEs.Location = new Point(19, 182);
+            cbGeradorSenhasCaracterEs.Name = "cbGeradorSenhasCaracterEs";
+            cbGeradorSenhasCaracterEs.Size = new Size(256, 30);
+            cbGeradorSenhasCaracterEs.TabIndex = 31;
+            cbGeradorSenhasCaracterEs.Text = "Caracteres especiais";
+            cbGeradorSenhasCaracterEs.TextAlign = ContentAlignment.MiddleCenter;
+            cbGeradorSenhasCaracterEs.UseVisualStyleBackColor = SenhaConfig.CaracterEs;
+            // 
+            // lbGeradorSenhasTitulo
+            // 
+            lbGeradorSenhasTitulo.Anchor = AnchorStyles.Left;
+            lbGeradorSenhasTitulo.Font = new Font("Arial", 15F);
+            lbGeradorSenhasTitulo.Location = new Point(19, 9);
+            lbGeradorSenhasTitulo.Name = "lbGeradorSenhasTitulo";
+            lbGeradorSenhasTitulo.Size = new Size(256, 34);
+            lbGeradorSenhasTitulo.TabIndex = 32;
+            lbGeradorSenhasTitulo.Text = "Configuração da geração";
+            lbGeradorSenhasTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // cbGeradorSenhasLetrasMi
+            // 
+            cbGeradorSenhasLetrasMi.Anchor = AnchorStyles.Left;
+            cbGeradorSenhasLetrasMi.Checked = SenhaConfig.letraMi;
+            cbGeradorSenhasLetrasMi.Location = new Point(19, 146);
+            cbGeradorSenhasLetrasMi.Name = "cbGeradorSenhasLetrasMi";
+            cbGeradorSenhasLetrasMi.Size = new Size(256, 30);
+            cbGeradorSenhasLetrasMi.TabIndex = 33;
+            cbGeradorSenhasLetrasMi.Text = "Letras minúsculas";
+            cbGeradorSenhasLetrasMi.TextAlign = ContentAlignment.MiddleCenter;
+            cbGeradorSenhasLetrasMi.UseVisualStyleBackColor = SenhaConfig.letraMi;
+            // 
+            // lbGeradorSenhasComprimentoNumber
+            // 
+            lbGeradorSenhasComprimentoNumber.Anchor = AnchorStyles.Left;
+            lbGeradorSenhasComprimentoNumber.Font = new Font("Arial", 12.75F);
+            lbGeradorSenhasComprimentoNumber.Location = new Point(236, 53);
+            lbGeradorSenhasComprimentoNumber.Name = "lbGeradorSenhasComprimentoNumber";
+            lbGeradorSenhasComprimentoNumber.Size = new Size(39, 19);
+            lbGeradorSenhasComprimentoNumber.TabIndex = 34;
+            lbGeradorSenhasComprimentoNumber.Text = SenhaConfig.comprimento.ToString();
+            lbGeradorSenhasComprimentoNumber.TextAlign = ContentAlignment.TopCenter;
             // 
             // GeradorSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(800, 450);
-            Controls.Add(tbGerarSenhasComprimento);
-            Controls.Add(lbGerarSenhasComprimento);
-            Controls.Add(cbGerarSenhasLetrasM);
+            ClientSize = new Size(291, 287);
+            Controls.Add(lbGeradorSenhasComprimentoNumber);
+            Controls.Add(cbGeradorSenhasLetrasMi);
+            Controls.Add(lbGeradorSenhasTitulo);
+            Controls.Add(cbGeradorSenhasCaracterEs);
+            Controls.Add(tbGeradorSenhasComprimento);
+            Controls.Add(lbGeradorSenhasComprimento);
+            Controls.Add(cbGeradorSenhasLetrasMa);
             Controls.Add(btGeradorSenhasSalvar);
             Controls.Add(btGeradorSenhasCancelar);
             Name = "GeradorSenhas";
             Text = "GeradorSenhas";
-            ((System.ComponentModel.ISupportInitialize)tbGerarSenhasComprimento).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbGeradorSenhasComprimento).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,8 +179,12 @@
 
         private Button btGeradorSenhasCancelar;
         private Button btGeradorSenhasSalvar;
-        private CheckBox cbGerarSenhasLetrasM;
-        private Label lbGerarSenhasComprimento;
-        private TrackBar tbGerarSenhasComprimento;
+        private CheckBox cbGeradorSenhasLetrasMa;
+        private Label lbGeradorSenhasComprimento;
+        private TrackBar tbGeradorSenhasComprimento;
+        private CheckBox cbGeradorSenhasCaracterEs;
+        private Label lbGeradorSenhasTitulo;
+        private CheckBox cbGeradorSenhasLetrasMi;
+        private Label lbGeradorSenhasComprimentoNumber;
     }
 }

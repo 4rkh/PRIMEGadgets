@@ -56,110 +56,143 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // lbUpdateEventoTitulo
             // 
             lbUpdateEventoTitulo.AutoSize = true;
-            lbUpdateEventoTitulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lbUpdateEventoTitulo.Location = new Point(30, 20);
+            lbUpdateEventoTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbUpdateEventoTitulo.Location = new Point(41, 27);
             lbUpdateEventoTitulo.Name = "lbUpdateEventoTitulo";
-            lbUpdateEventoTitulo.Size = new Size(183, 30);
+            lbUpdateEventoTitulo.Size = new Size(243, 36);
             lbUpdateEventoTitulo.TabIndex = 0;
             lbUpdateEventoTitulo.Text = "Atualizar Evento";
             // 
             // btUpdateEventoAtualizar
             // 
-            btUpdateEventoAtualizar.Location = new Point(120, 270);
+            btUpdateEventoAtualizar.BackColor = Color.FromArgb(230, 34, 34);
+            btUpdateEventoAtualizar.FlatAppearance.BorderSize = 0;
+            btUpdateEventoAtualizar.FlatStyle = FlatStyle.Flat;
+            btUpdateEventoAtualizar.Font = new Font("Arial", 12.75F);
+            btUpdateEventoAtualizar.ForeColor = Color.FromArgb(255, 252, 237);
+            btUpdateEventoAtualizar.Location = new Point(30, 270);
             btUpdateEventoAtualizar.Name = "btUpdateEventoAtualizar";
             btUpdateEventoAtualizar.Size = new Size(120, 35);
             btUpdateEventoAtualizar.TabIndex = 9;
             btUpdateEventoAtualizar.Text = "Atualizar";
-            btUpdateEventoAtualizar.UseVisualStyleBackColor = true;
+            btUpdateEventoAtualizar.UseVisualStyleBackColor = false;
             btUpdateEventoAtualizar.Click += btUpdateEventoAtualizar_Click;
             // 
             // btUpdateEventoCancelar
             // 
-            btUpdateEventoCancelar.Location = new Point(250, 270);
+            btUpdateEventoCancelar.BackColor = Color.FromArgb(230, 34, 34);
+            btUpdateEventoCancelar.FlatAppearance.BorderSize = 0;
+            btUpdateEventoCancelar.FlatStyle = FlatStyle.Flat;
+            btUpdateEventoCancelar.Font = new Font("Arial", 12.75F);
+            btUpdateEventoCancelar.ForeColor = Color.FromArgb(255, 252, 237);
+            btUpdateEventoCancelar.Location = new Point(179, 270);
             btUpdateEventoCancelar.Name = "btUpdateEventoCancelar";
             btUpdateEventoCancelar.Size = new Size(120, 35);
             btUpdateEventoCancelar.TabIndex = 10;
             btUpdateEventoCancelar.Text = "Cancelar";
-            btUpdateEventoCancelar.UseVisualStyleBackColor = true;
+            btUpdateEventoCancelar.UseVisualStyleBackColor = false;
             btUpdateEventoCancelar.Click += btUpdateEventoCancelar_Click;
             // 
             // campUpdateEventoId
             // 
-            campUpdateEventoId.Location = new Point(120, 67);
+            campUpdateEventoId.BackColor = Color.FromArgb(255, 252, 237);
+            campUpdateEventoId.BorderStyle = BorderStyle.None;
+            campUpdateEventoId.Font = new Font("Arial", 12.75F);
+            campUpdateEventoId.ForeColor = Color.FromArgb(230, 34, 34);
+            campUpdateEventoId.Location = new Point(121, 83);
             campUpdateEventoId.Name = "campUpdateEventoId";
             campUpdateEventoId.ReadOnly = true;
-            campUpdateEventoId.Size = new Size(80, 23);
+            campUpdateEventoId.Size = new Size(156, 20);
             campUpdateEventoId.TabIndex = 2;
             // 
             // lbUpdateEventoId
             // 
             lbUpdateEventoId.AutoSize = true;
-            lbUpdateEventoId.Location = new Point(30, 70);
+            lbUpdateEventoId.Font = new Font("Arial", 12.75F);
+            lbUpdateEventoId.Location = new Point(55, 86);
             lbUpdateEventoId.Name = "lbUpdateEventoId";
-            lbUpdateEventoId.Size = new Size(18, 15);
+            lbUpdateEventoId.Size = new Size(26, 19);
             lbUpdateEventoId.TabIndex = 1;
             lbUpdateEventoId.Text = "ID";
             // 
             // campUpdateEventoData
             // 
+            campUpdateEventoData.CalendarForeColor = Color.FromArgb(230, 34, 34);
+            campUpdateEventoData.Font = new Font("Arial", 12.75F);
             campUpdateEventoData.Format = DateTimePickerFormat.Short;
-            campUpdateEventoData.Location = new Point(120, 107);
+            campUpdateEventoData.Location = new Point(121, 112);
             campUpdateEventoData.Name = "campUpdateEventoData";
-            campUpdateEventoData.Size = new Size(120, 23);
+            campUpdateEventoData.Size = new Size(156, 27);
             campUpdateEventoData.TabIndex = 4;
             // 
             // lbUpdateEventoData
             // 
             lbUpdateEventoData.AutoSize = true;
-            lbUpdateEventoData.Location = new Point(30, 110);
+            lbUpdateEventoData.Font = new Font("Arial", 12.75F);
+            lbUpdateEventoData.Location = new Point(49, 118);
             lbUpdateEventoData.Name = "lbUpdateEventoData";
-            lbUpdateEventoData.Size = new Size(31, 15);
+            lbUpdateEventoData.Size = new Size(43, 19);
             lbUpdateEventoData.TabIndex = 3;
             lbUpdateEventoData.Text = "Data";
             // 
             // campUpdateEventoLocal
             // 
-            campUpdateEventoLocal.Location = new Point(120, 147);
+            campUpdateEventoLocal.BackColor = Color.FromArgb(255, 252, 237);
+            campUpdateEventoLocal.BorderStyle = BorderStyle.None;
+            campUpdateEventoLocal.Font = new Font("Arial", 12.75F);
+            campUpdateEventoLocal.ForeColor = Color.FromArgb(230, 34, 34);
+            campUpdateEventoLocal.Location = new Point(121, 148);
             campUpdateEventoLocal.Name = "campUpdateEventoLocal";
-            campUpdateEventoLocal.Size = new Size(250, 23);
+            campUpdateEventoLocal.Size = new Size(156, 20);
             campUpdateEventoLocal.TabIndex = 6;
             campUpdateEventoLocal.TextChanged += Campos_TextChanged;
             // 
             // lbUpdateEventoLocal
             // 
             lbUpdateEventoLocal.AutoSize = true;
-            lbUpdateEventoLocal.Location = new Point(30, 150);
+            lbUpdateEventoLocal.Font = new Font("Arial", 12.75F);
+            lbUpdateEventoLocal.Location = new Point(48, 148);
             lbUpdateEventoLocal.Name = "lbUpdateEventoLocal";
-            lbUpdateEventoLocal.Size = new Size(35, 15);
+            lbUpdateEventoLocal.Size = new Size(48, 19);
             lbUpdateEventoLocal.TabIndex = 5;
             lbUpdateEventoLocal.Text = "Local";
             // 
             // campUpdateEventoDescricao
             // 
-            campUpdateEventoDescricao.Location = new Point(120, 187);
+            campUpdateEventoDescricao.BackColor = Color.FromArgb(255, 252, 237);
+            campUpdateEventoDescricao.BorderStyle = BorderStyle.None;
+            campUpdateEventoDescricao.Font = new Font("Arial", 12.75F);
+            campUpdateEventoDescricao.ForeColor = Color.FromArgb(230, 34, 34);
+            campUpdateEventoDescricao.Location = new Point(121, 179);
             campUpdateEventoDescricao.Multiline = true;
             campUpdateEventoDescricao.Name = "campUpdateEventoDescricao";
-            campUpdateEventoDescricao.Size = new Size(250, 60);
+            campUpdateEventoDescricao.Size = new Size(156, 77);
             campUpdateEventoDescricao.TabIndex = 8;
             campUpdateEventoDescricao.TextChanged += Campos_TextChanged;
             // 
             // lbUpdateEventoDescricao
             // 
             lbUpdateEventoDescricao.AutoSize = true;
-            lbUpdateEventoDescricao.Location = new Point(30, 190);
+            lbUpdateEventoDescricao.Font = new Font("Arial", 12.75F);
+            lbUpdateEventoDescricao.Location = new Point(31, 179);
             lbUpdateEventoDescricao.Name = "lbUpdateEventoDescricao";
-            lbUpdateEventoDescricao.Size = new Size(58, 15);
+            lbUpdateEventoDescricao.Size = new Size(84, 19);
             lbUpdateEventoDescricao.TabIndex = 7;
             lbUpdateEventoDescricao.Text = "Descrição";
             // 
             // btUpdateEventoDeletar
             // 
-            btUpdateEventoDeletar.Location = new Point(176, 337);
+            btUpdateEventoDeletar.BackColor = Color.FromArgb(230, 34, 34);
+            btUpdateEventoDeletar.FlatAppearance.BorderSize = 0;
+            btUpdateEventoDeletar.FlatStyle = FlatStyle.Flat;
+            btUpdateEventoDeletar.Font = new Font("Arial", 12.75F);
+            btUpdateEventoDeletar.ForeColor = Color.FromArgb(255, 252, 237);
+            btUpdateEventoDeletar.Location = new Point(98, 320);
             btUpdateEventoDeletar.Name = "btUpdateEventoDeletar";
             btUpdateEventoDeletar.Size = new Size(133, 36);
             btUpdateEventoDeletar.TabIndex = 11;
             btUpdateEventoDeletar.Text = "Deletar";
-            btUpdateEventoDeletar.UseVisualStyleBackColor = true;
+            btUpdateEventoDeletar.UseVisualStyleBackColor = false;
             btUpdateEventoDeletar.Click += btUpdateEventoDeletar_Click;
             // 
             // UpdateEvento
@@ -167,7 +200,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(472, 450);
+            ClientSize = new Size(328, 373);
             ControlBox = false;
             Controls.Add(btUpdateEventoDeletar);
             Controls.Add(btUpdateEventoCancelar);

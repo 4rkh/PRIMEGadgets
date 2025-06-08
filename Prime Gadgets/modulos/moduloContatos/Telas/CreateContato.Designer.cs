@@ -58,7 +58,7 @@
             lbCreateContatosTitulo.BackColor = Color.Transparent;
             lbCreateContatosTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCreateContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateContatosTitulo.Location = new Point(49, 47);
+            lbCreateContatosTitulo.Location = new Point(29, 27);
             lbCreateContatosTitulo.Name = "lbCreateContatosTitulo";
             lbCreateContatosTitulo.Size = new Size(265, 36);
             lbCreateContatosTitulo.TabIndex = 0;
@@ -72,7 +72,7 @@
             btCreateContatosCriar.FlatStyle = FlatStyle.Flat;
             btCreateContatosCriar.Font = new Font("Arial", 12.75F);
             btCreateContatosCriar.ForeColor = Color.FromArgb(183, 190, 191);
-            btCreateContatosCriar.Location = new Point(47, 382);
+            btCreateContatosCriar.Location = new Point(22, 257);
             btCreateContatosCriar.Name = "btCreateContatosCriar";
             btCreateContatosCriar.Size = new Size(118, 37);
             btCreateContatosCriar.TabIndex = 1;
@@ -88,7 +88,7 @@
             btCreateContatosCancelar.FlatStyle = FlatStyle.Flat;
             btCreateContatosCancelar.Font = new Font("Arial", 12.75F);
             btCreateContatosCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btCreateContatosCancelar.Location = new Point(199, 382);
+            btCreateContatosCancelar.Location = new Point(186, 257);
             btCreateContatosCancelar.Name = "btCreateContatosCancelar";
             btCreateContatosCancelar.Size = new Size(118, 37);
             btCreateContatosCancelar.TabIndex = 2;
@@ -102,7 +102,7 @@
             campCreateContatosNome.BorderStyle = BorderStyle.None;
             campCreateContatosNome.Font = new Font("Arial", 12.75F);
             campCreateContatosNome.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateContatosNome.Location = new Point(131, 157);
+            campCreateContatosNome.Location = new Point(121, 112);
             campCreateContatosNome.Name = "campCreateContatosNome";
             campCreateContatosNome.Size = new Size(156, 20);
             campCreateContatosNome.TabIndex = 4;
@@ -114,7 +114,7 @@
             campCreateContatosSobrenome.BorderStyle = BorderStyle.None;
             campCreateContatosSobrenome.Font = new Font("Arial", 12.75F);
             campCreateContatosSobrenome.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateContatosSobrenome.Location = new Point(131, 186);
+            campCreateContatosSobrenome.Location = new Point(121, 141);
             campCreateContatosSobrenome.Name = "campCreateContatosSobrenome";
             campCreateContatosSobrenome.Size = new Size(156, 20);
             campCreateContatosSobrenome.TabIndex = 5;
@@ -125,7 +125,7 @@
             campCreateContatosTelefone.BorderStyle = BorderStyle.None;
             campCreateContatosTelefone.Font = new Font("Arial", 12.75F);
             campCreateContatosTelefone.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateContatosTelefone.Location = new Point(131, 215);
+            campCreateContatosTelefone.Location = new Point(121, 170);
             campCreateContatosTelefone.Name = "campCreateContatosTelefone";
             campCreateContatosTelefone.Size = new Size(156, 20);
             campCreateContatosTelefone.TabIndex = 6;
@@ -138,7 +138,7 @@
             campCreateContatosEmail.BorderStyle = BorderStyle.None;
             campCreateContatosEmail.Font = new Font("Arial", 12.75F);
             campCreateContatosEmail.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateContatosEmail.Location = new Point(131, 244);
+            campCreateContatosEmail.Location = new Point(121, 199);
             campCreateContatosEmail.Name = "campCreateContatosEmail";
             campCreateContatosEmail.Size = new Size(156, 20);
             campCreateContatosEmail.TabIndex = 7;
@@ -150,7 +150,7 @@
             lbCreateContatosNome.AutoSize = true;
             lbCreateContatosNome.Font = new Font("Arial", 12.75F);
             lbCreateContatosNome.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateContatosNome.Location = new Point(54, 161);
+            lbCreateContatosNome.Location = new Point(44, 116);
             lbCreateContatosNome.Name = "lbCreateContatosNome";
             lbCreateContatosNome.Size = new Size(51, 19);
             lbCreateContatosNome.TabIndex = 9;
@@ -161,7 +161,7 @@
             lbCreateContatosSobrenome.AutoSize = true;
             lbCreateContatosSobrenome.Font = new Font("Arial", 12.75F);
             lbCreateContatosSobrenome.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateContatosSobrenome.Location = new Point(32, 190);
+            lbCreateContatosSobrenome.Location = new Point(22, 145);
             lbCreateContatosSobrenome.Name = "lbCreateContatosSobrenome";
             lbCreateContatosSobrenome.Size = new Size(93, 19);
             lbCreateContatosSobrenome.TabIndex = 10;
@@ -172,7 +172,7 @@
             lbCreateContatosTelefone.AutoSize = true;
             lbCreateContatosTelefone.Font = new Font("Arial", 12.75F);
             lbCreateContatosTelefone.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateContatosTelefone.Location = new Point(47, 219);
+            lbCreateContatosTelefone.Location = new Point(37, 174);
             lbCreateContatosTelefone.Name = "lbCreateContatosTelefone";
             lbCreateContatosTelefone.Size = new Size(69, 19);
             lbCreateContatosTelefone.TabIndex = 11;
@@ -183,7 +183,7 @@
             lbCreateContatosEmail.AutoSize = true;
             lbCreateContatosEmail.Font = new Font("Arial", 12.75F);
             lbCreateContatosEmail.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateContatosEmail.Location = new Point(56, 248);
+            lbCreateContatosEmail.Location = new Point(46, 203);
             lbCreateContatosEmail.Name = "lbCreateContatosEmail";
             lbCreateContatosEmail.Size = new Size(49, 19);
             lbCreateContatosEmail.TabIndex = 12;
@@ -194,7 +194,7 @@
             lbCreateContatoEmailInvalid.AutoSize = true;
             lbCreateContatoEmailInvalid.Font = new Font("Arial", 9F);
             lbCreateContatoEmailInvalid.ForeColor = Color.FromArgb(230, 34, 34);
-            lbCreateContatoEmailInvalid.Location = new Point(168, 270);
+            lbCreateContatoEmailInvalid.Location = new Point(158, 225);
             lbCreateContatoEmailInvalid.Name = "lbCreateContatoEmailInvalid";
             lbCreateContatoEmailInvalid.Size = new Size(84, 15);
             lbCreateContatoEmailInvalid.TabIndex = 13;
@@ -205,7 +205,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(367, 450);
+            ClientSize = new Size(328, 317);
             ControlBox = false;
             Controls.Add(lbCreateContatoEmailInvalid);
             Controls.Add(lbCreateContatosEmail);

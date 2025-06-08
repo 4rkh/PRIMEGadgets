@@ -12,9 +12,11 @@ namespace Prime_Gadgets.modulos.moduloCalendario
 {
     public partial class MainCalendario : Form
     {
-        Color desativado = Color.FromArgb(128, 128, 128);
-        Color ativado = Color.FromArgb(192, 255, 255);
+        Color desativado = Color.FromArgb(153, 117, 92);
+        Color ativado = Color.FromArgb(255, 252, 237);
         Color evento = Color.FromArgb(230, 34, 34);
+        Color textoAtivado = Color.FromArgb(230, 34, 34);
+        Color textoEvento = Color.FromArgb(255, 252, 237);
         EventoAccess eventoAccess = new EventoAccess();
         private Label[] dias;
         private ToolTip toolTipEventos = new ToolTip();
@@ -246,10 +248,12 @@ namespace Prime_Gadgets.modulos.moduloCalendario
                     if (temEvento)
                     {
                         dias[i].BackColor = evento;
+                        dias[i].ForeColor = textoEvento;
                     }
                     else
                     {
                         dias[i].BackColor = ativado;
+                        dias[i].ForeColor = textoAtivado;
                     }
                     contador++;
                 }

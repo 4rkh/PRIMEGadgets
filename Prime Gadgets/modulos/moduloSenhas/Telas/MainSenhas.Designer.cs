@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSenhas));
             btMainSenhasCreate = new Button();
             btMainSenhasUpdate = new Button();
@@ -107,11 +110,36 @@
             tbMainSenhasDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tbMainSenhasDados.BackgroundColor = Color.FromArgb(255, 252, 237);
             tbMainSenhasDados.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle1.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            tbMainSenhasDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tbMainSenhasDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            tbMainSenhasDados.DefaultCellStyle = dataGridViewCellStyle2;
+            tbMainSenhasDados.GridColor = Color.FromArgb(153, 117, 92);
             tbMainSenhasDados.Location = new Point(242, 140);
             tbMainSenhasDados.MultiSelect = false;
             tbMainSenhasDados.Name = "tbMainSenhasDados";
             tbMainSenhasDados.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle3.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            tbMainSenhasDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             tbMainSenhasDados.RowHeadersVisible = false;
             tbMainSenhasDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tbMainSenhasDados.Size = new Size(925, 491);

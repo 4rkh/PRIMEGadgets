@@ -187,6 +187,216 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                     return;
                 }
             }
+            // Massa
+            else if (tipoConversao.Valor == 4)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de massa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para quilograma
+                double valorEmKg = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmKg = valorEntrada; break; // Quilograma
+                    case 2: valorEmKg = valorEntrada / 1000; break; // Grama
+                    case 3: valorEmKg = valorEntrada * 1000; break; // Tonelada
+                    case 4: valorEmKg = valorEntrada * 0.45359237; break; // Libra
+                    case 5: valorEmKg = valorEntrada * 0.0283495231; break; // Onça
+                }
+                // Converte de kg para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmKg; break; // Quilograma
+                    case 2: resultado = valorEmKg * 1000; break; // Grama
+                    case 3: resultado = valorEmKg / 1000; break; // Tonelada
+                    case 4: resultado = valorEmKg / 0.45359237; break; // Libra
+                    case 5: resultado = valorEmKg / 0.0283495231; break; // Onça
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Tempo
+            else if (tipoConversao.Valor == 5)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de tempo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para segundos
+                double valorEmSegundos = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmSegundos = valorEntrada; break; // Segundo
+                    case 2: valorEmSegundos = valorEntrada * 60; break; // Minuto
+                    case 3: valorEmSegundos = valorEntrada * 3600; break; // Hora
+                    case 4: valorEmSegundos = valorEntrada * 86400; break; // Dia
+                }
+                // Converte de segundos para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmSegundos; break; // Segundo
+                    case 2: resultado = valorEmSegundos / 60; break; // Minuto
+                    case 3: resultado = valorEmSegundos / 3600; break; // Hora
+                    case 4: resultado = valorEmSegundos / 86400; break; // Dia
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Área
+            else if (tipoConversao.Valor == 6)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de área.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para metro quadrado
+                double valorEmM2 = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmM2 = valorEntrada; break; // Metro quadrado
+                    case 2: valorEmM2 = valorEntrada * 1_000_000; break; // Km²
+                    case 3: valorEmM2 = valorEntrada * 10_000; break; // Hectare
+                    case 4: valorEmM2 = valorEntrada * 4046.85642; break; // Acre
+                }
+                // Converte de m² para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmM2; break; // Metro quadrado
+                    case 2: resultado = valorEmM2 / 1_000_000; break; // Km²
+                    case 3: resultado = valorEmM2 / 10_000; break; // Hectare
+                    case 4: resultado = valorEmM2 / 4046.85642; break; // Acre
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Volume
+            else if (tipoConversao.Valor == 7)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de volume.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para litros
+                double valorEmLitros = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmLitros = valorEntrada; break; // Litro
+                    case 2: valorEmLitros = valorEntrada / 1000; break; // Mililitro
+                    case 3: valorEmLitros = valorEntrada * 1000; break; // Metro cúbico
+                    case 4: valorEmLitros = valorEntrada * 3.78541; break; // Galão (EUA)
+                }
+                // Converte de litros para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmLitros; break; // Litro
+                    case 2: resultado = valorEmLitros * 1000; break; // Mililitro
+                    case 3: resultado = valorEmLitros / 1000; break; // Metro cúbico
+                    case 4: resultado = valorEmLitros / 3.78541; break; // Galão (EUA)
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Velocidade
+            else if (tipoConversao.Valor == 8)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de velocidade.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para m/s
+                double valorEmMS = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmMS = valorEntrada; break; // m/s
+                    case 2: valorEmMS = valorEntrada / 3.6; break; // km/h
+                    case 3: valorEmMS = valorEntrada * 0.44704; break; // mph
+                    case 4: valorEmMS = valorEntrada * 0.514444; break; // nó
+                }
+                // Converte de m/s para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmMS; break; // m/s
+                    case 2: resultado = valorEmMS * 3.6; break; // km/h
+                    case 3: resultado = valorEmMS / 0.44704; break; // mph
+                    case 4: resultado = valorEmMS / 0.514444; break; // nó
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Pressão
+            else if (tipoConversao.Valor == 9)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de pressão.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para Pascal
+                double valorEmPascal = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmPascal = valorEntrada; break; // Pascal
+                    case 2: valorEmPascal = valorEntrada * 100000; break; // Bar
+                    case 3: valorEmPascal = valorEntrada * 101325; break; // Atmosfera
+                    case 4: valorEmPascal = valorEntrada * 133.322; break; // mmHg
+                }
+                // Converte de Pascal para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmPascal; break; // Pascal
+                    case 2: resultado = valorEmPascal / 100000; break; // Bar
+                    case 3: resultado = valorEmPascal / 101325; break; // Atmosfera
+                    case 4: resultado = valorEmPascal / 133.322; break; // mmHg
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
+            // Potência
+            else if (tipoConversao.Valor == 10)
+            {
+                var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
+                var unidadeDestino = cbConversorCalculadoraUnidade2.SelectedItem as Conversor;
+                if (unidadeOrigem == null || unidadeDestino == null || unidadeOrigem.Valor == 0 || unidadeDestino.Valor == 0)
+                {
+                    MessageBox.Show("Selecione as unidades de potência.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Converte tudo para Watt
+                double valorEmWatt = valorEntrada;
+                switch (unidadeOrigem.Valor)
+                {
+                    case 1: valorEmWatt = valorEntrada; break; // Watt
+                    case 2: valorEmWatt = valorEntrada * 1000; break; // Quilowatt
+                    case 3: valorEmWatt = valorEntrada * 735.49875; break; // Cavalo-vapor
+                }
+                // Converte de Watt para destino
+                switch (unidadeDestino.Valor)
+                {
+                    case 1: resultado = valorEmWatt; break; // Watt
+                    case 2: resultado = valorEmWatt / 1000; break; // Quilowatt
+                    case 3: resultado = valorEmWatt / 735.49875; break; // Cavalo-vapor
+                }
+                resultadoTexto = resultado.ToString("N4");
+            }
             else
             {
                 MessageBox.Show("Selecione um tipo de conversão válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -247,6 +457,83 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 cbConversorCalculadoraUnidade1.Enabled = true;
                 cbConversorCalculadoraUnidade2.Enabled = true;
             }
+            else if (conversor.Valor == 4) // Massa
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoM1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoM2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 5) // Tempo
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoTem1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoTem2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 6) // Área
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoA1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoA2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 7) // Volume
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoV1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoV2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 8) // Velocidade
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoVel1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoVel2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 9) // Pressão
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoP1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoP2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
+            else if (conversor.Valor == 10) // Potência
+            {
+                cbConversorCalculadoraUnidade1.DataSource = Conversor.TipoPot1Conversao;
+                cbConversorCalculadoraUnidade1.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade1.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade2.DataSource = Conversor.TipoPot2Conversao;
+                cbConversorCalculadoraUnidade2.DisplayMember = "Texto";
+                cbConversorCalculadoraUnidade2.ValueMember = "Valor";
+                cbConversorCalculadoraUnidade1.Enabled = true;
+                cbConversorCalculadoraUnidade2.Enabled = true;
+            }
 
         }
 
@@ -254,7 +541,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
         {
             int tipoSelecionado = cbConversorCalculadoraTipo.SelectedIndex;
 
-            if (tipoSelecionado == 1 || tipoSelecionado == 3)
+            if (tipoSelecionado != 2)
             {
                 // Inversão simples para os modos 1 e 3
                 int idx1 = cbConversorCalculadoraUnidade1.SelectedIndex;
@@ -263,7 +550,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 cbConversorCalculadoraUnidade1.SelectedIndex = idx2;
                 cbConversorCalculadoraUnidade2.SelectedIndex = idx1;
             }
-            else if (tipoSelecionado == 2)
+            else
             {
                 // Salva os índices atuais de unidade
                 int idxUn1 = cbConversorCalculadoraUnidade1.SelectedIndex;

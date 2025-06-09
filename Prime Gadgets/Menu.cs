@@ -12,6 +12,7 @@ using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloSenhas;
 using Prime_Gadgets.modulos.moduloCalculadora;
 using Prime_Gadgets.modulos.moduloHome;
+using Prime_Gadgets.modulos.moduloRotina;
 
 namespace Prime_Gadgets
 {
@@ -96,6 +97,21 @@ namespace Prime_Gadgets
             TelaPrincipal.mainPanel.Controls.Clear();
             TelaPrincipal.mainPanel.Controls.Add(mainSenhas);
             mainSenhas.Show();
-        } 
+        }
+
+        private void btMenuRotina_Click(object sender, EventArgs e)
+        {
+            Form telaAtual = this.FindForm();
+            if (telaAtual is MainRotina)
+            {
+                return;
+            }
+            MainRotina mainRotina = new MainRotina();
+            mainRotina.Dock = DockStyle.Fill;
+            mainRotina.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainRotina);
+            mainRotina.Show();
         }
     }
+}

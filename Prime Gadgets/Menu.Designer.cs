@@ -73,6 +73,7 @@
             btMenuRotina.TabIndex = 15;
             btMenuRotina.Text = "Rotina";
             btMenuRotina.UseVisualStyleBackColor = false;
+            btMenuRotina.Click += btMenuRotina_Click;
             // 
             // btMenuSenhas
             // 

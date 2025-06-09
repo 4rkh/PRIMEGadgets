@@ -25,9 +25,6 @@
 
   <ItemGroup>
     <Folder Include="modulos\moduloFinanceiro\Telas\" />
-    <Folder Include="modulos\moduloRotina\Telas\" />
-    <Folder Include="modulos\moduloRotina\Modelos\" />
-    <Folder Include="modulos\moduloRotina\Repositorios\" />
     <Folder Include="modulos\moduloLembretes\Modelos\" />
     <Folder Include="modulos\moduloLembretes\Repositorios\" />
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />

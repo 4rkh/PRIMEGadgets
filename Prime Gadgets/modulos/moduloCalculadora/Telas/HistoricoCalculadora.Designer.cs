@@ -29,21 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoricoCalculadora));
-            lvHistoricoCalculadoraHistorico = new ListView();
             btHistoricoCalculadoraVoltar = new Button();
             btHistoricoCalculadoraClear = new Button();
+            libHistoricoCalculadoraArm = new ListBox();
             SuspendLayout();
-            // 
-            // lvHistoricoCalculadoraHistorico
-            // 
-            lvHistoricoCalculadoraHistorico.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lvHistoricoCalculadoraHistorico.BackColor = Color.FromArgb(255, 252, 237);
-            lvHistoricoCalculadoraHistorico.BorderStyle = BorderStyle.None;
-            lvHistoricoCalculadoraHistorico.Location = new Point(12, 12);
-            lvHistoricoCalculadoraHistorico.Name = "lvHistoricoCalculadoraHistorico";
-            lvHistoricoCalculadoraHistorico.Size = new Size(295, 537);
-            lvHistoricoCalculadoraHistorico.TabIndex = 0;
-            lvHistoricoCalculadoraHistorico.UseCompatibleStateImageBehavior = false;
             // 
             // btHistoricoCalculadoraVoltar
             // 
@@ -73,26 +62,37 @@
             btHistoricoCalculadoraClear.UseVisualStyleBackColor = false;
             btHistoricoCalculadoraClear.Click += btHistoricoCalculadoraClear_Click;
             // 
+            // libHistoricoCalculadoraArm
+            // 
+            libHistoricoCalculadoraArm.Font = new Font("Segoe UI", 20F);
+            libHistoricoCalculadoraArm.FormattingEnabled = true;
+            libHistoricoCalculadoraArm.ItemHeight = 37;
+            libHistoricoCalculadoraArm.Location = new Point(12, 12);
+            libHistoricoCalculadoraArm.Name = "libHistoricoCalculadoraArm";
+            libHistoricoCalculadoraArm.Size = new Size(295, 522);
+            libHistoricoCalculadoraArm.TabIndex = 3;
+            libHistoricoCalculadoraArm.DoubleClick += new System.EventHandler(this.libHistoricoCalculadoraArm_DoubleClick);
+            // 
             // HistoricoCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(384, 561);
+            Controls.Add(libHistoricoCalculadoraArm);
             Controls.Add(btHistoricoCalculadoraClear);
             Controls.Add(btHistoricoCalculadoraVoltar);
-            Controls.Add(lvHistoricoCalculadoraHistorico);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(400, 600);
             Name = "HistoricoCalculadora";
             Text = "HistoricoCalculadora";
+            Load += HistoricoCalculadora_Load;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private ListView lvHistoricoCalculadoraHistorico;
         private Button btHistoricoCalculadoraVoltar;
         private Button btHistoricoCalculadoraClear;
+        private ListBox libHistoricoCalculadoraArm;
     }
 }

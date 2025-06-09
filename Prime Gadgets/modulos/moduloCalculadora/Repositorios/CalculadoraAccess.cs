@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Prime_Gadgets.modulos.moduloSenhas;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Prime_Gadgets.modulos.moduloSenhas;
 
 namespace Prime_Gadgets.modulos.moduloCalculadora
 {
@@ -38,21 +39,27 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             var contas = new List<Contas>();
             try
             {
-                var linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                var linhas = File.ReadAllLines(caminho);
+                int idAtual = 1; // Se ainda quiser dar um ID incremental interno
+
                 foreach (var linha in linhas)
                 {
                     if (!string.IsNullOrWhiteSpace(linha))
                     {
-                        var campos = linha.Split(',');
-                        if (campos.Length == 5)
+                        string expressao = linha.Trim(); // Agora o arquivo não contém mais ID
+
+                        // Expressão regex para capturar: número1, operador, número2 e resultado
+                        var match = Regex.Match(expressao, @"([0-9.,]+)\s*([\+\-\*/])\s*([0-9.,]+)\s*=\s*([0-9.,]+)");
+
+                        if (match.Success)
                         {
                             var conta = new Contas
                             {
-                                Id = int.Parse(campos[0]),
-                                Numero1 = double.Parse(campos[1]),
-                                Operador = campos[2],
-                                Numero2 = double.Parse(campos[3]),
-                                Resultado = double.Parse(campos[4])
+                                Id = idAtual++,
+                                Numero1 = double.Parse(match.Groups[1].Value.Replace(",", "."), CultureInfo.InvariantCulture),
+                                Operador = match.Groups[2].Value,
+                                Numero2 = double.Parse(match.Groups[3].Value.Replace(",", "."), CultureInfo.InvariantCulture),
+                                Resultado = double.Parse(match.Groups[4].Value.Replace(",", "."), CultureInfo.InvariantCulture)
                             };
                             contas.Add(conta);
                         }
@@ -65,11 +72,13 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             }
             return contas;
         }
+
+
         public void AdicionarConta(Contas conta)
         {
             try
             {
-                string linha = $"{conta.Id},{conta.Numero1},{conta.Operador},{conta.Numero2},={conta.Resultado}";
+                string linha = $"{conta.Numero1} {conta.Operador} {conta.Numero2} = {conta.Resultado}";
                 File.AppendAllText(caminho, linha + Environment.NewLine);
             }
             catch (Exception e)
@@ -77,67 +86,17 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 MessageBox.Show("Problema ao tentar adicionar a conta ao histórico: " + e.Message);
             }
         }
-        public void DeleteConta(int id)
+
+        public void DeleteHistorico(int id)
         {
             try
             {
-                List<Contas> lista = LerHistorico();
-                var contaParaRemover = lista.Find(s => s.Id == id);
-
-                if (contaParaRemover != null)
-                {
-                    lista.Remove(contaParaRemover);
-                    File.Delete(caminho);
-                    lista = OrdenarContasPorId(lista);
-
-                    using (StreamWriter sw = File.CreateText(caminho))
-                    {
-                        foreach (var conta in lista)
-                        {
-                            string linha = $"{conta.Id},{conta.Numero1},{conta.Operador},{conta.Numero2},={conta.Resultado}";
-                            sw.WriteLine(linha);
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Conta não encontrada.");
-                }
+                File.WriteAllText(caminho, string.Empty);
             }
             catch (Exception e)
             {
-                MessageBox.Show("Problema ao tentar deletar a conta: " + e.Message);
+                MessageBox.Show("Problema ao tentar deletar histórico: " + e.Message);
             }
-        }
-        public int LerUltimoId()
-        {
-            try
-            {
-                var linhas = File.ReadAllLines(caminho);
-                if (linhas.Length == 0)
-                {
-                    return 0;
-                }
-                var ultimaLinha = linhas[^1];
-                var match = Regex.Match(ultimaLinha, @"^(\d+),");
-                if (match.Success)
-                {
-                    return int.Parse(match.Groups[1].Value);
-                }
-                else
-                {
-                    throw new Exception("Formato de linha inválido.");
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro ao ler o último ID: " + e.Message);
-                return -1;
-            }
-        }
-        public List<Contas> OrdenarContasPorId(List<Contas> lista)
-        {
-            return lista.OrderBy(s => s.Id).ToList();
         }
     }
 }

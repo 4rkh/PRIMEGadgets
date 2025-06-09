@@ -48,6 +48,7 @@
             btUpdateSenhasMostrar = new Button();
             btUpdateSenhasGerar = new Button();
             toolTip1 = new ToolTip(components);
+            btUpdateSenhasGeradorConfig = new Button();
             toolTip2 = new ToolTip(components);
             SuspendLayout();
             // 
@@ -92,6 +93,7 @@
             campUpdateSenhasOrigem.ForeColor = Color.FromArgb(230, 34, 34);
             campUpdateSenhasOrigem.Location = new Point(163, 206);
             campUpdateSenhasOrigem.Name = "campUpdateSenhasOrigem";
+            campUpdateSenhasOrigem.TextChanged += Campos_TextChanged;
             campUpdateSenhasOrigem.Size = new Size(156, 20);
             campUpdateSenhasOrigem.TabIndex = 21;
             // 
@@ -121,6 +123,7 @@
             campUpdateSenhasEmail.Name = "campUpdateSenhasEmail";
             campUpdateSenhasEmail.Size = new Size(156, 20);
             campUpdateSenhasEmail.TabIndex = 19;
+            campUpdateSenhasEmail.TextChanged += Campos_TextChanged;
             campUpdateSenhasEmail.Validating += campUpdateSenhasEmail_Validating;
             // 
             // campUpdateSenhasNome
@@ -134,6 +137,7 @@
             campUpdateSenhasNome.Name = "campUpdateSenhasNome";
             campUpdateSenhasNome.Size = new Size(156, 20);
             campUpdateSenhasNome.TabIndex = 18;
+            campUpdateSenhasNome.TextChanged += Campos_TextChanged;
             campUpdateSenhasNome.KeyPress += campUpdateSenhasNome_KeyPress;
             // 
             // lbUpdateSenhasEmailInvalido
@@ -214,6 +218,7 @@
             campUpdateSenhasId.Name = "campUpdateSenhasId";
             campUpdateSenhasId.Size = new Size(156, 20);
             campUpdateSenhasId.TabIndex = 25;
+            campUpdateSenhasId.TextChanged += Campos_TextChanged;
             campUpdateSenhasId.KeyPress += campUpdateSenhasId_KeyPress;
             // 
             // lbUpdateSenhasId
@@ -269,6 +274,21 @@
             btUpdateSenhasGerar.UseVisualStyleBackColor = false;
             btUpdateSenhasGerar.Click += btUpdateSenhasGerar_Click;
             // 
+            // btUpdateSenhasGeradorConfig
+            // 
+            btUpdateSenhasGeradorConfig.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btUpdateSenhasGeradorConfig.BackColor = Color.FromArgb(230, 34, 34);
+            btUpdateSenhasGeradorConfig.FlatAppearance.BorderSize = 0;
+            btUpdateSenhasGeradorConfig.FlatStyle = FlatStyle.Flat;
+            btUpdateSenhasGeradorConfig.Image = (Image)resources.GetObject("btUpdateSenhasGeradorConfig.Image");
+            btUpdateSenhasGeradorConfig.Location = new Point(323, 195);
+            btUpdateSenhasGeradorConfig.Name = "btUpdateSenhasGeradorConfig";
+            btUpdateSenhasGeradorConfig.Size = new Size(40, 40);
+            btUpdateSenhasGeradorConfig.TabIndex = 29;
+            toolTip1.SetToolTip(btUpdateSenhasGeradorConfig, "Configurar geração de senhas com os padrões de segurança");
+            btUpdateSenhasGeradorConfig.UseVisualStyleBackColor = false;
+            btUpdateSenhasGeradorConfig.Click += btUpdateSenhasGerarConfig_Click;
+            // 
             // UpdateSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -276,6 +296,7 @@
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(367, 511);
             ControlBox = false;
+            Controls.Add(btUpdateSenhasGeradorConfig);
             Controls.Add(lbUpdateSenhasSenhaInvalida);
             Controls.Add(btUpdateSenhasMostrar);
             Controls.Add(btUpdateSenhasGerar);
@@ -324,5 +345,6 @@
         private Button btUpdateSenhasGerar;
         private ToolTip toolTip1;
         private ToolTip toolTip2;
+        private Button btUpdateSenhasGeradorConfig;
     }
 }

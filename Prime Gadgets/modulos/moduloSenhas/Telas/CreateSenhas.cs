@@ -75,28 +75,15 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         private void PasswordValidator(object sender, CancelEventArgs e)
         {
             var senha = campCreateSenhasSenha.Text;
-            string caracteresEspeciais = @"[!@#$%^&*(),.?""':;{}|<>]";
             var erros = new System.Text.StringBuilder();
             lbCreateSenhasSenhaInvalida.Text = string.Empty;
             if (senha.Length < 8)
             {
                 erros.AppendLine("*A senha deve ter pelo menos 8 caracteres.");
             }
-            if (!Regex.IsMatch(senha, @"[A-Z]"))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos uma letra maiúscula.");
-            }
-            if (!Regex.IsMatch(senha, @"[a-z]"))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos uma letra minúscula.");
-            }
             if (!Regex.IsMatch(senha, @"\d"))
             {
                 erros.AppendLine("*A senha deve conter pelo menos um número.");
-            }
-            if (!Regex.IsMatch(senha, caracteresEspeciais))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos um caractere especial.");
             }
             if (erros.Length > 0)
             {
@@ -141,23 +128,39 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 return false;
             }
         }
-        private string GerarSenha(int comprimento)
+        private string GerarSenha(int comprimento, bool letraMa, bool letraMi, bool CaracterEs)
         {
             const string letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
-            const string numeros = "0123456789";
             const string especiais = "'!@#$%^&*(),.?{}|<:;>";
+            const string numeros = "0123456789";
+            int comprimentoSenha = 1;
 
-            string todosCaracteres = letrasMaiusculas + letrasMinusculas + numeros + especiais;
+            string todosCaracteres = numeros;
             var random = new Random();
             var senha = new StringBuilder();
 
-            senha.Append(letrasMaiusculas[random.Next(letrasMaiusculas.Length)]);
-            senha.Append(letrasMinusculas[random.Next(letrasMinusculas.Length)]);
+            if (letraMa == true)
+            {
+                todosCaracteres+= letrasMaiusculas;
+                comprimentoSenha++;
+                senha.Append(letrasMaiusculas[random.Next(letrasMaiusculas.Length)]);
+            }
+            if (letraMi == true)
+            {
+                todosCaracteres += letrasMinusculas;
+                comprimentoSenha++;
+                senha.Append(letrasMinusculas[random.Next(letrasMinusculas.Length)]);
+            }
+            if (CaracterEs == true)
+            {
+                todosCaracteres += especiais;
+                comprimentoSenha++;
+                senha.Append(especiais[random.Next(especiais.Length)]);
+            }
             senha.Append(numeros[random.Next(numeros.Length)]);
-            senha.Append(especiais[random.Next(especiais.Length)]);
 
-            for (int i = 4; i < comprimento; i++)
+            for (int i = comprimentoSenha; i < comprimento; i++)
             {
                 senha.Append(todosCaracteres[random.Next(todosCaracteres.Length)]);
             }
@@ -166,7 +169,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         }
         private void btCreateSenhasGerar_Click(object sender, EventArgs e)
         {
-            campCreateSenhasSenha.Text = GerarSenha(15);
+            campCreateSenhasSenha.Text = GerarSenha(SenhaConfig.comprimento, SenhaConfig.letraMa, SenhaConfig.letraMi, SenhaConfig.CaracterEs);
         }
         Bitmap btmShow = Properties.Resources.showon;
         Bitmap btmHide = Properties.Resources.showoff;
@@ -182,6 +185,12 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 campCreateSenhasSenha.UseSystemPasswordChar = true;
                 btCreateSenhasMostrar.Image = btmShow;
             }
+        }
+
+        private void btCreateSenhasGeradorConfig_Click(object sender, EventArgs e)
+        {
+            GeradorSenhas geradorSenhas = new GeradorSenhas();
+            geradorSenhas.ShowDialog();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
     public partial class UpdateSenhas : Form
     {
         public Senhas UpdatedSenha { get; private set; }
+        private string _senhaAntiga;
         public UpdateSenhas(Senhas senha)
         {
             InitializeComponent();
@@ -23,6 +25,10 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             btUpdateSenhasGerar.CausesValidation = false;
             lbUpdateSenhasSenhaInvalida.Hide();
             UpdatedSenha = senha;
+            SenhaAccess senhaAccess = new SenhaAccess();
+            List<Senhas> lista = senhaAccess.LerSenhas();
+            var senhaParaCaptar = lista.Find(s => s.Id == UpdatedSenha.Id);
+            _senhaAntiga = senhaParaCaptar.Senha;
             PreencherCampos();
         }
         private void PreencherCampos()
@@ -30,7 +36,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             campUpdateSenhasId.Text = UpdatedSenha.Id.ToString();
             campUpdateSenhasNome.Text = UpdatedSenha.NomeDeUsuario;
             campUpdateSenhasEmail.Text = UpdatedSenha.Email;
-            campUpdateSenhasSenha.Text = UpdatedSenha.Senha;
+            campUpdateSenhasSenha.Text = _senhaAntiga;
             campUpdateSenhasOrigem.Text = UpdatedSenha.Origem;
         }
         private void campUpdateSenhasId_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,7 +100,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                               $"ID: {UpdatedSenha.Id} -> {campUpdateSenhasId.Text}\n" +
                               $"Nome: {UpdatedSenha.NomeDeUsuario} -> {campUpdateSenhasNome.Text}\n" +
                               $"E-mail: {UpdatedSenha.Email} -> {campUpdateSenhasEmail.Text}\n" +
-                              $"Senha: {UpdatedSenha.Senha} -> {campUpdateSenhasSenha.Text}\n" +
+                              $"Senha: {_senhaAntiga} -> {campUpdateSenhasSenha.Text}\n" +
                               $"Origem: {UpdatedSenha.Origem} -> {campUpdateSenhasOrigem.Text}";
 
             DialogResult resultado = MessageBox.Show(mensagem, "Confirmação de Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -119,28 +125,15 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         private void PasswordValidator(object sender, CancelEventArgs e)
         {
             var senha = campUpdateSenhasSenha.Text;
-            string caracteresEspeciais = @"[!@#$%^&*(),.?""':;{}|<>]";
             var erros = new System.Text.StringBuilder();
             lbUpdateSenhasSenhaInvalida.Text = string.Empty;
             if (senha.Length < 8)
             {
                 erros.AppendLine("*A senha deve ter pelo menos 8 caracteres.");
             }
-            if (!Regex.IsMatch(senha, @"[A-Z]"))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos uma letra maiúscula.");
-            }
-            if (!Regex.IsMatch(senha, @"[a-z]"))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos uma letra minúscula.");
-            }
             if (!Regex.IsMatch(senha, @"\d"))
             {
                 erros.AppendLine("*A senha deve conter pelo menos um número.");
-            }
-            if (!Regex.IsMatch(senha, caracteresEspeciais))
-            {
-                erros.AppendLine("*A senha deve conter pelo menos um caractere especial.");
             }
             if (erros.Length > 0)
             {
@@ -158,23 +151,39 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         {
             this.Dispose();
         }
-        private string GerarSenha(int comprimento)
+        private string GerarSenha(int comprimento, bool letraMa, bool letraMi, bool CaracterEs)
         {
             const string letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
-            const string numeros = "0123456789";
             const string especiais = "'!@#$%^&*(),.?{}|<:;>";
+            const string numeros = "0123456789";
+            int comprimentoSenha = 1;
 
-            string todosCaracteres = letrasMaiusculas + letrasMinusculas + numeros + especiais;
+            string todosCaracteres = numeros;
             var random = new Random();
             var senha = new StringBuilder();
 
-            senha.Append(letrasMaiusculas[random.Next(letrasMaiusculas.Length)]);
-            senha.Append(letrasMinusculas[random.Next(letrasMinusculas.Length)]);
+            if (letraMa == true)
+            {
+                todosCaracteres += letrasMaiusculas;
+                comprimentoSenha++;
+                senha.Append(letrasMaiusculas[random.Next(letrasMaiusculas.Length)]);
+            }
+            if (letraMi == true)
+            {
+                todosCaracteres += letrasMinusculas;
+                comprimentoSenha++;
+                senha.Append(letrasMinusculas[random.Next(letrasMinusculas.Length)]);
+            }
+            if (CaracterEs == true)
+            {
+                todosCaracteres += especiais;
+                comprimentoSenha++;
+                senha.Append(especiais[random.Next(especiais.Length)]);
+            }
             senha.Append(numeros[random.Next(numeros.Length)]);
-            senha.Append(especiais[random.Next(especiais.Length)]);
 
-            for (int i = 4; i < comprimento; i++)
+            for (int i = comprimentoSenha; i < comprimento; i++)
             {
                 senha.Append(todosCaracteres[random.Next(todosCaracteres.Length)]);
             }
@@ -183,7 +192,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         }
         private void btUpdateSenhasGerar_Click(object sender, EventArgs e)
         {
-            campUpdateSenhasSenha.Text = GerarSenha(15);
+            campUpdateSenhasSenha.Text = GerarSenha(SenhaConfig.comprimento, SenhaConfig.letraMa, SenhaConfig.letraMi, SenhaConfig.CaracterEs);
         }
         Bitmap btmShow = Properties.Resources.showon;
         Bitmap btmHide = Properties.Resources.showoff;
@@ -199,6 +208,12 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 campUpdateSenhasSenha.UseSystemPasswordChar = true;
                 btUpdateSenhasMostrar.Image = btmShow;
             }
+        }
+
+        private void btUpdateSenhasGerarConfig_Click(object sender, EventArgs e)
+        {
+            GeradorSenhas geradorSenhas = new GeradorSenhas();
+            geradorSenhas.ShowDialog();
         }
     }
 }

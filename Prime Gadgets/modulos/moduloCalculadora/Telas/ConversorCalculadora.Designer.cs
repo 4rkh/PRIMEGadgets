@@ -37,6 +37,7 @@
             cbConversorCalculadoraTipo = new ComboBox();
             btConversorCalculadoraCancelar = new Button();
             btConversorCalculadoraConverter = new Button();
+            btConversorCalculadoraInverter = new Button();
             SuspendLayout();
             // 
             // campConversorCalculadoraNumero2
@@ -101,6 +102,7 @@
             cbConversorCalculadoraTipo.Name = "cbConversorCalculadoraTipo";
             cbConversorCalculadoraTipo.Size = new Size(555, 23);
             cbConversorCalculadoraTipo.TabIndex = 11;
+            cbConversorCalculadoraTipo.SelectedIndexChanged += cbConversorCalculadoraTipo_SelectedIndexChanged;
             // 
             // btConversorCalculadoraCancelar
             // 
@@ -131,6 +133,19 @@
             btConversorCalculadoraConverter.Text = "Converter";
             btConversorCalculadoraConverter.UseVisualStyleBackColor = false;
             btConversorCalculadoraConverter.Click += btConversorCalculadoraConverter_Click;
+            // 
+            // btConversorCalculadoraInverter
+            // 
+            btConversorCalculadoraInverter.Anchor = AnchorStyles.Bottom;
+            btConversorCalculadoraInverter.BackColor = Color.FromArgb(230, 34, 34);
+            btConversorCalculadoraInverter.FlatAppearance.BorderSize = 0;
+            btConversorCalculadoraInverter.FlatStyle = FlatStyle.Flat;
+            btConversorCalculadoraInverter.Image = (Image)resources.GetObject("btConversorCalculadoraInverter.Image");
+            btConversorCalculadoraInverter.Location = new Point(413, 112);
+            btConversorCalculadoraInverter.Name = "btConversorCalculadoraInverter";
+            btConversorCalculadoraInverter.Size = new Size(60, 45);
+            btConversorCalculadoraInverter.TabIndex = 14;
+            btConversorCalculadoraInverter.UseVisualStyleBackColor = false;
             // 
             // ConversorCalculadora
             // 
@@ -166,5 +181,6 @@
         private ComboBox cbConversorCalculadoraTipo;
         private Button btConversorCalculadoraCancelar;
         private Button btConversorCalculadoraConverter;
+        private Button btConversorCalculadoraInverter;
     }
 }

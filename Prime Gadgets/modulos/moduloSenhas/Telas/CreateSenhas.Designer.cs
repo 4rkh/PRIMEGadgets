@@ -47,6 +47,7 @@
             lbCreateSenhasSenhaInvalida = new Label();
             toolTip1 = new ToolTip(components);
             toolTip2 = new ToolTip(components);
+            btCreateSenhasGeradorConfig = new Button();
             SuspendLayout();
             // 
             // lbCreateSenhasTitulo
@@ -255,6 +256,21 @@
             lbCreateSenhasSenhaInvalida.TabIndex = 14;
             lbCreateSenhasSenhaInvalida.Text = "Senha inválida!";
             // 
+            // btCreateSenhasGeradorConfig
+            // 
+            btCreateSenhasGeradorConfig.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btCreateSenhasGeradorConfig.BackColor = Color.FromArgb(230, 34, 34);
+            btCreateSenhasGeradorConfig.FlatAppearance.BorderSize = 0;
+            btCreateSenhasGeradorConfig.FlatStyle = FlatStyle.Flat;
+            btCreateSenhasGeradorConfig.Image = (Image)resources.GetObject("btCreateSenhasGeradorConfig.Image");
+            btCreateSenhasGeradorConfig.Location = new Point(323, 196);
+            btCreateSenhasGeradorConfig.Name = "btCreateSenhasGeradorConfig";
+            btCreateSenhasGeradorConfig.Size = new Size(40, 40);
+            btCreateSenhasGeradorConfig.TabIndex = 30;
+            toolTip1.SetToolTip(btCreateSenhasGeradorConfig, "Configurar geração de senhas com os padrões de segurança");
+            btCreateSenhasGeradorConfig.UseVisualStyleBackColor = false;
+            btCreateSenhasGeradorConfig.Click += btCreateSenhasGeradorConfig_Click;
+            // 
             // CreateSenhas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -262,6 +278,7 @@
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(367, 511);
             ControlBox = false;
+            Controls.Add(btCreateSenhasGeradorConfig);
             Controls.Add(lbCreateSenhasSenhaInvalida);
             Controls.Add(btCreateSenhasMostrar);
             Controls.Add(btCreateSenhasGerar);
@@ -306,5 +323,6 @@
         private Label lbCreateSenhasSenhaInvalida;
         private ToolTip toolTip1;
         private ToolTip toolTip2;
+        private Button btCreateSenhasGeradorConfig;
     }
 }

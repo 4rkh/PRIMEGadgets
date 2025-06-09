@@ -96,6 +96,6 @@ namespace Prime_Gadgets
             TelaPrincipal.mainPanel.Controls.Clear();
             TelaPrincipal.mainPanel.Controls.Add(mainSenhas);
             mainSenhas.Show();
-            }
+        } 
         }
     }

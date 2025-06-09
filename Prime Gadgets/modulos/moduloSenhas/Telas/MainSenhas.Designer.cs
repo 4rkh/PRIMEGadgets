@@ -241,6 +241,7 @@
             ((System.ComponentModel.ISupportInitialize)tbMainSenhasDados).EndInit();
             ResumeLayout(false);
             PerformLayout();
+            this.VisibleChanged += MainSenhas_VisibleChanged;
         }
 
         #endregion

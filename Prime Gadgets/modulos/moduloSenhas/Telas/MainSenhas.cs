@@ -17,6 +17,9 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         private int _paginaAtual = 1;
         private int _totalPaginas = 1;
         private const int _tamanhoPagina = 30;
+        public string caminhoRelativo = "modulos\\moduloSenhas\\Repositorios\\Senhas.prime";
+        public string caminho;
+        Criptografia criptografia = new Criptografia();
         public MainSenhas()
         {
             try
@@ -40,6 +43,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
 
             InitializeComponent();
             LerTabela();
+            
         }
 
         public void LerTabela()
@@ -209,6 +213,25 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 _paginaAtual = 1;
                 LerTabela();
             }
+        }
+        private void MainSenhas_VisibleChanged(object sender, EventArgs e)
+        {
+            string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
+
+            
+            if (!this.Visible)
+            {
+                criptografia.EncryptFile(caminho, caminho + ".enc");
+            } else
+            {
+                if (File.Exists(caminho + ".enc"))
+                {
+                    criptografia.DecryptFile(caminho + ".enc", caminho);
+                    LerTabela();
+                }
+            }
+
         }
     }
 }

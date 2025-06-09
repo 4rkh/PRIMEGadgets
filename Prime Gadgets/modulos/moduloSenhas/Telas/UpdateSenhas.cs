@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
     public partial class UpdateSenhas : Form
     {
         public Senhas UpdatedSenha { get; private set; }
+        private string _senhaAntiga;
         public UpdateSenhas(Senhas senha)
         {
             InitializeComponent();
@@ -23,6 +25,10 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             btUpdateSenhasGerar.CausesValidation = false;
             lbUpdateSenhasSenhaInvalida.Hide();
             UpdatedSenha = senha;
+            SenhaAccess senhaAccess = new SenhaAccess();
+            List<Senhas> lista = senhaAccess.LerSenhas();
+            var senhaParaCaptar = lista.Find(s => s.Id == UpdatedSenha.Id);
+            _senhaAntiga = senhaParaCaptar.Senha;
             PreencherCampos();
         }
         private void PreencherCampos()
@@ -30,7 +36,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             campUpdateSenhasId.Text = UpdatedSenha.Id.ToString();
             campUpdateSenhasNome.Text = UpdatedSenha.NomeDeUsuario;
             campUpdateSenhasEmail.Text = UpdatedSenha.Email;
-            campUpdateSenhasSenha.Text = UpdatedSenha.Senha;
+            campUpdateSenhasSenha.Text = _senhaAntiga;
             campUpdateSenhasOrigem.Text = UpdatedSenha.Origem;
         }
         private void campUpdateSenhasId_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,7 +100,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                               $"ID: {UpdatedSenha.Id} -> {campUpdateSenhasId.Text}\n" +
                               $"Nome: {UpdatedSenha.NomeDeUsuario} -> {campUpdateSenhasNome.Text}\n" +
                               $"E-mail: {UpdatedSenha.Email} -> {campUpdateSenhasEmail.Text}\n" +
-                              $"Senha: {UpdatedSenha.Senha} -> {campUpdateSenhasSenha.Text}\n" +
+                              $"Senha: {_senhaAntiga} -> {campUpdateSenhasSenha.Text}\n" +
                               $"Origem: {UpdatedSenha.Origem} -> {campUpdateSenhasOrigem.Text}";
 
             DialogResult resultado = MessageBox.Show(mensagem, "Confirmação de Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

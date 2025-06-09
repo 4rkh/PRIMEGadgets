@@ -94,6 +94,7 @@
             campUpdateSenhasOrigem.Location = new Point(163, 244);
             campUpdateSenhasOrigem.Name = "campUpdateSenhasOrigem";
             campUpdateSenhasOrigem.Size = new Size(100, 20);
+            campUpdateSenhasOrigem.TextChanged += Campos_TextChanged;
             campUpdateSenhasOrigem.TabIndex = 21;
             // 
             // campUpdateSenhasSenha
@@ -122,6 +123,7 @@
             campUpdateSenhasEmail.Name = "campUpdateSenhasEmail";
             campUpdateSenhasEmail.Size = new Size(100, 20);
             campUpdateSenhasEmail.TabIndex = 19;
+            campUpdateSenhasEmail.TextChanged += Campos_TextChanged;
             campUpdateSenhasEmail.Validating += campUpdateSenhasEmail_Validating;
             // 
             // campUpdateSenhasNome
@@ -135,6 +137,7 @@
             campUpdateSenhasNome.Name = "campUpdateSenhasNome";
             campUpdateSenhasNome.Size = new Size(100, 20);
             campUpdateSenhasNome.TabIndex = 18;
+            campUpdateSenhasNome.TextChanged += Campos_TextChanged;
             campUpdateSenhasNome.KeyPress += campUpdateSenhasNome_KeyPress;
             // 
             // lbUpdateSenhasEmailInvalido
@@ -215,6 +218,7 @@
             campUpdateSenhasId.Name = "campUpdateSenhasId";
             campUpdateSenhasId.Size = new Size(100, 20);
             campUpdateSenhasId.TabIndex = 25;
+            campUpdateSenhasId.TextChanged += Campos_TextChanged;
             campUpdateSenhasId.KeyPress += campUpdateSenhasId_KeyPress;
             // 
             // lbUpdateSenhasId

@@ -38,8 +38,19 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
         private void btMainCalculadoraHistory_Click(object sender, EventArgs e)
         {
             HistoricoCalculadora historicoCalculadora = new HistoricoCalculadora();
-            historicoCalculadora.ShowDialog();
+
+            if (historicoCalculadora.ShowDialog() == DialogResult.OK)
+            {
+                string contaSelecionada = historicoCalculadora.ContaSelecionada;
+
+                if (!string.IsNullOrEmpty(contaSelecionada))
+                {
+                    campMainCalculadoraResult.Text = contaSelecionada;
+                    CorrecaoEnter();
+                }
+            }
         }
+
 
         Bitmap btmOntop = Properties.Resources.ontop;
         Bitmap btmOfftop = Properties.Resources.offtop;
@@ -340,41 +351,51 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 double numero1 = double.Parse(match.Groups[1].Value, CultureInfo.InvariantCulture);
                 double numero2 = double.Parse(match.Groups[4].Value, CultureInfo.InvariantCulture);
-                double resultado = 0;
-
                 string operador = match.Groups[3].Value;
+                double resultado = 0;
 
                 switch (operador)
                 {
-                    case "+":
-                        resultado = numero1 + numero2;
-                        break;
-
-                    case "-":
-                        resultado = numero1 - numero2;
-                        break;
-
-                    case "*":
-                        resultado = numero1 * numero2;
-                        break;
+                    case "+": resultado = numero1 + numero2; break;
+                    case "-": resultado = numero1 - numero2; break;
+                    case "*": resultado = numero1 * numero2; break;
                     case "/":
-                        if (numero2 != 0)
+                        if (numero2 == 0)
                         {
-                            resultado = numero1 / numero2;
-
+                            campMainCalculadoraResult.Text += " = Não é possível dividir por zero";
+                            return;
                         }
-                        else
-                        {
-                            campMainCalculadoraResult.Text += " = " + "Não é possível dividir por zero";
-                        }
+                        resultado = numero1 / numero2;
                         break;
                     default:
                         MessageBox.Show("Operador inválido!");
                         return;
                 }
+
                 if (!conta.Contains("="))
                 {
                     campMainCalculadoraResult.Text += " = " + resultado.ToString().Replace(".", ",");
+                }
+
+                // Grava no histórico
+                var acesso = new CalculadoraAccess();
+                var novaConta = new Contas
+                {
+                    Numero1 = numero1,
+                    Numero2 = numero2,
+                    Operador = operador,
+                    Resultado = resultado
+                };
+                acesso.AdicionarConta(novaConta);
+
+                // Atualiza ListBox do histórico, se estiver aberto
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form is HistoricoCalculadora hist)
+                    {
+                        hist.AtualizarListBox();
+                        break;
+                    }
                 }
             }
             else if (!conta.Contains("=") && conta != "")
@@ -382,6 +403,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 campMainCalculadoraResult.Text += " = " + conta;
             }
         }
+
         private void MainCalculadora_Load(object sender, EventArgs e)
         {
             this.KeyPreview = true;

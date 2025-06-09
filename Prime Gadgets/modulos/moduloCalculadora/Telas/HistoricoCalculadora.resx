@@ -121,20 +121,18 @@
   <data name="btHistoricoCalculadoraVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAAKJJREFUWEftjkEKhDAAxPr/v/qDBUU2gyi5Ogo2kEPplGZMJi3W37LucnyOhDwe
-        dA2JXPewiMikgwVEJh0sIDLpYAGRSQcLiEw6WEBk0sECIpMOFhCZdLCAu+XrMzZsScKBjZqS8ccGLUk4
-        Y8O75WvHHkQmXSwkMuliIZFJFwuJTLpYSGTSxUIiky4WEpl0sZDIpIuF7HLd5zUh4TUhkw8zxgZVVWQd
-        zmcQhgAAAABJRU5ErkJggg==
+        rAAACawBHEBKiAAAAHJJREFUWEftzjEKwDAMBEH//6/5QcDBARXeKo1PB7kFNUZGM0ZKouZ9zTV8l1eQ
+        dhAhbSAC2jA8HgiPB8LjgfC4JeTU0PDGJeXQ0opZY4PZIBWXFEPDFpc/fzwVEQExIgJiRATEiLAFcU+W
+        DaSygaRf9wBVVWQd/jBJTgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btHistoricoCalculadoraClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAANxJREFUWEftjlEKwyAUwHr/u+4Gg46u0dY2WhFlMAzk6+X5XCaTyS9Y3691hDxf
-        hz3QW06VscVRctKxhZFy9o7FJvljT1bsSFIsNMkj1mwyjlizyfjAopysJLQ0QcY7FjzJakLNzCRp+0iQ
-        Jx6x3bNVUY3fhwrYztUuHwly94a15n9+hrtZbOdqdVjy+0gFtnuWrP1DrCfUzEySHQtKspbQ0gQZH1iU
-        k5WINZuMI9ZsMk6xMCcrjztkxY7kjsWj5bRjCyPlbB5bGiUny9hibzlVjz3SQ56fTCadWJYPeXnEUnKp
-        2TEAAAAASUVORK5CYII=
+        rAAACawBHEBKiAAAAMRJREFUWEftjkEOwjAMBPv/v/IDpCJQGtWDnazSGi4eaU4dd7NtRVH8gf352DPk
+        zhAeZ8hNFx5lym0D42y532EYqfZK18fPMIpU71a7MPTk7ZuVxm35UdH8oKF885SimWZtAO+oFClymLD3
+        lCJVPuCAXaQcKvIRB+wi5XAmH0DYe8rhSA5H8I7KYaRZayjfPOXQ0xw3VpqwZTBSvV3tPjAaqd4oXX8A
+        YfgL+QYD42y5/wUPMuW2C48y5OYU/uAuuVMUxVVeeXnEUtcQKw0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

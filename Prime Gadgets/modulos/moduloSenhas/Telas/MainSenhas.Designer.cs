@@ -199,7 +199,7 @@
             // btMainSenhasFirst
             // 
             btMainSenhasFirst.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btMainSenhasFirst.Image = Properties.Resources.left;
+            btMainSenhasFirst.Image = Properties.Resources.primeira;
             btMainSenhasFirst.Location = new Point(457, 604);
             btMainSenhasFirst.Name = "btMainSenhasFirst";
             btMainSenhasFirst.Size = new Size(55, 59);
@@ -210,7 +210,7 @@
             // btMainSenhasBack
             // 
             btMainSenhasBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btMainSenhasBack.Image = Properties.Resources.left;
+            btMainSenhasBack.Image = Properties.Resources.voltar;
             btMainSenhasBack.Location = new Point(531, 604);
             btMainSenhasBack.Name = "btMainSenhasBack";
             btMainSenhasBack.Size = new Size(55, 59);
@@ -221,7 +221,7 @@
             // btMainSenhasLast
             // 
             btMainSenhasLast.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btMainSenhasLast.BackgroundImage = Properties.Resources.right;
+            btMainSenhasLast.BackgroundImage = Properties.Resources.ultima;
             btMainSenhasLast.BackgroundImageLayout = ImageLayout.Center;
             btMainSenhasLast.Location = new Point(927, 604);
             btMainSenhasLast.Name = "btMainSenhasLast";
@@ -233,7 +233,7 @@
             // btMainSenhasNext
             // 
             btMainSenhasNext.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btMainSenhasNext.BackgroundImage = Properties.Resources.right;
+            btMainSenhasNext.BackgroundImage = Properties.Resources.avancar;
             btMainSenhasNext.BackgroundImageLayout = ImageLayout.Center;
             btMainSenhasNext.Location = new Point(851, 604);
             btMainSenhasNext.Name = "btMainSenhasNext";

@@ -41,7 +41,7 @@
             lvHistoricoCalculadoraHistorico.BorderStyle = BorderStyle.None;
             lvHistoricoCalculadoraHistorico.Location = new Point(12, 12);
             lvHistoricoCalculadoraHistorico.Name = "lvHistoricoCalculadoraHistorico";
-            lvHistoricoCalculadoraHistorico.Size = new Size(635, 426);
+            lvHistoricoCalculadoraHistorico.Size = new Size(295, 537);
             lvHistoricoCalculadoraHistorico.TabIndex = 0;
             lvHistoricoCalculadoraHistorico.UseCompatibleStateImageBehavior = false;
             // 
@@ -52,7 +52,7 @@
             btHistoricoCalculadoraVoltar.FlatAppearance.BorderSize = 0;
             btHistoricoCalculadoraVoltar.FlatStyle = FlatStyle.Flat;
             btHistoricoCalculadoraVoltar.Image = (Image)resources.GetObject("btHistoricoCalculadoraVoltar.Image");
-            btHistoricoCalculadoraVoltar.Location = new Point(653, 11);
+            btHistoricoCalculadoraVoltar.Location = new Point(313, 11);
             btHistoricoCalculadoraVoltar.Name = "btHistoricoCalculadoraVoltar";
             btHistoricoCalculadoraVoltar.Size = new Size(60, 60);
             btHistoricoCalculadoraVoltar.TabIndex = 1;
@@ -66,7 +66,7 @@
             btHistoricoCalculadoraClear.FlatAppearance.BorderSize = 0;
             btHistoricoCalculadoraClear.FlatStyle = FlatStyle.Flat;
             btHistoricoCalculadoraClear.Image = (Image)resources.GetObject("btHistoricoCalculadoraClear.Image");
-            btHistoricoCalculadoraClear.Location = new Point(653, 77);
+            btHistoricoCalculadoraClear.Location = new Point(313, 77);
             btHistoricoCalculadoraClear.Name = "btHistoricoCalculadoraClear";
             btHistoricoCalculadoraClear.Size = new Size(60, 60);
             btHistoricoCalculadoraClear.TabIndex = 2;
@@ -78,11 +78,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(724, 450);
+            ClientSize = new Size(384, 561);
             Controls.Add(btHistoricoCalculadoraClear);
             Controls.Add(btHistoricoCalculadoraVoltar);
             Controls.Add(lvHistoricoCalculadoraHistorico);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(400, 600);
             Name = "HistoricoCalculadora";
             Text = "HistoricoCalculadora";
             ResumeLayout(false);

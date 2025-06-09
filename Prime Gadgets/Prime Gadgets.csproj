@@ -33,7 +33,6 @@
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />
     <Folder Include="modulos\moduloFinanceiro\Repositorios\" />
     <Folder Include="modulos\moduloCalendario\Modelos\" />
-    <Folder Include="modulos\moduloCalendario\Repositorios\" />
     <Folder Include="modulos\moduloLembretes\Telas\" />
     <Folder Include="modulos\moduloLembretes\" />
   </ItemGroup>

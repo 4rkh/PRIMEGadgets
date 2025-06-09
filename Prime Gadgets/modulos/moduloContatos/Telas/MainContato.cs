@@ -187,15 +187,15 @@ namespace Prime_Gadgets.modulos.moduloContatos
             {
                 btMainContatosFirst.Enabled = false;
                 btMainContatosBack.Enabled = false;
-                btMainContatosFirst.BackColor = Color.LightGray;
-                btMainContatosBack.BackColor = Color.LightGray;
+                btMainContatosFirst.BackColor = Color.FromArgb(52, 60, 76);
+                btMainContatosBack.BackColor = Color.FromArgb(52, 60, 76);
             }
             else
             {
                 btMainContatosFirst.Enabled = true;
                 btMainContatosBack.Enabled = true;
-                btMainContatosFirst.BackColor = SystemColors.Control;
-                btMainContatosBack.BackColor = SystemColors.Control;
+                btMainContatosFirst.BackColor = Color.FromArgb(230, 34, 34);
+                btMainContatosBack.BackColor = Color.FromArgb(230, 34, 34);
             }
 
             // Última página: desabilita 'end' e 'next'
@@ -203,15 +203,15 @@ namespace Prime_Gadgets.modulos.moduloContatos
             {
                 btMainContatosLast.Enabled = false;
                 btMainContatosNext.Enabled = false;
-                btMainContatosLast.BackColor = Color.LightGray;
-                btMainContatosNext.BackColor = Color.LightGray;
+                btMainContatosLast.BackColor = Color.FromArgb(52, 60, 76);
+                btMainContatosNext.BackColor = Color.FromArgb(52, 60, 76);
             }
             else
             {
                 btMainContatosLast.Enabled = true;
                 btMainContatosNext.Enabled = true;
-                btMainContatosLast.BackColor = SystemColors.Control;
-                btMainContatosNext.BackColor = SystemColors.Control;
+                btMainContatosLast.BackColor = Color.FromArgb(230, 34, 34);
+                btMainContatosNext.BackColor = Color.FromArgb(230, 34, 34);
             }
         }
     }

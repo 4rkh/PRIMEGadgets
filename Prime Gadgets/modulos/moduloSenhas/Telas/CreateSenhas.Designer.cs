@@ -80,7 +80,7 @@
             lbCreateSenhasEmail.AutoSize = true;
             lbCreateSenhasEmail.Font = new Font("Arial", 12.75F);
             lbCreateSenhasEmail.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateSenhasEmail.Location = new Point(49, 187);
+            lbCreateSenhasEmail.Location = new Point(49, 184);
             lbCreateSenhasEmail.Name = "lbCreateSenhasEmail";
             lbCreateSenhasEmail.Size = new Size(55, 19);
             lbCreateSenhasEmail.TabIndex = 2;
@@ -92,7 +92,7 @@
             lbCreateSenhasSenha.AutoSize = true;
             lbCreateSenhasSenha.Font = new Font("Arial", 12.75F);
             lbCreateSenhasSenha.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateSenhasSenha.Location = new Point(51, 216);
+            lbCreateSenhasSenha.Location = new Point(51, 236);
             lbCreateSenhasSenha.Name = "lbCreateSenhasSenha";
             lbCreateSenhasSenha.Size = new Size(56, 19);
             lbCreateSenhasSenha.TabIndex = 3;
@@ -104,7 +104,7 @@
             lbCreateSenhasOrigem.AutoSize = true;
             lbCreateSenhasOrigem.Font = new Font("Arial", 12.75F);
             lbCreateSenhasOrigem.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateSenhasOrigem.Location = new Point(49, 245);
+            lbCreateSenhasOrigem.Location = new Point(49, 210);
             lbCreateSenhasOrigem.Name = "lbCreateSenhasOrigem";
             lbCreateSenhasOrigem.Size = new Size(62, 19);
             lbCreateSenhasOrigem.TabIndex = 4;
@@ -116,7 +116,7 @@
             lbCreateSenhasEmailInvalido.AutoSize = true;
             lbCreateSenhasEmailInvalido.Font = new Font("Arial", 9F);
             lbCreateSenhasEmailInvalido.ForeColor = Color.FromArgb(230, 34, 34);
-            lbCreateSenhasEmailInvalido.Location = new Point(168, 270);
+            lbCreateSenhasEmailInvalido.Location = new Point(228, 377);
             lbCreateSenhasEmailInvalido.Name = "lbCreateSenhasEmailInvalido";
             lbCreateSenhasEmailInvalido.Size = new Size(91, 15);
             lbCreateSenhasEmailInvalido.TabIndex = 5;
@@ -131,7 +131,7 @@
             campCreateSenhasNome.ForeColor = Color.FromArgb(230, 34, 34);
             campCreateSenhasNome.Location = new Point(163, 157);
             campCreateSenhasNome.Name = "campCreateSenhasNome";
-            campCreateSenhasNome.Size = new Size(100, 20);
+            campCreateSenhasNome.Size = new Size(156, 20);
             campCreateSenhasNome.TabIndex = 6;
             campCreateSenhasNome.TextChanged += Campos_TextChanged;
             // 
@@ -142,9 +142,9 @@
             campCreateSenhasEmail.BorderStyle = BorderStyle.None;
             campCreateSenhasEmail.Font = new Font("Arial", 12.75F);
             campCreateSenhasEmail.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateSenhasEmail.Location = new Point(163, 186);
+            campCreateSenhasEmail.Location = new Point(163, 183);
             campCreateSenhasEmail.Name = "campCreateSenhasEmail";
-            campCreateSenhasEmail.Size = new Size(100, 20);
+            campCreateSenhasEmail.Size = new Size(156, 20);
             campCreateSenhasEmail.TabIndex = 7;
             campCreateSenhasEmail.TextChanged += Campos_TextChanged;
             campCreateSenhasEmail.Validating += campCreateSenhasEmail_Validating;
@@ -156,9 +156,9 @@
             campCreateSenhasSenha.BorderStyle = BorderStyle.None;
             campCreateSenhasSenha.Font = new Font("Arial", 12.75F);
             campCreateSenhasSenha.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateSenhasSenha.Location = new Point(163, 215);
+            campCreateSenhasSenha.Location = new Point(163, 235);
             campCreateSenhasSenha.Name = "campCreateSenhasSenha";
-            campCreateSenhasSenha.Size = new Size(100, 20);
+            campCreateSenhasSenha.Size = new Size(156, 20);
             campCreateSenhasSenha.TabIndex = 8;
             campCreateSenhasSenha.UseSystemPasswordChar = true;
             campCreateSenhasSenha.TextChanged += Campos_TextChanged;
@@ -171,9 +171,9 @@
             campCreateSenhasOrigem.BorderStyle = BorderStyle.None;
             campCreateSenhasOrigem.Font = new Font("Arial", 12.75F);
             campCreateSenhasOrigem.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateSenhasOrigem.Location = new Point(163, 244);
+            campCreateSenhasOrigem.Location = new Point(163, 209);
             campCreateSenhasOrigem.Name = "campCreateSenhasOrigem";
-            campCreateSenhasOrigem.Size = new Size(100, 20);
+            campCreateSenhasOrigem.Size = new Size(156, 20);
             campCreateSenhasOrigem.TabIndex = 9;
             campCreateSenhasOrigem.TextChanged += Campos_TextChanged;
             // 
@@ -185,7 +185,7 @@
             btCreateSenhasCriar.FlatStyle = FlatStyle.Flat;
             btCreateSenhasCriar.Font = new Font("Arial", 12.75F);
             btCreateSenhasCriar.ForeColor = Color.FromArgb(255, 252, 237);
-            btCreateSenhasCriar.Location = new Point(47, 382);
+            btCreateSenhasCriar.Location = new Point(49, 329);
             btCreateSenhasCriar.Name = "btCreateSenhasCriar";
             btCreateSenhasCriar.Size = new Size(118, 37);
             btCreateSenhasCriar.TabIndex = 10;
@@ -202,7 +202,7 @@
             btCreateSenhasCancelar.FlatStyle = FlatStyle.Flat;
             btCreateSenhasCancelar.Font = new Font("Arial", 12.75F);
             btCreateSenhasCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btCreateSenhasCancelar.Location = new Point(199, 382);
+            btCreateSenhasCancelar.Location = new Point(201, 329);
             btCreateSenhasCancelar.Name = "btCreateSenhasCancelar";
             btCreateSenhasCancelar.Size = new Size(118, 37);
             btCreateSenhasCancelar.TabIndex = 11;
@@ -219,7 +219,7 @@
             btCreateSenhasGerar.Font = new Font("Arial", 12.75F);
             btCreateSenhasGerar.ForeColor = Color.FromArgb(255, 252, 237);
             btCreateSenhasGerar.Image = (Image)resources.GetObject("btCreateSenhasGerar.Image");
-            btCreateSenhasGerar.Location = new Point(277, 195);
+            btCreateSenhasGerar.Location = new Point(163, 261);
             btCreateSenhasGerar.Name = "btCreateSenhasGerar";
             btCreateSenhasGerar.Size = new Size(40, 40);
             btCreateSenhasGerar.TabIndex = 12;
@@ -236,7 +236,7 @@
             btCreateSenhasMostrar.Font = new Font("Arial", 12.75F);
             btCreateSenhasMostrar.ForeColor = Color.FromArgb(255, 252, 237);
             btCreateSenhasMostrar.Image = (Image)resources.GetObject("btCreateSenhasMostrar.Image");
-            btCreateSenhasMostrar.Location = new Point(277, 244);
+            btCreateSenhasMostrar.Location = new Point(279, 261);
             btCreateSenhasMostrar.Name = "btCreateSenhasMostrar";
             btCreateSenhasMostrar.Size = new Size(40, 40);
             btCreateSenhasMostrar.TabIndex = 13;
@@ -250,7 +250,7 @@
             lbCreateSenhasSenhaInvalida.AutoSize = true;
             lbCreateSenhasSenhaInvalida.Font = new Font("Arial", 9F);
             lbCreateSenhasSenhaInvalida.ForeColor = Color.FromArgb(230, 34, 34);
-            lbCreateSenhasSenhaInvalida.Location = new Point(51, 288);
+            lbCreateSenhasSenhaInvalida.Location = new Point(49, 393);
             lbCreateSenhasSenhaInvalida.Name = "lbCreateSenhasSenhaInvalida";
             lbCreateSenhasSenhaInvalida.Size = new Size(91, 15);
             lbCreateSenhasSenhaInvalida.TabIndex = 14;
@@ -276,7 +276,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(367, 450);
+            ClientSize = new Size(367, 511);
             ControlBox = false;
             Controls.Add(btCreateSenhasGeradorConfig);
             Controls.Add(lbCreateSenhasSenhaInvalida);

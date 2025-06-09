@@ -60,7 +60,7 @@
             btUpdateSenhasCancelar.FlatStyle = FlatStyle.Flat;
             btUpdateSenhasCancelar.Font = new Font("Arial", 12.75F);
             btUpdateSenhasCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateSenhasCancelar.Location = new Point(199, 382);
+            btUpdateSenhasCancelar.Location = new Point(201, 329);
             btUpdateSenhasCancelar.Name = "btUpdateSenhasCancelar";
             btUpdateSenhasCancelar.Size = new Size(118, 37);
             btUpdateSenhasCancelar.TabIndex = 23;
@@ -76,7 +76,7 @@
             btUpdateSenhasAtualizar.FlatStyle = FlatStyle.Flat;
             btUpdateSenhasAtualizar.Font = new Font("Arial", 12.75F);
             btUpdateSenhasAtualizar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateSenhasAtualizar.Location = new Point(47, 382);
+            btUpdateSenhasAtualizar.Location = new Point(49, 329);
             btUpdateSenhasAtualizar.Name = "btUpdateSenhasAtualizar";
             btUpdateSenhasAtualizar.Size = new Size(118, 37);
             btUpdateSenhasAtualizar.TabIndex = 22;
@@ -91,10 +91,10 @@
             campUpdateSenhasOrigem.BorderStyle = BorderStyle.None;
             campUpdateSenhasOrigem.Font = new Font("Arial", 12.75F);
             campUpdateSenhasOrigem.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateSenhasOrigem.Location = new Point(163, 244);
+            campUpdateSenhasOrigem.Location = new Point(163, 206);
             campUpdateSenhasOrigem.Name = "campUpdateSenhasOrigem";
-            campUpdateSenhasOrigem.Size = new Size(100, 20);
             campUpdateSenhasOrigem.TextChanged += Campos_TextChanged;
+            campUpdateSenhasOrigem.Size = new Size(156, 20);
             campUpdateSenhasOrigem.TabIndex = 21;
             // 
             // campUpdateSenhasSenha
@@ -104,9 +104,9 @@
             campUpdateSenhasSenha.BorderStyle = BorderStyle.None;
             campUpdateSenhasSenha.Font = new Font("Arial", 12.75F);
             campUpdateSenhasSenha.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateSenhasSenha.Location = new Point(163, 215);
+            campUpdateSenhasSenha.Location = new Point(163, 232);
             campUpdateSenhasSenha.Name = "campUpdateSenhasSenha";
-            campUpdateSenhasSenha.Size = new Size(100, 20);
+            campUpdateSenhasSenha.Size = new Size(156, 20);
             campUpdateSenhasSenha.TabIndex = 20;
             campUpdateSenhasSenha.UseSystemPasswordChar = true;
             campUpdateSenhasSenha.TextChanged += Campos_TextChanged;
@@ -119,9 +119,9 @@
             campUpdateSenhasEmail.BorderStyle = BorderStyle.None;
             campUpdateSenhasEmail.Font = new Font("Arial", 12.75F);
             campUpdateSenhasEmail.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateSenhasEmail.Location = new Point(163, 186);
+            campUpdateSenhasEmail.Location = new Point(163, 180);
             campUpdateSenhasEmail.Name = "campUpdateSenhasEmail";
-            campUpdateSenhasEmail.Size = new Size(100, 20);
+            campUpdateSenhasEmail.Size = new Size(156, 20);
             campUpdateSenhasEmail.TabIndex = 19;
             campUpdateSenhasEmail.TextChanged += Campos_TextChanged;
             campUpdateSenhasEmail.Validating += campUpdateSenhasEmail_Validating;
@@ -133,9 +133,9 @@
             campUpdateSenhasNome.BorderStyle = BorderStyle.None;
             campUpdateSenhasNome.Font = new Font("Arial", 12.75F);
             campUpdateSenhasNome.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateSenhasNome.Location = new Point(163, 157);
+            campUpdateSenhasNome.Location = new Point(163, 154);
             campUpdateSenhasNome.Name = "campUpdateSenhasNome";
-            campUpdateSenhasNome.Size = new Size(100, 20);
+            campUpdateSenhasNome.Size = new Size(156, 20);
             campUpdateSenhasNome.TabIndex = 18;
             campUpdateSenhasNome.TextChanged += Campos_TextChanged;
             campUpdateSenhasNome.KeyPress += campUpdateSenhasNome_KeyPress;
@@ -146,7 +146,7 @@
             lbUpdateSenhasEmailInvalido.AutoSize = true;
             lbUpdateSenhasEmailInvalido.Font = new Font("Arial", 9F);
             lbUpdateSenhasEmailInvalido.ForeColor = Color.FromArgb(230, 34, 34);
-            lbUpdateSenhasEmailInvalido.Location = new Point(168, 270);
+            lbUpdateSenhasEmailInvalido.Location = new Point(228, 383);
             lbUpdateSenhasEmailInvalido.Name = "lbUpdateSenhasEmailInvalido";
             lbUpdateSenhasEmailInvalido.Size = new Size(91, 15);
             lbUpdateSenhasEmailInvalido.TabIndex = 17;
@@ -157,7 +157,7 @@
             lbUpdateSenhasOrigem.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbUpdateSenhasOrigem.AutoSize = true;
             lbUpdateSenhasOrigem.Font = new Font("Arial", 12.75F);
-            lbUpdateSenhasOrigem.Location = new Point(49, 245);
+            lbUpdateSenhasOrigem.Location = new Point(45, 216);
             lbUpdateSenhasOrigem.Name = "lbUpdateSenhasOrigem";
             lbUpdateSenhasOrigem.Size = new Size(62, 19);
             lbUpdateSenhasOrigem.TabIndex = 16;
@@ -168,7 +168,7 @@
             lbUpdateSenhasSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbUpdateSenhasSenha.AutoSize = true;
             lbUpdateSenhasSenha.Font = new Font("Arial", 12.75F);
-            lbUpdateSenhasSenha.Location = new Point(51, 216);
+            lbUpdateSenhasSenha.Location = new Point(49, 243);
             lbUpdateSenhasSenha.Name = "lbUpdateSenhasSenha";
             lbUpdateSenhasSenha.Size = new Size(56, 19);
             lbUpdateSenhasSenha.TabIndex = 15;
@@ -216,7 +216,7 @@
             campUpdateSenhasId.ForeColor = Color.FromArgb(230, 34, 34);
             campUpdateSenhasId.Location = new Point(163, 128);
             campUpdateSenhasId.Name = "campUpdateSenhasId";
-            campUpdateSenhasId.Size = new Size(100, 20);
+            campUpdateSenhasId.Size = new Size(156, 20);
             campUpdateSenhasId.TabIndex = 25;
             campUpdateSenhasId.TextChanged += Campos_TextChanged;
             campUpdateSenhasId.KeyPress += campUpdateSenhasId_KeyPress;
@@ -238,7 +238,7 @@
             lbUpdateSenhasSenhaInvalida.AutoSize = true;
             lbUpdateSenhasSenhaInvalida.Font = new Font("Arial", 9F);
             lbUpdateSenhasSenhaInvalida.ForeColor = Color.FromArgb(230, 34, 34);
-            lbUpdateSenhasSenhaInvalida.Location = new Point(168, 285);
+            lbUpdateSenhasSenhaInvalida.Location = new Point(49, 402);
             lbUpdateSenhasSenhaInvalida.Name = "lbUpdateSenhasSenhaInvalida";
             lbUpdateSenhasSenhaInvalida.Size = new Size(91, 15);
             lbUpdateSenhasSenhaInvalida.TabIndex = 28;
@@ -251,7 +251,7 @@
             btUpdateSenhasMostrar.FlatAppearance.BorderSize = 0;
             btUpdateSenhasMostrar.FlatStyle = FlatStyle.Flat;
             btUpdateSenhasMostrar.Image = (Image)resources.GetObject("btUpdateSenhasMostrar.Image");
-            btUpdateSenhasMostrar.Location = new Point(277, 148);
+            btUpdateSenhasMostrar.Location = new Point(279, 258);
             btUpdateSenhasMostrar.Name = "btUpdateSenhasMostrar";
             btUpdateSenhasMostrar.Size = new Size(40, 40);
             btUpdateSenhasMostrar.TabIndex = 27;
@@ -266,7 +266,7 @@
             btUpdateSenhasGerar.FlatAppearance.BorderSize = 0;
             btUpdateSenhasGerar.FlatStyle = FlatStyle.Flat;
             btUpdateSenhasGerar.Image = (Image)resources.GetObject("btUpdateSenhasGerar.Image");
-            btUpdateSenhasGerar.Location = new Point(277, 195);
+            btUpdateSenhasGerar.Location = new Point(163, 258);
             btUpdateSenhasGerar.Name = "btUpdateSenhasGerar";
             btUpdateSenhasGerar.Size = new Size(40, 40);
             btUpdateSenhasGerar.TabIndex = 26;
@@ -294,7 +294,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(367, 450);
+            ClientSize = new Size(367, 511);
             ControlBox = false;
             Controls.Add(btUpdateSenhasGeradorConfig);
             Controls.Add(lbUpdateSenhasSenhaInvalida);

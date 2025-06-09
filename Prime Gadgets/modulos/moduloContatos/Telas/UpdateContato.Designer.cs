@@ -60,7 +60,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             lbUpdateContatosTitulo.AutoSize = true;
             lbUpdateContatosTitulo.BackColor = Color.Transparent;
             lbUpdateContatosTitulo.Font = new Font("Arial", 24F);
-            lbUpdateContatosTitulo.Location = new Point(51, 47);
+            lbUpdateContatosTitulo.Location = new Point(32, 27);
             lbUpdateContatosTitulo.Name = "lbUpdateContatosTitulo";
             lbUpdateContatosTitulo.Size = new Size(256, 36);
             lbUpdateContatosTitulo.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             btUpdateContatosCriar.FlatStyle = FlatStyle.Flat;
             btUpdateContatosCriar.Font = new Font("Arial", 12.75F);
             btUpdateContatosCriar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateContatosCriar.Location = new Point(47, 382);
+            btUpdateContatosCriar.Location = new Point(22, 257);
             btUpdateContatosCriar.Name = "btUpdateContatosCriar";
             btUpdateContatosCriar.Size = new Size(118, 37);
             btUpdateContatosCriar.TabIndex = 1;
@@ -88,7 +88,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             btUpdateContatosCancelar.FlatStyle = FlatStyle.Flat;
             btUpdateContatosCancelar.Font = new Font("Arial", 12.75F);
             btUpdateContatosCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateContatosCancelar.Location = new Point(199, 382);
+            btUpdateContatosCancelar.Location = new Point(186, 257);
             btUpdateContatosCancelar.Name = "btUpdateContatosCancelar";
             btUpdateContatosCancelar.Size = new Size(118, 37);
             btUpdateContatosCancelar.TabIndex = 2;
@@ -102,7 +102,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             campUpdateContatosNome.BorderStyle = BorderStyle.None;
             campUpdateContatosNome.Font = new Font("Arial", 12.75F);
             campUpdateContatosNome.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateContatosNome.Location = new Point(131, 157);
+            campUpdateContatosNome.Location = new Point(121, 112);
             campUpdateContatosNome.Name = "campUpdateContatosNome";
             campUpdateContatosNome.Size = new Size(156, 20);
             campUpdateContatosNome.TabIndex = 4;
@@ -115,7 +115,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             campUpdateContatosSobrenome.BorderStyle = BorderStyle.None;
             campUpdateContatosSobrenome.Font = new Font("Arial", 12.75F);
             campUpdateContatosSobrenome.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateContatosSobrenome.Location = new Point(131, 186);
+            campUpdateContatosSobrenome.Location = new Point(121, 141);
             campUpdateContatosSobrenome.Name = "campUpdateContatosSobrenome";
             campUpdateContatosSobrenome.Size = new Size(156, 20);
             campUpdateContatosSobrenome.TabIndex = 5;
@@ -128,7 +128,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             campUpdateContatosTelefone.BorderStyle = BorderStyle.None;
             campUpdateContatosTelefone.Font = new Font("Arial", 12.75F);
             campUpdateContatosTelefone.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateContatosTelefone.Location = new Point(131, 215);
+            campUpdateContatosTelefone.Location = new Point(121, 170);
             campUpdateContatosTelefone.Name = "campUpdateContatosTelefone";
             campUpdateContatosTelefone.Size = new Size(156, 20);
             campUpdateContatosTelefone.TabIndex = 6;
@@ -141,7 +141,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             campUpdateContatosEmail.BorderStyle = BorderStyle.None;
             campUpdateContatosEmail.Font = new Font("Arial", 12.75F);
             campUpdateContatosEmail.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateContatosEmail.Location = new Point(131, 244);
+            campUpdateContatosEmail.Location = new Point(121, 199);
             campUpdateContatosEmail.Name = "campUpdateContatosEmail";
             campUpdateContatosEmail.Size = new Size(156, 20);
             campUpdateContatosEmail.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // 
             lbUpdateContatosNome.AutoSize = true;
             lbUpdateContatosNome.Font = new Font("Arial", 12.75F);
-            lbUpdateContatosNome.Location = new Point(54, 161);
+            lbUpdateContatosNome.Location = new Point(44, 116);
             lbUpdateContatosNome.Name = "lbUpdateContatosNome";
             lbUpdateContatosNome.Size = new Size(51, 19);
             lbUpdateContatosNome.TabIndex = 9;
@@ -162,7 +162,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // 
             lbUpdateContatosSobrenome.AutoSize = true;
             lbUpdateContatosSobrenome.Font = new Font("Arial", 12.75F);
-            lbUpdateContatosSobrenome.Location = new Point(32, 190);
+            lbUpdateContatosSobrenome.Location = new Point(22, 145);
             lbUpdateContatosSobrenome.Name = "lbUpdateContatosSobrenome";
             lbUpdateContatosSobrenome.Size = new Size(93, 19);
             lbUpdateContatosSobrenome.TabIndex = 10;
@@ -172,7 +172,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // 
             lbUpdateContatosEmail.AutoSize = true;
             lbUpdateContatosEmail.Font = new Font("Arial", 12.75F);
-            lbUpdateContatosEmail.Location = new Point(56, 248);
+            lbUpdateContatosEmail.Location = new Point(46, 203);
             lbUpdateContatosEmail.Name = "lbUpdateContatosEmail";
             lbUpdateContatosEmail.Size = new Size(49, 19);
             lbUpdateContatosEmail.TabIndex = 12;
@@ -182,7 +182,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // 
             lbUpdateContatosId.AutoSize = true;
             lbUpdateContatosId.Font = new Font("Arial", 12.75F);
-            lbUpdateContatosId.Location = new Point(64, 129);
+            lbUpdateContatosId.Location = new Point(55, 86);
             lbUpdateContatosId.Name = "lbUpdateContatosId";
             lbUpdateContatosId.Size = new Size(26, 19);
             lbUpdateContatosId.TabIndex = 13;
@@ -194,7 +194,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             campUpdateContatosId.BorderStyle = BorderStyle.None;
             campUpdateContatosId.Font = new Font("Arial", 12.75F);
             campUpdateContatosId.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateContatosId.Location = new Point(131, 128);
+            campUpdateContatosId.Location = new Point(121, 83);
             campUpdateContatosId.Name = "campUpdateContatosId";
             campUpdateContatosId.Size = new Size(156, 20);
             campUpdateContatosId.TabIndex = 14;
@@ -206,7 +206,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             lbUpdateContatosEmailInvalid.AutoSize = true;
             lbUpdateContatosEmailInvalid.Font = new Font("Arial", 9F);
             lbUpdateContatosEmailInvalid.ForeColor = Color.FromArgb(230, 34, 34);
-            lbUpdateContatosEmailInvalid.Location = new Point(168, 270);
+            lbUpdateContatosEmailInvalid.Location = new Point(158, 225);
             lbUpdateContatosEmailInvalid.Name = "lbUpdateContatosEmailInvalid";
             lbUpdateContatosEmailInvalid.Size = new Size(84, 15);
             lbUpdateContatosEmailInvalid.TabIndex = 15;
@@ -216,7 +216,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             // 
             lbUpdateContatosTelefone.AutoSize = true;
             lbUpdateContatosTelefone.Font = new Font("Arial", 12.75F);
-            lbUpdateContatosTelefone.Location = new Point(47, 219);
+            lbUpdateContatosTelefone.Location = new Point(37, 174);
             lbUpdateContatosTelefone.Name = "lbUpdateContatosTelefone";
             lbUpdateContatosTelefone.Size = new Size(69, 19);
             lbUpdateContatosTelefone.TabIndex = 11;
@@ -227,7 +227,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(367, 450);
+            ClientSize = new Size(328, 317);
             ControlBox = false;
             Controls.Add(lbUpdateContatosEmailInvalid);
             Controls.Add(campUpdateContatosId);

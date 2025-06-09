@@ -32,17 +32,49 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             new Conversor { Texto = "Fahrenheit", Valor = 2 },
             new Conversor { Texto = "Kelvin", Valor = 3 }
         };
-        public static List<Conversor> TipoD1Conversao = new List<Conversor>
+        public static List<Conversor> TipoCD1Conversao = new List<Conversor>
         {
             new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
-            new Conversor { Texto = "Quilomêtros", Valor = 1 },
-            new Conversor { Texto = "Milhas", Valor = 2 }
+            new Conversor { Texto = "Métrico", Valor = 1 },
+            new Conversor { Texto = "Imperial", Valor = 2 }
         };
-        public static List<Conversor> TipoD2Conversao = new List<Conversor>
+        public static List<Conversor> TipoCD2Conversao = new List<Conversor>
         {
             new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
-            new Conversor { Texto = "Quilomêtros", Valor = 1 },
-            new Conversor { Texto = "Milhas", Valor = 2 }
+            new Conversor { Texto = "Métrico", Valor = 1 },
+            new Conversor { Texto = "Imperial", Valor = 2 }
+        };
+        public static List<Conversor> TipCI1Conversao = new List<Conversor>
+        {
+            new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
+            new Conversor { Texto = "Polegada", Valor = 1 },
+            new Conversor { Texto = "Pé", Valor = 2 },
+            new Conversor { Texto = "Jarda", Valor = 3 },
+            new Conversor { Texto = "Milha", Valor = 4 }
+        };
+        public static List<Conversor> TipoCI2Conversao = new List<Conversor>
+        {
+            new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
+            new Conversor { Texto = "Polegada", Valor = 1 },
+            new Conversor { Texto = "Pé", Valor = 2 },
+            new Conversor { Texto = "Jarda", Valor = 3 },
+            new Conversor { Texto = "Milha", Valor = 4 }
+        };
+        public static List<Conversor> TipoCM1Conversao = new List<Conversor>
+        {
+            new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
+            new Conversor { Texto = "Milímetro", Valor = 1 },
+            new Conversor { Texto = "Centímetro", Valor = 2 },
+            new Conversor { Texto = "Metro", Valor = 3 },
+            new Conversor { Texto = "Quilômetro", Valor = 4 }
+        };
+        public static List<Conversor> TipoCM2Conversao = new List<Conversor>
+        {
+            new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
+            new Conversor { Texto = "Milímetro", Valor = 1 },
+            new Conversor { Texto = "Centímetro", Valor = 2 },
+            new Conversor { Texto = "Metro", Valor = 3 },
+            new Conversor { Texto = "Quilômetro", Valor = 4 }
         };
         public static List<Conversor> TipoC1Conversao = new List<Conversor>
         {

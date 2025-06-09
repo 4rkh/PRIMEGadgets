@@ -38,6 +38,8 @@
             btConversorCalculadoraCancelar = new Button();
             btConversorCalculadoraConverter = new Button();
             btConversorCalculadoraInverter = new Button();
+            cbConversorCalculadoraTipoUnidade1 = new ComboBox();
+            cbConversorCalculadoraTipoUnidade2 = new ComboBox();
             SuspendLayout();
             // 
             // campConversorCalculadoraNumero2
@@ -45,17 +47,18 @@
             campConversorCalculadoraNumero2.Anchor = AnchorStyles.None;
             campConversorCalculadoraNumero2.BackColor = Color.FromArgb(255, 252, 237);
             campConversorCalculadoraNumero2.Font = new Font("Arial", 9F);
-            campConversorCalculadoraNumero2.Location = new Point(321, 53);
+            campConversorCalculadoraNumero2.Location = new Point(322, 110);
             campConversorCalculadoraNumero2.Name = "campConversorCalculadoraNumero2";
             campConversorCalculadoraNumero2.Size = new Size(100, 21);
             campConversorCalculadoraNumero2.TabIndex = 9;
+            campConversorCalculadoraNumero2.ReadOnly = true;
             // 
             // cbConversorCalculadoraUnidade2
             // 
             cbConversorCalculadoraUnidade2.Anchor = AnchorStyles.None;
             cbConversorCalculadoraUnidade2.BackColor = Color.FromArgb(255, 252, 237);
             cbConversorCalculadoraUnidade2.FormattingEnabled = true;
-            cbConversorCalculadoraUnidade2.Location = new Point(427, 52);
+            cbConversorCalculadoraUnidade2.Location = new Point(428, 109);
             cbConversorCalculadoraUnidade2.Name = "cbConversorCalculadoraUnidade2";
             cbConversorCalculadoraUnidade2.Size = new Size(121, 23);
             cbConversorCalculadoraUnidade2.TabIndex = 8;
@@ -66,7 +69,7 @@
             lbConversorCalculadoraEqual.AutoSize = true;
             lbConversorCalculadoraEqual.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbConversorCalculadoraEqual.ForeColor = Color.FromArgb(52, 60, 76);
-            lbConversorCalculadoraEqual.Location = new Point(285, 52);
+            lbConversorCalculadoraEqual.Location = new Point(286, 112);
             lbConversorCalculadoraEqual.Name = "lbConversorCalculadoraEqual";
             lbConversorCalculadoraEqual.Size = new Size(18, 19);
             lbConversorCalculadoraEqual.TabIndex = 7;
@@ -77,7 +80,7 @@
             campConversorCalculadoraNumero1.Anchor = AnchorStyles.None;
             campConversorCalculadoraNumero1.BackColor = Color.FromArgb(255, 252, 237);
             campConversorCalculadoraNumero1.Font = new Font("Arial", 9F);
-            campConversorCalculadoraNumero1.Location = new Point(37, 52);
+            campConversorCalculadoraNumero1.Location = new Point(38, 110);
             campConversorCalculadoraNumero1.Name = "campConversorCalculadoraNumero1";
             campConversorCalculadoraNumero1.Size = new Size(100, 21);
             campConversorCalculadoraNumero1.TabIndex = 6;
@@ -87,7 +90,7 @@
             cbConversorCalculadoraUnidade1.Anchor = AnchorStyles.None;
             cbConversorCalculadoraUnidade1.BackColor = Color.FromArgb(255, 252, 237);
             cbConversorCalculadoraUnidade1.FormattingEnabled = true;
-            cbConversorCalculadoraUnidade1.Location = new Point(143, 52);
+            cbConversorCalculadoraUnidade1.Location = new Point(144, 109);
             cbConversorCalculadoraUnidade1.Name = "cbConversorCalculadoraUnidade1";
             cbConversorCalculadoraUnidade1.Size = new Size(121, 23);
             cbConversorCalculadoraUnidade1.TabIndex = 5;
@@ -98,7 +101,7 @@
             cbConversorCalculadoraTipo.BackColor = Color.FromArgb(255, 252, 237);
             cbConversorCalculadoraTipo.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbConversorCalculadoraTipo.FormattingEnabled = true;
-            cbConversorCalculadoraTipo.Location = new Point(17, 14);
+            cbConversorCalculadoraTipo.Location = new Point(17, 50);
             cbConversorCalculadoraTipo.Name = "cbConversorCalculadoraTipo";
             cbConversorCalculadoraTipo.Size = new Size(555, 23);
             cbConversorCalculadoraTipo.TabIndex = 11;
@@ -111,7 +114,7 @@
             btConversorCalculadoraCancelar.FlatAppearance.BorderSize = 0;
             btConversorCalculadoraCancelar.FlatStyle = FlatStyle.Flat;
             btConversorCalculadoraCancelar.Image = (Image)resources.GetObject("btConversorCalculadoraCancelar.Image");
-            btConversorCalculadoraCancelar.Location = new Point(204, 91);
+            btConversorCalculadoraCancelar.Location = new Point(204, 162);
             btConversorCalculadoraCancelar.Name = "btConversorCalculadoraCancelar";
             btConversorCalculadoraCancelar.Size = new Size(60, 45);
             btConversorCalculadoraCancelar.TabIndex = 12;
@@ -126,7 +129,7 @@
             btConversorCalculadoraConverter.FlatStyle = FlatStyle.Flat;
             btConversorCalculadoraConverter.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btConversorCalculadoraConverter.ForeColor = Color.FromArgb(255, 252, 237);
-            btConversorCalculadoraConverter.Location = new Point(321, 90);
+            btConversorCalculadoraConverter.Location = new Point(321, 161);
             btConversorCalculadoraConverter.Name = "btConversorCalculadoraConverter";
             btConversorCalculadoraConverter.Size = new Size(100, 45);
             btConversorCalculadoraConverter.TabIndex = 13;
@@ -141,18 +144,44 @@
             btConversorCalculadoraInverter.FlatAppearance.BorderSize = 0;
             btConversorCalculadoraInverter.FlatStyle = FlatStyle.Flat;
             btConversorCalculadoraInverter.Image = (Image)resources.GetObject("btConversorCalculadoraInverter.Image");
-            btConversorCalculadoraInverter.Location = new Point(413, 112);
+            btConversorCalculadoraInverter.Location = new Point(454, 162);
             btConversorCalculadoraInverter.Name = "btConversorCalculadoraInverter";
             btConversorCalculadoraInverter.Size = new Size(60, 45);
             btConversorCalculadoraInverter.TabIndex = 14;
             btConversorCalculadoraInverter.UseVisualStyleBackColor = false;
+            btConversorCalculadoraInverter.Click += btConversorCalculadoraInverter_Click;
+            // 
+            // cbConversorCalculadoraTipoUnidade1
+            // 
+            cbConversorCalculadoraTipoUnidade1.Anchor = AnchorStyles.None;
+            cbConversorCalculadoraTipoUnidade1.BackColor = Color.FromArgb(255, 252, 237);
+            cbConversorCalculadoraTipoUnidade1.FormattingEnabled = true;
+            cbConversorCalculadoraTipoUnidade1.Location = new Point(38, 79);
+            cbConversorCalculadoraTipoUnidade1.Name = "cbConversorCalculadoraTipoUnidade1";
+            cbConversorCalculadoraTipoUnidade1.Size = new Size(227, 23);
+            cbConversorCalculadoraTipoUnidade1.TabIndex = 15;
+            cbConversorCalculadoraTipoUnidade1.SelectedIndexChanged += cbConversorCalculadoraTipoUnidade1_SelectedIndexChanged;
+            // 
+            // cbConversorCalculadoraTipoUnidade2
+            // 
+            cbConversorCalculadoraTipoUnidade2.Anchor = AnchorStyles.None;
+            cbConversorCalculadoraTipoUnidade2.BackColor = Color.FromArgb(255, 252, 237);
+            cbConversorCalculadoraTipoUnidade2.FormattingEnabled = true;
+            cbConversorCalculadoraTipoUnidade2.Location = new Point(321, 79);
+            cbConversorCalculadoraTipoUnidade2.Name = "cbConversorCalculadoraTipoUnidade2";
+            cbConversorCalculadoraTipoUnidade2.Size = new Size(228, 23);
+            cbConversorCalculadoraTipoUnidade2.TabIndex = 16;
+            cbConversorCalculadoraTipoUnidade2.SelectedIndexChanged += cbConversorCalculadoraTipoUnidade2_SelectedIndexChanged;
             // 
             // ConversorCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(584, 161);
+            ClientSize = new Size(584, 232);
+            Controls.Add(cbConversorCalculadoraTipoUnidade2);
+            Controls.Add(cbConversorCalculadoraTipoUnidade1);
+            Controls.Add(btConversorCalculadoraInverter);
             Controls.Add(btConversorCalculadoraConverter);
             Controls.Add(btConversorCalculadoraCancelar);
             Controls.Add(cbConversorCalculadoraTipo);
@@ -177,10 +206,11 @@
         private Label lbConversorCalculadoraEqual;
         private TextBox campConversorCalculadoraNumero1;
         private ComboBox cbConversorCalculadoraUnidade1;
-        private Label label2;
         private ComboBox cbConversorCalculadoraTipo;
         private Button btConversorCalculadoraCancelar;
         private Button btConversorCalculadoraConverter;
         private Button btConversorCalculadoraInverter;
+        private ComboBox cbConversorCalculadoraTipoUnidade1;
+        private ComboBox cbConversorCalculadoraTipoUnidade2;
     }
 }

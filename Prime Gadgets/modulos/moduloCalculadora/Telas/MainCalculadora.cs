@@ -381,7 +381,6 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 campMainCalculadoraResult.Text += " = " + conta;
             }
-            
         }
         private void MainCalculadora_Load(object sender, EventArgs e)
         {

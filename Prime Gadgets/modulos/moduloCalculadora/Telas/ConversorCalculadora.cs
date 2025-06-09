@@ -151,7 +151,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
 
                 resultadoTexto = valorConvertido.ToString("N4");
             }
-            // Numérico (Binário/Decimal)
+            // Numérico (Binário/Decimal/Hexadecimal)
             else if (tipoConversao.Valor == 3)
             {
                 var unidadeOrigem = cbConversorCalculadoraUnidade1.SelectedItem as Conversor;
@@ -164,22 +164,22 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
 
                 try
                 {
-                    if (unidadeOrigem.Valor == 1 && unidadeDestino.Valor == 2)
-                    {
-                        // Binário para Decimal
-                        int dec = Convert.ToInt32(campConversorCalculadoraNumero1.Text, 2);
-                        resultadoTexto = dec.ToString();
-                    }
-                    else if (unidadeOrigem.Valor == 2 && unidadeDestino.Valor == 1)
-                    {
-                        // Decimal para Binário
-                        int dec = int.Parse(campConversorCalculadoraNumero1.Text);
+                    int dec = 0;
+                    // Converter para decimal primeiro
+                    if (unidadeOrigem.Valor == 1) // Binário
+                        dec = Convert.ToInt32(campConversorCalculadoraNumero1.Text, 2);
+                    else if (unidadeOrigem.Valor == 2) // Decimal
+                        dec = int.Parse(campConversorCalculadoraNumero1.Text);
+                    else if (unidadeOrigem.Valor == 3) // Hexadecimal
+                        dec = Convert.ToInt32(campConversorCalculadoraNumero1.Text, 16);
+
+                    // Converter do decimal para destino
+                    if (unidadeDestino.Valor == 1) // Binário
                         resultadoTexto = Convert.ToString(dec, 2);
-                    }
-                    else
-                    {
-                        resultadoTexto = campConversorCalculadoraNumero1.Text;
-                    }
+                    else if (unidadeDestino.Valor == 2) // Decimal
+                        resultadoTexto = dec.ToString();
+                    else if (unidadeDestino.Valor == 3) // Hexadecimal
+                        resultadoTexto = dec.ToString("X");
                 }
                 catch
                 {

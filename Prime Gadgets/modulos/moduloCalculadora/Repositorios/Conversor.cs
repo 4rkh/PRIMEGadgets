@@ -80,13 +80,15 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
         {
             new Conversor { Texto = "Selecione o tipo numérico", Valor = 0},
             new Conversor { Texto = "Binário", Valor = 1 },
-            new Conversor { Texto = "Decimal", Valor = 2 }
+            new Conversor { Texto = "Decimal", Valor = 2 },
+            new Conversor { Texto = "Hexadecimal", Valor = 3 }
         };
         public static List<Conversor> TipoC2Conversao = new List<Conversor>
         {
-            new Conversor { Texto = "Selecione o tipo de distância", Valor = 0},
+            new Conversor { Texto = "Selecione o tipo numérico", Valor = 0},
             new Conversor { Texto = "Binário", Valor = 1 },
-            new Conversor { Texto = "Decimal", Valor = 2 }
+            new Conversor { Texto = "Decimal", Valor = 2 },
+            new Conversor { Texto = "Hexadecimal", Valor = 3 }
         };
         public static List<Conversor> ConversaoBloqueada = new List<Conversor>
         {

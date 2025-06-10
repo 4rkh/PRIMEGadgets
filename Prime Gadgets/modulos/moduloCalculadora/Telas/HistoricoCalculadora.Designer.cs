@@ -64,14 +64,16 @@
             // 
             // libHistoricoCalculadoraArm
             // 
-            libHistoricoCalculadoraArm.Font = new Font("Segoe UI", 20F);
+            libHistoricoCalculadoraArm.BackColor = Color.FromArgb(255, 252, 237);
+            libHistoricoCalculadoraArm.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            libHistoricoCalculadoraArm.ForeColor = Color.FromArgb(230, 34, 34);
             libHistoricoCalculadoraArm.FormattingEnabled = true;
-            libHistoricoCalculadoraArm.ItemHeight = 37;
+            libHistoricoCalculadoraArm.ItemHeight = 32;
             libHistoricoCalculadoraArm.Location = new Point(12, 12);
             libHistoricoCalculadoraArm.Name = "libHistoricoCalculadoraArm";
-            libHistoricoCalculadoraArm.Size = new Size(295, 522);
+            libHistoricoCalculadoraArm.Size = new Size(295, 516);
             libHistoricoCalculadoraArm.TabIndex = 3;
-            libHistoricoCalculadoraArm.DoubleClick += new System.EventHandler(this.libHistoricoCalculadoraArm_DoubleClick);
+            libHistoricoCalculadoraArm.DoubleClick += libHistoricoCalculadoraArm_DoubleClick;
             // 
             // HistoricoCalculadora
             // 
@@ -85,7 +87,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(400, 600);
             Name = "HistoricoCalculadora";
-            Text = "HistoricoCalculadora";
+            Text = "Histírico - Calculadora";
             Load += HistoricoCalculadora_Load;
             ResumeLayout(false);
         }

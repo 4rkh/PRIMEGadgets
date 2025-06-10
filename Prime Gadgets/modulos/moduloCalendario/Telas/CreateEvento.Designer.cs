@@ -26,6 +26,7 @@
 
         private void InitializeComponent()
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(CreateEvento));
             lbCreateEventoTitulo = new Label();
             btCreateEventoCriar = new Button();
             btCreateEventoCancelar = new Button();
@@ -43,7 +44,7 @@
             lbCreateEventoTitulo.BackColor = Color.Transparent;
             lbCreateEventoTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCreateEventoTitulo.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateEventoTitulo.Location = new Point(41, 27);
+            lbCreateEventoTitulo.Location = new Point(94, 9);
             lbCreateEventoTitulo.Name = "lbCreateEventoTitulo";
             lbCreateEventoTitulo.Size = new Size(252, 36);
             lbCreateEventoTitulo.TabIndex = 0;
@@ -57,7 +58,7 @@
             btCreateEventoCriar.FlatStyle = FlatStyle.Flat;
             btCreateEventoCriar.Font = new Font("Arial", 12.75F);
             btCreateEventoCriar.ForeColor = Color.FromArgb(183, 190, 191);
-            btCreateEventoCriar.Location = new Point(22, 262);
+            btCreateEventoCriar.Location = new Point(30, 240);
             btCreateEventoCriar.Name = "btCreateEventoCriar";
             btCreateEventoCriar.Size = new Size(118, 37);
             btCreateEventoCriar.TabIndex = 1;
@@ -68,12 +69,13 @@
             // 
             // btCreateEventoCancelar
             // 
+            btCreateEventoCancelar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btCreateEventoCancelar.BackColor = Color.FromArgb(230, 34, 34);
             btCreateEventoCancelar.FlatAppearance.BorderSize = 0;
             btCreateEventoCancelar.FlatStyle = FlatStyle.Flat;
             btCreateEventoCancelar.Font = new Font("Arial", 12.75F);
             btCreateEventoCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btCreateEventoCancelar.Location = new Point(186, 262);
+            btCreateEventoCancelar.Location = new Point(279, 240);
             btCreateEventoCancelar.Name = "btCreateEventoCancelar";
             btCreateEventoCancelar.Size = new Size(118, 37);
             btCreateEventoCancelar.TabIndex = 2;
@@ -83,39 +85,42 @@
             // 
             // campCreateEventoData
             // 
+            campCreateEventoData.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             campCreateEventoData.CalendarForeColor = Color.FromArgb(230, 34, 34);
             campCreateEventoData.CalendarMonthBackground = Color.FromArgb(255, 252, 237);
             campCreateEventoData.CalendarTitleForeColor = Color.FromArgb(230, 34, 34);
             campCreateEventoData.Font = new Font("Arial", 12.75F);
             campCreateEventoData.Format = DateTimePickerFormat.Short;
-            campCreateEventoData.Location = new Point(121, 105);
+            campCreateEventoData.Location = new Point(171, 85);
             campCreateEventoData.Name = "campCreateEventoData";
-            campCreateEventoData.Size = new Size(156, 27);
+            campCreateEventoData.Size = new Size(226, 27);
             campCreateEventoData.TabIndex = 4;
             campCreateEventoData.ValueChanged += Campos_TextChanged;
             // 
             // campCreateEventoLocal
             // 
+            campCreateEventoLocal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             campCreateEventoLocal.BackColor = Color.FromArgb(255, 252, 237);
             campCreateEventoLocal.BorderStyle = BorderStyle.None;
             campCreateEventoLocal.Font = new Font("Arial", 12.75F);
             campCreateEventoLocal.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateEventoLocal.Location = new Point(121, 141);
+            campCreateEventoLocal.Location = new Point(171, 117);
             campCreateEventoLocal.Name = "campCreateEventoLocal";
-            campCreateEventoLocal.Size = new Size(156, 20);
+            campCreateEventoLocal.Size = new Size(226, 20);
             campCreateEventoLocal.TabIndex = 5;
             campCreateEventoLocal.TextChanged += Campos_TextChanged;
             // 
             // campCreateEventoDescricao
             // 
+            campCreateEventoDescricao.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             campCreateEventoDescricao.BackColor = Color.FromArgb(255, 252, 237);
             campCreateEventoDescricao.BorderStyle = BorderStyle.None;
             campCreateEventoDescricao.Font = new Font("Arial", 12.75F);
             campCreateEventoDescricao.ForeColor = Color.FromArgb(230, 34, 34);
-            campCreateEventoDescricao.Location = new Point(121, 170);
+            campCreateEventoDescricao.Location = new Point(171, 143);
             campCreateEventoDescricao.Multiline = true;
             campCreateEventoDescricao.Name = "campCreateEventoDescricao";
-            campCreateEventoDescricao.Size = new Size(156, 77);
+            campCreateEventoDescricao.Size = new Size(226, 77);
             campCreateEventoDescricao.TabIndex = 6;
             campCreateEventoDescricao.TextChanged += Campos_TextChanged;
             // 
@@ -124,7 +129,7 @@
             lbCreateEventoData.AutoSize = true;
             lbCreateEventoData.Font = new Font("Arial", 12.75F);
             lbCreateEventoData.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateEventoData.Location = new Point(53, 111);
+            lbCreateEventoData.Location = new Point(59, 91);
             lbCreateEventoData.Name = "lbCreateEventoData";
             lbCreateEventoData.Size = new Size(43, 19);
             lbCreateEventoData.TabIndex = 9;
@@ -135,7 +140,7 @@
             lbCreateEventoLocal.AutoSize = true;
             lbCreateEventoLocal.Font = new Font("Arial", 12.75F);
             lbCreateEventoLocal.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateEventoLocal.Location = new Point(49, 141);
+            lbCreateEventoLocal.Location = new Point(55, 118);
             lbCreateEventoLocal.Name = "lbCreateEventoLocal";
             lbCreateEventoLocal.Size = new Size(48, 19);
             lbCreateEventoLocal.TabIndex = 10;
@@ -146,7 +151,7 @@
             lbCreateEventoDescricao.AutoSize = true;
             lbCreateEventoDescricao.Font = new Font("Arial", 12.75F);
             lbCreateEventoDescricao.ForeColor = Color.FromArgb(52, 60, 76);
-            lbCreateEventoDescricao.Location = new Point(31, 170);
+            lbCreateEventoDescricao.Location = new Point(39, 143);
             lbCreateEventoDescricao.Name = "lbCreateEventoDescricao";
             lbCreateEventoDescricao.Size = new Size(84, 19);
             lbCreateEventoDescricao.TabIndex = 11;
@@ -157,7 +162,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(328, 317);
+            ClientSize = new Size(437, 299);
             ControlBox = false;
             Controls.Add(lbCreateEventoDescricao);
             Controls.Add(lbCreateEventoLocal);
@@ -170,6 +175,7 @@
             Controls.Add(lbCreateEventoTitulo);
             ForeColor = Color.FromArgb(52, 60, 76);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "CreateEvento";
             SizeGripStyle = SizeGripStyle.Hide;

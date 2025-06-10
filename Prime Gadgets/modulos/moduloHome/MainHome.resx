@@ -121,7 +121,7 @@
   <data name="label2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLwAAALtCAYAAAAi3X1SAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAhedJREFUeF7t+juyNDu2Zu1VEyhQpPT3X6dG9oYae0CzYmXmu0/uy1gRQCwP9zkn
+        DAAACwwBP0AiyAAAhedJREFUeF7t+juyNDu2Zu1VEyhQpPT3X6dG9oYae0CzYmXmu0/uy1gRQCwP9zkn
         xmM2lJP7QwAIX+4Br/pfkiRJ+q7/z//1f/1vKv+zJEmSJEmS1Ae96Pp7+U8lSZIkSZKkuujF1qvyzyRJ
         kiRJkqR66IXWSvnnkiRJkiRJUg30EuuTMpwkSZIkSZL0HHpx9ZsyrCRJkiRJknQ/emF1VfkISZIkSZIk
         6fvoBdU3ysdJkiRJkiRJ30Evpe4oHy9JkiRJkiRdi15G3VWmIEmSJEmSJP0evYB6qkxJkiRJkiRJ+gy9
@@ -696,7 +696,7 @@
 </value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Navegue pelas páginas no menu ao lado.
+    <value>Um produto Prime Tech. Navegue pelas páginas no menu ao lado.
 - Faça calculos e conversões com a Calculadora;
 - Armazene suas senhas na janela Senhas;
 - Registre eventos importantes no Calendário;

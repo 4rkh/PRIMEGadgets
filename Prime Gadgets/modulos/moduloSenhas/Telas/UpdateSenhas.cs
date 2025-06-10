@@ -192,7 +192,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         }
         private void btUpdateSenhasGerar_Click(object sender, EventArgs e)
         {
-            campUpdateSenhasSenha.Text = GerarSenha(SenhaConfig.comprimento, SenhaConfig.letraMa, SenhaConfig.letraMi, SenhaConfig.CaracterEs);
+            campUpdateSenhasSenha.Text = GerarSenha(SenhaPreferences.comprimento, SenhaPreferences.letraMa, SenhaPreferences.letraMi, SenhaPreferences.CaracterEs);
         }
         Bitmap btmShow = Properties.Resources.showon;
         Bitmap btmHide = Properties.Resources.showoff;

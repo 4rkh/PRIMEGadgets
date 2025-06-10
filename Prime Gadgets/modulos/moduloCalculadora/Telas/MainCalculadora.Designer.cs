@@ -509,7 +509,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(300, 600);
             Name = "MainCalculadora";
-            Text = "MainCalculadora";
+            Text = "Calculadora";
             Load += MainCalculadora_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

@@ -121,17 +121,20 @@
   <data name="btConversorCalculadoraCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAAHJJREFUWEftzjEKwDAMBEH//6/5QcDBARXeKo1PB7kFNUZGM0ZKouZ9zTV8l1eQ
-        dhAhbSAC2jA8HgiPB8LjgfC4JeTU0PDGJeXQ0opZY4PZIBWXFEPDFpc/fzwVEQExIgJiRATEiLAFcU+W
-        DaSygaRf9wBVVWQd/jBJTgAAAABJRU5ErkJggg==
+        rAAACawBHEBKiAAAAKJJREFUWEftjkEKhDAAxPr/v/qDBUU2gyi5Ogo2kEPplGZMJi3W37LucnyOhDwe
+        dA2JXPewiMikgwVEJh0sIDLpYAGRSQcLiEw6WEBk0sECIpMOFhCZdLCAu+XrMzZsScKBjZqS8ccGLUk4
+        Y8O75WvHHkQmXSwkMuliIZFJFwuJTLpYSGTSxUIiky4WEpl0sZDIpIuF7HLd5zUh4TUhkw8zxgZVVWQd
+        zmcQhgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btConversorCalculadoraInverter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
-        rAAACawBHEBKiAAAAHJJREFUWEftzjEKwDAMBEH//6/5QcDBARXeKo1PB7kFNUZGM0ZKouZ9zTV8l1eQ
-        dhAhbSAC2jA8HgiPB8LjgfC4JeTU0PDGJeXQ0opZY4PZIBWXFEPDFpc/fzwVEQExIgJiRATEiLAFcU+W
-        DaSygaRf9wBVVWQd/jBJTgAAAABJRU5ErkJggg==
+        rQAACa0BzgeobAAAAOJJREFUWEftjlkKAzEMQ+f+d+0NClMMCrUTJeNm9UcfCIKtyLr+nOR+v248zyNl
+        whRKZUIU0mWOF8rLHC3Eyoiw3gsrkgRLG/ZxlXCyhJl3COe/MNMO4bzFZeogz9WCxeIydZJnJ2FtcZkG
+        yPObN1ymAXQ+u2FmLeMMWvnFvGUWanMvtew0Nzs6BLX5L9T+p2yzLwaAmidC89kxbWT7GbjytenR3Ikr
+        W5u0sJ6CKzs3acEyhDuXGVcLpy3MuFo4zWEfVgjnnmGfk2DZCysiwno/ocoIocoIocoIocoIocrs4bo+
+        PnAjY/tjCAYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

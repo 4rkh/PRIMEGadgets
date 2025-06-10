@@ -151,15 +151,15 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             {
                 btMainSenhasFirst.Enabled = false;
                 btMainSenhasBack.Enabled = false;
-                btMainSenhasFirst.BackColor = Color.LightGray;
-                btMainSenhasBack.BackColor = Color.LightGray;
+                btMainSenhasFirst.BackColor = Color.FromArgb(52, 60, 76);
+                btMainSenhasBack.BackColor = Color.FromArgb(52, 60, 76);
             }
             else
             {
                 btMainSenhasFirst.Enabled = true;
                 btMainSenhasBack.Enabled = true;
-                btMainSenhasFirst.BackColor = SystemColors.Control;
-                btMainSenhasBack.BackColor = SystemColors.Control;
+                btMainSenhasFirst.BackColor = Color.FromArgb(230, 34, 34);
+                btMainSenhasBack.BackColor = Color.FromArgb(230, 34, 34);
             }
 
             // Última página: desabilita 'end' e 'next'
@@ -167,15 +167,15 @@ namespace Prime_Gadgets.modulos.moduloSenhas
             {
                 btMainSenhasLast.Enabled = false;
                 btMainSenhasNext.Enabled = false;
-                btMainSenhasLast.BackColor = Color.LightGray;
-                btMainSenhasNext.BackColor = Color.LightGray;
+                btMainSenhasLast.BackColor = Color.FromArgb(52, 60, 76);
+                btMainSenhasNext.BackColor = Color.FromArgb(52, 60, 76);
             }
             else
             {
                 btMainSenhasLast.Enabled = true;
                 btMainSenhasNext.Enabled = true;
-                btMainSenhasLast.BackColor = SystemColors.Control;
-                btMainSenhasNext.BackColor = SystemColors.Control;
+                btMainSenhasLast.BackColor = Color.FromArgb(230, 34, 34);
+                btMainSenhasNext.BackColor = Color.FromArgb(230, 34, 34);
             }
         }
 

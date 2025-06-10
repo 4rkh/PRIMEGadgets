@@ -169,7 +169,7 @@ namespace Prime_Gadgets.modulos.moduloSenhas
         }
         private void btCreateSenhasGerar_Click(object sender, EventArgs e)
         {
-            campCreateSenhasSenha.Text = GerarSenha(SenhaConfig.comprimento, SenhaConfig.letraMa, SenhaConfig.letraMi, SenhaConfig.CaracterEs);
+            campCreateSenhasSenha.Text = GerarSenha(SenhaPreferences.comprimento, SenhaPreferences.letraMa, SenhaPreferences.letraMi, SenhaPreferences.CaracterEs);
         }
         Bitmap btmShow = Properties.Resources.showon;
         Bitmap btmHide = Properties.Resources.showoff;

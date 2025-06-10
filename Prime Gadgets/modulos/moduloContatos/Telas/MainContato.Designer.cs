@@ -108,11 +108,11 @@
             // 
             lbMainContatosTitulo.Anchor = AnchorStyles.Top;
             lbMainContatosTitulo.BackColor = Color.Transparent;
-            lbMainContatosTitulo.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbMainContatosTitulo.Font = new Font("Arial", 24F, FontStyle.Bold);
             lbMainContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
-            lbMainContatosTitulo.Location = new Point(572, 23);
+            lbMainContatosTitulo.Location = new Point(520, 23);
             lbMainContatosTitulo.Name = "lbMainContatosTitulo";
-            lbMainContatosTitulo.Size = new Size(221, 35);
+            lbMainContatosTitulo.Size = new Size(310, 35);
             lbMainContatosTitulo.TabIndex = 4;
             lbMainContatosTitulo.Text = "Lista de Contatos";
             lbMainContatosTitulo.TextAlign = ContentAlignment.MiddleCenter;
@@ -125,6 +125,7 @@
             dtMainContatosLista.AllowUserToResizeRows = false;
             dtMainContatosLista.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtMainContatosLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtMainContatosLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dtMainContatosLista.BackgroundColor = Color.FromArgb(255, 252, 237);
             dtMainContatosLista.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -158,8 +159,9 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dtMainContatosLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dtMainContatosLista.RowHeadersVisible = false;
+            dtMainContatosLista.RowHeadersWidth = 40;
             dtMainContatosLista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtMainContatosLista.Size = new Size(884, 402);
+            dtMainContatosLista.Size = new Size(884, 343);
             dtMainContatosLista.TabIndex = 5;
             // 
             // menuGlobal
@@ -180,7 +182,7 @@
             btMainContatosNext.FlatAppearance.BorderSize = 0;
             btMainContatosNext.FlatStyle = FlatStyle.Flat;
             btMainContatosNext.Image = Properties.Resources.avancar;
-            btMainContatosNext.Location = new Point(803, 573);
+            btMainContatosNext.Location = new Point(803, 533);
             btMainContatosNext.Name = "btMainContatosNext";
             btMainContatosNext.Size = new Size(55, 59);
             btMainContatosNext.TabIndex = 7;
@@ -196,7 +198,7 @@
             btMainContatosLast.FlatAppearance.BorderSize = 0;
             btMainContatosLast.FlatStyle = FlatStyle.Flat;
             btMainContatosLast.Image = Properties.Resources.ultima;
-            btMainContatosLast.Location = new Point(879, 572);
+            btMainContatosLast.Location = new Point(879, 532);
             btMainContatosLast.Name = "btMainContatosLast";
             btMainContatosLast.Size = new Size(55, 59);
             btMainContatosLast.TabIndex = 8;
@@ -211,9 +213,9 @@
             btMainContatosBack.FlatAppearance.BorderSize = 0;
             btMainContatosBack.FlatStyle = FlatStyle.Flat;
             btMainContatosBack.Image = Properties.Resources.voltar;
-            btMainContatosBack.Location = new Point(539, 572);
+            btMainContatosBack.Location = new Point(539, 532);
             btMainContatosBack.Name = "btMainContatosBack";
-            btMainContatosBack.Size = new Size(60, 60);
+            btMainContatosBack.Size = new Size(55, 59);
             btMainContatosBack.TabIndex = 9;
             btMainContatosBack.UseVisualStyleBackColor = false;
             btMainContatosBack.Click += btMainContatosBack_Click;
@@ -227,7 +229,7 @@
             btMainContatosFirst.FlatAppearance.BorderSize = 0;
             btMainContatosFirst.FlatStyle = FlatStyle.Flat;
             btMainContatosFirst.Image = Properties.Resources.primeira;
-            btMainContatosFirst.Location = new Point(461, 573);
+            btMainContatosFirst.Location = new Point(461, 533);
             btMainContatosFirst.Name = "btMainContatosFirst";
             btMainContatosFirst.Size = new Size(55, 59);
             btMainContatosFirst.TabIndex = 10;
@@ -240,7 +242,7 @@
             lbMainContatosPgAtual.AutoSize = true;
             lbMainContatosPgAtual.Font = new Font("Arial", 18F);
             lbMainContatosPgAtual.ForeColor = Color.FromArgb(52, 60, 76);
-            lbMainContatosPgAtual.Location = new Point(640, 589);
+            lbMainContatosPgAtual.Location = new Point(640, 549);
             lbMainContatosPgAtual.Name = "lbMainContatosPgAtual";
             lbMainContatosPgAtual.Size = new Size(25, 27);
             lbMainContatosPgAtual.TabIndex = 11;
@@ -252,7 +254,7 @@
             lbMainContatosTexto1.AutoSize = true;
             lbMainContatosTexto1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbMainContatosTexto1.ForeColor = Color.FromArgb(52, 60, 76);
-            lbMainContatosTexto1.Location = new Point(682, 591);
+            lbMainContatosTexto1.Location = new Point(682, 551);
             lbMainContatosTexto1.Name = "lbMainContatosTexto1";
             lbMainContatosTexto1.Size = new Size(33, 24);
             lbMainContatosTexto1.TabIndex = 12;
@@ -264,7 +266,7 @@
             lbMainContatosPgFinal.AutoSize = true;
             lbMainContatosPgFinal.Font = new Font("Arial", 18F, FontStyle.Bold);
             lbMainContatosPgFinal.ForeColor = Color.FromArgb(230, 34, 34);
-            lbMainContatosPgFinal.Location = new Point(737, 587);
+            lbMainContatosPgFinal.Location = new Point(737, 547);
             lbMainContatosPgFinal.Name = "lbMainContatosPgFinal";
             lbMainContatosPgFinal.Size = new Size(26, 29);
             lbMainContatosPgFinal.TabIndex = 13;

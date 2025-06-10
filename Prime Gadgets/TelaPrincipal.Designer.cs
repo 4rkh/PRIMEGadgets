@@ -51,6 +51,7 @@
             MinimumSize = new Size(1000, 650);
             Name = "TelaPrincipal";
             Text = "MenuPrincipal";
+            Text = "PRIMEGadgets";
             WindowState = FormWindowState.Maximized;
             Load += panelHome_Enter;
             ResumeLayout(false);

@@ -12,7 +12,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
 {
     public partial class MainCalendario : Form
     {
-        Color desativado = Color.FromArgb(153, 117, 92);
+        Color desativado = Color.FromArgb(140, 132, 127);
         Color ativado = Color.FromArgb(255, 252, 237);
         Color evento = Color.FromArgb(230, 34, 34);
         Color textoAtivado = Color.FromArgb(230, 34, 34);

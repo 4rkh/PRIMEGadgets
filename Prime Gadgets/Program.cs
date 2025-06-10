@@ -13,7 +13,6 @@ namespace Prime_Gadgets
             ApplicationConfiguration.Initialize();
 
             Application.Run(new TelaPrincipal());
-
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             contato.Telefone = campCreateContatosTelefone.Text;
             contato.Email = campCreateContatosEmail.Text;
 
-            
+
             contatoAccess.AdicionarContato(contato);
             this.Dispose();
         }
@@ -64,14 +64,14 @@ namespace Prime_Gadgets.modulos.moduloContatos
         private void campCreateContatosEmail_Validating(object sender, CancelEventArgs e)
         {
 
-                // Valida o formato do e-mail
-                var email = campCreateContatosEmail.Text;
-                if (!IsValidEmail(email))
-                {
-                    e.Cancel = true;
-                   lbCreateContatoEmailInvalid.Show();
-                }
-                VerificarCampos();
+            // Valida o formato do e-mail
+            var email = campCreateContatosEmail.Text;
+            if (!IsValidEmail(email))
+            {
+                e.Cancel = true;
+                lbCreateContatoEmailInvalid.Show();
+            }
+            VerificarCampos();
         }
 
         private void Campos_TextChanged(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
-                lbCreateContatoEmailInvalid.Hide(); 
+                lbCreateContatoEmailInvalid.Hide();
                 return addr.Address == email;
             }
             catch

@@ -1,4 +1,10 @@
-﻿using System;
+using Prime_Gadgets.modulos.moduloCalculadora;
+using Prime_Gadgets.modulos.moduloCalendario;
+using Prime_Gadgets.modulos.moduloContatos;
+using Prime_Gadgets.modulos.moduloFinanceiro;
+using Prime_Gadgets.modulos.moduloHome;
+using Prime_Gadgets.modulos.moduloSenhas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prime_Gadgets.modulos.moduloContatos;
-using Prime_Gadgets.modulos.moduloCalendario;
-using Prime_Gadgets.modulos.moduloSenhas;
-using Prime_Gadgets.modulos.moduloCalculadora;
-using Prime_Gadgets.modulos.moduloHome;
 using Prime_Gadgets.modulos.moduloRotina;
 using Prime_Gadgets.modulos.moduloLembretes;
 
@@ -100,6 +101,21 @@ namespace Prime_Gadgets
             mainSenhas.Show();
         }
 
+
+        private void btMenuFinanceiro_Click(object sender, EventArgs e)
+        {
+            Form telaAtual = this.FindForm();
+            if (telaAtual is MainFinanceiro)
+            {
+                return;
+            }
+            MainFinanceiro mainFinanceiro = new MainFinanceiro();
+            mainFinanceiro.Dock = DockStyle.Fill;
+            mainFinanceiro.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainFinanceiro);
+            mainFinanceiro.Show();
+
         private void btMenuRotina_Click(object sender, EventArgs e)
         {
             Form telaAtual = this.FindForm();
@@ -128,6 +144,7 @@ namespace Prime_Gadgets
             TelaPrincipal.mainPanel.Controls.Clear();
             TelaPrincipal.mainPanel.Controls.Add(mainLembrete);
             mainLembrete.Show();
+
         }
     }
 }

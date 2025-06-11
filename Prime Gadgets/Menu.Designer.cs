@@ -145,6 +145,7 @@
             btMenuFinanceiro.TabIndex = 13;
             btMenuFinanceiro.Text = "Financeiro";
             btMenuFinanceiro.UseVisualStyleBackColor = false;
+            btMenuFinanceiro.Click += btMenuFinanceiro_Click;
             // 
             // btMenuCalendario
             // 

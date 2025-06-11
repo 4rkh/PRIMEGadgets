@@ -16,14 +16,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Graph">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020802-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="prime-icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+
+    <Folder Include="modulos\moduloLembretes\Telas\" />
+    <Folder Include="modulos\moduloRotina\Telas\" />
+    <Folder Include="modulos\moduloRotina\Modelos\" />
+    <Folder Include="modulos\moduloRotina\Repositorios\" />
+    <Folder Include="modulos\moduloLembretes\Modelos\" />
+    <Folder Include="modulos\moduloLembretes\Repositorios\" />
     <Folder Include="modulos\moduloFinanceiro\Telas\" />
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />
     <Folder Include="modulos\moduloFinanceiro\Repositorios\" />

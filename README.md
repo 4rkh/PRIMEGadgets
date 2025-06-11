@@ -58,7 +58,6 @@ Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEGadgets corre
 - Criptografia nativa com File.Encrypt e File.Decrypt
 - Gráficos com bibliotecas de visualização do .NET
 
----
 ## Padrão de Variáveis
 
 Nome das Telas: `IdentificaçãoDaTela` + `NomeDoMódulo`
@@ -75,5 +74,7 @@ Abreviações:
 - `dt` : DataGridView
 - `camp` : TextBox
 - `ct` : Chart
+
+---
 
 Desenvolvido com fins acadêmicos para a FATEC Praia Grande – 2025.

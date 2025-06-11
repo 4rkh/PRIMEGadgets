@@ -197,8 +197,9 @@
             btMainFinanceiroGraficos.Name = "btMainFinanceiroGraficos";
             btMainFinanceiroGraficos.Size = new Size(121, 64);
             btMainFinanceiroGraficos.TabIndex = 62;
-            btMainFinanceiroGraficos.Text = "Gráficos";
+            btMainFinanceiroGraficos.Text = "Resumo mensal";
             btMainFinanceiroGraficos.UseVisualStyleBackColor = true;
+            btMainFinanceiroGraficos.Click += btMainFinanceiroGraficos_Click;
             // 
             // MainFinanceiro
             // 

@@ -32,35 +32,39 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             }
         }
 
-        // Salva todo o conteúdo do DataGridView no arquivo Gastos.prime
+        // Salva todo o conteúdo do DataGridView no arquivo Gastos.prime (sem o ID vindo do DataGridView)
         public void SalvarGastos(DataGridView dgv)
         {
             try
             {
+                // Lê os gastos existentes para saber o último ID
+                var gastosExistentes = LerGastos();
+                int proximoId = gastosExistentes.Any() ? gastosExistentes.Max(g => g.Id) + 1 : 1;
+
                 using (StreamWriter sw = new StreamWriter(caminho, false, Encoding.UTF8))
                 {
                     foreach (DataGridViewRow row in dgv.Rows)
                     {
                         if (row.IsNewRow) continue;
-                        string id = row.Cells[0].Value?.ToString() ?? "";
-                        string descricao = row.Cells[1].Value?.ToString() ?? "";
-                        string valorStr = row.Cells[2].Value?.ToString() ?? "";
 
-                        // Sempre troca vírgula por ponto antes de converter
+                        string descricao = row.Cells[0].Value?.ToString() ?? "";
+                        string valorStr = row.Cells[1].Value?.ToString() ?? "";
                         valorStr = valorStr.Replace(',', '.');
                         decimal valor = decimal.TryParse(valorStr, NumberStyles.Any, CultureInfo.InvariantCulture, out var v) ? v : 0;
 
-                        string data = "";
-                        if (row.Cells[3].Value is DateTime dt)
-                            data = dt.ToString("yyyy-MM-dd");
-                        else
-                            data = row.Cells[3].Value?.ToString() ?? "";
-                        string categoria = row.Cells[4].Value?.ToString() ?? "";
-                        string formaPagamento = row.Cells[5].Value?.ToString() ?? "";
-                        string observacoes = row.Cells[6].Value?.ToString() ?? "";
+                        string diaStr = row.Cells[2].Value?.ToString() ?? "";
+                        int dia = int.TryParse(diaStr, out var d) ? d : 1;
+                        DateTime data = DateTime.Now;
+                        try { data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, dia); } catch { }
 
-                        // Sempre salva o valor com ponto como separador decimal
-                        string linha = $"{id};{descricao};{valor.ToString(CultureInfo.InvariantCulture)};{data};{categoria};{formaPagamento};{observacoes}";
+                        string categoria = row.Cells[3].Value?.ToString() ?? "";
+                        string formaPagamento = row.Cells[4].Value?.ToString() ?? "";
+                        string observacoes = row.Cells[5].Value?.ToString() ?? "";
+
+                        // Gera o ID automaticamente
+                        int id = proximoId++;
+
+                        string linha = $"{id};{descricao};{valor.ToString(CultureInfo.InvariantCulture)};{data:yyyy-MM-dd};{categoria};{formaPagamento};{observacoes}";
                         sw.WriteLine(linha);
                     }
                 }
@@ -71,7 +75,7 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             }
         }
 
-        // Salva os gastos do DataGridView no arquivo Gastos.prime, filtrando por mês e ano
+        // Salva os gastos do DataGridView no arquivo Gastos.prime, filtrando por mês e ano (sem depender do ID do DataGridView)
         public void SalvarGastos(DataGridView dgv, int mes, int ano)
         {
             try
@@ -85,25 +89,28 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
                 {
                     if (row.IsNewRow) continue;
 
-                    // Pega o ID da linha
-                    string idStr = row.Cells[0].Value?.ToString() ?? "";
-                    if (!int.TryParse(idStr, out int id) || id <= 0)
-                        continue;
-
-                    idsNoGrid.Add(id);
-
-                    int dia = int.TryParse(row.Cells[2].Value?.ToString(), out var d) ? d : 1;
-                    DateTime data = new DateTime(ano, mes, dia);
-
-                    string descricao = row.Cells[1].Value?.ToString() ?? "";
-                    string valorStr = row.Cells[2].Value?.ToString() ?? "";
+                    string descricao = row.Cells[0].Value?.ToString() ?? "";
+                    string valorStr = row.Cells[1].Value?.ToString() ?? "";
                     valorStr = valorStr.Replace(',', '.');
                     decimal valor = decimal.TryParse(valorStr, NumberStyles.Any, CultureInfo.InvariantCulture, out var v) ? v : 0;
+
+                    string diaStr = row.Cells[2].Value?.ToString() ?? "";
+                    int dia = int.TryParse(diaStr, out var d) ? d : 1;
+                    DateTime data = new DateTime(ano, mes, dia);
+
                     string categoria = row.Cells[3].Value?.ToString() ?? "";
                     string formaPagamento = row.Cells[4].Value?.ToString() ?? "";
                     string observacoes = row.Cells[5].Value?.ToString() ?? "";
 
-                    var gastoExistente = todosGastos.FirstOrDefault(g => g.Id == id);
+                    // Procura se já existe um gasto igual (por descrição, valor, data, categoria, formaPagamento, observações)
+                    var gastoExistente = todosGastos.FirstOrDefault(g =>
+                        g.Descricao == descricao &&
+                        g.Valor == valor &&
+                        g.Data == data &&
+                        g.Categoria == categoria &&
+                        g.FormaPagamento == formaPagamento &&
+                        g.Observacoes == observacoes
+                    );
 
                     if (gastoExistente != null)
                     {
@@ -114,13 +121,15 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
                         gastoExistente.Categoria = categoria;
                         gastoExistente.FormaPagamento = formaPagamento;
                         gastoExistente.Observacoes = observacoes;
+                        idsNoGrid.Add(gastoExistente.Id);
                     }
                     else
                     {
-                        // Adiciona novo registro apenas se o ID for único e válido
+                        // Gera novo ID
+                        int novoId = todosGastos.Any() ? todosGastos.Max(g => g.Id) + 1 : 1;
                         var novoGasto = new Gasto
                         {
-                            Id = id,
+                            Id = novoId,
                             Descricao = descricao,
                             Valor = valor,
                             Data = data,
@@ -129,6 +138,7 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
                             Observacoes = observacoes
                         };
                         todosGastos.Add(novoGasto);
+                        idsNoGrid.Add(novoId);
                     }
                 }
 

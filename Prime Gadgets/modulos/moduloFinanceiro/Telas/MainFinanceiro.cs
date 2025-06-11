@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Prime_Gadgets.modulos.moduloFinanceiro;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,9 +70,13 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             foreach (var gasto in gastos)
             {
                 var forma = formasValidas.Contains(gasto.FormaPagamento) ? gasto.FormaPagamento : formasValidas[0];
+                string valorStr = gasto.Valor.ToString(CultureInfo.InvariantCulture);
+                valorStr = valorStr.Replace(',', '.');
+                decimal valor = decimal.TryParse(valorStr, NumberStyles.Any, CultureInfo.InvariantCulture, out var v) ? v : 0;
+
                 dt.Rows.Add(
                     gasto.Descricao,
-                    gasto.Valor,
+                    valor,
                     gasto.Data.Day,
                     gasto.Categoria,
                     forma,
@@ -227,6 +231,11 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
         {
             // Evita a caixa de erro padrão e pode exibir uma mensagem customizada se desejar
             e.ThrowException = false;
+        }
+        private void btMainFinanceiroGraficos_Click(object sender, EventArgs e)
+        {
+            Resumo resumo = new Resumo(mesAtual, anoAtual);
+            resumo.ShowDialog();
         }
     }
 }

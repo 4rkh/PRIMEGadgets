@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace Prime_Gadgets.modulos.moduloFinanceiro.Telas
+namespace Prime_Gadgets.modulos.moduloFinanceiro
 {
     public partial class Resumo : Form
     {

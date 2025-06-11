@@ -1,5 +1,5 @@
-﻿namespace Prime_Gadgets.modulos.moduloFinanceiro.Telas
-{
+﻿namespace Prime_Gadgets.modulos.moduloFinanceiro 
+{ 
     partial class Resumo
     {
         /// <summary>

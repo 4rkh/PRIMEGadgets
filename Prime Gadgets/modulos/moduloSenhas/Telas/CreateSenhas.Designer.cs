@@ -309,6 +309,7 @@
             Name = "CreateSenhas";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Adicionar Senha";
+            StartPosition = FormStartPosition.CenterParent;
             ResumeLayout(false);
             PerformLayout();
         }

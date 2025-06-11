@@ -181,6 +181,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
+            StartPosition = FormStartPosition.CenterParent;
             Name = "GeradorSenhas";
             Text = "Configurações de Geração";
             Load += GeradorSenhas_Load;

@@ -312,6 +312,7 @@
             ForeColor = Color.FromArgb(52, 60, 76);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            StartPosition = FormStartPosition.CenterParent;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "UpdateSenhas";

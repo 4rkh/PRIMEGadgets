@@ -77,6 +77,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SemanaRotina";
             Text = "Semana";
+            StartPosition = FormStartPosition.CenterParent;
             ResumeLayout(false);
         }
 

@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>Prime_Gadgets</RootNamespace>
-	<Nullable>disable</Nullable>
+    <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>prime iconmini.png</PackageIcon>
@@ -13,18 +13,6 @@
 
   <ItemGroup>
     <None Remove="Resources\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Interop.Graph">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>9</VersionMinor>
-      <VersionMajor>1</VersionMajor>
-      <Guid>00020802-0000-0000-c000-000000000046</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-
     <Folder Include="modulos\moduloLembretes\Telas\" />
     <Folder Include="modulos\moduloRotina\Telas\" />
     <Folder Include="modulos\moduloRotina\Modelos\" />

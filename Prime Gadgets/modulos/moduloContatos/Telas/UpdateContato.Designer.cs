@@ -228,7 +228,6 @@ namespace Prime_Gadgets.modulos.moduloContatos
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(437, 275);
-            ControlBox = false;
             Controls.Add(lbUpdateContatosEmailInvalid);
             Controls.Add(campUpdateContatosId);
             Controls.Add(lbUpdateContatosId);
@@ -247,6 +246,7 @@ namespace Prime_Gadgets.modulos.moduloContatos
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "UpdateContato";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Atualizar Contato";

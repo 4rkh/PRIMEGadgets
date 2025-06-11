@@ -26,136 +26,167 @@
 
         private void InitializeComponent()
         {
-            this.lbCreateRotinaDiaSelecionado = new System.Windows.Forms.Label();
-            this.cbCreateRotinaDia = new System.Windows.Forms.ComboBox();
-            this.lbCreateRotinaNome = new System.Windows.Forms.Label();
-            this.campCreateRotinaNome = new System.Windows.Forms.TextBox();
-            this.lbCreateRotinaHorario = new System.Windows.Forms.Label();
-            this.campCreateRotinaHorario = new System.Windows.Forms.TextBox();
-            this.lbCreateRotinaHorarioInvalid = new System.Windows.Forms.Label();
-            this.btCreateRotinaCriar = new System.Windows.Forms.Button();
-            this.btCreateRotinaCancelar = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateRotina));
+            lbCreateRotinaDiaSelecionado = new Label();
+            cbCreateRotinaDia = new ComboBox();
+            lbCreateRotinaNome = new Label();
+            campCreateRotinaNome = new TextBox();
+            lbCreateRotinaHorario = new Label();
+            campCreateRotinaHorario = new TextBox();
+            lbCreateRotinaHorarioInvalid = new Label();
+            btCreateRotinaCriar = new Button();
+            btCreateRotinaCancelar = new Button();
+            lbCreateContatosTitulo = new Label();
+            SuspendLayout();
             // 
             // lbCreateRotinaDiaSelecionado
             // 
-            this.lbCreateRotinaDiaSelecionado.AutoSize = true;
-            this.lbCreateRotinaDiaSelecionado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lbCreateRotinaDiaSelecionado.Location = new System.Drawing.Point(30, 15);
-            this.lbCreateRotinaDiaSelecionado.Name = "lbCreateRotinaDiaSelecionado";
-            this.lbCreateRotinaDiaSelecionado.Size = new System.Drawing.Size(180, 19);
-            this.lbCreateRotinaDiaSelecionado.TabIndex = 0;
-            this.lbCreateRotinaDiaSelecionado.Text = "Dia da Semana, dd/MM/yyyy";
+            lbCreateRotinaDiaSelecionado.AutoSize = true;
+            lbCreateRotinaDiaSelecionado.Font = new Font("Arial", 10F, FontStyle.Bold);
+            lbCreateRotinaDiaSelecionado.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateRotinaDiaSelecionado.Location = new Point(102, 62);
+            lbCreateRotinaDiaSelecionado.Name = "lbCreateRotinaDiaSelecionado";
+            lbCreateRotinaDiaSelecionado.Size = new Size(197, 16);
+            lbCreateRotinaDiaSelecionado.TabIndex = 0;
+            lbCreateRotinaDiaSelecionado.Text = "Dia da Semana, dd/MM/yyyy";
             // 
             // cbCreateRotinaDia
             // 
-            this.cbCreateRotinaDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCreateRotinaDia.FormattingEnabled = true;
-            this.cbCreateRotinaDia.Location = new System.Drawing.Point(30, 40);
-            this.cbCreateRotinaDia.Name = "cbCreateRotinaDia";
-            this.cbCreateRotinaDia.Size = new System.Drawing.Size(180, 23);
-            this.cbCreateRotinaDia.TabIndex = 1;
-            this.cbCreateRotinaDia.Items.AddRange(new object[] {
-                System.DayOfWeek.Sunday,
-                System.DayOfWeek.Monday,
-                System.DayOfWeek.Tuesday,
-                System.DayOfWeek.Wednesday,
-                System.DayOfWeek.Thursday,
-                System.DayOfWeek.Friday,
-                System.DayOfWeek.Saturday
-            });
-            this.cbCreateRotinaDia.Enabled = false;
+            cbCreateRotinaDia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbCreateRotinaDia.Enabled = false;
+            cbCreateRotinaDia.Font = new Font("Arial", 12.75F);
+            cbCreateRotinaDia.FormattingEnabled = true;
+            cbCreateRotinaDia.Items.AddRange(new object[] { DayOfWeek.Sunday, DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday });
+            cbCreateRotinaDia.Location = new Point(104, 88);
+            cbCreateRotinaDia.Name = "cbCreateRotinaDia";
+            cbCreateRotinaDia.Size = new Size(226, 27);
+            cbCreateRotinaDia.TabIndex = 1;
             // 
             // lbCreateRotinaNome
             // 
-            this.lbCreateRotinaNome.AutoSize = true;
-            this.lbCreateRotinaNome.Location = new System.Drawing.Point(30, 75);
-            this.lbCreateRotinaNome.Name = "lbCreateRotinaNome";
-            this.lbCreateRotinaNome.Size = new System.Drawing.Size(43, 15);
-            this.lbCreateRotinaNome.TabIndex = 2;
-            this.lbCreateRotinaNome.Text = "Nome:";
+            lbCreateRotinaNome.AutoSize = true;
+            lbCreateRotinaNome.Font = new Font("Arial", 12.75F);
+            lbCreateRotinaNome.Location = new Point(39, 130);
+            lbCreateRotinaNome.Name = "lbCreateRotinaNome";
+            lbCreateRotinaNome.Size = new Size(51, 19);
+            lbCreateRotinaNome.TabIndex = 2;
+            lbCreateRotinaNome.Text = "Nome";
             // 
             // campCreateRotinaNome
             // 
-            this.campCreateRotinaNome.Location = new System.Drawing.Point(30, 95);
-            this.campCreateRotinaNome.Name = "campCreateRotinaNome";
-            this.campCreateRotinaNome.Size = new System.Drawing.Size(180, 23);
-            this.campCreateRotinaNome.TabIndex = 3;
-            this.campCreateRotinaNome.TextChanged += new System.EventHandler(this.Campos_TextChanged);
+            campCreateRotinaNome.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateRotinaNome.Font = new Font("Arial", 12.75F);
+            campCreateRotinaNome.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateRotinaNome.Location = new Point(104, 123);
+            campCreateRotinaNome.Name = "campCreateRotinaNome";
+            campCreateRotinaNome.Size = new Size(226, 27);
+            campCreateRotinaNome.TabIndex = 3;
+            campCreateRotinaNome.TextChanged += Campos_TextChanged;
             // 
             // lbCreateRotinaHorario
             // 
-            this.lbCreateRotinaHorario.AutoSize = true;
-            this.lbCreateRotinaHorario.Location = new System.Drawing.Point(30, 130);
-            this.lbCreateRotinaHorario.Name = "lbCreateRotinaHorario";
-            this.lbCreateRotinaHorario.Size = new System.Drawing.Size(52, 15);
-            this.lbCreateRotinaHorario.TabIndex = 4;
-            this.lbCreateRotinaHorario.Text = "Horário:";
+            lbCreateRotinaHorario.AutoSize = true;
+            lbCreateRotinaHorario.Font = new Font("Arial", 12.75F);
+            lbCreateRotinaHorario.Location = new Point(33, 166);
+            lbCreateRotinaHorario.Name = "lbCreateRotinaHorario";
+            lbCreateRotinaHorario.Size = new Size(63, 19);
+            lbCreateRotinaHorario.TabIndex = 4;
+            lbCreateRotinaHorario.Text = "Horário";
             // 
             // campCreateRotinaHorario
             // 
-            this.campCreateRotinaHorario.Location = new System.Drawing.Point(30, 150);
-            this.campCreateRotinaHorario.Name = "campCreateRotinaHorario";
-            this.campCreateRotinaHorario.Size = new System.Drawing.Size(180, 23);
-            this.campCreateRotinaHorario.TabIndex = 5;
-            this.campCreateRotinaHorario.TextChanged += new System.EventHandler(this.Campos_TextChanged);
-            this.campCreateRotinaHorario.Validating += new System.ComponentModel.CancelEventHandler(this.campCreateRotinaHorario_Validating);
+            campCreateRotinaHorario.BackColor = Color.FromArgb(255, 252, 237);
+            campCreateRotinaHorario.Font = new Font("Arial", 12.75F);
+            campCreateRotinaHorario.ForeColor = Color.FromArgb(230, 34, 34);
+            campCreateRotinaHorario.Location = new Point(104, 158);
+            campCreateRotinaHorario.Name = "campCreateRotinaHorario";
+            campCreateRotinaHorario.Size = new Size(226, 27);
+            campCreateRotinaHorario.TabIndex = 5;
+            campCreateRotinaHorario.TextChanged += Campos_TextChanged;
+            campCreateRotinaHorario.Validating += campCreateRotinaHorario_Validating;
             // 
             // lbCreateRotinaHorarioInvalid
             // 
-            this.lbCreateRotinaHorarioInvalid.AutoSize = true;
-            this.lbCreateRotinaHorarioInvalid.ForeColor = System.Drawing.Color.Red;
-            this.lbCreateRotinaHorarioInvalid.Location = new System.Drawing.Point(30, 176);
-            this.lbCreateRotinaHorarioInvalid.Name = "lbCreateRotinaHorarioInvalid";
-            this.lbCreateRotinaHorarioInvalid.Size = new System.Drawing.Size(120, 15);
-            this.lbCreateRotinaHorarioInvalid.TabIndex = 6;
-            this.lbCreateRotinaHorarioInvalid.Text = "Horário inválido (HH:mm)";
+            lbCreateRotinaHorarioInvalid.AutoSize = true;
+            lbCreateRotinaHorarioInvalid.ForeColor = Color.Red;
+            lbCreateRotinaHorarioInvalid.Location = new Point(104, 187);
+            lbCreateRotinaHorarioInvalid.Name = "lbCreateRotinaHorarioInvalid";
+            lbCreateRotinaHorarioInvalid.Size = new Size(146, 15);
+            lbCreateRotinaHorarioInvalid.TabIndex = 6;
+            lbCreateRotinaHorarioInvalid.Text = "Horário inválido (HH:mm)";
             // 
             // btCreateRotinaCriar
             // 
-            this.btCreateRotinaCriar.Location = new System.Drawing.Point(30, 210);
-            this.btCreateRotinaCriar.Name = "btCreateRotinaCriar";
-            this.btCreateRotinaCriar.Size = new System.Drawing.Size(80, 30);
-            this.btCreateRotinaCriar.TabIndex = 7;
-            this.btCreateRotinaCriar.Text = "Criar";
-            this.btCreateRotinaCriar.UseVisualStyleBackColor = true;
-            this.btCreateRotinaCriar.Click += new System.EventHandler(this.btCreateRotinaCriar_Click);
-            this.btCreateRotinaCriar.EnabledChanged += new System.EventHandler(this.btCreateRotinaCriar_EnabledChanged);
+            btCreateRotinaCriar.BackColor = Color.FromArgb(230, 34, 34);
+            btCreateRotinaCriar.FlatAppearance.BorderSize = 0;
+            btCreateRotinaCriar.FlatStyle = FlatStyle.Flat;
+            btCreateRotinaCriar.Font = new Font("Arial", 12.75F);
+            btCreateRotinaCriar.ForeColor = Color.FromArgb(255, 252, 237);
+            btCreateRotinaCriar.Location = new Point(33, 214);
+            btCreateRotinaCriar.Name = "btCreateRotinaCriar";
+            btCreateRotinaCriar.Size = new Size(120, 35);
+            btCreateRotinaCriar.TabIndex = 7;
+            btCreateRotinaCriar.Text = "Criar";
+            btCreateRotinaCriar.UseVisualStyleBackColor = false;
+            btCreateRotinaCriar.EnabledChanged += btCreateRotinaCriar_EnabledChanged;
+            btCreateRotinaCriar.Click += btCreateRotinaCriar_Click;
             // 
             // btCreateRotinaCancelar
             // 
-            this.btCreateRotinaCancelar.Location = new System.Drawing.Point(130, 210);
-            this.btCreateRotinaCancelar.Name = "btCreateRotinaCancelar";
-            this.btCreateRotinaCancelar.Size = new System.Drawing.Size(80, 30);
-            this.btCreateRotinaCancelar.TabIndex = 8;
-            this.btCreateRotinaCancelar.Text = "Cancelar";
-            this.btCreateRotinaCancelar.UseVisualStyleBackColor = true;
-            this.btCreateRotinaCancelar.Click += new System.EventHandler(this.btCreateRotinaCancelar_Click);
+            btCreateRotinaCancelar.BackColor = Color.FromArgb(230, 34, 34);
+            btCreateRotinaCancelar.FlatAppearance.BorderSize = 0;
+            btCreateRotinaCancelar.FlatStyle = FlatStyle.Flat;
+            btCreateRotinaCancelar.Font = new Font("Arial", 12.75F);
+            btCreateRotinaCancelar.ForeColor = Color.FromArgb(255, 252, 237);
+            btCreateRotinaCancelar.Location = new Point(212, 214);
+            btCreateRotinaCancelar.Name = "btCreateRotinaCancelar";
+            btCreateRotinaCancelar.Size = new Size(120, 35);
+            btCreateRotinaCancelar.TabIndex = 8;
+            btCreateRotinaCancelar.Text = "Cancelar";
+            btCreateRotinaCancelar.UseVisualStyleBackColor = false;
+            btCreateRotinaCancelar.Click += btCreateRotinaCancelar_Click;
+            // 
+            // lbCreateContatosTitulo
+            // 
+            lbCreateContatosTitulo.AutoSize = true;
+            lbCreateContatosTitulo.BackColor = Color.Transparent;
+            lbCreateContatosTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbCreateContatosTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbCreateContatosTitulo.Location = new Point(50, 9);
+            lbCreateContatosTitulo.Name = "lbCreateContatosTitulo";
+            lbCreateContatosTitulo.Size = new Size(280, 36);
+            lbCreateContatosTitulo.TabIndex = 9;
+            lbCreateContatosTitulo.Text = "Adicionar Atividade";
             // 
             // CreateRotina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 270);
-            this.Controls.Add(this.lbCreateRotinaDiaSelecionado);
-            this.Controls.Add(this.cbCreateRotinaDia);
-            this.Controls.Add(this.lbCreateRotinaNome);
-            this.Controls.Add(this.campCreateRotinaNome);
-            this.Controls.Add(this.lbCreateRotinaHorario);
-            this.Controls.Add(this.campCreateRotinaHorario);
-            this.Controls.Add(this.lbCreateRotinaHorarioInvalid);
-            this.Controls.Add(this.btCreateRotinaCriar);
-            this.Controls.Add(this.btCreateRotinaCancelar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "CreateRotina";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Adicionar Atividade";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(183, 190, 191);
+            ClientSize = new Size(376, 269);
+            Controls.Add(lbCreateContatosTitulo);
+            Controls.Add(lbCreateRotinaDiaSelecionado);
+            Controls.Add(cbCreateRotinaDia);
+            Controls.Add(lbCreateRotinaNome);
+            Controls.Add(campCreateRotinaNome);
+            Controls.Add(lbCreateRotinaHorario);
+            Controls.Add(campCreateRotinaHorario);
+            Controls.Add(lbCreateRotinaHorarioInvalid);
+            Controls.Add(btCreateRotinaCriar);
+            Controls.Add(btCreateRotinaCancelar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "CreateRotina";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Adicionar Atividade";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lbCreateContatosTitulo;
     }
 }

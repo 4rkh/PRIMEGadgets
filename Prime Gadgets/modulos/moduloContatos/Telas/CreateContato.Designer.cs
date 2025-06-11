@@ -206,7 +206,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(437, 275);
-            ControlBox = false;
             Controls.Add(lbCreateContatoEmailInvalid);
             Controls.Add(lbCreateContatosEmail);
             Controls.Add(lbCreateContatosTelefone);
@@ -223,6 +222,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CreateContato";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Adicionar Contato";

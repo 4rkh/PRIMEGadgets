@@ -58,7 +58,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // 
             lbUpdateEventoTitulo.AutoSize = true;
             lbUpdateEventoTitulo.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbUpdateEventoTitulo.Location = new Point(94, 9);
+            lbUpdateEventoTitulo.Location = new Point(112, 9);
             lbUpdateEventoTitulo.Name = "lbUpdateEventoTitulo";
             lbUpdateEventoTitulo.Size = new Size(243, 36);
             lbUpdateEventoTitulo.TabIndex = 0;
@@ -86,7 +86,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             btUpdateEventoCancelar.FlatStyle = FlatStyle.Flat;
             btUpdateEventoCancelar.Font = new Font("Arial", 12.75F);
             btUpdateEventoCancelar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateEventoCancelar.Location = new Point(279, 240);
+            btUpdateEventoCancelar.Location = new Point(319, 240);
             btUpdateEventoCancelar.Name = "btUpdateEventoCancelar";
             btUpdateEventoCancelar.Size = new Size(120, 35);
             btUpdateEventoCancelar.TabIndex = 10;
@@ -100,7 +100,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             campUpdateEventoId.BorderStyle = BorderStyle.None;
             campUpdateEventoId.Font = new Font("Arial", 12.75F);
             campUpdateEventoId.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateEventoId.Location = new Point(171, 59);
+            campUpdateEventoId.Location = new Point(168, 59);
             campUpdateEventoId.Name = "campUpdateEventoId";
             campUpdateEventoId.ReadOnly = true;
             campUpdateEventoId.Size = new Size(226, 20);
@@ -110,7 +110,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // 
             lbUpdateEventoId.AutoSize = true;
             lbUpdateEventoId.Font = new Font("Arial", 12.75F);
-            lbUpdateEventoId.Location = new Point(66, 60);
+            lbUpdateEventoId.Location = new Point(63, 60);
             lbUpdateEventoId.Name = "lbUpdateEventoId";
             lbUpdateEventoId.Size = new Size(26, 19);
             lbUpdateEventoId.TabIndex = 1;
@@ -121,7 +121,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             campUpdateEventoData.CalendarForeColor = Color.FromArgb(230, 34, 34);
             campUpdateEventoData.Font = new Font("Arial", 12.75F);
             campUpdateEventoData.Format = DateTimePickerFormat.Short;
-            campUpdateEventoData.Location = new Point(171, 85);
+            campUpdateEventoData.Location = new Point(168, 85);
             campUpdateEventoData.Name = "campUpdateEventoData";
             campUpdateEventoData.Size = new Size(226, 27);
             campUpdateEventoData.TabIndex = 4;
@@ -130,7 +130,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // 
             lbUpdateEventoData.AutoSize = true;
             lbUpdateEventoData.Font = new Font("Arial", 12.75F);
-            lbUpdateEventoData.Location = new Point(59, 91);
+            lbUpdateEventoData.Location = new Point(56, 91);
             lbUpdateEventoData.Name = "lbUpdateEventoData";
             lbUpdateEventoData.Size = new Size(43, 19);
             lbUpdateEventoData.TabIndex = 3;
@@ -142,7 +142,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             campUpdateEventoLocal.BorderStyle = BorderStyle.None;
             campUpdateEventoLocal.Font = new Font("Arial", 12.75F);
             campUpdateEventoLocal.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateEventoLocal.Location = new Point(171, 117);
+            campUpdateEventoLocal.Location = new Point(168, 117);
             campUpdateEventoLocal.Name = "campUpdateEventoLocal";
             campUpdateEventoLocal.Size = new Size(226, 20);
             campUpdateEventoLocal.TabIndex = 6;
@@ -152,7 +152,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // 
             lbUpdateEventoLocal.AutoSize = true;
             lbUpdateEventoLocal.Font = new Font("Arial", 12.75F);
-            lbUpdateEventoLocal.Location = new Point(55, 118);
+            lbUpdateEventoLocal.Location = new Point(52, 118);
             lbUpdateEventoLocal.Name = "lbUpdateEventoLocal";
             lbUpdateEventoLocal.Size = new Size(48, 19);
             lbUpdateEventoLocal.TabIndex = 5;
@@ -164,7 +164,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             campUpdateEventoDescricao.BorderStyle = BorderStyle.None;
             campUpdateEventoDescricao.Font = new Font("Arial", 12.75F);
             campUpdateEventoDescricao.ForeColor = Color.FromArgb(230, 34, 34);
-            campUpdateEventoDescricao.Location = new Point(171, 143);
+            campUpdateEventoDescricao.Location = new Point(168, 143);
             campUpdateEventoDescricao.Multiline = true;
             campUpdateEventoDescricao.Name = "campUpdateEventoDescricao";
             campUpdateEventoDescricao.Size = new Size(226, 77);
@@ -175,7 +175,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             // 
             lbUpdateEventoDescricao.AutoSize = true;
             lbUpdateEventoDescricao.Font = new Font("Arial", 12.75F);
-            lbUpdateEventoDescricao.Location = new Point(39, 143);
+            lbUpdateEventoDescricao.Location = new Point(36, 143);
             lbUpdateEventoDescricao.Name = "lbUpdateEventoDescricao";
             lbUpdateEventoDescricao.Size = new Size(84, 19);
             lbUpdateEventoDescricao.TabIndex = 7;
@@ -188,7 +188,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             btUpdateEventoDeletar.FlatStyle = FlatStyle.Flat;
             btUpdateEventoDeletar.Font = new Font("Arial", 12.75F);
             btUpdateEventoDeletar.ForeColor = Color.FromArgb(255, 252, 237);
-            btUpdateEventoDeletar.Location = new Point(147, 287);
+            btUpdateEventoDeletar.Location = new Point(168, 240);
             btUpdateEventoDeletar.Name = "btUpdateEventoDeletar";
             btUpdateEventoDeletar.Size = new Size(133, 36);
             btUpdateEventoDeletar.TabIndex = 11;
@@ -201,8 +201,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(437, 335);
-            ControlBox = false;
+            ClientSize = new Size(471, 299);
             Controls.Add(btUpdateEventoDeletar);
             Controls.Add(btUpdateEventoCancelar);
             Controls.Add(btUpdateEventoAtualizar);
@@ -219,6 +218,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "UpdateEvento";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Atualizar Evento";

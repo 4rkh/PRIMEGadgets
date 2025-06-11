@@ -145,7 +145,7 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(255, 252, 237);
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dtMainContatosLista.DefaultCellStyle = dataGridViewCellStyle2;
-            dtMainContatosLista.GridColor = Color.FromArgb(153, 117, 92);
+            dtMainContatosLista.GridColor = Color.FromArgb(140, 132, 127);
             dtMainContatosLista.Location = new Point(242, 141);
             dtMainContatosLista.MultiSelect = false;
             dtMainContatosLista.Name = "dtMainContatosLista";

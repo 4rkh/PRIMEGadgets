@@ -291,7 +291,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(437, 364);
-            ControlBox = false;
             Controls.Add(btUpdateSenhasGeradorConfig);
             Controls.Add(btUpdateSenhasMostrar);
             Controls.Add(btUpdateSenhasGerar);
@@ -314,6 +313,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "UpdateSenhas";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Atualizar Senha";

@@ -18,6 +18,7 @@
 
         private void InicializarLayoutSemana()
         {
+            InitializeComponent();
             this.dataGridViewSemana = new System.Windows.Forms.DataGridView();
             this.SuspendLayout();
 
@@ -64,12 +65,18 @@
         // Mantém o método padrão para compatibilidade
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SemanaRotina));
             SuspendLayout();
             // 
             // SemanaRotina
             // 
+            BackColor = Color.FromArgb(255, 252, 237);
             ClientSize = new Size(670, 500);
+            Font = new Font("Arial", 9F);
+            ForeColor = Color.FromArgb(230, 34, 34);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SemanaRotina";
+            Text = "Semana";
             ResumeLayout(false);
         }
 

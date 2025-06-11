@@ -168,7 +168,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(423, 297);
-            ControlBox = false;
             Controls.Add(lbGeradorSenhasComprimentoNumber);
             Controls.Add(cbGeradorSenhasLetrasMi);
             Controls.Add(lbGeradorSenhasTitulo);
@@ -180,6 +179,8 @@
             Controls.Add(btGeradorSenhasCancelar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "GeradorSenhas";
             Text = "Configurações de Geração";
             Load += GeradorSenhas_Load;

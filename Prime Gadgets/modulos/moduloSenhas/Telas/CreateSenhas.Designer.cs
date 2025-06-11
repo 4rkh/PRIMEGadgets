@@ -285,7 +285,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(438, 364);
-            ControlBox = false;
             Controls.Add(btCreateSenhasGeradorConfig);
             Controls.Add(btCreateSenhasMostrar);
             Controls.Add(btCreateSenhasGerar);
@@ -306,6 +305,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CreateSenhas";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Adicionar Senha";

@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFinanceiro));
             menuGlobal = new Menu();
             dtMainFinanceiroGastos = new DataGridView();
             lbMainFinaceiroTitulo = new Label();
@@ -45,79 +49,89 @@
             // 
             // menuGlobal
             // 
-            menuGlobal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             menuGlobal.BackColor = Color.FromArgb(230, 34, 34);
-            menuGlobal.Location = new Point(-3, 0);
+            menuGlobal.Dock = DockStyle.Left;
+            menuGlobal.Location = new Point(0, 0);
             menuGlobal.Name = "menuGlobal";
-            menuGlobal.Size = new Size(212, 1000);
+            menuGlobal.Size = new Size(212, 650);
             menuGlobal.TabIndex = 0;
             // 
             // dtMainFinanceiroGastos
             // 
             dtMainFinanceiroGastos.AllowUserToOrderColumns = true;
-            dtMainFinanceiroGastos.Anchor = AnchorStyles.Top;
+            dtMainFinanceiroGastos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtMainFinanceiroGastos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtMainFinanceiroGastos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dtMainFinanceiroGastos.BackgroundColor = Color.FromArgb(140, 132, 127);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle4.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dtMainFinanceiroGastos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dtMainFinanceiroGastos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtMainFinanceiroGastos.Location = new Point(495, 248);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle5.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dtMainFinanceiroGastos.DefaultCellStyle = dataGridViewCellStyle5;
+            dtMainFinanceiroGastos.GridColor = Color.FromArgb(140, 132, 127);
+            dtMainFinanceiroGastos.Location = new Point(257, 210);
             dtMainFinanceiroGastos.Name = "dtMainFinanceiroGastos";
-            dtMainFinanceiroGastos.Size = new Size(664, 540);
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle6.Font = new Font("Arial", 12.75F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(230, 34, 34);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(255, 252, 237);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dtMainFinanceiroGastos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dtMainFinanceiroGastos.Size = new Size(687, 337);
             dtMainFinanceiroGastos.TabIndex = 1;
-
-            // Definição das colunas na ordem da classe
-            dtMainFinanceiroGastos.Columns.Clear();
-
-            dtMainFinanceiroGastos.Columns.Add("Descricao", "Descrição");
-            dtMainFinanceiroGastos.Columns.Add("Valor", "Valor");
-            dtMainFinanceiroGastos.Columns.Add("Dia", "Dia");
-            dtMainFinanceiroGastos.Columns.Add("Categoria", "Categoria");
-
-            // Coluna ComboBox para Forma de Pagamento
-            var formaPagamentoColumn = new DataGridViewComboBoxColumn();
-            formaPagamentoColumn.HeaderText = "Forma de Pagamento";
-            formaPagamentoColumn.Name = "formaPagamentoColumn";
-            formaPagamentoColumn.DataPropertyName = "FormaPagamento"; // Use o nome do campo do seu modelo, se houver binding
-            formaPagamentoColumn.Items.AddRange(new object[] {
-                "A vista",
-                "Cartão de Crédito",
-            });
-            formaPagamentoColumn.Width = 120;
-
-            // Adiciona a coluna apenas se ainda não existir
-            if (!dtMainFinanceiroGastos.Columns.Contains("formaPagamentoColumn"))
-            {
-                dtMainFinanceiroGastos.Columns.Add(formaPagamentoColumn);
-            }
             // 
             // lbMainFinaceiroTitulo
             // 
             lbMainFinaceiroTitulo.Anchor = AnchorStyles.Top;
-            lbMainFinaceiroTitulo.BackColor = Color.Blue;
-            lbMainFinaceiroTitulo.Font = new Font("Segoe UI", 25F);
-            lbMainFinaceiroTitulo.Location = new Point(545, 63);
+            lbMainFinaceiroTitulo.BackColor = Color.Transparent;
+            lbMainFinaceiroTitulo.Font = new Font("Arial", 24F, FontStyle.Bold);
+            lbMainFinaceiroTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbMainFinaceiroTitulo.Location = new Point(441, 25);
             lbMainFinaceiroTitulo.Name = "lbMainFinaceiroTitulo";
-            lbMainFinaceiroTitulo.Size = new Size(509, 59);
+            lbMainFinaceiroTitulo.Size = new Size(374, 53);
             lbMainFinaceiroTitulo.TabIndex = 2;
             lbMainFinaceiroTitulo.Text = "Planejador Financeiro";
             lbMainFinaceiroTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btMainFinanceiroSalvar
             // 
-            btMainFinanceiroSalvar.Location = new Point(333, 304);
+            btMainFinanceiroSalvar.BackColor = Color.FromArgb(230, 34, 34);
+            btMainFinanceiroSalvar.FlatAppearance.BorderSize = 0;
+            btMainFinanceiroSalvar.FlatStyle = FlatStyle.Flat;
+            btMainFinanceiroSalvar.Font = new Font("Arial", 12.75F);
+            btMainFinanceiroSalvar.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainFinanceiroSalvar.Location = new Point(257, 157);
             btMainFinanceiroSalvar.Name = "btMainFinanceiroSalvar";
-            btMainFinanceiroSalvar.Size = new Size(75, 23);
+            btMainFinanceiroSalvar.Size = new Size(191, 37);
             btMainFinanceiroSalvar.TabIndex = 3;
             btMainFinanceiroSalvar.Text = "Salvar";
-            btMainFinanceiroSalvar.UseVisualStyleBackColor = true;
+            btMainFinanceiroSalvar.UseVisualStyleBackColor = false;
             btMainFinanceiroSalvar.Click += btMainFinanceiroSalvar_Click;
             // 
             // lbMainFinaceiroAno
             // 
             lbMainFinaceiroAno.Anchor = AnchorStyles.Top;
-            lbMainFinaceiroAno.BackColor = Color.FromArgb(192, 192, 255);
+            lbMainFinaceiroAno.BackColor = Color.Transparent;
             lbMainFinaceiroAno.FlatStyle = FlatStyle.Flat;
-            lbMainFinaceiroAno.Font = new Font("Segoe UI", 25F);
-            lbMainFinaceiroAno.Location = new Point(1094, 169);
+            lbMainFinaceiroAno.Font = new Font("Arial", 21.75F);
+            lbMainFinaceiroAno.ForeColor = Color.FromArgb(52, 60, 76);
+            lbMainFinaceiroAno.Location = new Point(857, 91);
             lbMainFinaceiroAno.Name = "lbMainFinaceiroAno";
-            lbMainFinaceiroAno.Size = new Size(119, 54);
+            lbMainFinaceiroAno.Size = new Size(87, 42);
             lbMainFinaceiroAno.TabIndex = 56;
             lbMainFinaceiroAno.Text = "2025";
             lbMainFinaceiroAno.TextAlign = ContentAlignment.MiddleCenter;
@@ -125,12 +139,13 @@
             // lbMainFinaceiroMes
             // 
             lbMainFinaceiroMes.Anchor = AnchorStyles.Top;
-            lbMainFinaceiroMes.BackColor = Color.FromArgb(192, 255, 192);
+            lbMainFinaceiroMes.BackColor = Color.Transparent;
             lbMainFinaceiroMes.FlatStyle = FlatStyle.Flat;
-            lbMainFinaceiroMes.Font = new Font("Segoe UI", 20F);
-            lbMainFinaceiroMes.Location = new Point(887, 169);
+            lbMainFinaceiroMes.Font = new Font("Arial", 21.75F);
+            lbMainFinaceiroMes.ForeColor = Color.FromArgb(52, 60, 76);
+            lbMainFinaceiroMes.Location = new Point(694, 91);
             lbMainFinaceiroMes.Name = "lbMainFinaceiroMes";
-            lbMainFinaceiroMes.Size = new Size(184, 54);
+            lbMainFinaceiroMes.Size = new Size(157, 42);
             lbMainFinaceiroMes.TabIndex = 55;
             lbMainFinaceiroMes.Text = "Julho";
             lbMainFinaceiroMes.TextAlign = ContentAlignment.MiddleCenter;
@@ -139,66 +154,86 @@
             // 
             ddmainFinaceiroMesSelect.AllowDrop = true;
             ddmainFinaceiroMesSelect.Anchor = AnchorStyles.Top;
-            ddmainFinaceiroMesSelect.BackColor = Color.Violet;
+            ddmainFinaceiroMesSelect.BackColor = Color.FromArgb(255, 252, 237);
+            ddmainFinaceiroMesSelect.Font = new Font("Arial", 15.75F);
+            ddmainFinaceiroMesSelect.ForeColor = Color.FromArgb(230, 34, 34);
             ddmainFinaceiroMesSelect.FormattingEnabled = true;
             ddmainFinaceiroMesSelect.Items.AddRange(new object[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" });
-            ddmainFinaceiroMesSelect.Location = new Point(412, 193);
+            ddmainFinaceiroMesSelect.Location = new Point(257, 101);
             ddmainFinaceiroMesSelect.Name = "ddmainFinaceiroMesSelect";
-            ddmainFinaceiroMesSelect.Size = new Size(197, 23);
+            ddmainFinaceiroMesSelect.Size = new Size(237, 32);
             ddmainFinaceiroMesSelect.TabIndex = 53;
-            ddmainFinaceiroMesSelect.Text = "----Selecionar o Mês----";
+            ddmainFinaceiroMesSelect.Text = "-- Selecionar o Mês --";
             // 
             // ddmainFinaceiroAnoSelect
             // 
             ddmainFinaceiroAnoSelect.AllowDrop = true;
             ddmainFinaceiroAnoSelect.Anchor = AnchorStyles.Top;
-            ddmainFinaceiroAnoSelect.BackColor = Color.Violet;
+            ddmainFinaceiroAnoSelect.BackColor = Color.FromArgb(255, 252, 237);
+            ddmainFinaceiroAnoSelect.Font = new Font("Arial", 15.75F);
+            ddmainFinaceiroAnoSelect.ForeColor = Color.FromArgb(230, 34, 34);
             ddmainFinaceiroAnoSelect.FormattingEnabled = true;
-            ddmainFinaceiroAnoSelect.Items.AddRange(new object[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" });
-            ddmainFinaceiroAnoSelect.Location = new Point(635, 193);
+            ddmainFinaceiroAnoSelect.Location = new Point(517, 101);
             ddmainFinaceiroAnoSelect.Name = "ddmainFinaceiroAnoSelect";
-            ddmainFinaceiroAnoSelect.Size = new Size(91, 23);
+            ddmainFinaceiroAnoSelect.Size = new Size(119, 32);
             ddmainFinaceiroAnoSelect.TabIndex = 58;
-            ddmainFinaceiroAnoSelect.Text = "---- Ano----";
+            ddmainFinaceiroAnoSelect.Text = "-- Ano --";
             // 
             // btMainFinaceiroNext
             // 
-            btMainFinaceiroNext.Anchor = AnchorStyles.Top;
-            btMainFinaceiroNext.Location = new Point(911, 800);
+            btMainFinaceiroNext.Anchor = AnchorStyles.Bottom;
+            btMainFinaceiroNext.BackColor = Color.FromArgb(230, 34, 34);
+            btMainFinaceiroNext.FlatAppearance.BorderSize = 0;
+            btMainFinaceiroNext.FlatStyle = FlatStyle.Flat;
+            btMainFinaceiroNext.Image = Properties.Resources.avancar;
+            btMainFinaceiroNext.Location = new Point(649, 564);
             btMainFinaceiroNext.Name = "btMainFinaceiroNext";
-            btMainFinaceiroNext.Size = new Size(128, 31);
+            btMainFinaceiroNext.Size = new Size(60, 60);
             btMainFinaceiroNext.TabIndex = 60;
-            btMainFinaceiroNext.Text = "next";
-            btMainFinaceiroNext.UseVisualStyleBackColor = true;
+            btMainFinaceiroNext.UseVisualStyleBackColor = false;
             // 
             // btMainFinaceiroBack
             // 
-            btMainFinaceiroBack.Anchor = AnchorStyles.Top;
-            btMainFinaceiroBack.Location = new Point(607, 800);
+            btMainFinaceiroBack.Anchor = AnchorStyles.Bottom;
+            btMainFinaceiroBack.BackColor = Color.FromArgb(230, 34, 34);
+            btMainFinaceiroBack.FlatAppearance.BorderSize = 0;
+            btMainFinaceiroBack.FlatStyle = FlatStyle.Flat;
+            btMainFinaceiroBack.Image = Properties.Resources.voltar;
+            btMainFinaceiroBack.Location = new Point(491, 564);
             btMainFinaceiroBack.Name = "btMainFinaceiroBack";
-            btMainFinaceiroBack.Size = new Size(128, 31);
+            btMainFinaceiroBack.Size = new Size(60, 60);
             btMainFinaceiroBack.TabIndex = 59;
-            btMainFinaceiroBack.Text = "back";
-            btMainFinaceiroBack.UseVisualStyleBackColor = true;
+            btMainFinaceiroBack.UseVisualStyleBackColor = false;
             // 
             // btMainFinanceiroReset
             // 
-            btMainFinanceiroReset.Location = new Point(333, 348);
+            btMainFinanceiroReset.BackColor = Color.FromArgb(230, 34, 34);
+            btMainFinanceiroReset.FlatAppearance.BorderSize = 0;
+            btMainFinanceiroReset.FlatStyle = FlatStyle.Flat;
+            btMainFinanceiroReset.Font = new Font("Arial", 12.75F);
+            btMainFinanceiroReset.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainFinanceiroReset.Location = new Point(474, 157);
             btMainFinanceiroReset.Name = "btMainFinanceiroReset";
-            btMainFinanceiroReset.Size = new Size(75, 23);
+            btMainFinanceiroReset.Size = new Size(191, 37);
             btMainFinanceiroReset.TabIndex = 61;
             btMainFinanceiroReset.Text = "Reverter";
-            btMainFinanceiroReset.UseVisualStyleBackColor = true;
+            btMainFinanceiroReset.UseVisualStyleBackColor = false;
             btMainFinanceiroReset.Click += btMainFinanceiroReset_Click;
             // 
             // btMainFinanceiroGraficos
             // 
-            btMainFinanceiroGraficos.Location = new Point(333, 688);
+            btMainFinanceiroGraficos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btMainFinanceiroGraficos.BackColor = Color.FromArgb(230, 34, 34);
+            btMainFinanceiroGraficos.FlatAppearance.BorderSize = 0;
+            btMainFinanceiroGraficos.FlatStyle = FlatStyle.Flat;
+            btMainFinanceiroGraficos.Font = new Font("Arial", 12.75F);
+            btMainFinanceiroGraficos.ForeColor = Color.FromArgb(255, 252, 237);
+            btMainFinanceiroGraficos.Location = new Point(753, 157);
             btMainFinanceiroGraficos.Name = "btMainFinanceiroGraficos";
-            btMainFinanceiroGraficos.Size = new Size(121, 64);
+            btMainFinanceiroGraficos.Size = new Size(191, 37);
             btMainFinanceiroGraficos.TabIndex = 62;
-            btMainFinanceiroGraficos.Text = "Resumo mensal";
-            btMainFinanceiroGraficos.UseVisualStyleBackColor = true;
+            btMainFinanceiroGraficos.Text = "Resumo Mensal";
+            btMainFinanceiroGraficos.UseVisualStyleBackColor = false;
             btMainFinanceiroGraficos.Click += btMainFinanceiroGraficos_Click;
             // 
             // MainFinanceiro
@@ -206,7 +241,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(1234, 839);
+            ClientSize = new Size(1000, 650);
             Controls.Add(btMainFinanceiroGraficos);
             Controls.Add(btMainFinanceiroReset);
             Controls.Add(btMainFinaceiroNext);
@@ -220,7 +255,8 @@
             Controls.Add(dtMainFinanceiroGastos);
             Controls.Add(menuGlobal);
             FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(689, 643);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(1000, 650);
             Name = "MainFinanceiro";
             Text = "MainFinanceiro";
             WindowState = FormWindowState.Maximized;
@@ -231,16 +267,16 @@
         #endregion
 
         private Menu menuGlobal;
-        private DataGridView dtMainFinanceiroGastos;
-        private Label lbMainFinaceiroTitulo;
-        private Button btMainFinanceiroSalvar;
-        private Label lbMainFinaceiroAno;
-        private Label lbMainFinaceiroMes;
-        private ComboBox ddmainFinaceiroMesSelect;
-        private ComboBox ddmainFinaceiroAnoSelect;
-        private Button btMainFinaceiroNext;
-        private Button btMainFinaceiroBack;
-        private Button btMainFinanceiroReset;
-        private Button btMainFinanceiroGraficos;
+        private System.Windows.Forms.DataGridView dtMainFinanceiroGastos;
+        private System.Windows.Forms.Label lbMainFinaceiroTitulo;
+        private System.Windows.Forms.Button btMainFinanceiroSalvar;
+        private System.Windows.Forms.Label lbMainFinaceiroAno;
+        private System.Windows.Forms.Label lbMainFinaceiroMes;
+        private System.Windows.Forms.ComboBox ddmainFinaceiroMesSelect;
+        private System.Windows.Forms.ComboBox ddmainFinaceiroAnoSelect;
+        private System.Windows.Forms.Button btMainFinaceiroNext;
+        private System.Windows.Forms.Button btMainFinaceiroBack;
+        private System.Windows.Forms.Button btMainFinanceiroReset;
+        private System.Windows.Forms.Button btMainFinanceiroGraficos;
     }
 }

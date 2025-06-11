@@ -163,7 +163,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(437, 299);
-            ControlBox = false;
             Controls.Add(lbCreateEventoDescricao);
             Controls.Add(lbCreateEventoLocal);
             Controls.Add(lbCreateEventoData);
@@ -177,6 +176,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CreateEvento";
             SizeGripStyle = SizeGripStyle.Hide;
             Text = "Adicionar Evento";

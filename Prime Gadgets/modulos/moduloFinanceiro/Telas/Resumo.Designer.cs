@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resumo));
             lbResumoTitulo = new Label();
             lbResumoGraficoColuna = new Label();
             pnResumoGastosMes = new Panel();
@@ -47,18 +48,22 @@
             // lbResumoTitulo
             // 
             lbResumoTitulo.AutoSize = true;
-            lbResumoTitulo.Location = new Point(487, 29);
+            lbResumoTitulo.Font = new Font("Arial", 24F);
+            lbResumoTitulo.ForeColor = Color.FromArgb(52, 60, 76);
+            lbResumoTitulo.Location = new Point(411, 9);
             lbResumoTitulo.Name = "lbResumoTitulo";
-            lbResumoTitulo.Size = new Size(91, 15);
+            lbResumoTitulo.Size = new Size(244, 36);
             lbResumoTitulo.TabIndex = 1;
-            lbResumoTitulo.Text = "Resumo mensal";
+            lbResumoTitulo.Text = "Resumo Mensal";
             // 
             // lbResumoGraficoColuna
             // 
             lbResumoGraficoColuna.AutoSize = true;
-            lbResumoGraficoColuna.Location = new Point(767, 106);
+            lbResumoGraficoColuna.Font = new Font("Arial", 20F);
+            lbResumoGraficoColuna.ForeColor = Color.FromArgb(52, 60, 76);
+            lbResumoGraficoColuna.Location = new Point(745, 92);
             lbResumoGraficoColuna.Name = "lbResumoGraficoColuna";
-            lbResumoGraficoColuna.Size = new Size(100, 15);
+            lbResumoGraficoColuna.Size = new Size(227, 32);
             lbResumoGraficoColuna.TabIndex = 2;
             lbResumoGraficoColuna.Text = "Gráfico de coluna";
             // 
@@ -74,6 +79,9 @@
             // 
             // tbResumoGastosMes
             // 
+            tbResumoGastosMes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tbResumoGastosMes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            tbResumoGastosMes.BackgroundColor = Color.FromArgb(140, 132, 127);
             tbResumoGastosMes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbResumoGastosMes.Location = new Point(3, 3);
             tbResumoGastosMes.Name = "tbResumoGastosMes";
@@ -83,57 +91,72 @@
             // lbResumoGastoTotal
             // 
             lbResumoGastoTotal.AutoSize = true;
-            lbResumoGastoTotal.Location = new Point(3, 321);
+            lbResumoGastoTotal.Font = new Font("Arial", 12.75F);
+            lbResumoGastoTotal.ForeColor = Color.FromArgb(230, 34, 34);
+            lbResumoGastoTotal.Location = new Point(3, 318);
             lbResumoGastoTotal.Name = "lbResumoGastoTotal";
-            lbResumoGastoTotal.Size = new Size(110, 15);
+            lbResumoGastoTotal.Size = new Size(148, 19);
             lbResumoGastoTotal.TabIndex = 1;
             lbResumoGastoTotal.Text = "Total gasto no mês:";
             // 
             // lbResumoGastosMes
             // 
             lbResumoGastosMes.AutoSize = true;
-            lbResumoGastosMes.Location = new Point(224, 106);
+            lbResumoGastosMes.Font = new Font("Arial", 20F);
+            lbResumoGastosMes.ForeColor = Color.FromArgb(52, 60, 76);
+            lbResumoGastosMes.Location = new Point(159, 92);
             lbResumoGastosMes.Name = "lbResumoGastosMes";
-            lbResumoGastosMes.Size = new Size(84, 15);
+            lbResumoGastosMes.Size = new Size(198, 32);
             lbResumoGastosMes.TabIndex = 4;
             lbResumoGastosMes.Text = "Gastos no mês";
             // 
             // btResumoVoltar
             // 
-            btResumoVoltar.Location = new Point(487, 510);
+            btResumoVoltar.BackColor = Color.FromArgb(230, 34, 34);
+            btResumoVoltar.FlatAppearance.BorderSize = 0;
+            btResumoVoltar.FlatStyle = FlatStyle.Flat;
+            btResumoVoltar.Image = Properties.Resources.primeira;
+            btResumoVoltar.Location = new Point(15, 21);
             btResumoVoltar.Name = "btResumoVoltar";
-            btResumoVoltar.Size = new Size(75, 23);
+            btResumoVoltar.Size = new Size(60, 60);
             btResumoVoltar.TabIndex = 5;
-            btResumoVoltar.Text = "Voltar";
-            btResumoVoltar.UseVisualStyleBackColor = true;
+            btResumoVoltar.UseVisualStyleBackColor = false;
             btResumoVoltar.Click += btResumoVoltar_Click;
             // 
             // btResumoAvancarMes
             // 
-            btResumoAvancarMes.Location = new Point(651, 60);
+            btResumoAvancarMes.BackColor = Color.FromArgb(230, 34, 34);
+            btResumoAvancarMes.FlatAppearance.BorderSize = 0;
+            btResumoAvancarMes.FlatStyle = FlatStyle.Flat;
+            btResumoAvancarMes.Image = Properties.Resources.avancar;
+            btResumoAvancarMes.Location = new Point(631, 58);
             btResumoAvancarMes.Name = "btResumoAvancarMes";
-            btResumoAvancarMes.Size = new Size(75, 23);
+            btResumoAvancarMes.Size = new Size(60, 60);
             btResumoAvancarMes.TabIndex = 6;
-            btResumoAvancarMes.Text = "Avançar";
-            btResumoAvancarMes.UseVisualStyleBackColor = true;
+            btResumoAvancarMes.UseVisualStyleBackColor = false;
             btResumoAvancarMes.Click += btResumoAvancarMes_Click;
             // 
             // btResumoAnteriorMes
             // 
-            btResumoAnteriorMes.Location = new Point(351, 60);
+            btResumoAnteriorMes.BackColor = Color.FromArgb(230, 34, 34);
+            btResumoAnteriorMes.FlatAppearance.BorderSize = 0;
+            btResumoAnteriorMes.FlatStyle = FlatStyle.Flat;
+            btResumoAnteriorMes.Image = Properties.Resources.voltar;
+            btResumoAnteriorMes.Location = new Point(381, 58);
             btResumoAnteriorMes.Name = "btResumoAnteriorMes";
-            btResumoAnteriorMes.Size = new Size(75, 23);
+            btResumoAnteriorMes.Size = new Size(60, 60);
             btResumoAnteriorMes.TabIndex = 7;
-            btResumoAnteriorMes.Text = "Anterior";
-            btResumoAnteriorMes.UseVisualStyleBackColor = true;
+            btResumoAnteriorMes.UseVisualStyleBackColor = false;
             btResumoAnteriorMes.Click += btResumoAnteriorMes_Click;
             // 
             // lbResumoMesAno
             // 
             lbResumoMesAno.AutoSize = true;
-            lbResumoMesAno.Location = new Point(506, 64);
+            lbResumoMesAno.Font = new Font("Arial", 12.75F);
+            lbResumoMesAno.ForeColor = Color.FromArgb(52, 60, 76);
+            lbResumoMesAno.Location = new Point(479, 78);
             lbResumoMesAno.Name = "lbResumoMesAno";
-            lbResumoMesAno.Size = new Size(56, 15);
+            lbResumoMesAno.Size = new Size(73, 19);
             lbResumoMesAno.TabIndex = 8;
             lbResumoMesAno.Text = "Mês/Ano";
             // 
@@ -150,7 +173,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(1107, 545);
+            ClientSize = new Size(1092, 545);
             Controls.Add(lbResumoMesAno);
             Controls.Add(btResumoAnteriorMes);
             Controls.Add(btResumoAvancarMes);
@@ -160,12 +183,16 @@
             Controls.Add(lbResumoGraficoColuna);
             Controls.Add(lbResumoTitulo);
             Controls.Add(ctResumoMes);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            MinimumSize = new Size(1108, 584);
             Name = "Resumo";
-            Text = "Resumo";
+            Text = "Resumo Mensal";
             pnResumoGastosMes.ResumeLayout(false);
             pnResumoGastosMes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbResumoGastosMes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ctResumoMes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

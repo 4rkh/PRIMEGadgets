@@ -25,6 +25,9 @@ namespace Prime_Gadgets.modulos.moduloSenhas
                 string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
                 caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
 
+                // Garante que o diretório existe
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
+
                 if (!File.Exists(caminho))
                 {
                     File.Create(caminho).Dispose();

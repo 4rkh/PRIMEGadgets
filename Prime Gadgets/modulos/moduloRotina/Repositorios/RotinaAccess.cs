@@ -24,6 +24,9 @@ namespace Prime_Gadgets.modulos.moduloRotina
                 string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
                 caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
 
+                // Garante que o diretório existe
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
+
                 // Força a conversão do arquivo para UTF-8 se necessário
                 ForcarConversaoParaUtf8(caminho);
 

@@ -21,6 +21,10 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
             {
                 string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
                 caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
+
+                // Garante que o diretório existe
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
+
                 if (!File.Exists(caminho))
                 {
                     File.Create(caminho).Dispose();
@@ -34,6 +38,7 @@ namespace Prime_Gadgets.modulos.moduloCalculadora
                 conteudo = string.Empty;
             }
         }
+
         public List<Contas> LerHistorico()
         {
             var contas = new List<Contas>();

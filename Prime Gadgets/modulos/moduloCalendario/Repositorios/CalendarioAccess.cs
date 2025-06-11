@@ -24,6 +24,7 @@ namespace Prime_Gadgets.modulos.moduloCalendario
                 string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
                 caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
 
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
                 if (!File.Exists(caminho))
                 {
                     File.Create(caminho).Dispose();

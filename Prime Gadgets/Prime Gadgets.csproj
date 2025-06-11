@@ -9,6 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>prime iconmini.png</PackageIcon>
     <ApplicationIcon>prime-icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>

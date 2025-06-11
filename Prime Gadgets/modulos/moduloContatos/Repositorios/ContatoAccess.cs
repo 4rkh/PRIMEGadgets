@@ -24,21 +24,18 @@ namespace Prime_Gadgets.modulos.moduloContatos
         {
             try
             {
-                // Esta função somada com a próxima linha de código, serve para encontrar o diretório do arquivo pois
-                // o visual studio tem um diretório meio estranho para rodar o projeto
                 string diretorioProjeto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-
-                //Para usar os caminho relativos basta usar esta variavel e alterar o caminhoRelativo com a mesma estrutura de pastas que voce vê no visual code
                 caminho = Path.Combine(diretorioProjeto, caminhoRelativo);
+
+                // Garante que o diretório existe
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
 
                 if (!File.Exists(caminho))
                 {
                     File.Create(caminho).Dispose();
                     conteudo = string.Empty;
-
                 }
                 conteudo = File.ReadAllText(caminho);
-
             }
             catch (Exception e)
             {

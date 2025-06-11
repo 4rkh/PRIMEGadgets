@@ -59,5 +59,21 @@ Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEGadgets corre
 - Gráficos com bibliotecas de visualização do .NET
 
 ---
+## Padrão de Variáveis
+
+Nome das Telas: `IdentificaçãoDaTela` + `NomeDoMódulo`
+Exemplo: `MainContato`
+
+Componentes da Tela:
+`TipoDoComponente` + `NomeDaTela` + `IdentificaçãoDoComponente`
+Exemplo: `lbMainContatosTitulo`
+
+Abreviações:
+- `lb` : Label
+- `cb` : ComboBox
+- `bt` : Button
+- `dt` : DataGridView
+- `camp` : TextBox
+- `ct` : Chart
 
 Desenvolvido com fins acadêmicos para a FATEC Praia Grande – 2025.

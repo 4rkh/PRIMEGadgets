@@ -42,12 +42,37 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             ddmainFinaceiroAnoSelect.SelectedIndexChanged += DdmainFinaceiroAnoSelect_SelectedIndexChanged;
             btMainFinaceiroNext.Click += BtMainFinaceiroNext_Click;
             btMainFinaceiroBack.Click += BtMainFinaceiroBack_Click;
+
+            // Adiciona o evento para deletar linha ao pressionar 'Del'
+            dtMainFinanceiroGastos.KeyDown += DtMainFinanceiroGastos_KeyDown;
         }
 
         private void AtualizarFinanceiro()
         {
-            // Aqui você pode atualizar os dados financeiros conforme o mês/ano selecionados
-            // Exemplo: recarregar DataGridView, etc.
+            var financeiroAccess = new FinanceiroAccess();
+            var gastos = financeiroAccess.FiltrarGastosPorMesAno(mesAtual, anoAtual);
+
+            var dt = new DataTable();
+            dt.Columns.Add("Descrição", typeof(string));
+            dt.Columns.Add("Valor", typeof(decimal));
+            dt.Columns.Add("Dia", typeof(int)); // Exibe apenas o dia
+            dt.Columns.Add("Categoria", typeof(string));
+            dt.Columns.Add("Forma de Pagamento", typeof(string));
+            dt.Columns.Add("Observações", typeof(string));
+
+            foreach (var gasto in gastos)
+            {
+                dt.Rows.Add(
+                    gasto.Descricao,
+                    gasto.Valor,
+                    gasto.Data.Day, // Apenas o dia
+                    gasto.Categoria,
+                    gasto.FormaPagamento,
+                    gasto.Observacoes
+                );
+            }
+
+            dtMainFinanceiroGastos.DataSource = dt;
         }
 
         private void AtualizarLabels()
@@ -111,5 +136,35 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             ddmainFinaceiroAnoSelect.SelectedItem = anoAtual.ToString();
             AtualizarLabels();
         }
+
+        private void btMainFinanceiroSalvar_Click(object sender, EventArgs e)
+        {
+            var financeiroAccess = new FinanceiroAccess();
+            financeiroAccess.SalvarGastos(dtMainFinanceiroGastos, mesAtual, anoAtual);
+
+            MessageBox.Show("Gastos salvos com sucesso!", "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btMainFinanceiroReset_Click(object sender, EventArgs e)
+        {
+            AtualizarFinanceiro();
+        }
+
+        private void DtMainFinanceiroGastos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                foreach (DataGridViewRow row in dtMainFinanceiroGastos.SelectedRows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        dtMainFinanceiroGastos.Rows.Remove(row);
+                    }
+                }
+                e.Handled = true;
+            }
+        }
+
+
     }
 }

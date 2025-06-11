@@ -39,6 +39,7 @@
             btMainFinaceiroNext = new Button();
             btMainFinaceiroBack = new Button();
             btMainFinanceiroReset = new Button();
+            btMainFinanceiroGraficos = new Button();
             ((System.ComponentModel.ISupportInitialize)dtMainFinanceiroGastos).BeginInit();
             SuspendLayout();
             // 
@@ -56,9 +57,9 @@
             dtMainFinanceiroGastos.AllowUserToOrderColumns = true;
             dtMainFinanceiroGastos.Anchor = AnchorStyles.Top;
             dtMainFinanceiroGastos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtMainFinanceiroGastos.Location = new Point(479, 248);
+            dtMainFinanceiroGastos.Location = new Point(495, 248);
             dtMainFinanceiroGastos.Name = "dtMainFinanceiroGastos";
-            dtMainFinanceiroGastos.Size = new Size(680, 540);
+            dtMainFinanceiroGastos.Size = new Size(664, 540);
             dtMainFinanceiroGastos.TabIndex = 1;
             // 
             // lbMainFinaceiroTitulo
@@ -81,6 +82,7 @@
             btMainFinanceiroSalvar.TabIndex = 3;
             btMainFinanceiroSalvar.Text = "Salvar";
             btMainFinanceiroSalvar.UseVisualStyleBackColor = true;
+            btMainFinanceiroSalvar.Click += btMainFinanceiroSalvar_Click;
             // 
             // lbMainFinaceiroAno
             // 
@@ -162,6 +164,16 @@
             btMainFinanceiroReset.TabIndex = 61;
             btMainFinanceiroReset.Text = "Reverter";
             btMainFinanceiroReset.UseVisualStyleBackColor = true;
+            btMainFinanceiroReset.Click += btMainFinanceiroReset_Click;
+            // 
+            // btMainFinanceiroGraficos
+            // 
+            btMainFinanceiroGraficos.Location = new Point(333, 688);
+            btMainFinanceiroGraficos.Name = "btMainFinanceiroGraficos";
+            btMainFinanceiroGraficos.Size = new Size(121, 64);
+            btMainFinanceiroGraficos.TabIndex = 62;
+            btMainFinanceiroGraficos.Text = "Gráficos";
+            btMainFinanceiroGraficos.UseVisualStyleBackColor = true;
             // 
             // MainFinanceiro
             // 
@@ -169,6 +181,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1234, 839);
+            Controls.Add(btMainFinanceiroGraficos);
             Controls.Add(btMainFinanceiroReset);
             Controls.Add(btMainFinaceiroNext);
             Controls.Add(btMainFinaceiroBack);
@@ -202,5 +215,6 @@
         private Button btMainFinaceiroNext;
         private Button btMainFinaceiroBack;
         private Button btMainFinanceiroReset;
+        private Button btMainFinanceiroGraficos;
     }
 }

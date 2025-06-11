@@ -36,7 +36,7 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
 
             // Atualiza labels
             AtualizarLabels();
-
+                
             // Eventos de seleção
             ddmainFinaceiroMesSelect.SelectedIndexChanged += DdmainFinaceiroMesSelect_SelectedIndexChanged;
             ddmainFinaceiroAnoSelect.SelectedIndexChanged += DdmainFinaceiroAnoSelect_SelectedIndexChanged;
@@ -45,6 +45,12 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
 
             // Adiciona o evento para deletar linha ao pressionar 'Del'
             dtMainFinanceiroGastos.KeyDown += DtMainFinanceiroGastos_KeyDown;
+
+            // Adiciona o evento para configurar o ComboBox e restringir entrada na coluna "Valor"
+            dtMainFinanceiroGastos.EditingControlShowing += DtMainFinanceiroGastos_EditingControlShowing;
+
+            // Adiciona o evento para tratar erros de dados
+            dtMainFinanceiroGastos.DataError += DtMainFinanceiroGastos_DataError;
         }
 
         private void AtualizarFinanceiro()
@@ -55,22 +61,63 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             var dt = new DataTable();
             dt.Columns.Add("Descrição", typeof(string));
             dt.Columns.Add("Valor", typeof(decimal));
-            dt.Columns.Add("Dia", typeof(int)); // Exibe apenas o dia
+            dt.Columns.Add("Dia", typeof(int));
             dt.Columns.Add("Categoria", typeof(string));
             dt.Columns.Add("Forma de Pagamento", typeof(string));
             dt.Columns.Add("Observações", typeof(string));
 
+            var formasValidas = new[] { "A vista", "Cartão de Crédito" };
             foreach (var gasto in gastos)
             {
+                var forma = formasValidas.Contains(gasto.FormaPagamento) ? gasto.FormaPagamento : formasValidas[0];
                 dt.Rows.Add(
                     gasto.Descricao,
                     gasto.Valor,
-                    gasto.Data.Day, // Apenas o dia
+                    gasto.Data.Day,
                     gasto.Categoria,
-                    gasto.FormaPagamento,
+                    forma,
                     gasto.Observacoes
                 );
             }
+
+            dtMainFinanceiroGastos.DataSource = null;
+            dtMainFinanceiroGastos.Columns.Clear();
+            dtMainFinanceiroGastos.AutoGenerateColumns = false;
+
+            // Adiciona as colunas manualmente
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Descrição",
+                HeaderText = "Descrição"
+            });
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Valor",
+                HeaderText = "Valor"
+            });
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Dia",
+                HeaderText = "Dia"
+            });
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Categoria",
+                HeaderText = "Categoria"
+            });
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewComboBoxColumn
+            {
+                DataPropertyName = "Forma de Pagamento",
+                HeaderText = "Forma de Pagamento",
+                Name = "Forma de Pagamento",
+                DataSource = formasValidas,
+                Width = 120
+            });
+            dtMainFinanceiroGastos.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Observações",
+                HeaderText = "Observações"
+            });
 
             dtMainFinanceiroGastos.DataSource = dt;
         }
@@ -165,6 +212,21 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             }
         }
 
+        private void DtMainFinanceiroGastos_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dtMainFinanceiroGastos.CurrentCell.ColumnIndex == dtMainFinanceiroGastos.Columns["Forma de Pagamento"].Index)
+            {
+                if (e.Control is ComboBox combo)
+                {
+                    combo.DropDownStyle = ComboBoxStyle.DropDownList;
+                }
+            }
+        }
 
+        private void DtMainFinanceiroGastos_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Evita a caixa de erro padrão e pode exibir uma mensagem customizada se desejar
+            e.ThrowException = false;
+        }
     }
 }

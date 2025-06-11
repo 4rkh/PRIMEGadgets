@@ -61,6 +61,31 @@
             dtMainFinanceiroGastos.Name = "dtMainFinanceiroGastos";
             dtMainFinanceiroGastos.Size = new Size(664, 540);
             dtMainFinanceiroGastos.TabIndex = 1;
+
+            // Definição das colunas na ordem da classe
+            dtMainFinanceiroGastos.Columns.Clear();
+
+            dtMainFinanceiroGastos.Columns.Add("Descricao", "Descrição");
+            dtMainFinanceiroGastos.Columns.Add("Valor", "Valor");
+            dtMainFinanceiroGastos.Columns.Add("Dia", "Dia");
+            dtMainFinanceiroGastos.Columns.Add("Categoria", "Categoria");
+
+            // Coluna ComboBox para Forma de Pagamento
+            var formaPagamentoColumn = new DataGridViewComboBoxColumn();
+            formaPagamentoColumn.HeaderText = "Forma de Pagamento";
+            formaPagamentoColumn.Name = "formaPagamentoColumn";
+            formaPagamentoColumn.DataPropertyName = "FormaPagamento"; // Use o nome do campo do seu modelo, se houver binding
+            formaPagamentoColumn.Items.AddRange(new object[] {
+                "A vista",
+                "Cartão de Crédito",
+            });
+            formaPagamentoColumn.Width = 120;
+
+            // Adiciona a coluna apenas se ainda não existir
+            if (!dtMainFinanceiroGastos.Columns.Contains("formaPagamentoColumn"))
+            {
+                dtMainFinanceiroGastos.Columns.Add(formaPagamentoColumn);
+            }
             // 
             // lbMainFinaceiroTitulo
             // 

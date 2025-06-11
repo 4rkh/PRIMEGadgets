@@ -16,5 +16,10 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro.Telas
         {
             InitializeComponent();
         }
+
+        private void btResumoVoltar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

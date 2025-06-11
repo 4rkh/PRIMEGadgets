@@ -28,7 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            ctResumoMes = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            lbResumoTitulo = new Label();
+            lbResumoGraficoColuna = new Label();
+            pnResumoGastosMes = new Panel();
+            lbResumoGastosMes = new Label();
+            lbResumoGasto = new Label();
+            lbResumoGastoTotal = new Label();
+            btResumoVoltar = new Button();
+            btResumoAvancarMes = new Button();
+            btResumoAnterior = new Button();
+            lbResumoMesAno = new Label();
+            ((System.ComponentModel.ISupportInitialize)ctResumoMes).BeginInit();
+            pnResumoGastosMes.SuspendLayout();
             SuspendLayout();
+            // 
+            // ctResumoMes
+            // 
+            chartArea3.Name = "ChartArea1";
+            ctResumoMes.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            ctResumoMes.Legends.Add(legend3);
+            ctResumoMes.Location = new Point(537, 124);
+            ctResumoMes.Name = "ctResumoMes";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            ctResumoMes.Series.Add(series3);
+            ctResumoMes.Size = new Size(558, 343);
+            ctResumoMes.TabIndex = 0;
+            ctResumoMes.Text = "chart1";
+            // 
+            // lbResumoTitulo
+            // 
+            lbResumoTitulo.AutoSize = true;
+            lbResumoTitulo.Location = new Point(487, 29);
+            lbResumoTitulo.Name = "lbResumoTitulo";
+            lbResumoTitulo.Size = new Size(91, 15);
+            lbResumoTitulo.TabIndex = 1;
+            lbResumoTitulo.Text = "Resumo mensal";
+            // 
+            // lbResumoGraficoColuna
+            // 
+            lbResumoGraficoColuna.AutoSize = true;
+            lbResumoGraficoColuna.Location = new Point(767, 106);
+            lbResumoGraficoColuna.Name = "lbResumoGraficoColuna";
+            lbResumoGraficoColuna.Size = new Size(100, 15);
+            lbResumoGraficoColuna.TabIndex = 2;
+            lbResumoGraficoColuna.Text = "Gráfico de coluna";
+            // 
+            // pnResumoGastosMes
+            // 
+            pnResumoGastosMes.BackColor = Color.White;
+            pnResumoGastosMes.Controls.Add(lbResumoGastoTotal);
+            pnResumoGastosMes.Controls.Add(lbResumoGasto);
+            pnResumoGastosMes.Location = new Point(12, 124);
+            pnResumoGastosMes.Name = "pnResumoGastosMes";
+            pnResumoGastosMes.Size = new Size(519, 343);
+            pnResumoGastosMes.TabIndex = 3;
+            // 
+            // lbResumoGastosMes
+            // 
+            lbResumoGastosMes.AutoSize = true;
+            lbResumoGastosMes.Location = new Point(224, 106);
+            lbResumoGastosMes.Name = "lbResumoGastosMes";
+            lbResumoGastosMes.Size = new Size(84, 15);
+            lbResumoGastosMes.TabIndex = 4;
+            lbResumoGastosMes.Text = "Gastos no mês";
+            // 
+            // lbResumoGasto
+            // 
+            lbResumoGasto.AutoSize = true;
+            lbResumoGasto.Location = new Point(3, 9);
+            lbResumoGasto.Name = "lbResumoGasto";
+            lbResumoGasto.Size = new Size(126, 15);
+            lbResumoGasto.TabIndex = 0;
+            lbResumoGasto.Text = "Nome do gasto - valor";
+            // 
+            // lbResumoGastoTotal
+            // 
+            lbResumoGastoTotal.AutoSize = true;
+            lbResumoGastoTotal.Location = new Point(3, 318);
+            lbResumoGastoTotal.Name = "lbResumoGastoTotal";
+            lbResumoGastoTotal.Size = new Size(110, 15);
+            lbResumoGastoTotal.TabIndex = 1;
+            lbResumoGastoTotal.Text = "Total gasto no mês:";
+            // 
+            // btResumoVoltar
+            // 
+            btResumoVoltar.Location = new Point(487, 510);
+            btResumoVoltar.Name = "btResumoVoltar";
+            btResumoVoltar.Size = new Size(75, 23);
+            btResumoVoltar.TabIndex = 5;
+            btResumoVoltar.Text = "Voltar";
+            btResumoVoltar.UseVisualStyleBackColor = true;
+            btResumoVoltar.Click += btResumoVoltar_Click;
+            // 
+            // btResumoAvancarMes
+            // 
+            btResumoAvancarMes.Location = new Point(651, 60);
+            btResumoAvancarMes.Name = "btResumoAvancarMes";
+            btResumoAvancarMes.Size = new Size(75, 23);
+            btResumoAvancarMes.TabIndex = 6;
+            btResumoAvancarMes.Text = "Avançar";
+            btResumoAvancarMes.UseVisualStyleBackColor = true;
+            // 
+            // btResumoAnterior
+            // 
+            btResumoAnterior.Location = new Point(351, 60);
+            btResumoAnterior.Name = "btResumoAnterior";
+            btResumoAnterior.Size = new Size(75, 23);
+            btResumoAnterior.TabIndex = 7;
+            btResumoAnterior.Text = "Anterior";
+            btResumoAnterior.UseVisualStyleBackColor = true;
+            // 
+            // lbResumoMesAno
+            // 
+            lbResumoMesAno.AutoSize = true;
+            lbResumoMesAno.Location = new Point(506, 64);
+            lbResumoMesAno.Name = "lbResumoMesAno";
+            lbResumoMesAno.Size = new Size(56, 15);
+            lbResumoMesAno.TabIndex = 8;
+            lbResumoMesAno.Text = "Mês/Ano";
             // 
             // Resumo
             // 
@@ -36,11 +160,36 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1107, 545);
+            Controls.Add(lbResumoMesAno);
+            Controls.Add(btResumoAnterior);
+            Controls.Add(btResumoAvancarMes);
+            Controls.Add(btResumoVoltar);
+            Controls.Add(lbResumoGastosMes);
+            Controls.Add(pnResumoGastosMes);
+            Controls.Add(lbResumoGraficoColuna);
+            Controls.Add(lbResumoTitulo);
+            Controls.Add(ctResumoMes);
             Name = "Resumo";
             Text = "Resumo";
+            ((System.ComponentModel.ISupportInitialize)ctResumoMes).EndInit();
+            pnResumoGastosMes.ResumeLayout(false);
+            pnResumoGastosMes.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctResumoMes;
+        private Label lbResumoTitulo;
+        private Label lbResumoGraficoColuna;
+        private Panel pnResumoGastosMes;
+        private Label lbResumoGastosMes;
+        private Label lbResumoGastoTotal;
+        private Label lbResumoGasto;
+        private Button btResumoVoltar;
+        private Button btResumoAvancarMes;
+        private Button btResumoAnterior;
+        private Label lbResumoMesAno;
     }
 }

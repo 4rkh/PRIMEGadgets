@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Prime_Gadgets.modulos.moduloCalculadora;
+using Prime_Gadgets.modulos.moduloFinanceiro.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -165,6 +167,10 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
             }
         }
 
-
+        private void btMainFinanceiroGraficos_Click(object sender, EventArgs e)
+        {
+            Resumo resumo = new Resumo();
+            resumo.ShowDialog();
+        }
     }
 }

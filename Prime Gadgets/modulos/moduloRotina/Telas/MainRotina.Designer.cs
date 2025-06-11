@@ -55,8 +55,7 @@
             lbMainRotinaTitulo.Name = "lbMainRotinaTitulo";
             lbMainRotinaTitulo.Size = new Size(85, 33);
             lbMainRotinaTitulo.TabIndex = 0;
-            lbMainRotinaTitulo.Text = "Rotina";
-            lbMainRotinaTitulo.Click += lbMainRotinaTitulo_Click;
+            lbMainRotinaTitulo.Text = "Rotina";            
             // 
             // lbMainRotinaData
             // 

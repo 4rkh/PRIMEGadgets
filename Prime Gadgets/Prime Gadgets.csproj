@@ -25,13 +25,9 @@
 
   <ItemGroup>
     <Folder Include="modulos\moduloFinanceiro\Telas\" />
-    <Folder Include="modulos\moduloLembretes\Modelos\" />
-    <Folder Include="modulos\moduloLembretes\Repositorios\" />
     <Folder Include="modulos\moduloFinanceiro\Modelos\" />
     <Folder Include="modulos\moduloFinanceiro\Repositorios\" />
     <Folder Include="modulos\moduloCalendario\Modelos\" />
-    <Folder Include="modulos\moduloLembretes\Telas\" />
-    <Folder Include="modulos\moduloLembretes\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -91,18 +91,10 @@ namespace Prime_Gadgets.modulos.moduloRotina
 
         private void btMainRotinaSemana_Click(object sender, EventArgs e)
         {
-            Form telaAtual = this.FindForm();
-            SemanaRotina semanaRotina = new SemanaRotina();
-            semanaRotina.Dock = DockStyle.Fill;
-            semanaRotina.TopLevel = false;
-            Prime_Gadgets.TelaPrincipal.mainPanel.Controls.Clear();
-            Prime_Gadgets.TelaPrincipal.mainPanel.Controls.Add(semanaRotina);
-            semanaRotina.Show();
-        }
-
-        private void lbMainRotinaTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
+            using (var semanaRotina = new SemanaRotina())
+            {
+                semanaRotina.ShowDialog(this);
+            }
+        }        
     }
 }

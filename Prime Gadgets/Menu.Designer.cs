@@ -109,6 +109,7 @@
             btMenuLembretes.TabIndex = 14;
             btMenuLembretes.Text = "Lembretes";
             btMenuLembretes.UseVisualStyleBackColor = false;
+            btMenuLembretes.Click += btMenuLembretes_Click;
             // 
             // btMenuCalculadora
             // 

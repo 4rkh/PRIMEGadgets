@@ -4,7 +4,7 @@
 - Rafael Michalewicz Rodrigues (Michalewicz)  
 - Sandro Gabriel dos Santos de Jesus (Sandro-Gab)
 
-# Aplicativo LES - PRIMEManager
+# Aplicativo LES - PRIMEGadgets
 
 Este projeto é uma aplicação desktop multiutilitária desenvolvida em **C# com .NET** no **Microsoft Visual Studio 2022**, para a disciplina de Laboratório de Engenharia de Software (LES). A aplicação visa centralizar diversas ferramentas de gestão pessoal para facilitar a organização do usuário.
 
@@ -20,7 +20,7 @@ Este projeto é uma aplicação desktop multiutilitária desenvolvida em **C# co
 
 ## Como Executar
 
-Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEManager corretamente:
+Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEGadgets corretamente:
 
 1. **Clone o repositório**
 
@@ -45,7 +45,7 @@ Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEManager corre
 
 5. **Execute o aplicativo**
 
-   - Pressione `F5` ou clique em **Start** para rodar o PRIMEManager.
+   - Pressione `F5` ou clique em **Start** para rodar o PRIMEGadgets.
 
 6. **Dica**: Para melhor experiência, execute em tela maximizada e navegue pelo menu principal (`TelaPrincipal.cs`).
 

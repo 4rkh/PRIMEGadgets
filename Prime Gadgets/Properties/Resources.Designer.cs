@@ -63,9 +63,9 @@ namespace Prime_Gadgets.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left {
+        internal static System.Drawing.Bitmap avancar {
             get {
-                object obj = ResourceManager.GetObject("left", resourceCulture);
+                object obj = ResourceManager.GetObject("avancar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Prime_Gadgets.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right {
+        internal static System.Drawing.Bitmap primeira {
             get {
-                object obj = ResourceManager.GetObject("right", resourceCulture);
+                object obj = ResourceManager.GetObject("primeira", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +116,26 @@ namespace Prime_Gadgets.Properties {
         internal static System.Drawing.Bitmap showon {
             get {
                 object obj = ResourceManager.GetObject("showon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ultima {
+            get {
+                object obj = ResourceManager.GetObject("ultima", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap voltar {
+            get {
+                object obj = ResourceManager.GetObject("voltar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

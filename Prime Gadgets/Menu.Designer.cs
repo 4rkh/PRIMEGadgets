@@ -49,11 +49,10 @@
             btMenuHome.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuHome.Image = (Image)resources.GetObject("btMenuHome.Image");
             btMenuHome.ImageAlign = ContentAlignment.TopCenter;
-            btMenuHome.Location = new Point(0, 8);
+            btMenuHome.Location = new Point(0, 3);
             btMenuHome.Name = "btMenuHome";
-            btMenuHome.Size = new Size(212, 113);
+            btMenuHome.Size = new Size(212, 131);
             btMenuHome.TabIndex = 17;
-            btMenuHome.Text = "PRIME Gadgets";
             btMenuHome.TextAlign = ContentAlignment.BottomCenter;
             btMenuHome.UseVisualStyleBackColor = false;
             btMenuHome.Click += btHome_Click;
@@ -68,12 +67,13 @@
             btMenuRotina.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuRotina.Image = (Image)resources.GetObject("btMenuRotina.Image");
             btMenuRotina.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuRotina.Location = new Point(0, 445);
+            btMenuRotina.Location = new Point(0, 458);
             btMenuRotina.Name = "btMenuRotina";
             btMenuRotina.Size = new Size(212, 47);
             btMenuRotina.TabIndex = 15;
             btMenuRotina.Text = "Rotina";
             btMenuRotina.UseVisualStyleBackColor = false;
+            btMenuRotina.Click += btMenuRotina_Click;
             // 
             // btMenuSenhas
             // 
@@ -85,7 +85,7 @@
             btMenuSenhas.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuSenhas.Image = (Image)resources.GetObject("btMenuSenhas.Image");
             btMenuSenhas.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuSenhas.Location = new Point(0, 180);
+            btMenuSenhas.Location = new Point(0, 193);
             btMenuSenhas.Name = "btMenuSenhas";
             btMenuSenhas.Size = new Size(212, 47);
             btMenuSenhas.TabIndex = 16;
@@ -103,12 +103,13 @@
             btMenuLembretes.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuLembretes.Image = (Image)resources.GetObject("btMenuLembretes.Image");
             btMenuLembretes.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuLembretes.Location = new Point(0, 392);
+            btMenuLembretes.Location = new Point(0, 405);
             btMenuLembretes.Name = "btMenuLembretes";
             btMenuLembretes.Size = new Size(212, 47);
             btMenuLembretes.TabIndex = 14;
             btMenuLembretes.Text = "Lembretes";
             btMenuLembretes.UseVisualStyleBackColor = false;
+            btMenuLembretes.Click += btMenuLembretes_Click;
             // 
             // btMenuCalculadora
             // 
@@ -120,7 +121,7 @@
             btMenuCalculadora.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuCalculadora.Image = (Image)resources.GetObject("btMenuCalculadora.Image");
             btMenuCalculadora.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuCalculadora.Location = new Point(0, 127);
+            btMenuCalculadora.Location = new Point(0, 140);
             btMenuCalculadora.Name = "btMenuCalculadora";
             btMenuCalculadora.Size = new Size(212, 47);
             btMenuCalculadora.TabIndex = 10;
@@ -138,11 +139,11 @@
             btMenuFinanceiro.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuFinanceiro.Image = (Image)resources.GetObject("btMenuFinanceiro.Image");
             btMenuFinanceiro.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuFinanceiro.Location = new Point(0, 339);
+            btMenuFinanceiro.Location = new Point(0, 352);
             btMenuFinanceiro.Name = "btMenuFinanceiro";
             btMenuFinanceiro.Size = new Size(212, 47);
             btMenuFinanceiro.TabIndex = 13;
-            btMenuFinanceiro.Text = "Finaceiro";
+            btMenuFinanceiro.Text = "Financeiro";
             btMenuFinanceiro.UseVisualStyleBackColor = false;
             btMenuFinanceiro.Click += btMenuFinanceiro_Click;
             // 
@@ -156,7 +157,7 @@
             btMenuCalendario.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuCalendario.Image = (Image)resources.GetObject("btMenuCalendario.Image");
             btMenuCalendario.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuCalendario.Location = new Point(0, 233);
+            btMenuCalendario.Location = new Point(0, 246);
             btMenuCalendario.Name = "btMenuCalendario";
             btMenuCalendario.Size = new Size(212, 47);
             btMenuCalendario.TabIndex = 11;
@@ -174,7 +175,7 @@
             btMenuContatos.ForeColor = Color.FromArgb(255, 252, 237);
             btMenuContatos.Image = (Image)resources.GetObject("btMenuContatos.Image");
             btMenuContatos.ImageAlign = ContentAlignment.MiddleLeft;
-            btMenuContatos.Location = new Point(0, 286);
+            btMenuContatos.Location = new Point(0, 299);
             btMenuContatos.Name = "btMenuContatos";
             btMenuContatos.Size = new Size(212, 47);
             btMenuContatos.TabIndex = 12;

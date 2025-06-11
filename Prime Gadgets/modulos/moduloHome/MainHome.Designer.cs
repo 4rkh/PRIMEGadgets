@@ -31,8 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainHome));
             menuMainHome = new Menu();
             lbMainHomeGreetings = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            label2 = new Label();
             SuspendLayout();
             // 
             // menuMainHome
@@ -41,52 +40,62 @@
             menuMainHome.Dock = DockStyle.Left;
             menuMainHome.Location = new Point(0, 0);
             menuMainHome.Name = "menuMainHome";
-            menuMainHome.Size = new Size(212, 840);
+            menuMainHome.Size = new Size(212, 1100);
             menuMainHome.TabIndex = 0;
             // 
             // lbMainHomeGreetings
             // 
-            lbMainHomeGreetings.AutoSize = true;
-            lbMainHomeGreetings.Font = new Font("Arial", 18F, FontStyle.Bold);
-            lbMainHomeGreetings.ForeColor = Color.FromArgb(52, 60, 76);
-            lbMainHomeGreetings.Location = new Point(827, 64);
+            lbMainHomeGreetings.Anchor = AnchorStyles.Top;
+            lbMainHomeGreetings.BackColor = Color.Transparent;
+            lbMainHomeGreetings.FlatStyle = FlatStyle.Flat;
+            lbMainHomeGreetings.Font = new Font("Arial", 24F, FontStyle.Bold);
+            lbMainHomeGreetings.ForeColor = Color.FromArgb(230, 34, 34);
+            lbMainHomeGreetings.Location = new Point(887, 26);
             lbMainHomeGreetings.Name = "lbMainHomeGreetings";
-            lbMainHomeGreetings.Size = new Size(369, 29);
+            lbMainHomeGreetings.Size = new Size(518, 47);
             lbMainHomeGreetings.TabIndex = 1;
-            lbMainHomeGreetings.Text = "Bem-Vindo ao PRIME Gadgets!";
+            lbMainHomeGreetings.Text = "Bem-vindo ao PRIME Gadgets™!";
+            lbMainHomeGreetings.TextAlign = ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // label2
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(349, 96);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1264, 813);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            label2.Anchor = AnchorStyles.Top;
+            label2.BackColor = Color.Transparent;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(255, 252, 237);
+            label2.Image = (Image)resources.GetObject("label2.Image");
+            label2.ImageAlign = ContentAlignment.BottomCenter;
+            label2.Location = new Point(521, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(1243, 933);
+            label2.TabIndex = 3;
+            label2.Text = resources.GetString("label2.Text");
+            label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // MainHome
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(1720, 840);
-            Controls.Add(pictureBox1);
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(1940, 1100);
             Controls.Add(lbMainHomeGreetings);
             Controls.Add(menuMainHome);
+            Controls.Add(label2);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(1000, 650);
             Name = "MainHome";
             Text = "telaHome";
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Menu menuMainHome;
         private Label lbMainHomeGreetings;
-        private PictureBox pictureBox1;
+        private Label label2;
     }
 }

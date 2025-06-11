@@ -127,9 +127,16 @@
         zmcQhgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="btConversorCalculadoraInverter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
+        rQAACa0BzgeobAAAAOJJREFUWEftjlkKAzEMQ+f+d+0NClMMCrUTJeNm9UcfCIKtyLr+nOR+v248zyNl
+        whRKZUIU0mWOF8rLHC3Eyoiw3gsrkgRLG/ZxlXCyhJl3COe/MNMO4bzFZeogz9WCxeIydZJnJ2FtcZkG
+        yPObN1ymAXQ+u2FmLeMMWvnFvGUWanMvtew0Nzs6BLX5L9T+p2yzLwaAmidC89kxbWT7GbjytenR3Ikr
+        W5u0sJ6CKzs3acEyhDuXGVcLpy3MuFo4zWEfVgjnnmGfk2DZCysiwno/ocoIocoIocoIocoIocrs4bo+
+        PnAjY/tjCAYAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIADXHQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv

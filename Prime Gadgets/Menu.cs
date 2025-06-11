@@ -1,4 +1,4 @@
-﻿using Prime_Gadgets.modulos.moduloCalculadora;
+using Prime_Gadgets.modulos.moduloCalculadora;
 using Prime_Gadgets.modulos.moduloCalendario;
 using Prime_Gadgets.modulos.moduloContatos;
 using Prime_Gadgets.modulos.moduloFinanceiro;
@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Prime_Gadgets.modulos.moduloRotina;
+using Prime_Gadgets.modulos.moduloLembretes;
 
 namespace Prime_Gadgets
 {
@@ -99,6 +101,7 @@ namespace Prime_Gadgets
             mainSenhas.Show();
         }
 
+
         private void btMenuFinanceiro_Click(object sender, EventArgs e)
         {
             Form telaAtual = this.FindForm();
@@ -112,6 +115,36 @@ namespace Prime_Gadgets
             TelaPrincipal.mainPanel.Controls.Clear();
             TelaPrincipal.mainPanel.Controls.Add(mainFinanceiro);
             mainFinanceiro.Show();
+
+        private void btMenuRotina_Click(object sender, EventArgs e)
+        {
+            Form telaAtual = this.FindForm();
+            if (telaAtual is MainRotina)
+            {
+                return;
+            }
+            MainRotina mainRotina = new MainRotina();
+            mainRotina.Dock = DockStyle.Fill;
+            mainRotina.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainRotina);
+            mainRotina.Show();
+        }
+
+        private void btMenuLembretes_Click(object sender, EventArgs e)
+        {
+            Form telaAtual = this.FindForm();
+            if (telaAtual is MainLembrete)
+            {
+                return;
+            }
+            MainLembrete mainLembrete = new MainLembrete();
+            mainLembrete.Dock = DockStyle.Fill;
+            mainLembrete.TopLevel = false;
+            TelaPrincipal.mainPanel.Controls.Clear();
+            TelaPrincipal.mainPanel.Controls.Add(mainLembrete);
+            mainLembrete.Show();
+
         }
     }
 }

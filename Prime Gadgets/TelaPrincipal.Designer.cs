@@ -37,7 +37,7 @@
             panelPrime.Dock = DockStyle.Fill;
             panelPrime.Location = new Point(0, 0);
             panelPrime.Name = "panelPrime";
-            panelPrime.Size = new Size(1405, 642);
+            panelPrime.Size = new Size(1184, 611);
             panelPrime.TabIndex = 1;
             // 
             // TelaPrincipal
@@ -45,11 +45,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(183, 190, 191);
-            ClientSize = new Size(1405, 642);
+            ClientSize = new Size(1184, 611);
             Controls.Add(panelPrime);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(1000, 650);
             Name = "TelaPrincipal";
             Text = "MenuPrincipal";
+            Text = "PRIMEGadgets";
             WindowState = FormWindowState.Maximized;
             Load += panelHome_Enter;
             ResumeLayout(false);

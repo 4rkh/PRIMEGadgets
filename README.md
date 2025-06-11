@@ -25,7 +25,7 @@ Siga os passos abaixo para clonar, abrir e executar o projeto PRIMEGadgets corre
 1. **Clone o repositório**
 
    Abra o terminal ou Git Bash e execute:
-   git clone https://github.com/4rkh/PRIMEManager
+   git clone https://github.com/4rkh/PRIMEGadgets
 
 2. **Abra o projeto no Visual Studio**
 

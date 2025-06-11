@@ -169,7 +169,7 @@ namespace Prime_Gadgets.modulos.moduloFinanceiro
 
         private void btMainFinanceiroGraficos_Click(object sender, EventArgs e)
         {
-            Resumo resumo = new Resumo();
+            Resumo resumo = new Resumo(mesAtual, anoAtual);
             resumo.ShowDialog();
         }
     }

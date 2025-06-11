@@ -28,39 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            ctResumoMes = new System.Windows.Forms.DataVisualization.Charting.Chart();
             lbResumoTitulo = new Label();
             lbResumoGraficoColuna = new Label();
             pnResumoGastosMes = new Panel();
-            lbResumoGastosMes = new Label();
-            lbResumoGasto = new Label();
+            tbResumoGastosMes = new DataGridView();
             lbResumoGastoTotal = new Label();
+            lbResumoGastosMes = new Label();
             btResumoVoltar = new Button();
             btResumoAvancarMes = new Button();
-            btResumoAnterior = new Button();
+            btResumoAnteriorMes = new Button();
             lbResumoMesAno = new Label();
-            ((System.ComponentModel.ISupportInitialize)ctResumoMes).BeginInit();
+            ctResumoMes = new System.Windows.Forms.DataVisualization.Charting.Chart();
             pnResumoGastosMes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tbResumoGastosMes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ctResumoMes).BeginInit();
             SuspendLayout();
-            // 
-            // ctResumoMes
-            // 
-            chartArea3.Name = "ChartArea1";
-            ctResumoMes.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            ctResumoMes.Legends.Add(legend3);
-            ctResumoMes.Location = new Point(537, 124);
-            ctResumoMes.Name = "ctResumoMes";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            ctResumoMes.Series.Add(series3);
-            ctResumoMes.Size = new Size(558, 343);
-            ctResumoMes.TabIndex = 0;
-            ctResumoMes.Text = "chart1";
             // 
             // lbResumoTitulo
             // 
@@ -83,12 +65,29 @@
             // pnResumoGastosMes
             // 
             pnResumoGastosMes.BackColor = Color.White;
+            pnResumoGastosMes.Controls.Add(tbResumoGastosMes);
             pnResumoGastosMes.Controls.Add(lbResumoGastoTotal);
-            pnResumoGastosMes.Controls.Add(lbResumoGasto);
             pnResumoGastosMes.Location = new Point(12, 124);
             pnResumoGastosMes.Name = "pnResumoGastosMes";
             pnResumoGastosMes.Size = new Size(519, 343);
             pnResumoGastosMes.TabIndex = 3;
+            // 
+            // tbResumoGastosMes
+            // 
+            tbResumoGastosMes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tbResumoGastosMes.Location = new Point(3, 3);
+            tbResumoGastosMes.Name = "tbResumoGastosMes";
+            tbResumoGastosMes.Size = new Size(513, 312);
+            tbResumoGastosMes.TabIndex = 2;
+            // 
+            // lbResumoGastoTotal
+            // 
+            lbResumoGastoTotal.AutoSize = true;
+            lbResumoGastoTotal.Location = new Point(3, 321);
+            lbResumoGastoTotal.Name = "lbResumoGastoTotal";
+            lbResumoGastoTotal.Size = new Size(110, 15);
+            lbResumoGastoTotal.TabIndex = 1;
+            lbResumoGastoTotal.Text = "Total gasto no mês:";
             // 
             // lbResumoGastosMes
             // 
@@ -98,24 +97,6 @@
             lbResumoGastosMes.Size = new Size(84, 15);
             lbResumoGastosMes.TabIndex = 4;
             lbResumoGastosMes.Text = "Gastos no mês";
-            // 
-            // lbResumoGasto
-            // 
-            lbResumoGasto.AutoSize = true;
-            lbResumoGasto.Location = new Point(3, 9);
-            lbResumoGasto.Name = "lbResumoGasto";
-            lbResumoGasto.Size = new Size(126, 15);
-            lbResumoGasto.TabIndex = 0;
-            lbResumoGasto.Text = "Nome do gasto - valor";
-            // 
-            // lbResumoGastoTotal
-            // 
-            lbResumoGastoTotal.AutoSize = true;
-            lbResumoGastoTotal.Location = new Point(3, 318);
-            lbResumoGastoTotal.Name = "lbResumoGastoTotal";
-            lbResumoGastoTotal.Size = new Size(110, 15);
-            lbResumoGastoTotal.TabIndex = 1;
-            lbResumoGastoTotal.Text = "Total gasto no mês:";
             // 
             // btResumoVoltar
             // 
@@ -135,15 +116,17 @@
             btResumoAvancarMes.TabIndex = 6;
             btResumoAvancarMes.Text = "Avançar";
             btResumoAvancarMes.UseVisualStyleBackColor = true;
+            btResumoAvancarMes.Click += btResumoAvancarMes_Click;
             // 
-            // btResumoAnterior
+            // btResumoAnteriorMes
             // 
-            btResumoAnterior.Location = new Point(351, 60);
-            btResumoAnterior.Name = "btResumoAnterior";
-            btResumoAnterior.Size = new Size(75, 23);
-            btResumoAnterior.TabIndex = 7;
-            btResumoAnterior.Text = "Anterior";
-            btResumoAnterior.UseVisualStyleBackColor = true;
+            btResumoAnteriorMes.Location = new Point(351, 60);
+            btResumoAnteriorMes.Name = "btResumoAnteriorMes";
+            btResumoAnteriorMes.Size = new Size(75, 23);
+            btResumoAnteriorMes.TabIndex = 7;
+            btResumoAnteriorMes.Text = "Anterior";
+            btResumoAnteriorMes.UseVisualStyleBackColor = true;
+            btResumoAnteriorMes.Click += btResumoAnteriorMes_Click;
             // 
             // lbResumoMesAno
             // 
@@ -154,6 +137,14 @@
             lbResumoMesAno.TabIndex = 8;
             lbResumoMesAno.Text = "Mês/Ano";
             // 
+            // ctResumoMes
+            // 
+            ctResumoMes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ctResumoMes.Location = new Point(537, 124);
+            ctResumoMes.Name = "ctResumoMes";
+            ctResumoMes.Size = new Size(558, 343);
+            ctResumoMes.TabIndex = 9;
+            // 
             // Resumo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -161,7 +152,7 @@
             BackColor = Color.FromArgb(183, 190, 191);
             ClientSize = new Size(1107, 545);
             Controls.Add(lbResumoMesAno);
-            Controls.Add(btResumoAnterior);
+            Controls.Add(btResumoAnteriorMes);
             Controls.Add(btResumoAvancarMes);
             Controls.Add(btResumoVoltar);
             Controls.Add(lbResumoGastosMes);
@@ -171,9 +162,10 @@
             Controls.Add(ctResumoMes);
             Name = "Resumo";
             Text = "Resumo";
-            ((System.ComponentModel.ISupportInitialize)ctResumoMes).EndInit();
             pnResumoGastosMes.ResumeLayout(false);
             pnResumoGastosMes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tbResumoGastosMes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ctResumoMes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,10 +178,10 @@
         private Panel pnResumoGastosMes;
         private Label lbResumoGastosMes;
         private Label lbResumoGastoTotal;
-        private Label lbResumoGasto;
         private Button btResumoVoltar;
         private Button btResumoAvancarMes;
-        private Button btResumoAnterior;
+        private Button btResumoAnteriorMes;
         private Label lbResumoMesAno;
+        private DataGridView tbResumoGastosMes;
     }
 }
